@@ -4,22 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>M. Cavaleiro Reparações | Assistência Técnica</title>
+  <title>M. Cavaleiro Reparações | Assistência Técnica em Lisboa</title>
 
-  <meta name="description" content="M. Cavaleiro Reparações - Assistência técnica de eletrodomésticos, ar condicionado, refrigeração, eletricidade e canalização. Lisboa e arredores. Contacte-nos pelo WhatsApp.">
+  <meta name="description" content="M. Cavaleiro Reparações — assistência técnica profissional em Lisboa e arredores. Reparação de eletrodomésticos, ar condicionado, refrigeração, eletricidade e canalização.">
 
-  <meta name="keywords" content="M Cavaleiro Reparações, reparação eletrodomésticos Lisboa, assistência técnica Lisboa, reparação máquinas lavar, reparação frigoríficos, reparação máquinas loiça, ar condicionado Lisboa, refrigeração Lisboa">
+  <meta name="keywords" content="reparação eletrodomésticos Lisboa, assistência técnica Lisboa, reparação frigoríficos, reparação máquinas lavar, reparação máquinas loiça, ar condicionado Lisboa, refrigeração">
 
   <meta name="author" content="M. Cavaleiro Reparações">
-
   <meta name="robots" content="index, follow">
 
   <meta property="og:title" content="M. Cavaleiro Reparações">
-  <meta property="og:description" content="Assistência técnica profissional de eletrodomésticos, ar condicionado e refrigeração.">
-  <meta property="og:type" content="website">
+  <meta property="og:description" content="Assistência técnica profissional em Lisboa e arredores.">
   <meta property="og:url" content="https://mcavaleiro.pt">
+  <meta property="og:type" content="website">
 
   <style>
+
+    :root {
+      --navy: #07111f;
+      --navy2: #0d1b2d;
+      --blue: #1479ff;
+      --blue2: #0b5ed7;
+      --orange: #f59e0b;
+      --white: #ffffff;
+      --light: #f5f7fa;
+      --text: #152033;
+      --muted: #687386;
+      --border: #e6eaf0;
+      --green: #25d366;
+    }
 
     * {
       margin: 0;
@@ -33,132 +46,206 @@
 
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background: #f4f6f8;
-      color: #17202a;
+      color: var(--text);
+      background: var(--white);
       line-height: 1.6;
     }
 
-    /* HEADER */
+    a {
+      text-decoration: none;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
 
     header {
       position: sticky;
       top: 0;
       z-index: 1000;
 
-      background: #101820;
-      color: white;
-
-      padding: 18px 6%;
+      height: 78px;
 
       display: flex;
       align-items: center;
       justify-content: space-between;
 
-      box-shadow: 0 3px 20px rgba(0,0,0,.18);
+      padding: 0 6%;
+
+      background: rgba(7,17,31,.94);
+
+      backdrop-filter: blur(12px);
+
+      border-bottom: 1px solid rgba(255,255,255,.08);
     }
 
     .logo {
-      font-size: 25px;
+      color: white;
+      font-size: 24px;
       font-weight: 900;
-      letter-spacing: -.5px;
+      letter-spacing: -.8px;
     }
 
     .logo span {
-      color: #f5a400;
+      color: var(--orange);
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
     }
 
     nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 25px;
-      font-weight: 600;
+      color: #dbe3ed;
+      font-size: 14px;
+      font-weight: 700;
       transition: .2s;
     }
 
     nav a:hover {
-      color: #f5a400;
+      color: white;
     }
 
-    /* HERO */
+    .nav-button {
+      background: var(--orange);
+      color: var(--navy);
+      padding: 11px 18px;
+      border-radius: 7px;
+      font-weight: 800;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
 
     .hero {
-      min-height: 88vh;
+      min-height: 700px;
 
       display: flex;
       align-items: center;
 
-      padding: 80px 6%;
+      position: relative;
+      overflow: hidden;
 
       background:
+        radial-gradient(
+          circle at 75% 45%,
+          rgba(20,121,255,.22),
+          transparent 35%
+        ),
         linear-gradient(
-          135deg,
-          rgba(10,18,28,.98),
-          rgba(27,43,59,.96)
+          120deg,
+          #06101d 0%,
+          #0c1d31 55%,
+          #102b46 100%
         );
 
       color: white;
     }
 
-    .hero-content {
-      max-width: 900px;
+    .hero::after {
+      content: "";
+
+      position: absolute;
+
+      width: 550px;
+      height: 550px;
+
+      right: -180px;
+      bottom: -220px;
+
+      border-radius: 50%;
+
+      background: rgba(245,158,11,.08);
+
+      filter: blur(5px);
     }
 
-    .badge {
-      display: inline-block;
+    .hero-content {
+      width: 100%;
+      max-width: 1250px;
 
-      padding: 8px 16px;
+      margin: auto;
+
+      padding: 80px 6%;
+
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+
+      padding: 8px 14px;
 
       border-radius: 50px;
 
-      background: rgba(245,164,0,.12);
+      background: rgba(255,255,255,.07);
 
-      border: 1px solid rgba(245,164,0,.45);
+      border: 1px solid rgba(255,255,255,.12);
 
-      color: #f5a400;
+      color: #dce7f3;
 
-      font-weight: 700;
+      font-size: 13px;
+      font-weight: 800;
 
       margin-bottom: 25px;
+    }
+
+    .hero-label i {
+      width: 8px;
+      height: 8px;
+
+      border-radius: 50%;
+
+      background: #25d366;
+
+      display: inline-block;
     }
 
     .hero h1 {
-      font-size: clamp(44px, 7vw, 78px);
+      max-width: 850px;
 
-      line-height: 1.02;
+      font-size: clamp(48px, 7vw, 82px);
 
-      margin-bottom: 25px;
+      line-height: .98;
 
-      letter-spacing: -2px;
+      letter-spacing: -3px;
+
+      margin-bottom: 28px;
     }
 
     .hero h1 span {
-      color: #f5a400;
+      color: var(--orange);
     }
 
-    .hero p {
-      max-width: 720px;
+    .hero-description {
+      max-width: 650px;
 
-      font-size: 20px;
+      font-size: 19px;
 
-      color: #d5dbe1;
+      color: #c9d4df;
 
       margin-bottom: 35px;
     }
 
-    .buttons {
+    .hero-actions {
       display: flex;
-      gap: 15px;
       flex-wrap: wrap;
+      gap: 14px;
     }
 
     .btn {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
 
-      padding: 16px 26px;
+      padding: 15px 23px;
 
-      border-radius: 9px;
-
-      text-decoration: none;
+      border-radius: 8px;
 
       font-weight: 800;
 
@@ -166,367 +253,691 @@
     }
 
     .btn:hover {
-      transform: translateY(-3px);
+      transform: translateY(-2px);
     }
 
-    .btn-primary {
-      background: #f5a400;
-      color: #101820;
+    .btn-orange {
+      background: var(--orange);
+      color: var(--navy);
     }
 
     .btn-whatsapp {
-      background: #25D366;
+      background: var(--green);
       color: white;
     }
 
-    .btn-outline {
-      border: 2px solid white;
+    .btn-dark-outline {
+      border: 1px solid rgba(255,255,255,.3);
       color: white;
     }
 
-    /* TRUST */
+    /* HERO STATS */
 
-    .trust {
-      background: white;
+    .hero-stats {
+      display: flex;
+      flex-wrap: wrap;
 
-      padding: 30px 6%;
+      gap: 45px;
 
-      display: grid;
-
-      grid-template-columns: repeat(3, 1fr);
-
-      text-align: center;
-
-      box-shadow: 0 3px 15px rgba(0,0,0,.06);
+      margin-top: 65px;
     }
 
-    .trust strong {
+    .hero-stat strong {
       display: block;
 
-      font-size: 18px;
+      font-size: 24px;
+
+      color: white;
     }
 
-    .trust span {
-      color: #6b7280;
-      font-size: 14px;
+    .hero-stat span {
+      color: #9eacbb;
+
+      font-size: 13px;
     }
 
-    /* SECTIONS */
+    /* =========================
+       TRUST BAR
+    ========================= */
 
-    section {
-      padding: 90px 6%;
-    }
+    .trust-bar {
+      background: white;
 
-    .section-header {
-      text-align: center;
-
-      max-width: 750px;
-
-      margin: 0 auto 55px;
-    }
-
-    .section-header h2 {
-      font-size: 40px;
-
-      margin-bottom: 12px;
-    }
-
-    .section-header p {
-      color: #68717c;
-
-      font-size: 17px;
-    }
-
-    /* SERVICES */
-
-    .services {
-      max-width: 1200px;
-
-      margin: auto;
+      border-bottom: 1px solid var(--border);
 
       display: grid;
 
       grid-template-columns:
-        repeat(auto-fit, minmax(250px, 1fr));
+        repeat(4, 1fr);
 
-      gap: 25px;
+      padding: 22px 6%;
     }
 
-    .service {
+    .trust-item {
+      display: flex;
+
+      justify-content: center;
+      align-items: center;
+
+      gap: 12px;
+
+      border-right: 1px solid var(--border);
+
+      font-size: 14px;
+
+      font-weight: 800;
+    }
+
+    .trust-item:last-child {
+      border-right: none;
+    }
+
+    .trust-icon {
+      font-size: 22px;
+    }
+
+    /* =========================
+       GENERAL
+    ========================= */
+
+    section {
+      padding: 100px 6%;
+    }
+
+    .container {
+      max-width: 1250px;
+      margin: auto;
+    }
+
+    .section-top {
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: end;
+
+      gap: 30px;
+
+      margin-bottom: 55px;
+    }
+
+    .eyebrow {
+      color: var(--blue);
+
+      font-size: 12px;
+
+      font-weight: 900;
+
+      text-transform: uppercase;
+
+      letter-spacing: 1.5px;
+
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      font-size: clamp(34px, 4vw, 48px);
+
+      line-height: 1.05;
+
+      letter-spacing: -1.5px;
+    }
+
+    .section-description {
+      max-width: 520px;
+
+      color: var(--muted);
+
+      font-size: 16px;
+    }
+
+    /* =========================
+       SERVICES
+    ========================= */
+
+    .services-section {
+      background: var(--light);
+    }
+
+    .services-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 20px;
+    }
+
+    .service-card {
       background: white;
 
-      padding: 32px;
+      padding: 34px;
 
-      border-radius: 15px;
+      border: 1px solid var(--border);
 
-      box-shadow: 0 8px 30px rgba(0,0,0,.07);
-
-      border-top: 4px solid transparent;
+      border-radius: 14px;
 
       transition: .25s;
     }
 
-    .service:hover {
-      transform: translateY(-7px);
+    .service-card:hover {
+      transform: translateY(-6px);
 
-      border-top-color: #f5a400;
+      border-color: #cbd5e1;
 
-      box-shadow: 0 15px 35px rgba(0,0,0,.12);
+      box-shadow: 0 20px 45px rgba(15,23,42,.09);
     }
 
-    .icon {
-      font-size: 44px;
-
-      margin-bottom: 18px;
+    .service-card.featured {
+      background: var(--navy);
+      color: white;
     }
 
-    .service h3 {
+    .service-number {
+      font-size: 12px;
+
+      color: var(--blue);
+
+      font-weight: 900;
+
+      margin-bottom: 25px;
+    }
+
+    .service-card.featured .service-number {
+      color: var(--orange);
+    }
+
+    .service-icon {
+      font-size: 40px;
+
+      margin-bottom: 20px;
+    }
+
+    .service-card h3 {
       font-size: 22px;
 
       margin-bottom: 12px;
     }
 
-    .service p {
-      color: #68717c;
+    .service-card p {
+      color: var(--muted);
+
+      font-size: 15px;
     }
 
-    .service ul {
+    .service-card.featured p {
+      color: #b8c5d3;
+    }
+
+    .service-list {
       list-style: none;
 
-      margin-top: 18px;
+      margin-top: 20px;
     }
 
-    .service li {
-      margin-bottom: 7px;
+    .service-list li {
+      margin-bottom: 8px;
 
-      color: #4b5563;
+      font-size: 14px;
+
+      color: #566274;
     }
 
-    .service li::before {
+    .service-card.featured .service-list li {
+      color: #d4dde6;
+    }
+
+    .service-list li::before {
       content: "✓";
 
-      color: #f5a400;
+      color: var(--blue);
 
-      font-weight: bold;
+      font-weight: 900;
 
       margin-right: 8px;
     }
 
-    /* FEATURED */
-
-    .featured {
-      background: #101820;
-
-      color: white;
+    .service-card.featured .service-list li::before {
+      color: var(--orange);
     }
 
-    .featured .section-header p {
-      color: #cbd5df;
+    /* =========================
+       FEATURE
+    ========================= */
+
+    .feature-section {
+      background: white;
     }
 
-    .featured-box {
-      max-width: 1100px;
-
-      margin: auto;
-
+    .feature-layout {
       display: grid;
 
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1.05fr .95fr;
 
-      gap: 40px;
+      gap: 70px;
 
       align-items: center;
     }
 
-    .featured-text h3 {
-      font-size: 34px;
+    .feature-content h2 {
+      font-size: clamp(36px, 5vw, 58px);
 
-      margin-bottom: 20px;
+      line-height: 1.02;
+
+      letter-spacing: -2px;
+
+      margin-bottom: 25px;
     }
 
-    .featured-text p {
-      color: #cbd5df;
-
-      margin-bottom: 20px;
+    .feature-content h2 span {
+      color: var(--blue);
     }
 
-    .featured-list {
-      display: grid;
+    .feature-content p {
+      color: var(--muted);
 
-      grid-template-columns: 1fr 1fr;
+      font-size: 17px;
 
-      gap: 12px;
-
-      margin-top: 25px;
+      margin-bottom: 25px;
     }
 
-    .featured-list div {
-      background: rgba(255,255,255,.06);
-
-      padding: 12px;
-
-      border-radius: 8px;
-    }
-
-    .featured-card {
-      background: white;
-
-      color: #17202a;
-
-      padding: 35px;
-
-      border-radius: 18px;
-
-      box-shadow: 0 15px 45px rgba(0,0,0,.25);
-    }
-
-    .featured-card h3 {
-      font-size: 25px;
-
-      margin-bottom: 15px;
-    }
-
-    /* ABOUT */
-
-    .about {
-      background: white;
-    }
-
-    .about-content {
-      max-width: 900px;
-
-      margin: auto;
-
-      text-align: center;
-
-      font-size: 18px;
-    }
-
-    .about-grid {
-      max-width: 1000px;
-
-      margin: 45px auto 0;
-
+    .appliance-grid {
       display: grid;
 
       grid-template-columns:
-        repeat(auto-fit, minmax(210px, 1fr));
+        repeat(2, 1fr);
 
-      gap: 20px;
+      gap: 10px;
+
+      margin: 25px 0 30px;
     }
 
-    .about-card {
-      background: #f4f6f8;
+    .appliance {
+      background: var(--light);
 
-      padding: 25px;
+      padding: 13px 15px;
 
-      border-radius: 12px;
+      border-radius: 7px;
 
-      text-align: center;
+      font-size: 14px;
+
+      font-weight: 700;
     }
 
-    .about-card strong {
-      display: block;
+    .feature-panel {
+      min-height: 480px;
 
-      font-size: 19px;
+      border-radius: 18px;
 
-      margin-bottom: 6px;
+      overflow: hidden;
+
+      position: relative;
+
+      background:
+        linear-gradient(
+          145deg,
+          #10243b,
+          #07111f
+        );
+
+      box-shadow:
+        0 25px 60px rgba(7,17,31,.18);
     }
 
-    /* AREAS */
+    .feature-panel::before {
+      content: "M";
 
-    .areas {
-      text-align: center;
+      position: absolute;
 
-      background: #f4f6f8;
+      font-size: 430px;
+
+      font-weight: 900;
+
+      line-height: 1;
+
+      color: rgba(255,255,255,.025);
+
+      right: -80px;
+
+      bottom: -90px;
     }
 
-    .areas-box {
-      max-width: 900px;
+    .panel-content {
+      position: absolute;
 
-      margin: auto;
+      left: 35px;
 
-      background: white;
+      right: 35px;
 
-      padding: 35px;
+      bottom: 35px;
 
-      border-radius: 15px;
-
-      box-shadow: 0 8px 30px rgba(0,0,0,.06);
+      z-index: 2;
     }
 
-    .areas-box p {
-      color: #68717c;
+    .panel-badge {
+      display: inline-block;
+
+      background: var(--orange);
+
+      color: var(--navy);
+
+      padding: 7px 12px;
+
+      border-radius: 5px;
+
+      font-size: 11px;
+
+      font-weight: 900;
+
+      margin-bottom: 14px;
+    }
+
+    .panel-content h3 {
+      color: white;
+
+      font-size: 30px;
+
+      line-height: 1.1;
+    }
+
+    .panel-content p {
+      color: #b9c7d5;
 
       margin-top: 10px;
     }
 
-    /* CONTACT */
+    /* =========================
+       PROCESS
+    ========================= */
 
-    .contact {
-      background: #101820;
+    .process-section {
+      background: var(--light);
+    }
+
+    .process-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 25px;
+    }
+
+    .process-card {
+      position: relative;
+
+      background: white;
+
+      padding: 35px;
+
+      border-radius: 14px;
+
+      border: 1px solid var(--border);
+    }
+
+    .process-number {
+      width: 45px;
+      height: 45px;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 50%;
+
+      background: var(--navy);
+
+      color: white;
+
+      font-weight: 900;
+
+      margin-bottom: 22px;
+    }
+
+    .process-card h3 {
+      margin-bottom: 10px;
+    }
+
+    .process-card p {
+      color: var(--muted);
+
+      font-size: 15px;
+    }
+
+    /* =========================
+       ABOUT
+    ========================= */
+
+    .about-section {
+      background: white;
+    }
+
+    .about-layout {
+      display: grid;
+
+      grid-template-columns:
+        .8fr 1.2fr;
+
+      gap: 70px;
+
+      align-items: center;
+    }
+
+    .about-box {
+      background: var(--navy);
+
+      border-radius: 18px;
+
+      padding: 45px;
+
+      color: white;
+
+      position: relative;
+
+      overflow: hidden;
+    }
+
+    .about-box::after {
+      content: "";
+
+      position: absolute;
+
+      width: 180px;
+      height: 180px;
+
+      border-radius: 50%;
+
+      background: rgba(245,158,11,.12);
+
+      right: -60px;
+
+      top: -60px;
+    }
+
+    .about-box h3 {
+      font-size: 35px;
+
+      line-height: 1.1;
+
+      margin-bottom: 15px;
+    }
+
+    .about-box p {
+      color: #c4d0dc;
+    }
+
+    .about-content h2 {
+      font-size: 42px;
+
+      line-height: 1.05;
+
+      margin-bottom: 20px;
+    }
+
+    .about-content p {
+      color: var(--muted);
+
+      font-size: 17px;
+
+      margin-bottom: 18px;
+    }
+
+    .about-points {
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
+      gap: 15px;
+
+      margin-top: 30px;
+    }
+
+    .about-point {
+      padding: 15px;
+
+      border: 1px solid var(--border);
+
+      border-radius: 8px;
+
+      font-size: 14px;
+
+      font-weight: 700;
+    }
+
+    /* =========================
+       AREA
+    ========================= */
+
+    .area-section {
+      background: #eef3f8;
+    }
+
+    .area-box {
+      max-width: 1000px;
+
+      margin: auto;
+
+      background: white;
+
+      border-radius: 16px;
+
+      padding: 45px;
+
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: center;
+
+      gap: 35px;
+
+      border: 1px solid var(--border);
+    }
+
+    .area-box h2 {
+      font-size: 34px;
+
+      margin-bottom: 8px;
+    }
+
+    .area-box p {
+      color: var(--muted);
+    }
+
+    /* =========================
+       CTA
+    ========================= */
+
+    .cta-section {
+      background:
+        linear-gradient(
+          135deg,
+          #07111f,
+          #102c48
+        );
 
       color: white;
 
       text-align: center;
     }
 
-    .contact .section-header p {
-      color: #cbd5df;
+    .cta-section h2 {
+      font-size: clamp(38px, 5vw, 58px);
+
+      line-height: 1;
+
+      letter-spacing: -2px;
+
+      margin-bottom: 18px;
     }
 
-    .phone {
-      font-size: 28px;
+    .cta-section p {
+      color: #c7d3df;
 
-      font-weight: 800;
+      max-width: 600px;
 
-      margin: 25px 0;
+      margin: auto auto 30px;
     }
 
-    /* FOOTER */
+    .cta-phone {
+      margin-top: 25px;
+
+      font-size: 24px;
+
+      font-weight: 900;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
 
     footer {
-      background: #080c12;
+      background: #040a12;
 
-      color: #9ca3af;
+      color: #8795a5;
+
+      padding: 35px 6%;
 
       text-align: center;
 
-      padding: 25px;
+      font-size: 13px;
     }
 
-    /* FLOAT WHATSAPP */
+    footer strong {
+      color: white;
+    }
+
+    /* =========================
+       WHATSAPP
+    ========================= */
 
     .whatsapp-float {
       position: fixed;
 
       right: 22px;
-
       bottom: 22px;
 
-      width: 64px;
+      width: 62px;
+      height: 62px;
 
-      height: 64px;
+      display: flex;
 
-      background: #25D366;
+      align-items: center;
+      justify-content: center;
+
+      background: var(--green);
 
       color: white;
 
       border-radius: 50%;
 
-      display: flex;
+      font-size: 29px;
 
-      align-items: center;
+      box-shadow: 0 8px 30px rgba(0,0,0,.25);
 
-      justify-content: center;
-
-      font-size: 31px;
-
-      text-decoration: none;
-
-      box-shadow: 0 7px 25px rgba(0,0,0,.3);
-
-      z-index: 2000;
+      z-index: 3000;
 
       transition: .2s;
     }
@@ -535,80 +946,143 @@
       transform: scale(1.08);
     }
 
-    /* MOBILE */
+    /* =========================
+       MOBILE
+    ========================= */
 
-    @media(max-width:700px) {
+    @media(max-width: 900px) {
+
+      nav {
+        gap: 15px;
+      }
+
+      .nav-button {
+        display: none;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .feature-layout,
+      .about-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .area-box {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+    }
+
+    @media(max-width: 650px) {
 
       header {
+        height: auto;
+
+        padding: 18px 5%;
+
         flex-direction: column;
 
         gap: 15px;
       }
 
       nav {
-        display: flex;
-
-        flex-wrap: wrap;
-
-        justify-content: center;
+        gap: 12px;
       }
 
       nav a {
-        margin: 0 7px;
-
-        font-size: 13px;
+        font-size: 12px;
       }
 
       .hero {
-        min-height: 78vh;
+        min-height: 650px;
+      }
 
-        padding: 65px 5%;
+      .hero-content {
+        padding: 70px 5%;
       }
 
       .hero h1 {
-        font-size: 45px;
+        font-size: 49px;
 
-        letter-spacing: -1px;
+        letter-spacing: -2px;
       }
 
-      .hero p {
-        font-size: 18px;
+      .hero-description {
+        font-size: 17px;
+      }
+
+      .hero-stats {
+        gap: 25px;
+
+        margin-top: 45px;
+      }
+
+      .trust-bar {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 20px;
+
+        padding: 25px 5%;
+      }
+
+      .trust-item {
+        border-right: none;
+        justify-content: flex-start;
       }
 
       section {
-        padding: 65px 5%;
+        padding: 70px 5%;
       }
 
-      .section-header h2 {
-        font-size: 32px;
+      .section-top {
+        display: block;
       }
 
-      .trust {
-        grid-template-columns: 1fr;
-
-        gap: 20px;
+      .section-description {
+        margin-top: 15px;
       }
 
-      .featured-box {
+      .services-grid {
         grid-template-columns: 1fr;
       }
 
-      .featured-list {
+      .appliance-grid {
         grid-template-columns: 1fr;
       }
 
-      .phone {
-        font-size: 24px;
+      .about-points {
+        grid-template-columns: 1fr;
+      }
+
+      .about-box {
+        padding: 35px;
+      }
+
+      .feature-panel {
+        min-height: 350px;
+      }
+
+      .area-box {
+        padding: 30px;
+      }
+
+      .cta-section h2 {
+        font-size: 40px;
       }
 
       .whatsapp-float {
         width: 58px;
-
         height: 58px;
 
-        right: 18px;
-
-        bottom: 18px;
+        right: 16px;
+        bottom: 16px;
       }
 
     }
@@ -617,7 +1091,6 @@
 
 </head>
 
-
 <body>
 
 
@@ -625,9 +1098,9 @@
 
 <header>
 
-  <div class="logo">
+  <a href="#" class="logo">
     M. Cavaleiro<span>.</span>
-  </div>
+  </a>
 
   <nav>
 
@@ -635,9 +1108,13 @@
 
     <a href="#eletrodomesticos">Eletrodomésticos</a>
 
+    <a href="#processo">Como funciona</a>
+
     <a href="#sobre">Sobre</a>
 
-    <a href="#contactos">Contactos</a>
+    <a href="#contactos" class="nav-button">
+      Pedir assistência
+    </a>
 
   </nav>
 
@@ -650,26 +1127,28 @@
 
   <div class="hero-content">
 
-    <div class="badge">
-      🔧 Assistência Técnica Profissional
+    <div class="hero-label">
+      <i></i>
+      Assistência técnica em Lisboa e arredores
     </div>
 
     <h1>
-      M. Cavaleiro<br>
-      <span>Reparações</span>
+      O problema aparece.<br>
+      <span>Nós resolvemos.</span>
     </h1>
 
-    <p>
-      Reparação e assistência técnica de
-      eletrodomésticos, ar condicionado,
-      refrigeração, eletricidade e canalização.
-      Atendimento profissional em Lisboa e arredores.
+    <p class="hero-description">
+
+      Reparação profissional de eletrodomésticos,
+      ar condicionado e sistemas de refrigeração,
+      com diagnóstico técnico e atendimento no local.
+
     </p>
 
-    <div class="buttons">
+    <div class="hero-actions">
 
       <a
-        class="btn btn-whatsapp"
+        class="btn btn-orange"
         href="https://wa.me/351931369411?text=Olá%20M.%20Cavaleiro%20Reparações,%20preciso%20de%20assistência."
         target="_blank">
 
@@ -678,12 +1157,31 @@
       </a>
 
       <a
-        class="btn btn-outline"
+        class="btn btn-dark-outline"
         href="#servicos">
 
-        Ver serviços
+        Conhecer serviços →
 
       </a>
+
+    </div>
+
+    <div class="hero-stats">
+
+      <div class="hero-stat">
+        <strong>10+</strong>
+        <span>Anos de experiência</span>
+      </div>
+
+      <div class="hero-stat">
+        <strong>5 áreas</strong>
+        <span>de assistência técnica</span>
+      </div>
+
+      <div class="hero-stat">
+        <strong>Lisboa</strong>
+        <span>e arredores</span>
+      </div>
 
     </div>
 
@@ -694,30 +1192,26 @@
 
 <!-- TRUST -->
 
-<div class="trust">
+<div class="trust-bar">
 
-  <div>
-
-    <strong>🔧 Assistência técnica</strong>
-
-    <span>Diagnóstico e reparação</span>
-
+  <div class="trust-item">
+    <span class="trust-icon">🔧</span>
+    Diagnóstico técnico
   </div>
 
-  <div>
-
-    <strong>⚡ Soluções profissionais</strong>
-
-    <span>Particulares e empresas</span>
-
+  <div class="trust-item">
+    <span class="trust-icon">⚡</span>
+    Serviço profissional
   </div>
 
-  <div>
+  <div class="trust-item">
+    <span class="trust-icon">📍</span>
+    Atendimento no local
+  </div>
 
-    <strong>📍 Lisboa e arredores</strong>
-
-    <span>Serviço no local</span>
-
+  <div class="trust-item">
+    <span class="trust-icon">💬</span>
+    Contacto direto
   </div>
 
 </div>
@@ -725,173 +1219,339 @@
 
 <!-- SERVICES -->
 
-<section id="servicos">
+<section id="servicos" class="services-section">
 
-  <div class="section-header">
+  <div class="container">
 
-    <h2>Serviços</h2>
+    <div class="section-top">
 
-    <p>
-      Soluções técnicas para equipamentos domésticos
-      e instalações.
-    </p>
+      <div>
+
+        <div class="eyebrow">
+          O que fazemos
+        </div>
+
+        <h2 class="section-title">
+          Assistência técnica<br>
+          especializada.
+        </h2>
+
+      </div>
+
+      <p class="section-description">
+
+        Soluções para equipamentos domésticos,
+        climatização, refrigeração e instalações técnicas.
+
+      </p>
+
+    </div>
+
+
+    <div class="services-grid">
+
+
+      <article class="service-card featured">
+
+        <div class="service-number">
+          01 / PRINCIPAL
+        </div>
+
+        <div class="service-icon">
+          🔧
+        </div>
+
+        <h3>
+          Eletrodomésticos
+        </h3>
+
+        <p>
+          Diagnóstico e reparação de
+          equipamentos domésticos.
+        </p>
+
+        <ul class="service-list">
+
+          <li>Máquinas de lavar roupa</li>
+
+          <li>Máquinas de lavar loiça</li>
+
+          <li>Frigoríficos</li>
+
+          <li>Fornos e placas</li>
+
+          <li>Secadores</li>
+
+        </ul>
+
+      </article>
+
+
+      <article class="service-card">
+
+        <div class="service-number">
+          02
+        </div>
+
+        <div class="service-icon">
+          ❄️
+        </div>
+
+        <h3>
+          Ar Condicionado
+        </h3>
+
+        <p>
+          Instalação, manutenção,
+          diagnóstico e reparação.
+        </p>
+
+        <ul class="service-list">
+
+          <li>Instalação</li>
+
+          <li>Manutenção</li>
+
+          <li>Diagnóstico</li>
+
+          <li>Deteção de fugas</li>
+
+        </ul>
+
+      </article>
+
+
+      <article class="service-card">
+
+        <div class="service-number">
+          03
+        </div>
+
+        <div class="service-icon">
+          🧊
+        </div>
+
+        <h3>
+          Refrigeração
+        </h3>
+
+        <p>
+          Assistência a sistemas
+          frigoríficos domésticos e comerciais.
+        </p>
+
+        <ul class="service-list">
+
+          <li>Frigoríficos</li>
+
+          <li>Congeladores</li>
+
+          <li>Arcas</li>
+
+          <li>Sistemas frigoríficos</li>
+
+        </ul>
+
+      </article>
+
+
+      <article class="service-card">
+
+        <div class="service-number">
+          04
+        </div>
+
+        <div class="service-icon">
+          ⚡
+        </div>
+
+        <h3>
+          Eletricidade
+        </h3>
+
+        <p>
+          Diagnóstico e reparação de
+          problemas elétricos.
+        </p>
+
+        <ul class="service-list">
+
+          <li>Diagnóstico</li>
+
+          <li>Reparações</li>
+
+          <li>Ligações</li>
+
+        </ul>
+
+      </article>
+
+
+      <article class="service-card">
+
+        <div class="service-number">
+          05
+        </div>
+
+        <div class="service-icon">
+          🚿
+        </div>
+
+        <h3>
+          Canalização
+        </h3>
+
+        <p>
+          Reparação e manutenção de
+          instalações hidráulicas.
+        </p>
+
+        <ul class="service-list">
+
+          <li>Fugas</li>
+
+          <li>Torneiras</li>
+
+          <li>Ligações</li>
+
+        </ul>
+
+      </article>
+
+
+      <article class="service-card">
+
+        <div class="service-number">
+          06
+        </div>
+
+        <div class="service-icon">
+          🛠️
+        </div>
+
+        <h3>
+          Assistência Técnica
+        </h3>
+
+        <p>
+          Diagnóstico técnico e procura
+          da solução mais adequada.
+        </p>
+
+        <ul class="service-list">
+
+          <li>Diagnóstico</li>
+
+          <li>Avaliação</li>
+
+          <li>Reparação</li>
+
+        </ul>
+
+      </article>
+
+
+    </div>
 
   </div>
 
+</section>
 
-  <div class="services">
+
+<!-- APPLIANCES -->
+
+<section id="eletrodomesticos" class="feature-section">
+
+  <div class="container feature-layout">
 
 
-    <!-- ELETRODOMÉSTICOS -->
+    <div class="feature-content">
 
-    <div class="service" id="eletrodomesticos">
+      <div class="eyebrow">
+        Especialização
+      </div>
 
-      <div class="icon">🔧</div>
-
-      <h3>Reparação de Eletrodomésticos</h3>
+      <h2>
+        O seu eletrodoméstico<br>
+        <span>não funciona?</span>
+      </h2>
 
       <p>
-        Diagnóstico e reparação de equipamentos
-        domésticos de várias marcas.
+
+        Antes de substituir o equipamento,
+        faça um diagnóstico.
+
+        Uma avaria pode ter uma solução
+        simples e economicamente vantajosa.
+
       </p>
 
-      <ul>
+      <div class="appliance-grid">
 
-        <li>Máquinas de lavar roupa</li>
+        <div class="appliance">
+          🧺 Máquina de lavar roupa
+        </div>
 
-        <li>Máquinas de lavar loiça</li>
+        <div class="appliance">
+          🍽️ Máquina de lavar loiça
+        </div>
 
-        <li>Frigoríficos</li>
+        <div class="appliance">
+          🧊 Frigorífico
+        </div>
 
-        <li>Congeladores</li>
+        <div class="appliance">
+          ❄️ Congelador
+        </div>
 
-        <li>Fornos</li>
+        <div class="appliance">
+          🔥 Forno
+        </div>
 
-        <li>Placas</li>
+        <div class="appliance">
+          ⚡ Placa
+        </div>
 
-        <li>Secadores de roupa</li>
+        <div class="appliance">
+          👕 Secador
+        </div>
 
-        <li>Exaustores</li>
+        <div class="appliance">
+          💨 Exaustor
+        </div>
 
-      </ul>
+      </div>
+
+      <a
+        class="btn btn-whatsapp"
+        href="https://wa.me/351931369411?text=Olá,%20preciso%20de%20reparação%20de%20um%20eletrodoméstico.%20O%20equipamento%20é:"
+        target="_blank">
+
+        💬 Enviar pedido pelo WhatsApp
+
+      </a>
 
     </div>
 
 
-    <!-- AC -->
+    <div class="feature-panel">
 
-    <div class="service">
+      <div class="panel-content">
 
-      <div class="icon">❄️</div>
+        <div class="panel-badge">
+          M. CAVALEIRO
+        </div>
 
-      <h3>Ar Condicionado</h3>
+        <h3>
+          Reparação técnica
+          com foco na solução.
+        </h3>
 
-      <p>
-        Instalação, manutenção e reparação
-        de sistemas de climatização.
-      </p>
+        <p>
+          Diagnóstico, reparação e manutenção.
+        </p>
 
-      <ul>
-
-        <li>Instalação de AC</li>
-
-        <li>Manutenção</li>
-
-        <li>Diagnóstico de avarias</li>
-
-        <li>Deteção de fugas</li>
-
-        <li>Recuperação de refrigerante</li>
-
-        <li>Vácuo e carga</li>
-
-      </ul>
-
-    </div>
-
-
-    <!-- REFRIGERAÇÃO -->
-
-    <div class="service">
-
-      <div class="icon">🧊</div>
-
-      <h3>Refrigeração</h3>
-
-      <p>
-        Assistência técnica a equipamentos
-        frigoríficos domésticos e comerciais.
-      </p>
-
-      <ul>
-
-        <li>Frigoríficos</li>
-
-        <li>Congeladores</li>
-
-        <li>Arcas congeladoras</li>
-
-        <li>Equipamentos comerciais</li>
-
-        <li>Diagnóstico frigorífico</li>
-
-      </ul>
-
-    </div>
-
-
-    <!-- ELETRICIDADE -->
-
-    <div class="service">
-
-      <div class="icon">⚡</div>
-
-      <h3>Eletricidade</h3>
-
-      <p>
-        Diagnóstico e reparação de avarias
-        elétricas em equipamentos e instalações.
-      </p>
-
-      <ul>
-
-        <li>Diagnóstico elétrico</li>
-
-        <li>Reparações</li>
-
-        <li>Ligações</li>
-
-        <li>Equipamentos domésticos</li>
-
-      </ul>
-
-    </div>
-
-
-    <!-- CANALIZAÇÃO -->
-
-    <div class="service">
-
-      <div class="icon">🚿</div>
-
-      <h3>Canalização</h3>
-
-      <p>
-        Reparação e manutenção de instalações
-        e equipamentos hidráulicos.
-      </p>
-
-      <ul>
-
-        <li>Fugas de água</li>
-
-        <li>Torneiras</li>
-
-        <li>Ligações hidráulicas</li>
-
-        <li>Equipamentos domésticos</li>
-
-      </ul>
+      </div>
 
     </div>
 
@@ -901,85 +1561,95 @@
 </section>
 
 
-<!-- ELETRODOMÉSTICOS DESTAQUE -->
+<!-- PROCESS -->
 
-<section class="featured">
+<section id="processo" class="process-section">
 
-  <div class="section-header">
+  <div class="container">
 
-    <h2>Especialistas em Eletrodomésticos</h2>
+    <div class="section-top">
 
-    <p>
-      O equipamento deixou de funcionar?
-      Nós ajudamos a encontrar a causa.
-    </p>
+      <div>
 
-  </div>
+        <div class="eyebrow">
+          Processo simples
+        </div>
 
-
-  <div class="featured-box">
-
-
-    <div class="featured-text">
-
-      <h3>
-        Reparação no local
-      </h3>
-
-      <p>
-        Fazemos diagnóstico e reparação de
-        diversos tipos de eletrodomésticos,
-        procurando uma solução rápida e eficaz.
-      </p>
-
-      <div class="featured-list">
-
-        <div>✓ Máquina de lavar roupa</div>
-
-        <div>✓ Máquina de lavar loiça</div>
-
-        <div>✓ Frigorífico</div>
-
-        <div>✓ Congelador</div>
-
-        <div>✓ Forno</div>
-
-        <div>✓ Placa</div>
-
-        <div>✓ Secador</div>
-
-        <div>✓ Exaustor</div>
+        <h2 class="section-title">
+          Do problema<br>
+          à solução.
+        </h2>
 
       </div>
 
-    </div>
+      <p class="section-description">
 
+        Entre em contacto e explique-nos
+        o problema. Tratamos do resto.
 
-    <div class="featured-card">
-
-      <h3>
-        Precisa de assistência?
-      </h3>
-
-      <p>
-        Envie uma mensagem pelo WhatsApp
-        com o equipamento e, se possível,
-        uma fotografia da máquina e da avaria.
       </p>
 
-      <br>
-
-      <a
-        class="btn btn-whatsapp"
-        href="https://wa.me/351931369411?text=Olá,%20preciso%20de%20reparação%20de%20um%20eletrodoméstico.%20O%20equipamento%20é:"
-        target="_blank">
-
-        💬 Contactar pelo WhatsApp
-
-      </a>
-
     </div>
 
+
+    <div class="process-grid">
+
+
+      <div class="process-card">
+
+        <div class="process-number">
+          01
+        </div>
+
+        <h3>
+          Contacte-nos
+        </h3>
+
+        <p>
+          Envie uma mensagem pelo WhatsApp
+          com o equipamento e a avaria.
+        </p>
+
+      </div>
+
+
+      <div class="process-card">
+
+        <div class="process-number">
+          02
+        </div>
+
+        <h3>
+          Fazemos o diagnóstico
+        </h3>
+
+        <p>
+          Avaliamos o equipamento e
+          identificamos a origem do problema.
+        </p>
+
+      </div>
+
+
+      <div class="process-card">
+
+        <div class="process-number">
+          03
+        </div>
+
+        <h3>
+          Resolvemos
+        </h3>
+
+        <p>
+          Apresentamos a solução adequada
+          e avançamos com a reparação.
+        </p>
+
+      </div>
+
+
+    </div>
 
   </div>
 
@@ -988,73 +1658,114 @@
 
 <!-- ABOUT -->
 
-<section id="sobre" class="about">
+<section id="sobre" class="about-section">
 
-  <div class="section-header">
+  <div class="container about-layout">
 
-    <h2>Porquê escolher a M. Cavaleiro?</h2>
 
-    <p>
-      Experiência, diagnóstico e uma abordagem
-      profissional a cada intervenção.
-    </p>
+    <div class="about-box">
+
+      <h3>
+        Técnica.<br>
+        Experiência.<br>
+        Solução.
+      </h3>
+
+      <p>
+        M. Cavaleiro Reparações
+      </p>
+
+    </div>
+
+
+    <div class="about-content">
+
+      <div class="eyebrow">
+        Sobre nós
+      </div>
+
+      <h2>
+        Assistência técnica
+        sem complicações.
+      </h2>
+
+      <p>
+        A M. Cavaleiro Reparações presta
+        assistência técnica a particulares
+        e empresas, com uma abordagem
+        focada no diagnóstico e na resolução
+        eficaz das avarias.
+      </p>
+
+      <p>
+        A experiência em diferentes áreas
+        técnicas permite abordar equipamentos
+        e sistemas de forma integrada.
+      </p>
+
+
+      <div class="about-points">
+
+        <div class="about-point">
+          ✓ Diagnóstico técnico
+        </div>
+
+        <div class="about-point">
+          ✓ Atendimento profissional
+        </div>
+
+        <div class="about-point">
+          ✓ Soluções personalizadas
+        </div>
+
+        <div class="about-point">
+          ✓ Particulares e empresas
+        </div>
+
+      </div>
+
+    </div>
+
 
   </div>
 
-
-  <div class="about-content">
-
-    <p>
-      A <strong>M. Cavaleiro Reparações</strong>
-      presta assistência técnica a particulares
-      e empresas, com foco na resolução eficaz
-      das avarias.
-    </p>
-
-    <br>
-
-    <p>
-      Trabalhamos com diferentes tipos de
-      equipamentos e sistemas técnicos,
-      procurando apresentar ao cliente uma
-      solução clara e adequada.
-    </p>
-
-  </div>
+</section>
 
 
-  <div class="about-grid">
+<!-- AREA -->
 
-    <div class="about-card">
+<section class="area-section">
 
-      <strong>🔎 Diagnóstico</strong>
+  <div class="container">
 
-      Identificação da origem da avaria.
+    <div class="area-box">
 
-    </div>
+      <div>
 
-    <div class="about-card">
+        <div class="eyebrow">
+          Área de intervenção
+        </div>
 
-      <strong>🛠️ Experiência</strong>
+        <h2>
+          Lisboa e arredores
+        </h2>
 
-      Conhecimento técnico multidisciplinar.
+        <p>
+          Contacte-nos para confirmar
+          disponibilidade na sua zona.
+        </p>
 
-    </div>
+      </div>
 
-    <div class="about-card">
 
-      <strong>⚡ Eficiência</strong>
+      <a
+        class="btn btn-orange"
+        href="https://wa.me/351931369411?text=Olá,%20gostaria%20de%20saber%20se%20fazem%20assistência%20na%20minha%20zona."
+        target="_blank">
 
-      Procuramos resolver o problema
-      de forma rápida e eficaz.
+        📍 Consultar disponibilidade
 
-    </div>
-
-    <div class="about-card">
-
-      <strong>🤝 Transparência</strong>
-
-      Comunicação clara com o cliente.
+      </a>
 
     </div>
 
@@ -1063,65 +1774,42 @@
 </section>
 
 
-<!-- ÁREA -->
+<!-- CTA -->
 
-<section class="areas">
+<section id="contactos" class="cta-section">
 
-  <div class="section-header">
+  <div class="container">
 
-    <h2>Zona de atendimento</h2>
+    <div class="eyebrow" style="color:#f59e0b;">
+      Precisa de assistência?
+    </div>
 
-    <p>
-      Assistência técnica em Lisboa e arredores.
-    </p>
-
-  </div>
-
-
-  <div class="areas-box">
-
-    <strong>
-      📍 Lisboa e região envolvente
-    </strong>
+    <h2>
+      Vamos resolver o problema.
+    </h2>
 
     <p>
-      Para confirmar disponibilidade na sua zona,
-      entre em contacto através do WhatsApp.
+      Envie-nos uma mensagem pelo WhatsApp
+      e diga-nos qual é o equipamento
+      e o problema que apresenta.
     </p>
 
-  </div>
 
-</section>
+    <a
+      class="btn btn-whatsapp"
+      href="https://wa.me/351931369411?text=Olá%20M.%20Cavaleiro%20Reparações,%20preciso%20de%20assistência."
+      target="_blank">
+
+      💬 Falar pelo WhatsApp
+
+    </a>
 
 
-<!-- CONTACT -->
-
-<section id="contactos" class="contact">
-
-  <div class="section-header">
-
-    <h2>Precisa de assistência?</h2>
-
-    <p>
-      Fale diretamente connosco pelo WhatsApp.
-    </p>
+    <div class="cta-phone">
+      📱 931 369 411
+    </div>
 
   </div>
-
-
-  <div class="phone">
-    📱 931 369 411
-  </div>
-
-
-  <a
-    class="btn btn-whatsapp"
-    href="https://wa.me/351931369411?text=Olá%20M.%20Cavaleiro%20Reparações,%20preciso%20de%20assistência."
-    target="_blank">
-
-    💬 Falar pelo WhatsApp
-
-  </a>
 
 </section>
 
@@ -1130,19 +1818,27 @@
 
 <footer>
 
+  <strong>M. Cavaleiro Reparações</strong>
+  <br><br>
+
+  Assistência técnica · Eletrodomésticos ·
+  Ar Condicionado · Refrigeração · Eletricidade · Canalização
+
+  <br><br>
+
   © 2026 M. Cavaleiro Reparações —
   Todos os direitos reservados.
 
 </footer>
 
 
-<!-- WHATSAPP FLUTUANTE -->
+<!-- WHATSAPP FLOAT -->
 
 <a
   class="whatsapp-float"
   href="https://wa.me/351931369411?text=Olá%20M.%20Cavaleiro%20Reparações,%20preciso%20de%20assistência."
   target="_blank"
-  aria-label="WhatsApp">
+  aria-label="Contactar M. Cavaleiro Reparações pelo WhatsApp">
 
   💬
 
