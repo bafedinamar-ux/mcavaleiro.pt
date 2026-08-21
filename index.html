@@ -1,21 +1,34 @@
 <!DOCTYPE html>
 <html lang="pt-PT">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>M. Cavaleiro Reparações | Assistência Técnica Lisboa</title>
 
 <meta name="description" content="M. Cavaleiro Reparações - Reparação de eletrodomésticos, ar condicionado, refrigeração, eletricidade, canalização e desentupimentos em Lisboa e arredores.">
-<meta name="keywords" content="reparação eletrodomésticos Lisboa, assistência técnica Lisboa, reparação frigoríficos, máquinas lavar, ar condicionado Lisboa, refrigeração, eletricidade, canalização, desentupimentos">
+
+<meta name="keywords" content="M Cavaleiro Reparações, reparação eletrodomésticos Lisboa, assistência técnica Lisboa, frigoríficos, máquinas lavar, ar condicionado, refrigeração, eletricidade, canalização, desentupimentos">
+
 <meta name="author" content="M. Cavaleiro Reparações">
+
 <meta name="robots" content="index, follow">
 
 <meta property="og:title" content="M. Cavaleiro Reparações">
+
 <meta property="og:description" content="Assistência técnica profissional em Lisboa e arredores.">
+
 <meta property="og:type" content="website">
 
+
 <style>
+
+/* =====================================================
+   RESET
+===================================================== */
 
 *{
     margin:0;
@@ -44,18 +57,26 @@ a{
     margin:auto;
 }
 
-/* ================= HEADER ================= */
+
+/* =====================================================
+   HEADER
+===================================================== */
 
 header{
+
     position:sticky;
     top:0;
     z-index:1000;
+
     background:#08111f;
     color:white;
+
     padding:18px 5%;
+
     display:flex;
     justify-content:space-between;
     align-items:center;
+
     box-shadow:0 3px 20px rgba(0,0,0,.2);
 }
 
@@ -72,12 +93,12 @@ header{
 nav{
     display:flex;
     align-items:center;
-    gap:25px;
+    gap:20px;
 }
 
 nav a{
     color:white;
-    font-size:14px;
+    font-size:12px;
     font-weight:bold;
 }
 
@@ -92,14 +113,27 @@ nav a:hover{
     border-radius:7px;
 }
 
-/* ================= HERO ================= */
+
+/* =====================================================
+   HERO
+===================================================== */
 
 .hero{
+
     background:
-        radial-gradient(circle at 80% 20%,#17477c 0,#08111f 45%,#050a11 100%);
+    radial-gradient(
+        circle at 80% 20%,
+        #17477c 0,
+        #08111f 45%,
+        #050a11 100%
+    );
+
     color:white;
+
     padding:110px 0;
+
     min-height:680px;
+
     display:flex;
     align-items:center;
 }
@@ -109,20 +143,32 @@ nav a:hover{
 }
 
 .badge{
+
     display:inline-block;
+
     border:1px solid rgba(255,255,255,.2);
+
     background:rgba(255,255,255,.06);
+
     padding:8px 15px;
+
     border-radius:30px;
+
     font-size:13px;
+
     font-weight:bold;
+
     margin-bottom:25px;
 }
 
 .hero h1{
+
     font-size:clamp(45px,7vw,78px);
+
     line-height:1;
+
     letter-spacing:-3px;
+
     margin-bottom:25px;
 }
 
@@ -131,23 +177,35 @@ nav a:hover{
 }
 
 .hero p{
+
     color:#cbd5df;
+
     font-size:19px;
+
     max-width:680px;
+
     margin-bottom:32px;
 }
 
 .buttons{
+
     display:flex;
+
     flex-wrap:wrap;
+
     gap:12px;
 }
 
 .btn{
+
     display:inline-block;
+
     padding:15px 23px;
+
     border-radius:8px;
+
     font-weight:900;
+
     transition:.2s;
 }
 
@@ -171,9 +229,13 @@ nav a:hover{
 }
 
 .hero-stats{
+
     display:flex;
+
     gap:45px;
+
     margin-top:55px;
+
     flex-wrap:wrap;
 }
 
@@ -187,123 +249,191 @@ nav a:hover{
     font-size:13px;
 }
 
-/* ================= TRUST ================= */
+
+/* =====================================================
+   TRUST
+===================================================== */
 
 .trust{
+
     background:white;
+
     display:grid;
+
     grid-template-columns:repeat(4,1fr);
+
     border-bottom:1px solid #e2e7ed;
 }
 
 .trust div{
+
     text-align:center;
+
     padding:22px 10px;
+
     font-weight:bold;
+
     border-right:1px solid #e2e7ed;
 }
 
-/* ================= GENERAL ================= */
+
+/* =====================================================
+   SECTIONS
+===================================================== */
 
 section{
     padding:90px 0;
 }
 
 .section-top{
+
     text-align:center;
+
     margin-bottom:50px;
 }
 
 .section-top small{
+
     color:#1479ff;
+
     font-weight:900;
+
     text-transform:uppercase;
+
     letter-spacing:2px;
 }
 
 .section-top h2{
+
     font-size:clamp(35px,5vw,52px);
+
     line-height:1;
+
     margin:10px 0 15px;
+
     letter-spacing:-2px;
 }
 
 .section-top p{
+
     color:#687386;
+
     max-width:650px;
+
     margin:auto;
 }
 
-/* ================= SERVICES ================= */
+
+/* =====================================================
+   SERVIÇOS
+===================================================== */
 
 #servicos{
     background:#f5f7fa;
 }
 
 .services{
+
     display:grid;
+
     grid-template-columns:repeat(3,1fr);
+
     gap:22px;
 }
 
 .service{
+
     background:white;
+
     border:1px solid #e2e7ed;
+
     border-radius:14px;
+
     padding:32px;
+
     transition:.25s;
+
     box-shadow:0 5px 20px rgba(0,0,0,.04);
 }
 
 .service:hover{
+
     transform:translateY(-6px);
+
     box-shadow:0 20px 40px rgba(0,0,0,.1);
 }
 
 .icon{
+
     width:65px;
+
     height:65px;
+
     display:flex;
+
     align-items:center;
+
     justify-content:center;
+
     border-radius:13px;
+
     background:#edf4ff;
+
     font-size:32px;
+
     margin-bottom:20px;
 }
 
 .service h3{
+
     font-size:22px;
+
     margin-bottom:10px;
 }
 
 .service p{
+
     color:#687386;
+
     font-size:15px;
 }
 
 .service ul{
+
     list-style:none;
+
     margin-top:15px;
 }
 
 .service li{
+
     font-size:14px;
+
     margin:5px 0;
+
     color:#536072;
 }
 
 .service li:before{
+
     content:"✓";
+
     color:#1479ff;
+
     font-weight:bold;
+
     margin-right:7px;
 }
 
-/* ================= DESTAQUE DESENTUPIMENTOS ================= */
+
+/* =====================================================
+   DESENTUPIMENTOS
+===================================================== */
 
 .desentupimentos{
+
     background:#07111f;
+
     color:white;
 }
 
@@ -316,20 +446,29 @@ section{
 }
 
 .drain-grid{
+
     display:grid;
+
     grid-template-columns:repeat(3,1fr);
+
     gap:20px;
 }
 
 .drain{
+
     background:#101e2f;
+
     border:1px solid rgba(255,255,255,.1);
+
     padding:30px;
+
     border-radius:14px;
 }
 
 .drain-icon{
+
     font-size:45px;
+
     margin-bottom:15px;
 }
 
@@ -341,39 +480,414 @@ section{
     color:#b8c5d1;
 }
 
-/* ================= ELETRODOMESTICOS ================= */
+
+/* =====================================================
+   PRESENÇA / PARCERIAS
+===================================================== */
+
+.partners{
+
+    background:#ffffff;
+}
+
+.partner-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:20px;
+
+    margin-top:40px;
+}
+
+.partner-card{
+
+    background:#f8fafc;
+
+    border:1px solid #e1e7ee;
+
+    border-radius:15px;
+
+    padding:30px 20px;
+
+    text-align:center;
+
+    min-height:220px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    transition:.25s;
+}
+
+.partner-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+}
+
+.partner-logo{
+
+    height:65px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin-bottom:18px;
+
+    font-size:25px;
+
+    font-weight:900;
+}
+
+.worten{
+    color:#e30613;
+}
+
+.fixando{
+    color:#ff5a36;
+}
+
+.zaask{
+    color:#151c2b;
+}
+
+.fixo{
+    color:#1479ff;
+}
+
+.partner-card h3{
+    font-size:18px;
+    margin-bottom:8px;
+}
+
+.partner-card p{
+    color:#687386;
+    font-size:13px;
+    margin-bottom:18px;
+}
+
+.partner-link{
+
+    display:inline-block;
+
+    padding:9px 15px;
+
+    border-radius:6px;
+
+    background:#08111f;
+
+    color:white;
+
+    font-size:12px;
+
+    font-weight:bold;
+}
+
+.partner-link:hover{
+    background:#1479ff;
+}
+
+.partner-note{
+
+    text-align:center;
+
+    margin-top:30px;
+
+    color:#7a8694;
+
+    font-size:12px;
+
+    max-width:800px;
+
+    margin-left:auto;
+
+    margin-right:auto;
+}
+
+
+/* =====================================================
+   AVALIAÇÕES
+===================================================== */
+
+.reviews{
+
+    background:#f5f7fa;
+}
+
+.review-platforms{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:25px;
+
+    margin-bottom:40px;
+}
+
+.review-platform{
+
+    background:white;
+
+    border:1px solid #e1e7ee;
+
+    border-radius:16px;
+
+    padding:30px;
+
+    display:grid;
+
+    grid-template-columns:65px 1fr auto;
+
+    gap:20px;
+
+    align-items:center;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.05);
+
+    transition:.25s;
+}
+
+.review-platform:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.09);
+}
+
+.review-logo{
+
+    width:58px;
+
+    height:58px;
+
+    border-radius:14px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:31px;
+
+    font-weight:900;
+}
+
+.google{
+
+    background:#f1f3f4;
+
+    color:#4285f4;
+}
+
+.fixando-review{
+
+    background:#fff0eb;
+
+    color:#ff5a36;
+}
+
+.review-platform h3{
+    font-size:20px;
+}
+
+.stars{
+
+    color:#f5a623;
+
+    letter-spacing:2px;
+
+    font-size:17px;
+}
+
+.review-platform strong{
+
+    font-size:22px;
+}
+
+.review-platform p{
+
+    color:#788493;
+
+    font-size:13px;
+}
+
+.review-button{
+
+    background:#08111f;
+
+    color:white;
+
+    padding:11px 16px;
+
+    border-radius:7px;
+
+    font-size:12px;
+
+    font-weight:bold;
+
+    white-space:nowrap;
+}
+
+.review-button:hover{
+    background:#1479ff;
+}
+
+.testimonials{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+}
+
+.testimonial{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:14px;
+
+    border:1px solid #e1e7ee;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.04);
+}
+
+.testimonial-stars{
+
+    color:#f5a623;
+
+    font-size:18px;
+
+    letter-spacing:2px;
+
+    margin-bottom:15px;
+}
+
+.testimonial p{
+
+    font-size:16px;
+
+    color:#374151;
+
+    line-height:1.7;
+
+    margin-bottom:20px;
+}
+
+.testimonial strong{
+
+    display:block;
+
+    font-size:14px;
+}
+
+.testimonial span{
+
+    color:#7b8794;
+
+    font-size:12px;
+}
+
+.review-bottom{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+    margin-top:40px;
+
+    flex-wrap:wrap;
+}
+
+.btn-outline-dark{
+
+    border:2px solid #08111f;
+
+    color:#08111f;
+}
+
+.btn-outline-dark:hover{
+
+    background:#08111f;
+
+    color:white;
+}
+
+
+/* =====================================================
+   ELETRODOMÉSTICOS
+===================================================== */
 
 .appliances{
+
     background:white;
 }
 
 .appliance-grid{
+
     display:grid;
+
     grid-template-columns:1fr 1fr;
+
     gap:60px;
+
     align-items:center;
 }
 
 .appliance-box{
+
     min-height:430px;
+
     border-radius:18px;
+
     background:
-        linear-gradient(135deg,#0a1726,#164e80);
+    linear-gradient(
+        135deg,
+        #0a1726,
+        #164e80
+    );
+
     display:flex;
+
     align-items:center;
+
     justify-content:center;
+
     overflow:hidden;
 }
 
 .appliance-svg{
+
     width:80%;
+
     max-width:420px;
 }
 
 .appliance-text h2{
+
     font-size:clamp(38px,5vw,58px);
+
     line-height:1;
+
     letter-spacing:-2px;
+
     margin-bottom:20px;
 }
 
@@ -382,43 +896,67 @@ section{
 }
 
 .appliance-text p{
+
     color:#687386;
+
     font-size:17px;
+
     margin-bottom:25px;
 }
 
 .appliance-list{
+
     display:grid;
+
     grid-template-columns:1fr 1fr;
+
     gap:10px;
+
     margin-bottom:25px;
 }
 
 .appliance-list div{
+
     background:#f1f4f7;
+
     padding:13px;
+
     border-radius:7px;
+
     font-size:14px;
+
     font-weight:bold;
 }
 
-/* ================= FOTO / GALERIA SVG ================= */
+
+/* =====================================================
+   GALERIA
+===================================================== */
 
 .gallery{
+
     background:#eef2f6;
 }
 
 .gallery-grid{
+
     display:grid;
+
     grid-template-columns:2fr 1fr 1fr;
+
     grid-template-rows:210px 210px;
+
     gap:12px;
 }
 
 .gallery-card{
+
     border-radius:12px;
+
     overflow:hidden;
+
     background:#0b1828;
+
     position:relative;
 }
 
@@ -427,49 +965,78 @@ section{
 }
 
 .gallery-svg{
+
     width:100%;
+
     height:100%;
 }
 
 .gallery-label{
+
     position:absolute;
+
     left:15px;
+
     bottom:15px;
+
     background:rgba(0,0,0,.75);
+
     color:white;
+
     padding:8px 12px;
+
     border-radius:5px;
+
     font-size:12px;
+
     font-weight:bold;
 }
 
-/* ================= SOBRE ================= */
+
+/* =====================================================
+   SOBRE
+===================================================== */
 
 .about{
     background:white;
 }
 
 .about-grid{
+
     display:grid;
+
     grid-template-columns:1fr 1fr;
+
     gap:60px;
+
     align-items:center;
 }
 
 .about-dark{
+
     background:#08111f;
+
     color:white;
+
     border-radius:18px;
+
     padding:50px;
+
     min-height:400px;
+
     display:flex;
+
     flex-direction:column;
+
     justify-content:flex-end;
 }
 
 .about-dark h2{
+
     font-size:45px;
+
     line-height:1;
+
     margin-bottom:15px;
 }
 
@@ -478,46 +1045,72 @@ section{
 }
 
 .about-text h2{
+
     font-size:45px;
+
     line-height:1;
+
     margin-bottom:20px;
 }
 
 .about-text p{
+
     color:#687386;
+
     font-size:17px;
+
     margin-bottom:15px;
 }
 
 .advantages{
+
     display:grid;
+
     grid-template-columns:1fr 1fr;
+
     gap:10px;
+
     margin-top:25px;
 }
 
 .advantages div{
+
     border:1px solid #e1e6ec;
+
     padding:13px;
+
     border-radius:7px;
+
     font-weight:bold;
+
     font-size:14px;
 }
 
-/* ================= AREA ================= */
+
+/* =====================================================
+   ÁREA
+===================================================== */
 
 .area{
     background:#edf3f8;
 }
 
 .area-box{
+
     background:white;
+
     padding:40px;
+
     border-radius:15px;
+
     display:flex;
+
     justify-content:space-between;
+
     align-items:center;
+
     gap:25px;
+
     border:1px solid #e1e6ec;
 }
 
@@ -529,47 +1122,76 @@ section{
     color:#687386;
 }
 
-/* ================= CONTACTO ================= */
+
+/* =====================================================
+   CONTACTO
+===================================================== */
 
 .contact{
-    background:linear-gradient(135deg,#07111f,#123a61);
+
+    background:
+    linear-gradient(
+        135deg,
+        #07111f,
+        #123a61
+    );
+
     color:white;
 }
 
 .contact-grid{
+
     display:grid;
+
     grid-template-columns:1fr 1fr;
+
     gap:60px;
+
     align-items:center;
 }
 
 .contact-text h2{
+
     font-size:clamp(40px,5vw,60px);
+
     line-height:1;
+
     margin-bottom:20px;
 }
 
 .contact-text p{
+
     color:#c3d0dc;
+
     font-size:17px;
+
     margin-bottom:25px;
 }
 
 .phone{
+
     font-size:30px;
+
     font-weight:900;
+
     margin-top:25px;
 }
 
 .contact-card{
+
     background:white;
+
     color:#17202a;
+
     padding:35px;
+
     border-radius:15px;
 }
 
 .contact-card h3{
+
     font-size:25px;
+
     margin-bottom:20px;
 }
 
@@ -578,41 +1200,64 @@ section{
 }
 
 .contact-row label{
+
     display:block;
+
     font-size:13px;
+
     font-weight:bold;
+
     margin-bottom:5px;
 }
 
 .contact-row input,
 .contact-row select,
 .contact-row textarea{
+
     width:100%;
+
     padding:13px;
+
     border:1px solid #dce2e9;
+
     border-radius:7px;
+
     font-family:inherit;
 }
 
 .contact-row textarea{
+
     min-height:100px;
+
     resize:vertical;
 }
 
 .submit{
+
     width:100%;
+
     border:0;
+
     cursor:pointer;
+
     font-size:15px;
 }
 
-/* ================= FOOTER ================= */
+
+/* =====================================================
+   FOOTER
+===================================================== */
 
 footer{
+
     background:#04080e;
+
     color:#8794a2;
+
     text-align:center;
+
     padding:35px 5%;
+
     font-size:13px;
 }
 
@@ -620,39 +1265,59 @@ footer strong{
     color:white;
 }
 
-/* ================= WHATSAPP ================= */
+
+/* =====================================================
+   WHATSAPP
+===================================================== */
 
 .whatsapp{
+
     position:fixed;
+
     right:20px;
+
     bottom:20px;
+
     width:62px;
+
     height:62px;
+
     border-radius:50%;
+
     background:#25d366;
+
     color:white;
+
     display:flex;
+
     align-items:center;
+
     justify-content:center;
+
     font-size:30px;
+
     z-index:5000;
+
     box-shadow:0 8px 30px rgba(0,0,0,.3);
 }
 
-/* ================= MOBILE ================= */
 
-@media(max-width:900px){
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:1000px){
 
     nav{
         gap:10px;
     }
 
     nav a{
-        font-size:12px;
+        font-size:11px;
     }
 
-    .nav-button{
-        display:none;
+    .partner-grid{
+        grid-template-columns:1fr 1fr;
     }
 
     .services,
@@ -668,25 +1333,32 @@ footer strong{
 
 }
 
-@media(max-width:650px){
+@media(max-width:700px){
 
     header{
+
         flex-direction:column;
+
         gap:12px;
+
         padding:15px 4%;
     }
 
     nav{
+
         justify-content:center;
+
         flex-wrap:wrap;
     }
 
     nav a{
-        font-size:11px;
+        font-size:10px;
     }
 
     .hero{
+
         padding:80px 0;
+
         min-height:650px;
     }
 
@@ -703,12 +1375,16 @@ footer strong{
     }
 
     .trust{
+
         grid-template-columns:1fr 1fr;
     }
 
     .trust div{
+
         border:none;
+
         font-size:12px;
+
         padding:17px 5px;
     }
 
@@ -718,6 +1394,62 @@ footer strong{
 
     .services,
     .drain-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .partner-grid{
+
+        grid-template-columns:1fr 1fr;
+
+        gap:10px;
+    }
+
+    .partner-card{
+
+        padding:20px 10px;
+
+        min-height:190px;
+    }
+
+    .partner-logo{
+
+        font-size:19px;
+
+        height:45px;
+    }
+
+    .partner-card h3{
+        font-size:15px;
+    }
+
+    .partner-card p{
+        font-size:11px;
+    }
+
+    .partner-link{
+        font-size:10px;
+        padding:8px 10px;
+    }
+
+    .review-platforms{
+        grid-template-columns:1fr;
+    }
+
+    .review-platform{
+
+        grid-template-columns:55px 1fr;
+    }
+
+    .review-button{
+
+        grid-column:1 / 3;
+
+        text-align:center;
+    }
+
+    .testimonials{
+
         grid-template-columns:1fr;
     }
 
@@ -726,7 +1458,9 @@ footer strong{
     }
 
     .gallery-grid{
+
         grid-template-columns:1fr 1fr;
+
         grid-template-rows:180px 180px 180px;
     }
 
@@ -739,8 +1473,11 @@ footer strong{
     }
 
     .area-box{
+
         flex-direction:column;
+
         align-items:flex-start;
+
         padding:28px;
     }
 
@@ -749,7 +1486,9 @@ footer strong{
     }
 
     .about-dark{
+
         min-height:330px;
+
         padding:35px;
     }
 
@@ -758,20 +1497,29 @@ footer strong{
     }
 
     .whatsapp{
+
         width:58px;
+
         height:58px;
+
         right:15px;
+
         bottom:15px;
     }
 
 }
 
 </style>
+
 </head>
+
 
 <body>
 
-<!-- ================= HEADER ================= -->
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
 
 <header>
 
@@ -783,9 +1531,11 @@ M. Cavaleiro<span>.</span>
 
 <a href="#servicos">Serviços</a>
 
-<a href="#eletrodomesticos">Eletrodomésticos</a>
-
 <a href="#desentupimentos">Desentupimentos</a>
+
+<a href="#parcerias">Presença</a>
+
+<a href="#avaliacoes">Avaliações</a>
 
 <a href="#sobre">Sobre</a>
 
@@ -798,7 +1548,9 @@ Contactar
 </header>
 
 
-<!-- ================= HERO ================= -->
+<!-- =====================================================
+     HERO
+===================================================== -->
 
 <section class="hero">
 
@@ -816,10 +1568,12 @@ O problema aparece.<br>
 </h1>
 
 <p>
+
 Reparação e assistência técnica profissional
 de eletrodomésticos, ar condicionado,
 refrigeração, eletricidade, canalização
 e desentupimentos.
+
 </p>
 
 <div class="buttons">
@@ -869,7 +1623,9 @@ href="tel:+351931369411">
 </section>
 
 
-<!-- ================= TRUST ================= -->
+<!-- =====================================================
+     TRUST
+===================================================== -->
 
 <div class="trust">
 
@@ -884,7 +1640,9 @@ href="tel:+351931369411">
 </div>
 
 
-<!-- ================= SERVIÇOS ================= -->
+<!-- =====================================================
+     SERVIÇOS
+===================================================== -->
 
 <section id="servicos">
 
@@ -921,11 +1679,17 @@ Reparação e diagnóstico de equipamentos domésticos.
 </p>
 
 <ul>
+
 <li>Máquinas de lavar roupa</li>
+
 <li>Máquinas de lavar loiça</li>
+
 <li>Frigoríficos</li>
+
 <li>Fornos e placas</li>
+
 <li>Secadores</li>
+
 </ul>
 
 </div>
@@ -942,10 +1706,15 @@ Instalação, manutenção, diagnóstico e reparação.
 </p>
 
 <ul>
+
 <li>Instalação</li>
+
 <li>Manutenção</li>
+
 <li>Diagnóstico</li>
+
 <li>Deteção de fugas</li>
+
 </ul>
 
 </div>
@@ -962,10 +1731,15 @@ Assistência a equipamentos frigoríficos domésticos e comerciais.
 </p>
 
 <ul>
+
 <li>Frigoríficos</li>
+
 <li>Congeladores</li>
+
 <li>Arcas</li>
+
 <li>Sistemas frigoríficos</li>
+
 </ul>
 
 </div>
@@ -982,10 +1756,15 @@ Diagnóstico e reparação de problemas elétricos.
 </p>
 
 <ul>
+
 <li>Diagnóstico</li>
+
 <li>Reparações</li>
+
 <li>Ligações</li>
+
 <li>Equipamentos</li>
+
 </ul>
 
 </div>
@@ -1002,10 +1781,15 @@ Reparação e manutenção de instalações hidráulicas.
 </p>
 
 <ul>
+
 <li>Fugas</li>
+
 <li>Torneiras</li>
+
 <li>Ligações</li>
+
 <li>Reparações</li>
+
 </ul>
 
 </div>
@@ -1022,10 +1806,15 @@ Desentupimento de instalações e tubagens.
 </p>
 
 <ul>
+
 <li>Sanitas</li>
+
 <li>Lavatórios</li>
+
 <li>Lava-loiças</li>
+
 <li>Duches</li>
+
 </ul>
 
 </div>
@@ -1038,7 +1827,9 @@ Desentupimento de instalações e tubagens.
 </section>
 
 
-<!-- ================= DESENTUPIMENTOS ================= -->
+<!-- =====================================================
+     DESENTUPIMENTOS
+===================================================== -->
 
 <section id="desentupimentos" class="desentupimentos">
 
@@ -1062,6 +1853,7 @@ obstruções e canalizações domésticas.
 
 
 <div class="drain-grid">
+
 
 <div class="drain">
 
@@ -1167,7 +1959,368 @@ target="_blank">
 </section>
 
 
-<!-- ================= ELETRODOMÉSTICOS ================= -->
+<!-- =====================================================
+     PRESENÇA / PARCERIAS
+===================================================== -->
+
+<section id="parcerias" class="partners">
+
+<div class="container">
+
+<div class="section-top">
+
+<small>Presença profissional</small>
+
+<h2>
+Onde também<br>
+nos pode encontrar.
+</h2>
+
+<p>
+A M. Cavaleiro Reparações está presente
+em plataformas e redes profissionais,
+facilitando o contacto e a contratação
+dos nossos serviços.
+</p>
+
+</div>
+
+
+<div class="partner-grid">
+
+
+<div class="partner-card">
+
+<div class="partner-logo worten">
+WORTEN
+</div>
+
+<h3>Worten Resolve</h3>
+
+<p>
+Rede de serviços e assistência técnica.
+</p>
+
+<a
+class="partner-link"
+href="https://www.worten.pt/resolve/bem-vindo"
+target="_blank"
+rel="noopener">
+
+VISITAR
+
+</a>
+
+</div>
+
+
+<div class="partner-card">
+
+<div class="partner-logo fixando">
+FIXANDO
+</div>
+
+<h3>Fixando</h3>
+
+<p>
+Perfil profissional da
+M. Cavaleiro Reparações.
+</p>
+
+<a
+class="partner-link"
+href="https://www.fixando.pt/profile/343325/mcavaleiroreparacoes"
+target="_blank"
+rel="noopener">
+
+VER PERFIL
+
+</a>
+
+</div>
+
+
+<div class="partner-card">
+
+<div class="partner-logo zaask">
+ZAASK
+</div>
+
+<h3>Zaask</h3>
+
+<p>
+Presença em plataforma profissional
+de serviços.
+</p>
+
+<a
+class="partner-link"
+href="https://www.zaask.pt"
+target="_blank"
+rel="noopener">
+
+VISITAR
+
+</a>
+
+</div>
+
+
+<div class="partner-card">
+
+<div class="partner-logo fixo">
+FIXO
+</div>
+
+<h3>Fixo</h3>
+
+<p>
+Presença em rede profissional
+de serviços.
+</p>
+
+<div
+class="partner-link"
+style="background:#e8edf3;color:#17202a;">
+
+PRESENÇA
+
+</div>
+
+</div>
+
+
+</div>
+
+
+<div class="partner-note">
+
+As referências a plataformas e redes profissionais
+destinam-se a indicar a presença da M. Cavaleiro
+Reparações nesses canais. As marcas pertencem
+aos respetivos titulares.
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     AVALIAÇÕES
+===================================================== -->
+
+<section id="avaliacoes" class="reviews">
+
+<div class="container">
+
+<div class="section-top">
+
+<small>A opinião dos nossos clientes</small>
+
+<h2>
+Confiança que se<br>
+constrói no trabalho.
+</h2>
+
+<p>
+A qualidade do nosso serviço é também
+avaliada pelos nossos clientes.
+</p>
+
+</div>
+
+
+<div class="review-platforms">
+
+
+<!-- GOOGLE -->
+
+<div class="review-platform">
+
+<div class="review-logo google">
+G
+</div>
+
+<div>
+
+<h3>Google</h3>
+
+<div class="stars">
+★★★★★
+</div>
+
+<strong>
+4,8 / 5
+</strong>
+
+<p>
+20 avaliações
+</p>
+
+</div>
+
+<a
+class="review-button"
+href="https://www.google.com/search?q=M.Cavaleiro+Reparações"
+target="_blank"
+rel="noopener">
+
+VER GOOGLE →
+
+</a>
+
+</div>
+
+
+<!-- FIXANDO -->
+
+<div class="review-platform">
+
+<div class="review-logo fixando-review">
+F
+</div>
+
+<div>
+
+<h3>Fixando</h3>
+
+<div class="stars">
+★★★★★
+</div>
+
+<strong>
+4,7 / 5
+</strong>
+
+<p>
+114 avaliações
+</p>
+
+</div>
+
+<a
+class="review-button"
+href="https://www.fixando.pt/profile/343325/mcavaleiroreparacoes"
+target="_blank"
+rel="noopener">
+
+VER FIXANDO →
+
+</a>
+
+</div>
+
+</div>
+
+
+<div class="testimonials">
+
+
+<div class="testimonial">
+
+<div class="testimonial-stars">
+★★★★★
+</div>
+
+<p>
+“Muito simpático e prestativo.
+Profissional honesto. Recomendo
+sem dúvidas.”
+</p>
+
+<strong>
+Cliente Fixando
+</strong>
+
+<span>
+Reparação de eletrodomésticos
+</span>
+
+</div>
+
+
+<div class="testimonial">
+
+<div class="testimonial-stars">
+★★★★★
+</div>
+
+<p>
+“Excelente profissional, muito
+competente, deu logo com o problema
+e resolveu-o.”
+</p>
+
+<strong>
+Cliente Fixando
+</strong>
+
+<span>
+Assistência técnica
+</span>
+
+</div>
+
+
+<div class="testimonial">
+
+<div class="testimonial-stars">
+★★★★★
+</div>
+
+<p>
+“Profissional, honesto, pontual
+e competente.”
+</p>
+
+<strong>
+Cliente Fixando
+</strong>
+
+<span>
+Reparação de equipamentos
+</span>
+
+</div>
+
+
+</div>
+
+
+<div class="review-bottom">
+
+<a
+class="btn btn-orange"
+href="https://www.google.com/search?q=M.Cavaleiro+Reparações"
+target="_blank"
+rel="noopener">
+
+⭐ VER AVALIAÇÕES GOOGLE
+
+</a>
+
+<a
+class="btn btn-outline-dark"
+href="https://www.fixando.pt/profile/343325/mcavaleiroreparacoes"
+target="_blank"
+rel="noopener">
+
+⭐ VER AVALIAÇÕES FIXANDO
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     ELETRODOMÉSTICOS
+===================================================== -->
 
 <section id="eletrodomesticos" class="appliances">
 
@@ -1183,22 +2336,57 @@ class="appliance-svg"
 viewBox="0 0 500 500"
 xmlns="http://www.w3.org/2000/svg">
 
-<rect x="120" y="40" width="260" height="420" rx="20" fill="#e9eef4"/>
+<rect
+x="120"
+y="40"
+width="260"
+height="420"
+rx="20"
+fill="#e9eef4"/>
 
-<rect x="145" y="70" width="210" height="70" rx="10" fill="#17202a"/>
+<rect
+x="145"
+y="70"
+width="210"
+height="70"
+rx="10"
+fill="#17202a"/>
 
-<circle cx="250" cy="105" r="18" fill="#f5a623"/>
+<circle
+cx="250"
+cy="105"
+r="18"
+fill="#f5a623"/>
 
-<circle cx="250" cy="285" r="105" fill="#c9d3dd"/>
+<circle
+cx="250"
+cy="285"
+r="105"
+fill="#c9d3dd"/>
 
-<circle cx="250" cy="285" r="80" fill="#17202a"/>
+<circle
+cx="250"
+cy="285"
+r="80"
+fill="#17202a"/>
 
-<circle cx="250" cy="285" r="58" fill="#40617e"/>
+<circle
+cx="250"
+cy="285"
+r="58"
+fill="#40617e"/>
 
-<path d="M205 285 C220 250 280 250 295 285 C280 320 220 320 205 285Z"
+<path
+d="M205 285 C220 250 280 250 295 285 C280 320 220 320 205 285Z"
 fill="#9cc7e8"/>
 
-<rect x="170" y="400" width="160" height="20" rx="10" fill="#17202a"/>
+<rect
+x="170"
+y="400"
+width="160"
+height="20"
+rx="10"
+fill="#17202a"/>
 
 </svg>
 
@@ -1226,12 +2414,19 @@ o equipamento.
 <div class="appliance-list">
 
 <div>🧺 Máquina de lavar roupa</div>
+
 <div>🍽️ Máquina de lavar loiça</div>
+
 <div>🧊 Frigorífico</div>
+
 <div>❄️ Congelador</div>
+
 <div>🔥 Forno</div>
+
 <div>⚡ Placa</div>
+
 <div>👕 Secador</div>
+
 <div>💨 Exaustor</div>
 
 </div>
@@ -1242,7 +2437,7 @@ class="btn btn-whatsapp"
 href="https://wa.me/351931369411?text=Olá,%20preciso%20de%20reparação%20de%20um%20eletrodoméstico."
 target="_blank">
 
-💬 Pedir reparação
+💬 PEDIR REPARAÇÃO
 
 </a>
 
@@ -1255,7 +2450,9 @@ target="_blank">
 </section>
 
 
-<!-- ================= GALERIA ================= -->
+<!-- =====================================================
+     GALERIA
+===================================================== -->
 
 <section class="gallery">
 
@@ -1281,30 +2478,72 @@ serviços da M. Cavaleiro Reparações.
 <div class="gallery-grid">
 
 
-<!-- FOTO 1 -->
-
 <div class="gallery-card">
 
-<svg class="gallery-svg" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+<svg
+class="gallery-svg"
+viewBox="0 0 800 600"
+xmlns="http://www.w3.org/2000/svg">
 
 <defs>
-<linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
-<stop offset="0" stop-color="#0b2238"/>
-<stop offset="1" stop-color="#1768a5"/>
+
+<linearGradient
+id="g1"
+x1="0"
+y1="0"
+x2="1"
+y2="1">
+
+<stop
+offset="0"
+stop-color="#0b2238"/>
+
+<stop
+offset="1"
+stop-color="#1768a5"/>
+
 </linearGradient>
+
 </defs>
 
-<rect width="800" height="600" fill="url(#g1)"/>
+<rect
+width="800"
+height="600"
+fill="url(#g1)"/>
 
-<rect x="180" y="80" width="440" height="420" rx="25" fill="#e8edf2"/>
+<rect
+x="180"
+y="80"
+width="440"
+height="420"
+rx="25"
+fill="#e8edf2"/>
 
-<circle cx="400" cy="310" r="130" fill="#1b2b3a"/>
+<circle
+cx="400"
+cy="310"
+r="130"
+fill="#1b2b3a"/>
 
-<circle cx="400" cy="310" r="95" fill="#5481a4"/>
+<circle
+cx="400"
+cy="310"
+r="95"
+fill="#5481a4"/>
 
-<circle cx="400" cy="310" r="65" fill="#a9d0ea"/>
+<circle
+cx="400"
+cy="310"
+r="65"
+fill="#a9d0ea"/>
 
-<rect x="240" y="110" width="320" height="55" rx="10" fill="#182431"/>
+<rect
+x="240"
+y="110"
+width="320"
+height="55"
+rx="10"
+fill="#182431"/>
 
 </svg>
 
@@ -1315,23 +2554,49 @@ Eletrodomésticos
 </div>
 
 
-<!-- FOTO 2 -->
-
 <div class="gallery-card">
 
-<svg class="gallery-svg" viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
+<svg
+class="gallery-svg"
+viewBox="0 0 500 400"
+xmlns="http://www.w3.org/2000/svg">
 
-<rect width="500" height="400" fill="#dfeaf3"/>
+<rect
+width="500"
+height="400"
+fill="#dfeaf3"/>
 
-<rect x="50" y="80" width="400" height="200" rx="20" fill="#ffffff"/>
+<rect
+x="50"
+y="80"
+width="400"
+height="200"
+rx="20"
+fill="#ffffff"/>
 
-<rect x="90" y="120" width="320" height="90" rx="10" fill="#182b3d"/>
+<rect
+x="90"
+y="120"
+width="320"
+height="90"
+rx="10"
+fill="#182b3d"/>
 
-<circle cx="140" cy="165" r="25" fill="#f5a623"/>
+<circle
+cx="140"
+cy="165"
+r="25"
+fill="#f5a623"/>
 
-<path d="M250 280 L250 350" stroke="#17202a" stroke-width="12"/>
+<path
+d="M250 280 L250 350"
+stroke="#17202a"
+stroke-width="12"/>
 
-<path d="M190 350 L310 350" stroke="#17202a" stroke-width="12"/>
+<path
+d="M190 350 L310 350"
+stroke="#17202a"
+stroke-width="12"/>
 
 </svg>
 
@@ -1342,21 +2607,46 @@ Ar condicionado
 </div>
 
 
-<!-- FOTO 3 -->
-
 <div class="gallery-card">
 
-<svg class="gallery-svg" viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
+<svg
+class="gallery-svg"
+viewBox="0 0 500 400"
+xmlns="http://www.w3.org/2000/svg">
 
-<rect width="500" height="400" fill="#12283d"/>
+<rect
+width="500"
+height="400"
+fill="#12283d"/>
 
-<rect x="100" y="60" width="300" height="280" rx="18" fill="#dce4ea"/>
+<rect
+x="100"
+y="60"
+width="300"
+height="280"
+rx="18"
+fill="#dce4ea"/>
 
-<rect x="130" y="90" width="240" height="180" rx="12" fill="#273c50"/>
+<rect
+x="130"
+y="90"
+width="240"
+height="180"
+rx="12"
+fill="#273c50"/>
 
-<rect x="155" y="115" width="190" height="120" fill="#7eb4d6"/>
+<rect
+x="155"
+y="115"
+width="190"
+height="120"
+fill="#7eb4d6"/>
 
-<circle cx="250" cy="175" r="25" fill="#e8f5ff"/>
+<circle
+cx="250"
+cy="175"
+r="25"
+fill="#e8f5ff"/>
 
 </svg>
 
@@ -1367,19 +2657,33 @@ Refrigeração
 </div>
 
 
-<!-- FOTO 4 -->
-
 <div class="gallery-card">
 
-<svg class="gallery-svg" viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
+<svg
+class="gallery-svg"
+viewBox="0 0 500 400"
+xmlns="http://www.w3.org/2000/svg">
 
-<rect width="500" height="400" fill="#17202a"/>
+<rect
+width="500"
+height="400"
+fill="#17202a"/>
 
-<path d="M250 50 V350" stroke="#f5a623" stroke-width="25"/>
+<path
+d="M250 50 V350"
+stroke="#f5a623"
+stroke-width="25"/>
 
-<path d="M100 200 H400" stroke="#1479ff" stroke-width="25"/>
+<path
+d="M100 200 H400"
+stroke="#1479ff"
+stroke-width="25"/>
 
-<circle cx="250" cy="200" r="60" fill="#e9eef4"/>
+<circle
+cx="250"
+cy="200"
+r="60"
+fill="#e9eef4"/>
 
 </svg>
 
@@ -1390,18 +2694,24 @@ Eletricidade
 </div>
 
 
-<!-- FOTO 5 -->
-
 <div class="gallery-card">
 
-<svg class="gallery-svg" viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
+<svg
+class="gallery-svg"
+viewBox="0 0 500 400"
+xmlns="http://www.w3.org/2000/svg">
 
-<rect width="500" height="400" fill="#dcebf2"/>
+<rect
+width="500"
+height="400"
+fill="#dcebf2"/>
 
-<path d="M250 40 C150 120 150 230 250 350 C350 230 350 120 250 40Z"
+<path
+d="M250 40 C150 120 150 230 250 350 C350 230 350 120 250 40Z"
 fill="#1479ff"/>
 
-<path d="M250 90 C195 145 195 210 250 280 C305 210 305 145 250 90Z"
+<path
+d="M250 90 C195 145 195 210 250 280 C305 210 305 145 250 90Z"
 fill="#8bd2ff"/>
 
 </svg>
@@ -1420,7 +2730,9 @@ Canalização
 </section>
 
 
-<!-- ================= SOBRE ================= -->
+<!-- =====================================================
+     SOBRE
+===================================================== -->
 
 <section id="sobre" class="about">
 
@@ -1470,8 +2782,11 @@ eletricidade e canalização.
 <div class="advantages">
 
 <div>✓ Diagnóstico técnico</div>
+
 <div>✓ Atendimento profissional</div>
+
 <div>✓ Soluções personalizadas</div>
+
 <div>✓ Particulares e empresas</div>
 
 </div>
@@ -1485,7 +2800,9 @@ eletricidade e canalização.
 </section>
 
 
-<!-- ================= ÁREA ================= -->
+<!-- =====================================================
+     ÁREA
+===================================================== -->
 
 <section class="area">
 
@@ -1511,7 +2828,7 @@ class="btn btn-orange"
 href="https://wa.me/351931369411?text=Olá,%20gostaria%20de%20saber%20se%20fazem%20assistência%20na%20minha%20zona."
 target="_blank">
 
-📍 Consultar disponibilidade
+📍 CONSULTAR DISPONIBILIDADE
 
 </a>
 
@@ -1522,7 +2839,9 @@ target="_blank">
 </section>
 
 
-<!-- ================= CONTACTO ================= -->
+<!-- =====================================================
+     CONTACTO
+===================================================== -->
 
 <section id="contactos" class="contact">
 
@@ -1551,7 +2870,7 @@ class="btn btn-whatsapp"
 href="https://wa.me/351931369411?text=Olá%20M.%20Cavaleiro%20Reparações,%20preciso%20de%20assistência."
 target="_blank">
 
-💬 WhatsApp
+💬 WHATSAPP
 
 </a>
 
@@ -1570,6 +2889,7 @@ Pedir assistência
 
 <form id="whatsappForm">
 
+
 <div class="contact-row">
 
 <label>Nome</label>
@@ -1587,18 +2907,26 @@ required>
 
 <label>Serviço</label>
 
-<select id="servico" required>
+<select
+id="servico"
+required>
 
 <option value="">
 Selecionar serviço
 </option>
 
 <option>Eletrodomésticos</option>
+
 <option>Ar Condicionado</option>
+
 <option>Refrigeração</option>
+
 <option>Eletricidade</option>
+
 <option>Canalização</option>
+
 <option>Desentupimentos</option>
+
 <option>Outro</option>
 
 </select>
@@ -1650,7 +2978,9 @@ type="submit">
 </section>
 
 
-<!-- ================= FOOTER ================= -->
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
 <footer>
 
@@ -1679,7 +3009,9 @@ Todos os direitos reservados.
 </footer>
 
 
-<!-- ================= WHATSAPP ================= -->
+<!-- =====================================================
+     WHATSAPP FLUTUANTE
+===================================================== -->
 
 <a
 class="whatsapp"
@@ -1692,13 +3024,17 @@ aria-label="WhatsApp">
 </a>
 
 
-<!-- ================= SCRIPT ================= -->
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
 
 <script>
 
 document
 .getElementById("whatsappForm")
-.addEventListener("submit",function(e){
+.addEventListener(
+"submit",
+function(e){
 
 e.preventDefault();
 
@@ -1714,21 +3050,51 @@ document.getElementById("local").value;
 const mensagem =
 document.getElementById("mensagem").value;
 
+
 const texto =
-"Olá M. Cavaleiro Reparações!%0A%0A"+
-"Nome: "+encodeURIComponent(nome)+
-"%0AServiço: "+encodeURIComponent(servico)+
-"%0ALocalidade: "+encodeURIComponent(local)+
-"%0AProblema: "+encodeURIComponent(mensagem);
+
+"Olá M. Cavaleiro Reparações!%0A%0A"
+
++
+
+"Nome: "
++
+encodeURIComponent(nome)
+
++
+
+"%0AServiço: "
++
+encodeURIComponent(servico)
+
++
+
+"%0ALocalidade: "
++
+encodeURIComponent(local)
+
++
+
+"%0AProblema: "
++
+encodeURIComponent(mensagem);
+
 
 window.open(
-"https://wa.me/351931369411?text="+texto,
+
+"https://wa.me/351931369411?text="
++
+texto,
+
 "_blank"
+
 );
 
 });
 
 </script>
 
+
 </body>
+
 </html>
