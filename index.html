@@ -4,17 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description" content="M Cavaleiro Reparações - Reparação de eletrodomésticos, máquinas de lavar, máquinas de lavar loiça, frigoríficos, fornos, placas, ar condicionado e refrigeração em Lisboa e arredores.">
-  <meta name="keywords" content="reparação eletrodomésticos Lisboa, técnico eletrodomésticos, máquinas lavar roupa, máquinas lavar loiça, frigoríficos, fornos, placas, ar condicionado, refrigeração">
-  <meta name="author" content="M Cavaleiro Reparações">
+  <title>M. Cavaleiro Reparações | Assistência Técnica</title>
 
-  <title>M Cavaleiro Reparações | Eletrodomésticos, AC e Refrigeração</title>
+  <meta name="description" content="M. Cavaleiro Reparações - Assistência técnica de eletrodomésticos, ar condicionado, refrigeração, eletricidade e canalização. Lisboa e arredores. Contacte-nos pelo WhatsApp.">
+
+  <meta name="keywords" content="M Cavaleiro Reparações, reparação eletrodomésticos Lisboa, assistência técnica Lisboa, reparação máquinas lavar, reparação frigoríficos, reparação máquinas loiça, ar condicionado Lisboa, refrigeração Lisboa">
+
+  <meta name="author" content="M. Cavaleiro Reparações">
+
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:title" content="M. Cavaleiro Reparações">
+  <meta property="og:description" content="Assistência técnica profissional de eletrodomésticos, ar condicionado e refrigeração.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mcavaleiro.pt">
 
   <style>
+
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
     html {
@@ -23,31 +33,38 @@
 
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background: #f5f7fa;
+      background: #f4f6f8;
       color: #17202a;
       line-height: 1.6;
     }
 
+    /* HEADER */
+
     header {
-      background: #111827;
-      color: white;
-      padding: 18px 6%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
       position: sticky;
       top: 0;
       z-index: 1000;
-      box-shadow: 0 2px 15px rgba(0,0,0,0.15);
+
+      background: #101820;
+      color: white;
+
+      padding: 18px 6%;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      box-shadow: 0 3px 20px rgba(0,0,0,.18);
     }
 
     .logo {
       font-size: 25px;
-      font-weight: 800;
+      font-weight: 900;
+      letter-spacing: -.5px;
     }
 
     .logo span {
-      color: #f59e0b;
+      color: #f5a400;
     }
 
     nav a {
@@ -55,53 +72,77 @@
       text-decoration: none;
       margin-left: 25px;
       font-weight: 600;
-      transition: 0.2s;
+      transition: .2s;
     }
 
     nav a:hover {
-      color: #f59e0b;
+      color: #f5a400;
     }
 
+    /* HERO */
+
     .hero {
-      min-height: 82vh;
+      min-height: 88vh;
+
       display: flex;
       align-items: center;
+
       padding: 80px 6%;
+
       background:
-        linear-gradient(135deg, rgba(17,24,39,0.98), rgba(38,52,71,0.95));
+        linear-gradient(
+          135deg,
+          rgba(10,18,28,.98),
+          rgba(27,43,59,.96)
+        );
+
       color: white;
     }
 
     .hero-content {
-      max-width: 850px;
+      max-width: 900px;
     }
 
-    .tag {
+    .badge {
       display: inline-block;
-      background: rgba(245,158,11,0.15);
-      color: #f59e0b;
-      border: 1px solid rgba(245,158,11,0.4);
-      padding: 8px 15px;
-      border-radius: 30px;
-      font-weight: 700;
-      margin-bottom: 20px;
-    }
 
-    .hero h1 {
-      font-size: clamp(42px, 6vw, 72px);
-      line-height: 1.05;
+      padding: 8px 16px;
+
+      border-radius: 50px;
+
+      background: rgba(245,164,0,.12);
+
+      border: 1px solid rgba(245,164,0,.45);
+
+      color: #f5a400;
+
+      font-weight: 700;
+
       margin-bottom: 25px;
     }
 
+    .hero h1 {
+      font-size: clamp(44px, 7vw, 78px);
+
+      line-height: 1.02;
+
+      margin-bottom: 25px;
+
+      letter-spacing: -2px;
+    }
+
     .hero h1 span {
-      color: #f59e0b;
+      color: #f5a400;
     }
 
     .hero p {
-      font-size: 20px;
-      color: #d1d5db;
-      margin-bottom: 35px;
       max-width: 720px;
+
+      font-size: 20px;
+
+      color: #d5dbe1;
+
+      margin-bottom: 35px;
     }
 
     .buttons {
@@ -110,94 +151,242 @@
       flex-wrap: wrap;
     }
 
-    .button {
+    .btn {
       display: inline-block;
-      padding: 15px 25px;
-      border-radius: 8px;
+
+      padding: 16px 26px;
+
+      border-radius: 9px;
+
       text-decoration: none;
-      font-weight: 700;
-      transition: 0.2s;
+
+      font-weight: 800;
+
+      transition: .2s;
     }
 
-    .button:hover {
-      transform: translateY(-2px);
+    .btn:hover {
+      transform: translateY(-3px);
     }
 
-    .primary {
-      background: #f59e0b;
-      color: #111827;
+    .btn-primary {
+      background: #f5a400;
+      color: #101820;
     }
 
-    .secondary {
+    .btn-whatsapp {
+      background: #25D366;
+      color: white;
+    }
+
+    .btn-outline {
       border: 2px solid white;
       color: white;
     }
 
-    section {
-      padding: 85px 6%;
-    }
+    /* TRUST */
 
-    .section-title {
+    .trust {
+      background: white;
+
+      padding: 30px 6%;
+
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
       text-align: center;
-      margin-bottom: 50px;
+
+      box-shadow: 0 3px 15px rgba(0,0,0,.06);
     }
 
-    .section-title h2 {
-      font-size: 38px;
-      margin-bottom: 10px;
+    .trust strong {
+      display: block;
+
+      font-size: 18px;
     }
 
-    .section-title p {
+    .trust span {
       color: #6b7280;
+      font-size: 14px;
+    }
+
+    /* SECTIONS */
+
+    section {
+      padding: 90px 6%;
+    }
+
+    .section-header {
+      text-align: center;
+
+      max-width: 750px;
+
+      margin: 0 auto 55px;
+    }
+
+    .section-header h2 {
+      font-size: 40px;
+
+      margin-bottom: 12px;
+    }
+
+    .section-header p {
+      color: #68717c;
+
       font-size: 17px;
     }
 
+    /* SERVICES */
+
     .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 25px;
       max-width: 1200px;
+
       margin: auto;
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+
+      gap: 25px;
     }
 
     .service {
       background: white;
-      padding: 30px;
-      border-radius: 14px;
-      box-shadow: 0 5px 25px rgba(0,0,0,0.07);
-      transition: transform 0.2s, box-shadow 0.2s;
+
+      padding: 32px;
+
+      border-radius: 15px;
+
+      box-shadow: 0 8px 30px rgba(0,0,0,.07);
+
       border-top: 4px solid transparent;
+
+      transition: .25s;
     }
 
     .service:hover {
-      transform: translateY(-5px);
-      border-top-color: #f59e0b;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.10);
+      transform: translateY(-7px);
+
+      border-top-color: #f5a400;
+
+      box-shadow: 0 15px 35px rgba(0,0,0,.12);
     }
 
-    .service-icon {
-      font-size: 42px;
-      margin-bottom: 15px;
+    .icon {
+      font-size: 44px;
+
+      margin-bottom: 18px;
     }
 
     .service h3 {
-      margin-bottom: 10px;
       font-size: 22px;
+
+      margin-bottom: 12px;
     }
 
     .service p {
-      color: #6b7280;
+      color: #68717c;
     }
 
-    .brands {
-      margin-top: 45px;
-      text-align: center;
-      color: #6b7280;
+    .service ul {
+      list-style: none;
+
+      margin-top: 18px;
     }
 
-    .brands strong {
+    .service li {
+      margin-bottom: 7px;
+
+      color: #4b5563;
+    }
+
+    .service li::before {
+      content: "✓";
+
+      color: #f5a400;
+
+      font-weight: bold;
+
+      margin-right: 8px;
+    }
+
+    /* FEATURED */
+
+    .featured {
+      background: #101820;
+
+      color: white;
+    }
+
+    .featured .section-header p {
+      color: #cbd5df;
+    }
+
+    .featured-box {
+      max-width: 1100px;
+
+      margin: auto;
+
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 40px;
+
+      align-items: center;
+    }
+
+    .featured-text h3 {
+      font-size: 34px;
+
+      margin-bottom: 20px;
+    }
+
+    .featured-text p {
+      color: #cbd5df;
+
+      margin-bottom: 20px;
+    }
+
+    .featured-list {
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 12px;
+
+      margin-top: 25px;
+    }
+
+    .featured-list div {
+      background: rgba(255,255,255,.06);
+
+      padding: 12px;
+
+      border-radius: 8px;
+    }
+
+    .featured-card {
+      background: white;
+
       color: #17202a;
+
+      padding: 35px;
+
+      border-radius: 18px;
+
+      box-shadow: 0 15px 45px rgba(0,0,0,.25);
     }
+
+    .featured-card h3 {
+      font-size: 25px;
+
+      margin-bottom: 15px;
+    }
+
+    /* ABOUT */
 
     .about {
       background: white;
@@ -205,104 +394,181 @@
 
     .about-content {
       max-width: 900px;
+
       margin: auto;
+
       text-align: center;
+
       font-size: 18px;
     }
 
-    .about-boxes {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
+    .about-grid {
       max-width: 1000px;
+
       margin: 45px auto 0;
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(auto-fit, minmax(210px, 1fr));
+
+      gap: 20px;
     }
 
-    .about-box {
-      background: #f5f7fa;
+    .about-card {
+      background: #f4f6f8;
+
       padding: 25px;
+
       border-radius: 12px;
+
       text-align: center;
     }
 
-    .about-box strong {
+    .about-card strong {
       display: block;
-      font-size: 20px;
-      margin-bottom: 5px;
+
+      font-size: 19px;
+
+      margin-bottom: 6px;
     }
+
+    /* AREAS */
+
+    .areas {
+      text-align: center;
+
+      background: #f4f6f8;
+    }
+
+    .areas-box {
+      max-width: 900px;
+
+      margin: auto;
+
+      background: white;
+
+      padding: 35px;
+
+      border-radius: 15px;
+
+      box-shadow: 0 8px 30px rgba(0,0,0,.06);
+    }
+
+    .areas-box p {
+      color: #68717c;
+
+      margin-top: 10px;
+    }
+
+    /* CONTACT */
 
     .contact {
-      background: #111827;
+      background: #101820;
+
       color: white;
+
       text-align: center;
     }
 
-    .contact .section-title p {
-      color: #d1d5db;
+    .contact .section-header p {
+      color: #cbd5df;
     }
 
-    .contact-info {
-      margin: 30px 0;
-      font-size: 20px;
+    .phone {
+      font-size: 28px;
+
+      font-weight: 800;
+
+      margin: 25px 0;
     }
 
-    .whatsapp {
-      background: #25D366;
-      color: white;
-      font-size: 18px;
-      padding: 17px 30px;
-    }
+    /* FOOTER */
 
     footer {
-      background: #080c14;
+      background: #080c12;
+
       color: #9ca3af;
+
       text-align: center;
+
       padding: 25px;
     }
+
+    /* FLOAT WHATSAPP */
 
     .whatsapp-float {
       position: fixed;
+
       right: 22px;
+
       bottom: 22px;
-      width: 62px;
-      height: 62px;
+
+      width: 64px;
+
+      height: 64px;
+
       background: #25D366;
+
       color: white;
+
       border-radius: 50%;
+
       display: flex;
+
       align-items: center;
+
       justify-content: center;
-      font-size: 30px;
+
+      font-size: 31px;
+
       text-decoration: none;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+
+      box-shadow: 0 7px 25px rgba(0,0,0,.3);
+
       z-index: 2000;
+
+      transition: .2s;
     }
 
-    @media (max-width: 700px) {
+    .whatsapp-float:hover {
+      transform: scale(1.08);
+    }
+
+    /* MOBILE */
+
+    @media(max-width:700px) {
 
       header {
         flex-direction: column;
+
         gap: 15px;
       }
 
       nav {
         display: flex;
+
         flex-wrap: wrap;
+
         justify-content: center;
       }
 
       nav a {
-        margin: 0 8px;
-        font-size: 14px;
+        margin: 0 7px;
+
+        font-size: 13px;
       }
 
       .hero {
-        min-height: 75vh;
+        min-height: 78vh;
+
         padding: 65px 5%;
       }
 
       .hero h1 {
-        font-size: 44px;
+        font-size: 45px;
+
+        letter-spacing: -1px;
       }
 
       .hero p {
@@ -310,373 +576,562 @@
       }
 
       section {
-        padding: 60px 5%;
+        padding: 65px 5%;
       }
 
-      .section-title h2 {
+      .section-header h2 {
         font-size: 32px;
+      }
+
+      .trust {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+      }
+
+      .featured-box {
+        grid-template-columns: 1fr;
+      }
+
+      .featured-list {
+        grid-template-columns: 1fr;
+      }
+
+      .phone {
+        font-size: 24px;
       }
 
       .whatsapp-float {
         width: 58px;
+
         height: 58px;
+
         right: 18px;
+
         bottom: 18px;
       }
+
     }
+
   </style>
+
 </head>
 
+
 <body>
+
+
+<!-- HEADER -->
 
 <header>
 
   <div class="logo">
-    M Cavaleiro<span>.</span>
+    M. Cavaleiro<span>.</span>
   </div>
 
   <nav>
+
     <a href="#servicos">Serviços</a>
+
     <a href="#eletrodomesticos">Eletrodomésticos</a>
+
     <a href="#sobre">Sobre</a>
+
     <a href="#contactos">Contactos</a>
+
   </nav>
 
 </header>
 
 
-<main>
+<!-- HERO -->
 
-  <!-- HERO -->
+<section class="hero">
 
-  <section class="hero">
+  <div class="hero-content">
 
-    <div class="hero-content">
-
-      <div class="tag">
-        🔧 Assistência Técnica Profissional
-      </div>
-
-      <h1>
-        Reparações profissionais.<br>
-        <span>Sem complicações.</span>
-      </h1>
-
-      <p>
-        Reparação e assistência técnica de eletrodomésticos,
-        ar condicionado, refrigeração, eletricidade e canalização.
-        Atendimento profissional para particulares e empresas.
-      </p>
-
-      <div class="buttons">
-
-        <a
-          class="button whatsapp"
-          href="https://wa.me/351931369411?text=Olá%20M%20Cavaleiro%20Reparações,%20preciso%20de%20assistência."
-          target="_blank">
-          💬 Pedir assistência pelo WhatsApp
-        </a>
-
-        <a class="button secondary" href="#servicos">
-          Ver serviços
-        </a>
-
-      </div>
-
+    <div class="badge">
+      🔧 Assistência Técnica Profissional
     </div>
 
-  </section>
-
-
-  <!-- SERVIÇOS -->
-
-  <section id="servicos">
-
-    <div class="section-title">
-
-      <h2>Os nossos serviços</h2>
-
-      <p>
-        Assistência técnica profissional para particulares e empresas.
-      </p>
-
-    </div>
-
-
-    <div class="services">
-
-
-      <!-- ELETRODOMÉSTICOS -->
-
-      <div class="service" id="eletrodomesticos">
-
-        <div class="service-icon">🔧</div>
-
-        <h3>Eletrodomésticos</h3>
-
-        <p>
-          Diagnóstico e reparação de eletrodomésticos
-          domésticos e equipamentos de cozinha.
-        </p>
-
-        <br>
-
-        <p>
-          • Máquinas de lavar roupa<br>
-          • Máquinas de lavar loiça<br>
-          • Frigoríficos<br>
-          • Congeladores<br>
-          • Fornos<br>
-          • Placas<br>
-          • Secadores de roupa<br>
-          • Exaustores
-        </p>
-
-      </div>
-
-
-      <!-- AR CONDICIONADO -->
-
-      <div class="service">
-
-        <div class="service-icon">❄️</div>
-
-        <h3>Ar Condicionado</h3>
-
-        <p>
-          Instalação, manutenção, diagnóstico e reparação
-          de sistemas de ar condicionado.
-        </p>
-
-        <br>
-
-        <p>
-          • Instalação<br>
-          • Manutenção<br>
-          • Diagnóstico de avarias<br>
-          • Deteção de fugas<br>
-          • Recuperação de refrigerante<br>
-          • Vácuo e carga de refrigerante
-        </p>
-
-      </div>
-
-
-      <!-- REFRIGERAÇÃO -->
-
-      <div class="service">
-
-        <div class="service-icon">🧊</div>
-
-        <h3>Refrigeração</h3>
-
-        <p>
-          Diagnóstico e reparação de equipamentos
-          de refrigeração domésticos e comerciais.
-        </p>
-
-        <br>
-
-        <p>
-          • Frigoríficos<br>
-          • Congeladores<br>
-          • Arcas congeladoras<br>
-          • Equipamentos comerciais<br>
-          • Sistemas frigoríficos
-        </p>
-
-      </div>
-
-
-      <!-- ELETRICIDADE -->
-
-      <div class="service">
-
-        <div class="service-icon">⚡</div>
-
-        <h3>Eletricidade</h3>
-
-        <p>
-          Reparações e intervenções elétricas em
-          equipamentos e instalações.
-        </p>
-
-        <br>
-
-        <p>
-          • Diagnóstico elétrico<br>
-          • Reparação de avarias<br>
-          • Ligações elétricas<br>
-          • Equipamentos domésticos
-        </p>
-
-      </div>
-
-
-      <!-- CANALIZAÇÃO -->
-
-      <div class="service">
-
-        <div class="service-icon">🚿</div>
-
-        <h3>Canalização</h3>
-
-        <p>
-          Reparação e manutenção de instalações
-          e equipamentos hidráulicos.
-        </p>
-
-        <br>
-
-        <p>
-          • Fugas de água<br>
-          • Torneiras<br>
-          • Ligações hidráulicas<br>
-          • Equipamentos domésticos
-        </p>
-
-      </div>
-
-    </div>
-
-
-    <div class="brands">
-
-      <p>
-        <strong>Trabalhamos com diversas marcas de equipamentos.</strong>
-      </p>
-
-      <p>
-        Bosch · Siemens · Whirlpool · Samsung · LG · Beko · Candy ·
-        Haier · Electrolux · AEG · Hotpoint · Indesit · Teka ·
-        Balay · Hisense e outras.
-      </p>
-
-    </div>
-
-  </section>
-
-
-  <!-- SOBRE -->
-
-  <section id="sobre" class="about">
-
-    <div class="section-title">
-
-      <h2>Experiência e confiança</h2>
-
-      <p>
-        Uma solução profissional para cada avaria.
-      </p>
-
-    </div>
-
-
-    <div class="about-content">
-
-      <p>
-        A <strong>M Cavaleiro Reparações</strong> presta serviços
-        de assistência técnica com foco na qualidade,
-        rapidez e resolução eficaz dos problemas.
-      </p>
-
-      <br>
-
-      <p>
-        O nosso trabalho abrange eletrodomésticos,
-        climatização, refrigeração, eletricidade e canalização,
-        permitindo oferecer ao cliente uma solução técnica
-        completa.
-      </p>
-
-    </div>
-
-
-    <div class="about-boxes">
-
-      <div class="about-box">
-
-        <strong>🔧 Diagnóstico</strong>
-
-        Identificação da origem da avaria.
-
-      </div>
-
-
-      <div class="about-box">
-
-        <strong>⚡ Soluções</strong>
-
-        Reparação adequada ao equipamento.
-
-      </div>
-
-
-      <div class="about-box">
-
-        <strong>⏱️ Rapidez</strong>
-
-        Procuramos resolver o problema de forma eficiente.
-
-      </div>
-
-
-      <div class="about-box">
-
-        <strong>🤝 Confiança</strong>
-
-        Atendimento profissional e transparente.
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- CONTACTOS -->
-
-  <section id="contactos" class="contact">
-
-    <div class="section-title">
-
-      <h2>Precisa de assistência?</h2>
-
-      <p>
-        Envie-nos uma mensagem pelo WhatsApp.
-      </p>
-
-    </div>
-
-
-    <div class="contact-info">
-
-      📱 <strong>931 369 411</strong>
-
-    </div>
-
-
-    <div class="buttons" style="justify-content:center;">
+    <h1>
+      M. Cavaleiro<br>
+      <span>Reparações</span>
+    </h1>
+
+    <p>
+      Reparação e assistência técnica de
+      eletrodomésticos, ar condicionado,
+      refrigeração, eletricidade e canalização.
+      Atendimento profissional em Lisboa e arredores.
+    </p>
+
+    <div class="buttons">
 
       <a
-        class="button whatsapp"
-        href="https://wa.me/351931369411?text=Olá%20M%20Cavaleiro%20Reparações,%20preciso%20de%20assistência."
+        class="btn btn-whatsapp"
+        href="https://wa.me/351931369411?text=Olá%20M.%20Cavaleiro%20Reparações,%20preciso%20de%20assistência."
         target="_blank">
 
-        💬 Falar pelo WhatsApp
+        💬 Pedir assistência
+
+      </a>
+
+      <a
+        class="btn btn-outline"
+        href="#servicos">
+
+        Ver serviços
 
       </a>
 
     </div>
 
-  </section>
+  </div>
 
-</main>
+</section>
 
+
+<!-- TRUST -->
+
+<div class="trust">
+
+  <div>
+
+    <strong>🔧 Assistência técnica</strong>
+
+    <span>Diagnóstico e reparação</span>
+
+  </div>
+
+  <div>
+
+    <strong>⚡ Soluções profissionais</strong>
+
+    <span>Particulares e empresas</span>
+
+  </div>
+
+  <div>
+
+    <strong>📍 Lisboa e arredores</strong>
+
+    <span>Serviço no local</span>
+
+  </div>
+
+</div>
+
+
+<!-- SERVICES -->
+
+<section id="servicos">
+
+  <div class="section-header">
+
+    <h2>Serviços</h2>
+
+    <p>
+      Soluções técnicas para equipamentos domésticos
+      e instalações.
+    </p>
+
+  </div>
+
+
+  <div class="services">
+
+
+    <!-- ELETRODOMÉSTICOS -->
+
+    <div class="service" id="eletrodomesticos">
+
+      <div class="icon">🔧</div>
+
+      <h3>Reparação de Eletrodomésticos</h3>
+
+      <p>
+        Diagnóstico e reparação de equipamentos
+        domésticos de várias marcas.
+      </p>
+
+      <ul>
+
+        <li>Máquinas de lavar roupa</li>
+
+        <li>Máquinas de lavar loiça</li>
+
+        <li>Frigoríficos</li>
+
+        <li>Congeladores</li>
+
+        <li>Fornos</li>
+
+        <li>Placas</li>
+
+        <li>Secadores de roupa</li>
+
+        <li>Exaustores</li>
+
+      </ul>
+
+    </div>
+
+
+    <!-- AC -->
+
+    <div class="service">
+
+      <div class="icon">❄️</div>
+
+      <h3>Ar Condicionado</h3>
+
+      <p>
+        Instalação, manutenção e reparação
+        de sistemas de climatização.
+      </p>
+
+      <ul>
+
+        <li>Instalação de AC</li>
+
+        <li>Manutenção</li>
+
+        <li>Diagnóstico de avarias</li>
+
+        <li>Deteção de fugas</li>
+
+        <li>Recuperação de refrigerante</li>
+
+        <li>Vácuo e carga</li>
+
+      </ul>
+
+    </div>
+
+
+    <!-- REFRIGERAÇÃO -->
+
+    <div class="service">
+
+      <div class="icon">🧊</div>
+
+      <h3>Refrigeração</h3>
+
+      <p>
+        Assistência técnica a equipamentos
+        frigoríficos domésticos e comerciais.
+      </p>
+
+      <ul>
+
+        <li>Frigoríficos</li>
+
+        <li>Congeladores</li>
+
+        <li>Arcas congeladoras</li>
+
+        <li>Equipamentos comerciais</li>
+
+        <li>Diagnóstico frigorífico</li>
+
+      </ul>
+
+    </div>
+
+
+    <!-- ELETRICIDADE -->
+
+    <div class="service">
+
+      <div class="icon">⚡</div>
+
+      <h3>Eletricidade</h3>
+
+      <p>
+        Diagnóstico e reparação de avarias
+        elétricas em equipamentos e instalações.
+      </p>
+
+      <ul>
+
+        <li>Diagnóstico elétrico</li>
+
+        <li>Reparações</li>
+
+        <li>Ligações</li>
+
+        <li>Equipamentos domésticos</li>
+
+      </ul>
+
+    </div>
+
+
+    <!-- CANALIZAÇÃO -->
+
+    <div class="service">
+
+      <div class="icon">🚿</div>
+
+      <h3>Canalização</h3>
+
+      <p>
+        Reparação e manutenção de instalações
+        e equipamentos hidráulicos.
+      </p>
+
+      <ul>
+
+        <li>Fugas de água</li>
+
+        <li>Torneiras</li>
+
+        <li>Ligações hidráulicas</li>
+
+        <li>Equipamentos domésticos</li>
+
+      </ul>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<!-- ELETRODOMÉSTICOS DESTAQUE -->
+
+<section class="featured">
+
+  <div class="section-header">
+
+    <h2>Especialistas em Eletrodomésticos</h2>
+
+    <p>
+      O equipamento deixou de funcionar?
+      Nós ajudamos a encontrar a causa.
+    </p>
+
+  </div>
+
+
+  <div class="featured-box">
+
+
+    <div class="featured-text">
+
+      <h3>
+        Reparação no local
+      </h3>
+
+      <p>
+        Fazemos diagnóstico e reparação de
+        diversos tipos de eletrodomésticos,
+        procurando uma solução rápida e eficaz.
+      </p>
+
+      <div class="featured-list">
+
+        <div>✓ Máquina de lavar roupa</div>
+
+        <div>✓ Máquina de lavar loiça</div>
+
+        <div>✓ Frigorífico</div>
+
+        <div>✓ Congelador</div>
+
+        <div>✓ Forno</div>
+
+        <div>✓ Placa</div>
+
+        <div>✓ Secador</div>
+
+        <div>✓ Exaustor</div>
+
+      </div>
+
+    </div>
+
+
+    <div class="featured-card">
+
+      <h3>
+        Precisa de assistência?
+      </h3>
+
+      <p>
+        Envie uma mensagem pelo WhatsApp
+        com o equipamento e, se possível,
+        uma fotografia da máquina e da avaria.
+      </p>
+
+      <br>
+
+      <a
+        class="btn btn-whatsapp"
+        href="https://wa.me/351931369411?text=Olá,%20preciso%20de%20reparação%20de%20um%20eletrodoméstico.%20O%20equipamento%20é:"
+        target="_blank">
+
+        💬 Contactar pelo WhatsApp
+
+      </a>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="sobre" class="about">
+
+  <div class="section-header">
+
+    <h2>Porquê escolher a M. Cavaleiro?</h2>
+
+    <p>
+      Experiência, diagnóstico e uma abordagem
+      profissional a cada intervenção.
+    </p>
+
+  </div>
+
+
+  <div class="about-content">
+
+    <p>
+      A <strong>M. Cavaleiro Reparações</strong>
+      presta assistência técnica a particulares
+      e empresas, com foco na resolução eficaz
+      das avarias.
+    </p>
+
+    <br>
+
+    <p>
+      Trabalhamos com diferentes tipos de
+      equipamentos e sistemas técnicos,
+      procurando apresentar ao cliente uma
+      solução clara e adequada.
+    </p>
+
+  </div>
+
+
+  <div class="about-grid">
+
+    <div class="about-card">
+
+      <strong>🔎 Diagnóstico</strong>
+
+      Identificação da origem da avaria.
+
+    </div>
+
+    <div class="about-card">
+
+      <strong>🛠️ Experiência</strong>
+
+      Conhecimento técnico multidisciplinar.
+
+    </div>
+
+    <div class="about-card">
+
+      <strong>⚡ Eficiência</strong>
+
+      Procuramos resolver o problema
+      de forma rápida e eficaz.
+
+    </div>
+
+    <div class="about-card">
+
+      <strong>🤝 Transparência</strong>
+
+      Comunicação clara com o cliente.
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ÁREA -->
+
+<section class="areas">
+
+  <div class="section-header">
+
+    <h2>Zona de atendimento</h2>
+
+    <p>
+      Assistência técnica em Lisboa e arredores.
+    </p>
+
+  </div>
+
+
+  <div class="areas-box">
+
+    <strong>
+      📍 Lisboa e região envolvente
+    </strong>
+
+    <p>
+      Para confirmar disponibilidade na sua zona,
+      entre em contacto através do WhatsApp.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contactos" class="contact">
+
+  <div class="section-header">
+
+    <h2>Precisa de assistência?</h2>
+
+    <p>
+      Fale diretamente connosco pelo WhatsApp.
+    </p>
+
+  </div>
+
+
+  <div class="phone">
+    📱 931 369 411
+  </div>
+
+
+  <a
+    class="btn btn-whatsapp"
+    href="https://wa.me/351931369411?text=Olá%20M.%20Cavaleiro%20Reparações,%20preciso%20de%20assistência."
+    target="_blank">
+
+    💬 Falar pelo WhatsApp
+
+  </a>
+
+</section>
+
+
+<!-- FOOTER -->
 
 <footer>
 
-  © 2026 M Cavaleiro Reparações — Todos os direitos reservados.
+  © 2026 M. Cavaleiro Reparações —
+  Todos os direitos reservados.
 
 </footer>
 
@@ -685,13 +1140,14 @@
 
 <a
   class="whatsapp-float"
-  href="https://wa.me/351931369411?text=Olá%20M%20Cavaleiro%20Reparações,%20preciso%20de%20assistência."
+  href="https://wa.me/351931369411?text=Olá%20M.%20Cavaleiro%20Reparações,%20preciso%20de%20assistência."
   target="_blank"
-  aria-label="Contactar pelo WhatsApp">
+  aria-label="WhatsApp">
 
   💬
 
 </a>
+
 
 </body>
 </html>
