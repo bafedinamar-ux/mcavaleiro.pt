@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="M Cavaleiro Reparações - Reparação de eletrodomésticos, ar condicionado, refrigeração, eletricidade e canalização.">
+  <title>M Cavaleiro Reparações</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f7fa;
+      color: #17202a;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #111827;
+      color: white;
+      padding: 20px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 800;
+    }
+
+    .logo span {
+      color: #f59e0b;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 25px;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: #f59e0b;
+    }
+
+    .hero {
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      padding: 70px 6%;
+      background: linear-gradient(135deg, #111827, #263447);
+      color: white;
+    }
+
+    .hero-content {
+      max-width: 800px;
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 6vw, 72px);
+      line-height: 1.05;
+      margin-bottom: 25px;
+    }
+
+    .hero h1 span {
+      color: #f59e0b;
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: #d1d5db;
+      margin-bottom: 35px;
+      max-width: 650px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 15px 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .primary {
+      background: #f59e0b;
+      color: #111827;
+    }
+
+    .secondary {
+      border: 2px solid white;
+      color: white;
+    }
+
+    section {
+      padding: 80px 6%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h2 {
+      font-size: 38px;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: #6b7280;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 25px;
+    }
+
+    .service {
+      background: white;
+      padding: 30px;
+      border-radius: 14px;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.07);
+      transition: transform 0.2s;
+    }
+
+    .service:hover {
+      transform: translateY(-5px);
+    }
+
+    .service-icon {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .service h3 {
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+
+    .service p {
+      color: #6b7280;
+    }
+
+    .about {
+      background: white;
+    }
+
+    .about-content {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+      font-size: 18px;
+    }
+
+    .contact {
+      background: #111827;
+      color: white;
+      text-align: center;
+    }
+
+    .contact p {
+      color: #d1d5db;
+      margin-bottom: 25px;
+    }
+
+    footer {
+      background: #080c14;
+      color: #9ca3af;
+      text-align: center;
+      padding: 25px;
+    }
+
+    @media (max-width: 700px) {
+      header {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      nav a {
+        margin: 0 8px;
+        font-size: 14px;
+      }
+
+      .hero {
+        min-height: 75vh;
+      }
+
+      section {
+        padding: 60px 5%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">M Cavaleiro<span>.</span></div>
+
+    <nav>
+      <a href="#servicos">Serviços</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contactos">Contactos</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Reparações profissionais.<br><span>Sem complicações.</span></h1>
+
+        <p>
+          Reparação e assistência técnica de eletrodomésticos,
+          ar condicionado, refrigeração, eletricidade e canalização.
+        </p>
+
+        <div class="buttons">
+          <a class="button primary" href="#contactos">
+            Pedir orçamento
+          </a>
+
+          <a class="button secondary" href="tel:+351000000000">
+            Ligar agora
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicos">
+
+      <div class="section-title">
+        <h2>Os nossos serviços</h2>
+        <p>Assistência técnica profissional para particulares e empresas.</p>
+      </div>
+
+      <div class="services">
+
+        <div class="service">
+          <div class="service-icon">🔧</div>
+          <h3>Eletrodomésticos</h3>
+          <p>
+            Reparação de máquinas de lavar, loiça, frigoríficos,
+            fornos, placas e outros equipamentos.
+          </p>
+        </div>
+
+        <div class="service">
+          <div class="service-icon">❄️</div>
+          <h3>Ar Condicionado</h3>
+          <p>
+            Instalação, manutenção, diagnóstico e reparação
+            de sistemas de ar condicionado.
+          </p>
+        </div>
+
+        <div class="service">
+          <div class="service-icon">🧊</div>
+          <h3>Refrigeração</h3>
+          <p>
+            Diagnóstico e reparação de sistemas de refrigeração
+            domésticos e comerciais.
+          </p>
+        </div>
+
+        <div class="service">
+          <div class="service-icon">⚡</div>
+          <h3>Eletricidade</h3>
+          <p>
+            Reparações e intervenções elétricas em instalações
+            e equipamentos.
+          </p>
+        </div>
+
+        <div class="service">
+          <div class="service-icon">🚿</div>
+          <h3>Canalização</h3>
+          <p>
+            Reparação e manutenção de instalações e equipamentos
+            hidráulicos.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="sobre" class="about">
+
+      <div class="section-title">
+        <h2>Experiência e confiança</h2>
+      </div>
+
+      <div class="about-content">
+        <p>
+          A M Cavaleiro Reparações presta serviços de assistência técnica
+          com foco na qualidade, rapidez e resolução eficaz dos problemas.
+        </p>
+
+        <br>
+
+        <p>
+          Trabalhamos com equipamentos domésticos e sistemas técnicos,
+          procurando sempre apresentar ao cliente uma solução clara
+          e profissional.
+        </p>
+      </div>
+
+    </section>
+
+    <section id="contactos" class="contact">
+
+      <div class="section-title">
+        <h2>Precisa de assistência?</h2>
+        <p>
+          Entre em contacto para pedir informações ou orçamento.
+        </p>
+      </div>
+
+      <div class="buttons" style="justify-content:center;">
+
+        <a class="button primary" href="tel:+351000000000">
+          📞 Ligar
+        </a>
+
+        <a class="button secondary"
+           href="https://wa.me/351000000000"
+           target="_blank">
+          💬 WhatsApp
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    © 2026 M Cavaleiro Reparações — Todos os direitos reservados.
+  </footer>
+
+</body>
+</html>
