@@ -3,14 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="M Cavaleiro Reparações - Reparação de eletrodomésticos, ar condicionado, refrigeração, eletricidade e canalização.">
-  <title>M Cavaleiro Reparações</title>
+
+  <meta name="description" content="M Cavaleiro Reparações - Reparação de eletrodomésticos, máquinas de lavar, máquinas de lavar loiça, frigoríficos, fornos, placas, ar condicionado e refrigeração em Lisboa e arredores.">
+  <meta name="keywords" content="reparação eletrodomésticos Lisboa, técnico eletrodomésticos, máquinas lavar roupa, máquinas lavar loiça, frigoríficos, fornos, placas, ar condicionado, refrigeração">
+  <meta name="author" content="M Cavaleiro Reparações">
+
+  <title>M Cavaleiro Reparações | Eletrodomésticos, AC e Refrigeração</title>
 
   <style>
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
@@ -23,17 +31,18 @@
     header {
       background: #111827;
       color: white;
-      padding: 20px 6%;
+      padding: 18px 6%;
       display: flex;
       justify-content: space-between;
       align-items: center;
       position: sticky;
       top: 0;
       z-index: 1000;
+      box-shadow: 0 2px 15px rgba(0,0,0,0.15);
     }
 
     .logo {
-      font-size: 24px;
+      font-size: 25px;
       font-weight: 800;
     }
 
@@ -46,6 +55,7 @@
       text-decoration: none;
       margin-left: 25px;
       font-weight: 600;
+      transition: 0.2s;
     }
 
     nav a:hover {
@@ -53,16 +63,28 @@
     }
 
     .hero {
-      min-height: 80vh;
+      min-height: 82vh;
       display: flex;
       align-items: center;
-      padding: 70px 6%;
-      background: linear-gradient(135deg, #111827, #263447);
+      padding: 80px 6%;
+      background:
+        linear-gradient(135deg, rgba(17,24,39,0.98), rgba(38,52,71,0.95));
       color: white;
     }
 
     .hero-content {
-      max-width: 800px;
+      max-width: 850px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: rgba(245,158,11,0.15);
+      color: #f59e0b;
+      border: 1px solid rgba(245,158,11,0.4);
+      padding: 8px 15px;
+      border-radius: 30px;
+      font-weight: 700;
+      margin-bottom: 20px;
     }
 
     .hero h1 {
@@ -79,7 +101,7 @@
       font-size: 20px;
       color: #d1d5db;
       margin-bottom: 35px;
-      max-width: 650px;
+      max-width: 720px;
     }
 
     .buttons {
@@ -94,6 +116,11 @@
       border-radius: 8px;
       text-decoration: none;
       font-weight: 700;
+      transition: 0.2s;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
     }
 
     .primary {
@@ -107,7 +134,7 @@
     }
 
     section {
-      padding: 80px 6%;
+      padding: 85px 6%;
     }
 
     .section-title {
@@ -122,12 +149,15 @@
 
     .section-title p {
       color: #6b7280;
+      font-size: 17px;
     }
 
     .services {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 25px;
+      max-width: 1200px;
+      margin: auto;
     }
 
     .service {
@@ -135,11 +165,14 @@
       padding: 30px;
       border-radius: 14px;
       box-shadow: 0 5px 25px rgba(0,0,0,0.07);
-      transition: transform 0.2s;
+      transition: transform 0.2s, box-shadow 0.2s;
+      border-top: 4px solid transparent;
     }
 
     .service:hover {
       transform: translateY(-5px);
+      border-top-color: #f59e0b;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.10);
     }
 
     .service-icon {
@@ -156,6 +189,16 @@
       color: #6b7280;
     }
 
+    .brands {
+      margin-top: 45px;
+      text-align: center;
+      color: #6b7280;
+    }
+
+    .brands strong {
+      color: #17202a;
+    }
+
     .about {
       background: white;
     }
@@ -167,15 +210,47 @@
       font-size: 18px;
     }
 
+    .about-boxes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 45px auto 0;
+    }
+
+    .about-box {
+      background: #f5f7fa;
+      padding: 25px;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .about-box strong {
+      display: block;
+      font-size: 20px;
+      margin-bottom: 5px;
+    }
+
     .contact {
       background: #111827;
       color: white;
       text-align: center;
     }
 
-    .contact p {
+    .contact .section-title p {
       color: #d1d5db;
-      margin-bottom: 25px;
+    }
+
+    .contact-info {
+      margin: 30px 0;
+      font-size: 20px;
+    }
+
+    .whatsapp {
+      background: #25D366;
+      color: white;
+      font-size: 18px;
+      padding: 17px 30px;
     }
 
     footer {
@@ -185,10 +260,35 @@
       padding: 25px;
     }
 
+    .whatsapp-float {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      width: 62px;
+      height: 62px;
+      background: #25D366;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      text-decoration: none;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+      z-index: 2000;
+    }
+
     @media (max-width: 700px) {
+
       header {
         flex-direction: column;
         gap: 15px;
+      }
+
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
       }
 
       nav a {
@@ -198,10 +298,30 @@
 
       .hero {
         min-height: 75vh;
+        padding: 65px 5%;
+      }
+
+      .hero h1 {
+        font-size: 44px;
+      }
+
+      .hero p {
+        font-size: 18px;
       }
 
       section {
         padding: 60px 5%;
+      }
+
+      .section-title h2 {
+        font-size: 32px;
+      }
+
+      .whatsapp-float {
+        width: 58px;
+        height: 58px;
+        right: 18px;
+        bottom: 18px;
       }
     }
   </style>
@@ -209,149 +329,369 @@
 
 <body>
 
-  <header>
-    <div class="logo">M Cavaleiro<span>.</span></div>
+<header>
 
-    <nav>
-      <a href="#servicos">Serviços</a>
-      <a href="#sobre">Sobre</a>
-      <a href="#contactos">Contactos</a>
-    </nav>
-  </header>
+  <div class="logo">
+    M Cavaleiro<span>.</span>
+  </div>
 
-  <main>
+  <nav>
+    <a href="#servicos">Serviços</a>
+    <a href="#eletrodomesticos">Eletrodomésticos</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#contactos">Contactos</a>
+  </nav>
 
-    <section class="hero">
-      <div class="hero-content">
-        <h1>Reparações profissionais.<br><span>Sem complicações.</span></h1>
+</header>
+
+
+<main>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <div class="tag">
+        🔧 Assistência Técnica Profissional
+      </div>
+
+      <h1>
+        Reparações profissionais.<br>
+        <span>Sem complicações.</span>
+      </h1>
+
+      <p>
+        Reparação e assistência técnica de eletrodomésticos,
+        ar condicionado, refrigeração, eletricidade e canalização.
+        Atendimento profissional para particulares e empresas.
+      </p>
+
+      <div class="buttons">
+
+        <a
+          class="button whatsapp"
+          href="https://wa.me/351931369411?text=Olá%20M%20Cavaleiro%20Reparações,%20preciso%20de%20assistência."
+          target="_blank">
+          💬 Pedir assistência pelo WhatsApp
+        </a>
+
+        <a class="button secondary" href="#servicos">
+          Ver serviços
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- SERVIÇOS -->
+
+  <section id="servicos">
+
+    <div class="section-title">
+
+      <h2>Os nossos serviços</h2>
+
+      <p>
+        Assistência técnica profissional para particulares e empresas.
+      </p>
+
+    </div>
+
+
+    <div class="services">
+
+
+      <!-- ELETRODOMÉSTICOS -->
+
+      <div class="service" id="eletrodomesticos">
+
+        <div class="service-icon">🔧</div>
+
+        <h3>Eletrodomésticos</h3>
 
         <p>
-          Reparação e assistência técnica de eletrodomésticos,
-          ar condicionado, refrigeração, eletricidade e canalização.
-        </p>
-
-        <div class="buttons">
-          <a class="button primary" href="#contactos">
-            Pedir orçamento
-          </a>
-
-          <a class="button secondary" href="tel:+351000000000">
-            Ligar agora
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section id="servicos">
-
-      <div class="section-title">
-        <h2>Os nossos serviços</h2>
-        <p>Assistência técnica profissional para particulares e empresas.</p>
-      </div>
-
-      <div class="services">
-
-        <div class="service">
-          <div class="service-icon">🔧</div>
-          <h3>Eletrodomésticos</h3>
-          <p>
-            Reparação de máquinas de lavar, loiça, frigoríficos,
-            fornos, placas e outros equipamentos.
-          </p>
-        </div>
-
-        <div class="service">
-          <div class="service-icon">❄️</div>
-          <h3>Ar Condicionado</h3>
-          <p>
-            Instalação, manutenção, diagnóstico e reparação
-            de sistemas de ar condicionado.
-          </p>
-        </div>
-
-        <div class="service">
-          <div class="service-icon">🧊</div>
-          <h3>Refrigeração</h3>
-          <p>
-            Diagnóstico e reparação de sistemas de refrigeração
-            domésticos e comerciais.
-          </p>
-        </div>
-
-        <div class="service">
-          <div class="service-icon">⚡</div>
-          <h3>Eletricidade</h3>
-          <p>
-            Reparações e intervenções elétricas em instalações
-            e equipamentos.
-          </p>
-        </div>
-
-        <div class="service">
-          <div class="service-icon">🚿</div>
-          <h3>Canalização</h3>
-          <p>
-            Reparação e manutenção de instalações e equipamentos
-            hidráulicos.
-          </p>
-        </div>
-
-      </div>
-    </section>
-
-    <section id="sobre" class="about">
-
-      <div class="section-title">
-        <h2>Experiência e confiança</h2>
-      </div>
-
-      <div class="about-content">
-        <p>
-          A M Cavaleiro Reparações presta serviços de assistência técnica
-          com foco na qualidade, rapidez e resolução eficaz dos problemas.
+          Diagnóstico e reparação de eletrodomésticos
+          domésticos e equipamentos de cozinha.
         </p>
 
         <br>
 
         <p>
-          Trabalhamos com equipamentos domésticos e sistemas técnicos,
-          procurando sempre apresentar ao cliente uma solução clara
-          e profissional.
+          • Máquinas de lavar roupa<br>
+          • Máquinas de lavar loiça<br>
+          • Frigoríficos<br>
+          • Congeladores<br>
+          • Fornos<br>
+          • Placas<br>
+          • Secadores de roupa<br>
+          • Exaustores
         </p>
+
       </div>
 
-    </section>
 
-    <section id="contactos" class="contact">
+      <!-- AR CONDICIONADO -->
 
-      <div class="section-title">
-        <h2>Precisa de assistência?</h2>
+      <div class="service">
+
+        <div class="service-icon">❄️</div>
+
+        <h3>Ar Condicionado</h3>
+
         <p>
-          Entre em contacto para pedir informações ou orçamento.
+          Instalação, manutenção, diagnóstico e reparação
+          de sistemas de ar condicionado.
         </p>
-      </div>
 
-      <div class="buttons" style="justify-content:center;">
+        <br>
 
-        <a class="button primary" href="tel:+351000000000">
-          📞 Ligar
-        </a>
-
-        <a class="button secondary"
-           href="https://wa.me/351000000000"
-           target="_blank">
-          💬 WhatsApp
-        </a>
+        <p>
+          • Instalação<br>
+          • Manutenção<br>
+          • Diagnóstico de avarias<br>
+          • Deteção de fugas<br>
+          • Recuperação de refrigerante<br>
+          • Vácuo e carga de refrigerante
+        </p>
 
       </div>
 
-    </section>
 
-  </main>
+      <!-- REFRIGERAÇÃO -->
 
-  <footer>
-    © 2026 M Cavaleiro Reparações — Todos os direitos reservados.
-  </footer>
+      <div class="service">
+
+        <div class="service-icon">🧊</div>
+
+        <h3>Refrigeração</h3>
+
+        <p>
+          Diagnóstico e reparação de equipamentos
+          de refrigeração domésticos e comerciais.
+        </p>
+
+        <br>
+
+        <p>
+          • Frigoríficos<br>
+          • Congeladores<br>
+          • Arcas congeladoras<br>
+          • Equipamentos comerciais<br>
+          • Sistemas frigoríficos
+        </p>
+
+      </div>
+
+
+      <!-- ELETRICIDADE -->
+
+      <div class="service">
+
+        <div class="service-icon">⚡</div>
+
+        <h3>Eletricidade</h3>
+
+        <p>
+          Reparações e intervenções elétricas em
+          equipamentos e instalações.
+        </p>
+
+        <br>
+
+        <p>
+          • Diagnóstico elétrico<br>
+          • Reparação de avarias<br>
+          • Ligações elétricas<br>
+          • Equipamentos domésticos
+        </p>
+
+      </div>
+
+
+      <!-- CANALIZAÇÃO -->
+
+      <div class="service">
+
+        <div class="service-icon">🚿</div>
+
+        <h3>Canalização</h3>
+
+        <p>
+          Reparação e manutenção de instalações
+          e equipamentos hidráulicos.
+        </p>
+
+        <br>
+
+        <p>
+          • Fugas de água<br>
+          • Torneiras<br>
+          • Ligações hidráulicas<br>
+          • Equipamentos domésticos
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="brands">
+
+      <p>
+        <strong>Trabalhamos com diversas marcas de equipamentos.</strong>
+      </p>
+
+      <p>
+        Bosch · Siemens · Whirlpool · Samsung · LG · Beko · Candy ·
+        Haier · Electrolux · AEG · Hotpoint · Indesit · Teka ·
+        Balay · Hisense e outras.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- SOBRE -->
+
+  <section id="sobre" class="about">
+
+    <div class="section-title">
+
+      <h2>Experiência e confiança</h2>
+
+      <p>
+        Uma solução profissional para cada avaria.
+      </p>
+
+    </div>
+
+
+    <div class="about-content">
+
+      <p>
+        A <strong>M Cavaleiro Reparações</strong> presta serviços
+        de assistência técnica com foco na qualidade,
+        rapidez e resolução eficaz dos problemas.
+      </p>
+
+      <br>
+
+      <p>
+        O nosso trabalho abrange eletrodomésticos,
+        climatização, refrigeração, eletricidade e canalização,
+        permitindo oferecer ao cliente uma solução técnica
+        completa.
+      </p>
+
+    </div>
+
+
+    <div class="about-boxes">
+
+      <div class="about-box">
+
+        <strong>🔧 Diagnóstico</strong>
+
+        Identificação da origem da avaria.
+
+      </div>
+
+
+      <div class="about-box">
+
+        <strong>⚡ Soluções</strong>
+
+        Reparação adequada ao equipamento.
+
+      </div>
+
+
+      <div class="about-box">
+
+        <strong>⏱️ Rapidez</strong>
+
+        Procuramos resolver o problema de forma eficiente.
+
+      </div>
+
+
+      <div class="about-box">
+
+        <strong>🤝 Confiança</strong>
+
+        Atendimento profissional e transparente.
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACTOS -->
+
+  <section id="contactos" class="contact">
+
+    <div class="section-title">
+
+      <h2>Precisa de assistência?</h2>
+
+      <p>
+        Envie-nos uma mensagem pelo WhatsApp.
+      </p>
+
+    </div>
+
+
+    <div class="contact-info">
+
+      📱 <strong>931 369 411</strong>
+
+    </div>
+
+
+    <div class="buttons" style="justify-content:center;">
+
+      <a
+        class="button whatsapp"
+        href="https://wa.me/351931369411?text=Olá%20M%20Cavaleiro%20Reparações,%20preciso%20de%20assistência."
+        target="_blank">
+
+        💬 Falar pelo WhatsApp
+
+      </a>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+<footer>
+
+  © 2026 M Cavaleiro Reparações — Todos os direitos reservados.
+
+</footer>
+
+
+<!-- WHATSAPP FLUTUANTE -->
+
+<a
+  class="whatsapp-float"
+  href="https://wa.me/351931369411?text=Olá%20M%20Cavaleiro%20Reparações,%20preciso%20de%20assistência."
+  target="_blank"
+  aria-label="Contactar pelo WhatsApp">
+
+  💬
+
+</a>
 
 </body>
 </html>
