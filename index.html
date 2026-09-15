@@ -1,2319 +1,2431 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-PT">
 <head>
-  <meta charset="UTF-8">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>M. Cavaleiro Reparações | Assistência Técnica em Lisboa e Margem Sul</title>
-
-  <meta
-    name="description"
-    content="M. Cavaleiro Reparações — assistência técnica ao domicílio em Lisboa e Margem Sul. Reparação de eletrodomésticos, frigoríficos, congeladores, ar condicionado e refrigeração."
-  >
-
-  <meta
-    name="keywords"
-    content="reparação eletrodomésticos Lisboa, assistência técnica Lisboa, técnico eletrodomésticos Lisboa, reparação frigoríficos Lisboa, ar condicionado Lisboa, assistência técnica Margem Sul, reparação Seixal, reparação Almada, reparação Amora, reparação Corroios"
-  >
-
-  <meta name="robots" content="index, follow, max-image-preview:large">
-
-  <link rel="canonical" href="https://mcavaleiro.pt/">
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="pt_PT">
-  <meta property="og:site_name" content="M. Cavaleiro Reparações">
-  <meta property="og:title" content="M. Cavaleiro Reparações | Assistência Técnica em Lisboa e Margem Sul">
-  <meta
-    property="og:description"
-    content="Assistência técnica ao domicílio para eletrodomésticos, frigoríficos, congeladores, ar condicionado e refrigeração."
-  >
-  <meta property="og:url" content="https://mcavaleiro.pt/">
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="M. Cavaleiro Reparações">
-  <meta
-    name="twitter:description"
-    content="Assistência técnica em Lisboa e Margem Sul."
-  >
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
-    rel="stylesheet"
-  >
-
-  <style>
-
-    :root {
-      --bg: #060a10;
-      --bg-soft: #0b111a;
-      --panel: #101925;
-      --panel-2: #0d151f;
-      --border: #223044;
-
-      --text: #f7f9fc;
-      --muted: #aab5c4;
-
-      --orange: #ff7900;
-      --orange-light: #ff9b42;
-
-      --blue: #349cff;
-      --green: #20d477;
-
-      --max: 1180px;
-
-      --radius: 18px;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      background:
-        radial-gradient(
-          circle at 80% -10%,
-          rgba(255, 121, 0, .12),
-          transparent 30%
-        ),
-        var(--bg);
-
-      color: var(--text);
-
-      font-family:
-        Inter,
-        system-ui,
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        sans-serif;
-
-      line-height: 1.6;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    button,
-    input,
-    textarea,
-    select {
-      font: inherit;
-    }
-
-    .container {
-      width: min(
-        var(--max),
-        calc(100% - 32px)
-      );
-
-      margin: auto;
-    }
-
-    /* =========================
-       HEADER
-    ========================= */
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-
-      background: rgba(6, 10, 16, .88);
-
-      backdrop-filter: blur(16px);
-
-      border-bottom:
-        1px solid rgba(255,255,255,.07);
-    }
-
-    .nav {
-      min-height: 72px;
-
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-
-      gap: 20px;
-    }
-
-    .logo {
-      font-size: 1.05rem;
-      font-weight: 900;
-
-      letter-spacing: -.04em;
-
-      white-space: nowrap;
-    }
-
-    .logo span {
-      color: var(--orange);
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 24px;
-    }
-
-    .nav-links a {
-      color: #c9d3df;
-      font-size: .92rem;
-      font-weight: 600;
-
-      transition: .2s;
-    }
-
-    .nav-links a:hover {
-      color: white;
-    }
-
-    .menu-btn {
-      display: none;
-
-      border: 0;
-      background: none;
-
-      color: white;
-
-      font-size: 1.6rem;
-
-      cursor: pointer;
-    }
-
-    /* =========================
-       BUTTONS
-    ========================= */
-
-    .btn {
-      display: inline-flex;
-
-      align-items: center;
-      justify-content: center;
-
-      gap: 8px;
-
-      min-height: 48px;
-
-      padding:
-        0 18px;
-
-      border-radius: 12px;
-
-      font-weight: 800;
-
-      border: 1px solid transparent;
-
-      cursor: pointer;
-
-      transition:
-        transform .2s,
-        background .2s,
-        border .2s;
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-    }
-
-    .btn-orange {
-      background: var(--orange);
-      color: #111;
-
-      box-shadow:
-        0 10px 30px rgba(255,121,0,.18);
-    }
-
-    .btn-orange:hover {
-      background: var(--orange-light);
-    }
-
-    .btn-dark {
-      background: #0d1621;
-      border-color: var(--border);
-
-      color: white;
-    }
-
-    /* =========================
-       HERO
-    ========================= */
-
-    .hero {
-      padding:
-        82px 0
-        55px;
-    }
-
-    .hero-grid {
-      display: grid;
-
-      grid-template-columns:
-        minmax(0, 1.2fr)
-        minmax(320px, .8fr);
-
-      gap: 50px;
-
-      align-items: center;
-    }
-
-    .eyebrow {
-      color: var(--orange-light);
-
-      text-transform: uppercase;
-
-      font-size: .76rem;
-
-      letter-spacing: .13em;
-
-      font-weight: 900;
-    }
-
-    .hero h1 {
-      margin:
-        12px 0
-        20px;
-
-      font-size:
-        clamp(
-          2.6rem,
-          6vw,
-          4.7rem
-        );
-
-      line-height: 1;
-
-      letter-spacing: -.06em;
-    }
-
-    .hero h1 span {
-      color: var(--orange);
-    }
-
-    .hero-text {
-      max-width: 720px;
-
-      color: var(--muted);
-
-      font-size: 1.08rem;
-    }
-
-    .hero-actions {
-      display: flex;
-
-      flex-wrap: wrap;
-
-      gap: 12px;
-
-      margin-top: 28px;
-    }
-
-    .hero-note {
-      margin-top: 17px;
-
-      color: #7f8c9d;
-
-      font-size: .84rem;
-    }
-
-    /* HERO CARD */
-
-    .hero-card {
-      background:
-        linear-gradient(
-          145deg,
-          #131e2c,
-          #0b121c
-        );
-
-      border:
-        1px solid var(--border);
-
-      border-radius: 24px;
-
-      padding: 28px;
-
-      box-shadow:
-        0 25px 70px rgba(0,0,0,.3);
-    }
-
-    .hero-card h2 {
-      margin-top: 0;
-
-      font-size: 1.25rem;
-    }
-
-    .hero-check {
-      display: flex;
-
-      align-items: flex-start;
-
-      gap: 11px;
-
-      margin:
-        15px 0;
-
-      color: #d9e2ed;
-    }
-
-    .hero-check strong {
-      color: var(--green);
-    }
-
-    /* =========================
-       TRUST BAR
-    ========================= */
-
-    .trust {
-      padding:
-        18px 0;
-
-      background: #080e17;
-
-      border-top:
-        1px solid var(--border);
-
-      border-bottom:
-        1px solid var(--border);
-    }
-
-    .trust-grid {
-      display: grid;
-
-      grid-template-columns:
-        repeat(4, 1fr);
-
-      gap: 18px;
-    }
-
-    .trust-item {
-      color: var(--muted);
-
-      font-size: .85rem;
-    }
-
-    .trust-item strong {
-      display: block;
-
-      color: white;
-
-      font-size: .98rem;
-    }
-
-    /* =========================
-       SECTIONS
-    ========================= */
-
-    section {
-      padding:
-        78px 0;
-    }
-
-    .section-head {
-      max-width: 760px;
-
-      margin-bottom: 34px;
-    }
-
-    .section-head h2 {
-      margin:
-        8px 0
-        12px;
-
-      font-size:
-        clamp(
-          1.9rem,
-          4vw,
-          2.8rem
-        );
-
-      line-height: 1.08;
-
-      letter-spacing: -.045em;
-    }
-
-    .section-head p {
-      color: var(--muted);
-
-      margin: 0;
-    }
-
-    /* =========================
-       SERVICES
-    ========================= */
-
-    .services-grid {
-      display: grid;
-
-      grid-template-columns:
-        repeat(3, 1fr);
-
-      gap: 16px;
-    }
-
-    .service-card {
-      display: block;
-
-      padding: 24px;
-
-      background: var(--panel);
-
-      border:
-        1px solid var(--border);
-
-      border-radius: var(--radius);
-
-      transition:
-        transform .2s,
-        border-color .2s;
-    }
-
-    .service-card:hover {
-      transform: translateY(-4px);
-
-      border-color:
-        #3a4c63;
-    }
-
-    .service-icon {
-      width: 46px;
-      height: 46px;
-
-      display: grid;
-      place-items: center;
-
-      border-radius: 13px;
-
-      background:
-        rgba(255,121,0,.12);
-
-      color: var(--orange);
-
-      font-size: 1.25rem;
-
-      margin-bottom: 15px;
-    }
-
-    .service-card h3 {
-      margin:
-        0 0
-        9px;
-
-      font-size: 1.1rem;
-    }
-
-    .service-card p {
-      margin: 0;
-
-      color: var(--muted);
-
-      font-size: .91rem;
-    }
-
-    /* =========================
-       EMERGENCY MARGEM SUL
-    ========================= */
-
-    .emergency {
-      padding:
-        0 0
-        20px;
-    }
-
-    .emergency-box {
-      padding: 24px 26px;
-
-      border:
-        1px solid
-        rgba(255,121,0,.35);
-
-      border-radius: 18px;
-
-      background:
-        linear-gradient(
-          100deg,
-          rgba(255,121,0,.13),
-          rgba(255,121,0,.035)
-        );
-
-      display: flex;
-
-      align-items: center;
-
-      justify-content: space-between;
-
-      gap: 25px;
-    }
-
-    .emergency-label {
-      color: var(--orange-light);
-
-      text-transform: uppercase;
-
-      letter-spacing: .1em;
-
-      font-size: .72rem;
-
-      font-weight: 900;
-    }
-
-    .emergency h2 {
-      margin:
-        5px 0;
-
-      font-size: 1.35rem;
-    }
-
-    .emergency p {
-      margin: 0;
-
-      color: var(--muted);
-    }
-
-    /* =========================
-       LOCAL
-    ========================= */
-
-    .local-section {
-      background:
-        var(--panel-2);
-    }
-
-    .area-grid {
-      display: flex;
-
-      flex-wrap: wrap;
-
-      gap: 9px;
-    }
-
-    .area {
-      padding:
-        9px 13px;
-
-      border:
-        1px solid #2a3a4d;
-
-      border-radius: 999px;
-
-      background: #0a131e;
-
-      color: #d8e1eb;
-
-      font-size: .86rem;
-
-      transition: .2s;
-    }
-
-    .area:hover {
-      border-color:
-        var(--orange);
-
-      color: white;
-    }
-
-    /* =========================
-       PROCESS
-    ========================= */
-
-    .process-grid {
-      display: grid;
-
-      grid-template-columns:
-        repeat(3, 1fr);
-
-      gap: 16px;
-    }
-
-    .process-card {
-      padding: 25px;
-
-      background: var(--panel);
-
-      border:
-        1px solid var(--border);
-
-      border-radius: var(--radius);
-    }
-
-    .process-number {
-      color: var(--orange);
-
-      font-size: .75rem;
-
-      font-weight: 900;
-
-      text-transform: uppercase;
-
-      letter-spacing: .1em;
-    }
-
-    .process-card h3 {
-      margin:
-        7px 0
-        9px;
-    }
-
-    .process-card p {
-      color: var(--muted);
-
-      margin: 0;
-    }
-
-    /* =========================
-       CONTACT FORM
-    ========================= */
-
-    .contact-box {
-      display: grid;
-
-      grid-template-columns:
-        .9fr 1.1fr;
-
-      gap: 30px;
-
-      padding: 32px;
-
-      background:
-        linear-gradient(
-          135deg,
-          #121e2c,
-          #0b131e
-        );
-
-      border:
-        1px solid var(--border);
-
-      border-radius: 24px;
-    }
-
-    .contact-box h2 {
-      margin:
-        8px 0
-        12px;
-
-      font-size: 2rem;
-
-      line-height: 1.1;
-    }
-
-    .contact-box p {
-      color: var(--muted);
-    }
-
-    form {
-      display: grid;
-
-      gap: 11px;
-    }
-
-    input,
-    textarea,
-    select {
-      width: 100%;
-
-      padding:
-        14px;
-
-      border:
-        1px solid #304156;
-
-      border-radius: 11px;
-
-      background:
-        #07101a;
-
-      color: white;
-
-      outline: none;
-    }
-
-    input:focus,
-    textarea:focus,
-    select:focus {
-      border-color:
-        var(--orange);
-    }
-
-    textarea {
-      min-height: 130px;
-
-      resize: vertical;
-    }
-
-    /* =========================
-       FAQ
-    ========================= */
-
-    .faq {
-      display: grid;
-
-      gap: 10px;
-
-      max-width: 900px;
-    }
-
-    .faq details {
-      padding:
-        17px 18px;
-
-      background: var(--panel);
-
-      border:
-        1px solid var(--border);
-
-      border-radius: 14px;
-    }
-
-    .faq summary {
-      cursor: pointer;
-
-      font-weight: 800;
-    }
-
-    .faq p {
-      color: var(--muted);
-
-      margin:
-        12px 0
-        0;
-    }
-
-    /* =========================
-       CTA
-    ========================= */
-
-    .final-cta {
-      padding-top: 20px;
-    }
-
-    .final-box {
-      display: flex;
-
-      align-items: center;
-
-      justify-content: space-between;
-
-      gap: 25px;
-
-      padding: 34px;
-
-      border:
-        1px solid
-        rgba(255,121,0,.28);
-
-      border-radius: 24px;
-
-      background:
-        radial-gradient(
-          circle at 85% 50%,
-          rgba(52,156,255,.09),
-          transparent 35%
-        ),
-        rgba(255,121,0,.06);
-    }
-
-    .final-box h2 {
-      margin:
-        0 0
-        8px;
-    }
-
-    .final-box p {
-      margin: 0;
-
-      color: var(--muted);
-    }
-
-    /* =========================
-       FOOTER
-    ========================= */
-
-    footer {
-      margin-top: 60px;
-
-      padding:
-        36px 0
-        100px;
-
-      border-top:
-        1px solid var(--border);
-
-      color: #8995a5;
-    }
-
-    .footer-grid {
-      display: flex;
-
-      justify-content: space-between;
-
-      gap: 20px;
-
-      flex-wrap: wrap;
-    }
-
-    .footer-grid strong {
-      color: white;
-    }
-
-    /* =========================
-       FLOATING WHATSAPP
-    ========================= */
-
-    .floating-whatsapp {
-      position: fixed;
-
-      right: 18px;
-
-      bottom: 25px;
-
-      z-index: 90;
-
-      display: flex;
-
-      align-items: center;
-
-      gap: 8px;
-
-      padding:
-        13px 17px;
-
-      border-radius: 999px;
-
-      background:
-        #18c96b;
-
-      color: #06150d;
-
-      font-weight: 900;
-
-      box-shadow:
-        0 15px 35px rgba(0,0,0,.35);
-    }
-
-    /* =========================
-       MOBILE BAR
-    ========================= */
-
-    .mobile-bar {
-      display: none;
-    }
-
-    /* =========================
-       RESPONSIVE
-    ========================= */
-
-    @media (max-width: 950px) {
-
-      .hero-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .services-grid {
-        grid-template-columns:
-          repeat(2, 1fr);
-      }
-
-      .trust-grid {
-        grid-template-columns:
-          repeat(2, 1fr);
-      }
-
-      .process-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .contact-box {
-        grid-template-columns: 1fr;
-      }
-
-    }
-
-    @media (max-width: 680px) {
-
-      .container {
-        width:
-          calc(100% - 22px);
-      }
-
-      .nav {
-        min-height: 65px;
-      }
-
-      .nav-links {
-        display: none;
-
-        position: absolute;
-
-        top: 64px;
-
-        left: 11px;
-        right: 11px;
-
-        padding: 12px;
-
-        flex-direction: column;
-
-        align-items: stretch;
-
-        gap: 0;
-
-        background:
-          #0b131e;
-
-        border:
-          1px solid var(--border);
-
-        border-radius: 14px;
-      }
-
-      .nav-links.active {
-        display: flex;
-      }
-
-      .nav-links a {
-        padding: 12px;
-      }
-
-      .menu-btn {
-        display: block;
-      }
-
-      .nav > .btn {
-        display: none;
-      }
-
-      .hero {
-        padding:
-          52px 0
-          38px;
-      }
-
-      .hero h1 {
-        font-size:
-          2.65rem;
-      }
-
-      .hero-text {
-        font-size: 1rem;
-      }
-
-      .services-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .trust-grid {
-        grid-template-columns:
-          1fr 1fr;
-      }
-
-      .emergency-box {
-        flex-direction: column;
-
-        align-items: flex-start;
-      }
-
-      .contact-box {
-        padding: 22px;
-      }
-
-      .final-box {
-        flex-direction: column;
-
-        align-items: flex-start;
-
-        padding: 25px;
-      }
-
-      .floating-whatsapp {
-        display: none;
-      }
-
-      .mobile-bar {
-        display: grid;
-
-        grid-template-columns:
-          1fr 1fr;
-
-        position: fixed;
-
-        left: 0;
-        right: 0;
-        bottom: 0;
-
-        z-index: 100;
-
-        border-top:
-          1px solid var(--border);
-
-        background:
-          #080e17;
-      }
-
-      .mobile-bar a {
-        padding:
-          14px;
-
-        text-align: center;
-
-        font-weight: 900;
-      }
-
-      .mobile-bar a:first-child {
-        background:
-          #18c96b;
-
-        color: #06150d;
-      }
-
-      .mobile-bar a:last-child {
-        background:
-          var(--orange);
-
-        color: #111;
-      }
-
-      footer {
-        padding-bottom: 95px;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-
-      html {
-        scroll-behavior: auto;
-      }
-
-      * {
-        transition: none !important;
-      }
-
-    }
-
-  </style>
-
-  <!--
-    DADOS ESTRUTURADOS
-    Sem morada inventada.
-    Sem avaliações falsas.
-  -->
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "@id": "https://mcavaleiro.pt/#business",
-    "name": "M. Cavaleiro Reparações",
-    "url": "https://mcavaleiro.pt/",
-    "telephone": "+351931369411",
-    "email": "geral@mcavaleiro.pt",
-    "priceRange": "€€",
-    "areaServed": [
-      {
-        "@type": "City",
-        "name": "Lisboa"
-      },
-      {
-        "@type": "AdministrativeArea",
-        "name": "Área Metropolitana de Lisboa"
-      },
-      {
-        "@type": "City",
-        "name": "Seixal"
-      },
-      {
-        "@type": "City",
-        "name": "Almada"
-      },
-      {
-        "@type": "City",
-        "name": "Barreiro"
-      },
-      {
-        "@type": "City",
-        "name": "Setúbal"
-      }
-    ],
-    "serviceType": [
-      "Reparação de eletrodomésticos",
-      "Reparação de frigoríficos",
-      "Reparação de congeladores",
-      "Assistência de ar condicionado",
-      "Refrigeração",
-      "Eletricidade",
-      "Canalização",
-      "Desentupimentos"
-    ]
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "@id": "https://mcavaleiro.pt/#website",
-    "url": "https://mcavaleiro.pt/",
-    "name": "M. Cavaleiro Reparações",
-    "inLanguage": "pt-PT"
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": "https://mcavaleiro.pt/#webpage",
-    "url": "https://mcavaleiro.pt/",
-    "name": "M. Cavaleiro Reparações | Assistência Técnica em Lisboa e Margem Sul",
-    "isPartOf": {
-      "@id": "https://mcavaleiro.pt/#website"
-    },
-    "about": {
-      "@id": "https://mcavaleiro.pt/#business"
-    },
-    "inLanguage": "pt-PT"
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Fazem assistência técnica ao domicílio?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sim. A M. Cavaleiro Reparações realiza assistência técnica ao domicílio nas zonas abrangidas pela área de atendimento, dependendo da disponibilidade e do tipo de intervenção."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Que equipamentos reparam?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "A assistência inclui eletrodomésticos, frigoríficos, congeladores, ar condicionado e equipamentos de refrigeração, entre outros serviços técnicos."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Posso enviar fotografias da avaria?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sim. Pode enviar fotografias, vídeos, marca, modelo e códigos de erro através do WhatsApp para ajudar no diagnóstico inicial."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Trabalham em Lisboa e na Margem Sul?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sim. A área de atendimento inclui Lisboa e várias localidades da Área Metropolitana de Lisboa, incluindo zonas da Margem Sul."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Reparam todas as marcas?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "A possibilidade de reparação depende da marca, modelo, tipo de avaria e disponibilidade de peças. Envie os dados do equipamento para avaliação."
-        }
-      }
-    ]
-  }
-  </script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Reparação de Eletrodomésticos e Ar Condicionado em Lisboa | M. Cavaleiro</title>
+
+<meta name="description" content="Reparação de eletrodomésticos e assistência a ar condicionado ao domicílio em Lisboa e Margem Sul. Máquinas de lavar, frigoríficos, fornos, placas, AC e refrigeração.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://mcavaleiro.pt/">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_PT">
+<meta property="og:title" content="M. Cavaleiro Reparações | Eletrodomésticos + Ar Condicionado">
+<meta property="og:description" content="O equipamento avariou? Explique o sintoma e peça assistência técnica ao domicílio em Lisboa e Margem Sul.">
+<meta property="og:url" content="https://mcavaleiro.pt/">
+<meta property="og:image" content="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=1800&q=90">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="M. Cavaleiro Reparações">
+<meta name="twitter:description" content="Reparação de eletrodomésticos e assistência a ar condicionado em Lisboa e Margem Sul.">
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=1800&q=90">
+
+<link rel="preconnect" href="https://images.unsplash.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Oswald:wght@600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+--bg:#03070b;
+--bg2:#07111c;
+--card:#0b1724;
+--card2:#0f1d2b;
+--line:#22364a;
+--white:#f7f9fc;
+--muted:#a9b7c6;
+--orange:#ff7900;
+--orange2:#ff9f45;
+--cyan:#35b8ff;
+--green:#22d477;
+--max:1200px;
+--radius:22px
+}
+
+*{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+margin:0;
+background:
+radial-gradient(900px 500px at 80% -5%,rgba(255,121,0,.17),transparent 65%),
+radial-gradient(900px 600px at 0 35%,rgba(53,184,255,.07),transparent 65%),
+#03070b;
+color:var(--white);
+font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+line-height:1.55;
+overflow-x:hidden
+}
+
+body:before{
+content:"";
+position:fixed;
+inset:0;
+pointer-events:none;
+z-index:-1;
+opacity:.22;
+background-image:
+linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),
+linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);
+background-size:50px 50px;
+mask-image:linear-gradient(to bottom,#000,transparent 75%)
+}
+
+a{text-decoration:none;color:inherit}
+
+img{display:block;max-width:100%}
+
+.wrap{
+width:min(var(--max),calc(100% - 34px));
+margin:auto
+}
+
+/* HEADER */
+
+header{
+position:sticky;
+top:0;
+z-index:100;
+background:rgba(3,7,11,.82);
+backdrop-filter:blur(20px);
+border-bottom:1px solid rgba(255,255,255,.08)
+}
+
+.nav{
+height:76px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:22px
+}
+
+.brand{
+display:flex;
+align-items:center;
+gap:10px;
+font-weight:900;
+letter-spacing:-.04em
+}
+
+.brand-mark{
+width:43px;
+height:43px;
+border-radius:13px;
+display:grid;
+place-items:center;
+font-size:22px;
+color:var(--orange);
+border:1px solid rgba(255,121,0,.45);
+background:linear-gradient(145deg,#172636,#07101a);
+box-shadow:0 0 25px rgba(255,121,0,.08)
+}
+
+.brand small{
+display:block;
+color:var(--orange);
+font-size:.65rem;
+letter-spacing:.14em;
+margin-top:-3px
+}
+
+nav{
+display:flex;
+align-items:center;
+gap:22px
+}
+
+nav a{
+font-size:.8rem;
+font-weight:800;
+color:#c9d4df;
+transition:.2s
+}
+
+nav a:hover{color:var(--orange2)}
+
+.btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+gap:9px;
+min-height:52px;
+padding:0 20px;
+border-radius:13px;
+border:1px solid transparent;
+font-weight:900;
+cursor:pointer;
+transition:.22s;
+position:relative;
+overflow:hidden
+}
+
+.btn:hover{
+transform:translateY(-3px)
+}
+
+.orange{
+background:var(--orange);
+color:#111;
+box-shadow:0 15px 40px rgba(255,121,0,.22)
+}
+
+.orange:hover{
+background:#ff9130
+}
+
+.outline{
+border-color:#405269;
+background:rgba(7,14,22,.7)
+}
+
+.green{
+background:var(--green);
+color:#03130b
+}
+
+.menu{
+display:none;
+border:0;
+background:none;
+color:#fff;
+font-size:25px
+}
+
+/* HERO */
+
+.hero{
+padding:72px 0 42px;
+position:relative
+}
+
+.hero-grid{
+display:grid;
+grid-template-columns:1fr .9fr;
+gap:58px;
+align-items:center
+}
+
+.eyebrow{
+font-size:.7rem;
+font-weight:900;
+letter-spacing:.15em;
+text-transform:uppercase;
+color:var(--orange2)
+}
+
+h1{
+font-size:clamp(3rem,6.5vw,5.7rem);
+line-height:.93;
+letter-spacing:-.067em;
+margin:14px 0 22px;
+max-width:780px
+}
+
+h1 em{
+font-style:normal;
+color:var(--orange);
+display:block
+}
+
+.lead{
+font-size:1.12rem;
+color:var(--muted);
+max-width:680px
+}
+
+.actions{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+margin:28px 0 18px
+}
+
+.proof{
+display:flex;
+flex-wrap:wrap;
+gap:8px
+}
+
+.proof span{
+font-size:.73rem;
+padding:7px 10px;
+border:1px solid rgba(255,255,255,.1);
+border-radius:99px;
+background:rgba(255,255,255,.035);
+color:#c8d3de
+}
+
+.hero-photo{
+position:relative;
+min-height:600px;
+overflow:hidden;
+border-radius:30px;
+border:1px solid var(--line);
+box-shadow:0 40px 110px rgba(0,0,0,.5)
+}
+
+.hero-photo img{
+width:100%;
+height:100%;
+min-height:600px;
+object-fit:cover;
+filter:saturate(.92) contrast(1.05)
+}
+
+.hero-photo:after{
+content:"";
+position:absolute;
+inset:0;
+background:
+linear-gradient(180deg,transparent 38%,rgba(1,5,9,.96)),
+linear-gradient(135deg,rgba(255,121,0,.08),transparent 50%)
+}
+
+.photo-card{
+position:absolute;
+z-index:2;
+left:20px;
+right:20px;
+bottom:20px;
+padding:20px;
+border:1px solid rgba(255,255,255,.14);
+border-radius:20px;
+background:rgba(3,8,13,.83);
+backdrop-filter:blur(15px)
+}
+
+.photo-card b{font-size:1.12rem}
+
+.photo-card p{
+margin:5px 0 0;
+color:#bac7d4;
+font-size:.83rem
+}
+
+/* STATS */
+
+.stats{
+background:#07101a;
+border-block:1px solid var(--line)
+}
+
+.stats-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr)
+}
+
+.stat{
+position:relative;
+padding:21px 15px 21px 39px;
+border-right:1px solid var(--line)
+}
+
+.stat:last-child{border-right:0}
+
+.stat:before{
+content:"✓";
+position:absolute;
+left:14px;
+top:22px;
+color:var(--orange);
+font-weight:900
+}
+
+.stat b{
+display:block;
+font-size:.94rem
+}
+
+.stat span{
+font-size:.75rem;
+color:var(--muted)
+}
+
+/* SECTIONS */
+
+section{padding:92px 0}
+
+.head{
+max-width:830px;
+margin-bottom:32px
+}
+
+.head h2{
+font-size:clamp(2.1rem,4.3vw,3.5rem);
+line-height:1;
+letter-spacing:-.057em;
+margin:8px 0 13px
+}
+
+.head p{
+margin:0;
+color:var(--muted);
+font-size:.98rem
+}
+
+/* SINTOMAS */
+
+.symptoms{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:11px
+}
+
+.symptom{
+min-height:130px;
+padding:18px;
+border-radius:17px;
+border:1px solid var(--line);
+background:linear-gradient(145deg,#101f2e,#09131e);
+transition:.22s;
+position:relative;
+overflow:hidden
+}
+
+.symptom:after{
+content:"";
+position:absolute;
+width:80px;
+height:80px;
+right:-35px;
+bottom:-35px;
+border-radius:50%;
+background:rgba(255,121,0,.08)
+}
+
+.symptom:hover{
+transform:translateY(-5px);
+border-color:var(--orange);
+box-shadow:0 20px 50px rgba(0,0,0,.28)
+}
+
+.symptom i{
+font-style:normal;
+font-size:1.55rem
+}
+
+.symptom b{
+display:block;
+margin-top:8px
+}
+
+.symptom small{
+display:block;
+color:var(--muted);
+font-size:.72rem;
+margin-top:2px
+}
+
+/* PILARES */
+
+.pillars{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:18px
+}
+
+.pillar{
+min-height:510px;
+border-radius:25px;
+overflow:hidden;
+position:relative;
+border:1px solid var(--line);
+background:#07101a;
+box-shadow:0 25px 75px rgba(0,0,0,.3)
+}
+
+.pillar img{
+width:100%;
+height:100%;
+min-height:510px;
+object-fit:cover;
+transition:.8s
+}
+
+.pillar:hover img{transform:scale(1.035)}
+
+.pillar:after{
+content:"";
+position:absolute;
+inset:0;
+background:
+linear-gradient(0deg,rgba(2,6,10,.98),rgba(2,6,10,.05) 68%),
+linear-gradient(120deg,rgba(255,121,0,.08),transparent 50%)
+}
+
+.pillar-content{
+position:absolute;
+z-index:2;
+left:28px;
+right:28px;
+bottom:25px
+}
+
+.pillar-content h3{
+font-size:2rem;
+letter-spacing:-.045em;
+margin:6px 0
+}
+
+.pillar-content p{
+color:#d2dae3;
+max-width:550px
+}
+
+.checks{
+display:grid;
+gap:6px;
+margin:15px 0
+}
+
+.checks span{
+font-size:.81rem
+}
+
+.checks span:before{
+content:"✓";
+color:var(--orange);
+font-weight:900;
+margin-right:8px
+}
+
+/* GALERIA */
+
+.gallery{
+display:grid;
+grid-template-columns:1.3fr .7fr .7fr;
+grid-template-rows:225px 225px;
+gap:12px
+}
+
+.gallery figure{
+margin:0;
+position:relative;
+overflow:hidden;
+border-radius:18px;
+border:1px solid var(--line)
+}
+
+.gallery figure:first-child{
+grid-row:1/3
+}
+
+.gallery img{
+width:100%;
+height:100%;
+object-fit:cover;
+transition:.7s
+}
+
+.gallery figure:hover img{
+transform:scale(1.05)
+}
+
+.gallery figcaption{
+position:absolute;
+left:12px;
+bottom:12px;
+padding:7px 10px;
+border-radius:9px;
+background:rgba(3,7,11,.83);
+font-size:.7rem;
+font-weight:900
+}
+
+/* CALL OUT */
+
+.callout{
+padding:29px;
+border:1px solid rgba(255,121,0,.32);
+border-radius:22px;
+background:
+linear-gradient(100deg,rgba(255,121,0,.14),rgba(53,184,255,.045));
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:25px
+}
+
+.callout h2{
+margin:4px 0;
+font-size:1.5rem
+}
+
+.callout p{
+margin:0;
+color:var(--muted)
+}
+
+/* SERVICOS */
+
+.service-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:14px
+}
+
+.service{
+padding:25px;
+background:linear-gradient(145deg,#0e1c2a,#08121d);
+border:1px solid var(--line);
+border-radius:19px;
+transition:.22s;
+position:relative;
+overflow:hidden
+}
+
+.service:after{
+content:"";
+position:absolute;
+width:100px;
+height:100px;
+right:-50px;
+top:-50px;
+border-radius:50%;
+background:rgba(255,121,0,.05)
+}
+
+.service:hover{
+transform:translateY(-5px);
+border-color:rgba(255,121,0,.55);
+box-shadow:0 20px 55px rgba(0,0,0,.25)
+}
+
+.icon{
+width:50px;
+height:50px;
+border-radius:14px;
+display:grid;
+place-items:center;
+background:rgba(255,121,0,.08);
+color:var(--orange);
+font-size:1.35rem;
+margin-bottom:14px
+}
+
+.service h3{
+margin:0 0 7px
+}
+
+.service p{
+color:var(--muted);
+font-size:.84rem;
+margin:0
+}
+
+.service span{
+display:inline-block;
+color:var(--orange2);
+font-size:.78rem;
+font-weight:900;
+margin-top:14px
+}
+
+/* PORQUE */
+
+.why-section{
+background:#040910;
+border-block:1px solid var(--line)
+}
+
+.why{
+display:grid;
+grid-template-columns:.9fr 1.1fr;
+gap:55px;
+align-items:center
+}
+
+.why-photo{
+min-height:520px;
+border-radius:25px;
+overflow:hidden;
+border:1px solid var(--line);
+position:relative
+}
+
+.why-photo img{
+width:100%;
+height:100%;
+min-height:520px;
+object-fit:cover
+}
+
+.why-photo span{
+position:absolute;
+left:16px;
+bottom:16px;
+background:rgba(3,7,11,.85);
+border:1px solid rgba(255,255,255,.12);
+padding:8px 11px;
+border-radius:10px;
+font-size:.67rem;
+font-weight:900
+}
+
+.why h2{
+font-size:clamp(2.1rem,4vw,3.45rem);
+line-height:1;
+letter-spacing:-.055em;
+margin:8px 0 14px
+}
+
+.why-copy{
+color:var(--muted)
+}
+
+.why-list{
+display:grid;
+gap:10px;
+margin-top:24px
+}
+
+.why-item{
+display:flex;
+gap:14px;
+padding:15px;
+border:1px solid var(--line);
+background:rgba(255,255,255,.025);
+border-radius:14px
+}
+
+.why-item b{
+color:var(--orange)
+}
+
+.why-item span{
+font-size:.8rem;
+color:var(--muted)
+}
+
+.why-item strong{
+display:block;
+color:#fff
+}
+
+/* ZONAS */
+
+.local{
+background:linear-gradient(180deg,#07131e,#050b11);
+border-block:1px solid var(--line)
+}
+
+.areas{
+display:flex;
+flex-wrap:wrap;
+gap:9px
+}
+
+.areas a{
+padding:9px 13px;
+border:1px solid #294057;
+background:#08121c;
+border-radius:99px;
+color:#d6e0e9;
+font-size:.8rem;
+transition:.2s
+}
+
+.areas a:hover{
+border-color:var(--orange);
+background:rgba(255,121,0,.08);
+color:#fff;
+transform:translateY(-2px)
+}
+
+/* PROCESSO */
+
+.process{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:14px
+}
+
+.step{
+padding:27px;
+border:1px solid var(--line);
+border-radius:18px;
+background:var(--card);
+position:relative;
+overflow:hidden
+}
+
+.step:after{
+content:"";
+position:absolute;
+width:120px;
+height:120px;
+right:-50px;
+top:-50px;
+border-radius:50%;
+border:1px solid rgba(255,121,0,.08)
+}
+
+.num{
+font-family:Oswald,sans-serif;
+font-size:1.5rem;
+color:var(--orange)
+}
+
+.step h3{
+margin:5px 0
+}
+
+.step p{
+color:var(--muted);
+font-size:.86rem;
+margin:0
+}
+
+/* CONTACTO */
+
+.contact{
+display:grid;
+grid-template-columns:.85fr 1.15fr;
+gap:32px;
+padding:35px;
+border:1px solid var(--line);
+border-radius:26px;
+background:linear-gradient(135deg,#101d2b,#060d15);
+box-shadow:0 30px 100px rgba(0,0,0,.4)
+}
+
+.contact h2{
+font-size:2.4rem;
+line-height:1;
+margin:8px 0 15px;
+letter-spacing:-.05em
+}
+
+.contact p{
+color:var(--muted)
+}
+
+form{
+display:grid;
+gap:10px
+}
+
+input,
+textarea,
+select{
+width:100%;
+border:1px solid #30445a;
+background:#040b12;
+color:#fff;
+border-radius:12px;
+padding:14px;
+outline:none
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+border-color:var(--orange);
+box-shadow:0 0 0 3px rgba(255,121,0,.08)
+}
+
+textarea{
+min-height:135px;
+resize:vertical
+}
+
+/* FAQ */
+
+.faq{
+display:grid;
+gap:9px;
+max-width:950px
+}
+
+.faq details{
+background:var(--card);
+border:1px solid var(--line);
+border-radius:14px;
+padding:17px 18px
+}
+
+.faq summary{
+font-weight:800;
+cursor:pointer
+}
+
+.faq p{
+color:var(--muted);
+margin:10px 0 0;
+font-size:.87rem
+}
+
+/* FINAL */
+
+.final{
+padding:32px;
+border:1px solid rgba(255,121,0,.3);
+border-radius:23px;
+background:
+radial-gradient(circle at 85% 50%,rgba(53,184,255,.1),transparent 32%),
+rgba(255,121,0,.055);
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:20px
+}
+
+.final h2{
+margin:0 0 7px
+}
+
+.final p{
+margin:0;
+color:var(--muted)
+}
+
+/* FOOTER */
+
+footer{
+padding:42px 0 105px;
+border-top:1px solid var(--line);
+color:#8998a8
+}
+
+.foot{
+display:flex;
+justify-content:space-between;
+gap:25px;
+flex-wrap:wrap
+}
+
+.foot strong{color:#fff}
+
+/* WHATSAPP */
+
+.float{
+position:fixed;
+z-index:90;
+right:18px;
+bottom:20px;
+background:var(--green);
+color:#03130b;
+padding:13px 18px;
+border-radius:99px;
+font-weight:900;
+box-shadow:0 16px 45px rgba(0,0,0,.5)
+}
+
+.mobile{
+display:none
+}
+
+/* ANIMATION */
+
+.reveal{
+opacity:0;
+transform:translateY(16px);
+transition:.6s ease
+}
+
+.reveal.on{
+opacity:1;
+transform:none
+}
+
+/* RESPONSIVE */
+
+@media(max-width:950px){
+
+nav{display:none}
+
+.menu{display:block}
+
+.hero-grid,
+.why,
+.contact{
+grid-template-columns:1fr
+}
+
+.hero-photo,
+.hero-photo img{
+min-height:450px
+}
+
+.symptoms{
+grid-template-columns:repeat(2,1fr)
+}
+
+.service-grid{
+grid-template-columns:repeat(2,1fr)
+}
+
+.stats-grid{
+grid-template-columns:repeat(2,1fr)
+}
+
+.stat:nth-child(2){
+border-right:0
+}
+
+.gallery{
+grid-template-columns:1fr 1fr;
+grid-template-rows:240px 180px
+}
+
+.gallery figure:first-child{
+grid-column:1/3;
+grid-row:auto
+}
+
+}
+
+@media(max-width:650px){
+
+.wrap{
+width:calc(100% - 22px)
+}
+
+header .btn{
+display:none
+}
+
+.hero{
+padding:45px 0 30px
+}
+
+h1{
+font-size:2.85rem
+}
+
+.lead{
+font-size:1rem
+}
+
+.actions .btn{
+width:100%
+}
+
+.hero-photo,
+.hero-photo img{
+min-height:390px
+}
+
+.stats-grid{
+grid-template-columns:1fr 1fr
+}
+
+.stat{
+border-bottom:1px solid var(--line)
+}
+
+.symptoms,
+.service-grid,
+.pillars,
+.process{
+grid-template-columns:1fr
+}
+
+.pillar,
+.pillar img{
+min-height:420px
+}
+
+.gallery{
+grid-template-columns:1fr 1fr;
+grid-template-rows:220px 160px
+}
+
+.gallery figure:first-child{
+grid-column:1/3
+}
+
+.callout,
+.final{
+flex-direction:column;
+align-items:flex-start
+}
+
+section{
+padding:70px 0
+}
+
+.why-photo,
+.why-photo img{
+min-height:390px
+}
+
+.contact{
+padding:23px
+}
+
+.contact h2{
+font-size:2rem
+}
+
+.float{
+display:none
+}
+
+.mobile{
+display:grid;
+grid-template-columns:1fr 1fr;
+position:fixed;
+z-index:100;
+bottom:0;
+left:0;
+right:0;
+background:#07101a;
+border-top:1px solid var(--line)
+}
+
+.mobile a{
+padding:14px;
+text-align:center;
+font-weight:900
+}
+
+.mobile a:first-child{
+background:var(--green);
+color:#03130b
+}
+
+.mobile a:last-child{
+background:var(--orange);
+color:#111
+}
+
+footer{
+padding-bottom:88px
+}
+
+}
+
+@media(prefers-reduced-motion:reduce){
+
+html{scroll-behavior:auto}
+
+.reveal{
+opacity:1;
+transform:none
+}
+
+*{
+transition:none!important
+}
+
+}
+</style>
+
+<!-- SEO LOCAL BUSINESS -->
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":["LocalBusiness","HomeAndConstructionBusiness"],
+"@id":"https://mcavaleiro.pt/#business",
+"name":"M. Cavaleiro Reparações",
+"url":"https://mcavaleiro.pt/",
+"telephone":"+351931369411",
+"email":"geral@mcavaleiro.pt",
+"description":"Reparação de eletrodomésticos e assistência a ar condicionado ao domicílio em Lisboa e Área Metropolitana de Lisboa.",
+"priceRange":"€€",
+"areaServed":[
+"Lisboa",
+"Seixal",
+"Amora",
+"Corroios",
+"Arrentela",
+"Paio Pires",
+"Fernão Ferro",
+"Almada",
+"Barreiro",
+"Moita",
+"Montijo",
+"Setúbal",
+"Loures",
+"Odivelas",
+"Amadora",
+"Sintra",
+"Cascais",
+"Oeiras",
+"Mafra",
+"Vila Franca de Xira"
+],
+"serviceType":[
+"Reparação de eletrodomésticos",
+"Reparação de frigoríficos",
+"Reparação de máquinas de lavar",
+"Reparação de máquinas de secar",
+"Assistência de ar condicionado",
+"Manutenção de ar condicionado",
+"Refrigeração"
+]
+}
+</script>
+
+<!-- WEBSITE -->
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"WebSite",
+"url":"https://mcavaleiro.pt/",
+"name":"M. Cavaleiro Reparações",
+"inLanguage":"pt-PT"
+}
+</script>
+
+<!-- FAQ -->
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"FAQPage",
+"mainEntity":[
+{
+"@type":"Question",
+"name":"Fazem reparação de eletrodomésticos ao domicílio?",
+"acceptedAnswer":{
+"@type":"Answer",
+"text":"Sim. A M. Cavaleiro Reparações presta assistência técnica ao domicílio nas zonas abrangidas, dependendo da disponibilidade e do tipo de intervenção."
+}
+},
+{
+"@type":"Question",
+"name":"Que eletrodomésticos reparam?",
+"acceptedAnswer":{
+"@type":"Answer",
+"text":"A assistência pode abranger máquinas de lavar roupa, máquinas de lavar loiça, máquinas de secar, fornos, placas, frigoríficos, congeladores e outros equipamentos, dependendo da marca, modelo e avaria."
+}
+},
+{
+"@type":"Question",
+"name":"O ar condicionado não arrefece. Fazem diagnóstico?",
+"acceptedAnswer":{
+"@type":"Answer",
+"text":"Sim. O equipamento pode ser avaliado para perceber a natureza provável da avaria antes de definir a intervenção."
+}
+},
+{
+"@type":"Question",
+"name":"Posso enviar fotografias e código de erro?",
+"acceptedAnswer":{
+"@type":"Answer",
+"text":"Sim. Fotografias, vídeos, etiqueta do equipamento, marca, modelo e códigos de erro podem ajudar no diagnóstico inicial."
+}
+},
+{
+"@type":"Question",
+"name":"Trabalham na Margem Sul?",
+"acceptedAnswer":{
+"@type":"Answer",
+"text":"Sim. A área inclui Seixal, Amora, Corroios, Arrentela, Paio Pires, Fernão Ferro, Almada, Barreiro e outras localidades, sujeito à disponibilidade."
+}
+}
+]
+}
+</script>
 
 </head>
 
 <body>
 
-  <!-- =========================
-       HEADER
-  ========================= -->
-
-  <header>
-
-    <div class="container nav">
-
-      <a
-        class="logo"
-        href="/"
-        aria-label="M. Cavaleiro Reparações - Página inicial"
-      >
-        M. <span>Cavaleiro</span> Reparações
-      </a>
-
-      <button
-        class="menu-btn"
-        id="menuBtn"
-        aria-label="Abrir menu"
-        aria-expanded="false"
-      >
-        ☰
-      </button>
+<header>
+<div class="wrap nav">
 
-      <nav
-        class="nav-links"
-        id="navLinks"
-        aria-label="Navegação principal"
-      >
+<a class="brand" href="/" aria-label="M. Cavaleiro Reparações">
+<span class="brand-mark">⚙</span>
+<span>
+M. CAVALEIRO
+<small>REPARAÇÕES</small>
+</span>
+</a>
 
-        <a href="#servicos">
-          Serviços
-        </a>
-
-        <a href="#zonas">
-          Zonas
-        </a>
-
-        <a href="#processo">
-          Como funciona
-        </a>
-
-        <a href="#contacto">
-          Contacto
-        </a>
-
-      </nav>
-
-      <a
-        class="btn btn-orange"
-        href="https://wa.me/351931369411"
-        target="_blank"
-        rel="noopener"
-      >
-        WhatsApp
-      </a>
-
-    </div>
-
-  </header>
-
-
-  <main>
-
-    <!-- =========================
-         HERO
-    ========================= -->
-
-    <section class="hero">
-
-      <div class="container hero-grid">
-
-        <div>
-
-          <div class="eyebrow">
-            Lisboa · Área Metropolitana · Margem Sul
-          </div>
-
-          <h1>
-            Assistência técnica
-            <span>sem complicações.</span>
-          </h1>
-
-          <p class="hero-text">
-            Reparação e assistência técnica ao domicílio para
-            eletrodomésticos, frigoríficos, congeladores,
-            ar condicionado e refrigeração.
-            Atendimento em Lisboa e várias zonas da Margem Sul.
-          </p>
-
-          <div class="hero-actions">
-
-            <a
-              class="btn btn-orange"
-              href="https://wa.me/351931369411?text=Olá%20M.%20Cavaleiro.%20Preciso%20de%20assistência%20técnica."
-              target="_blank"
-              rel="noopener"
-            >
-              Pedir assistência
-            </a>
-
-            <a
-              class="btn btn-dark"
-              href="#servicos"
-            >
-              Ver serviços
-            </a>
+<nav>
+<a href="#avarias">Avarias</a>
+<a href="#especialidades">Especialidades</a>
+<a href="#servicos">Serviços</a>
+<a href="#zonas">Zonas</a>
+<a href="#contacto">Contacto</a>
+</nav>
 
-          </div>
+<a class="btn orange" href="https://wa.me/351931369411?text=Olá%20M.%20Cavaleiro.%20Preciso%20de%20assistência%20técnica." target="_blank" rel="noopener">
+💬 WhatsApp
+</a>
 
-          <div class="hero-note">
-            Diagnóstico técnico · Atendimento ao domicílio · Contacto direto
-          </div>
+<button class="menu" id="menu" aria-label="Abrir menu">☰</button>
 
-        </div>
+</div>
+</header>
 
 
-        <div class="hero-card">
+<main>
 
-          <div class="eyebrow">
-            Técnico especializado
-          </div>
+<!-- HERO -->
 
-          <h2>
-            O objetivo é resolver,
-            não complicar.
-          </h2>
+<section class="hero">
 
-          <div class="hero-check">
-            <strong>✓</strong>
-            <span>
-              Mais de 10 anos de experiência técnica.
-            </span>
-          </div>
+<div class="wrap hero-grid">
 
-          <div class="hero-check">
-            <strong>✓</strong>
-            <span>
-              Diagnóstico orientado à causa da avaria.
-            </span>
-          </div>
+<div class="reveal">
 
-          <div class="hero-check">
-            <strong>✓</strong>
-            <span>
-              Assistência ao domicílio.
-            </span>
-          </div>
+<div class="eyebrow">
+Assistência técnica ao domicílio · Lisboa + Margem Sul
+</div>
 
-          <div class="hero-check">
-            <strong>✓</strong>
-            <span>
-              Contacto rápido através do WhatsApp.
-            </span>
-          </div>
+<h1>
+O equipamento avariou?
+<em>Vamos perceber porquê.</em>
+</h1>
 
-          <a
-            class="btn btn-orange"
-            style="width:100%;margin-top:8px"
-            href="https://wa.me/351931369411"
-            target="_blank"
-            rel="noopener"
-          >
-            Falar diretamente com o técnico
-          </a>
+<p class="lead">
+Reparação de eletrodomésticos e assistência a ar condicionado com diagnóstico técnico, contacto direto e atendimento ao domicílio.
+</p>
 
-        </div>
+<div class="actions">
 
-      </div>
+<a class="btn orange" href="#contacto">
+🛠️ Pedir assistência
+</a>
 
-    </section>
+<a class="btn outline" href="https://wa.me/351931369411?text=Olá.%20Preciso%20de%20assistência%20técnica." target="_blank" rel="noopener">
+💬 Falar pelo WhatsApp
+</a>
 
+</div>
 
-    <!-- =========================
-         TRUST
-    ========================= -->
+<div class="proof">
+<span>10+ anos de experiência</span>
+<span>Diagnóstico técnico</span>
+<span>Ao domicílio</span>
+<span>Lisboa + AML</span>
+</div>
 
-    <div class="trust">
+</div>
 
-      <div class="container trust-grid">
 
-        <div class="trust-item">
-          <strong>10+ anos</strong>
-          Experiência técnica
-        </div>
+<div class="hero-photo reveal">
 
-        <div class="trust-item">
-          <strong>Diagnóstico</strong>
-          Antes da intervenção
-        </div>
+<img
+src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=1500&q=90"
+alt="Técnico profissional a realizar assistência técnica"
+width="1500"
+height="1125"
+fetchpriority="high">
 
-        <div class="trust-item">
-          <strong>Ao domicílio</strong>
-          Lisboa e AML
-        </div>
+<div class="photo-card">
+<b>Não sabe qual é a avaria?</b>
+<p>
+Não tem problema. Diga-nos o sintoma, a marca e o modelo.
+Se puder, envie também uma fotografia.
+</p>
+</div>
 
-        <div class="trust-item">
-          <strong>Contacto direto</strong>
-          WhatsApp e telefone
-        </div>
+</div>
 
-      </div>
+</div>
 
-    </div>
+</section>
 
 
-    <!-- =========================
-         EMERGENCY MARGEM SUL
-    ========================= -->
+<!-- STATS -->
 
-    <section class="emergency">
+<div class="stats">
 
-      <div class="container">
+<div class="wrap stats-grid">
 
-        <div class="emergency-box">
+<div class="stat">
+<b>10+ anos</b>
+<span>Experiência técnica</span>
+</div>
 
-          <div>
+<div class="stat">
+<b>Eletrodomésticos</b>
+<span>Reparação e diagnóstico</span>
+</div>
 
-            <div class="emergency-label">
-              Assistência prioritária
-            </div>
+<div class="stat">
+<b>Ar condicionado</b>
+<span>Diagnóstico e assistência</span>
+</div>
 
-            <h2>
-              Precisa de técnico na Margem Sul?
-            </h2>
+<div class="stat">
+<b>Contacto direto</b>
+<span>Telefone e WhatsApp</span>
+</div>
 
-            <p>
-              Se está em Seixal, Amora, Corroios, Almada,
-              Barreiro ou zonas próximas, envie a avaria
-              e a localização para verificarmos disponibilidade.
-            </p>
+</div>
 
-          </div>
+</div>
 
-          <a
-            class="btn btn-orange"
-            href="https://wa.me/351912410782?text=Olá.%20Preciso%20de%20assistência%20na%20Margem%20Sul."
-            target="_blank"
-            rel="noopener"
-          >
-            Margem Sul · WhatsApp
-          </a>
 
-        </div>
+<!-- AVARIAS -->
 
-      </div>
+<section id="avarias">
 
-    </section>
+<div class="wrap">
 
+<div class="head reveal">
 
-    <!-- =========================
-         SERVIÇOS
-    ========================= -->
+<div class="eyebrow">
+Comece pelo sintoma
+</div>
 
-    <section id="servicos">
+<h2>
+O que está a acontecer ao seu equipamento?
+</h2>
 
-      <div class="container">
+<p>
+Escolha o problema mais parecido. Depois envie os detalhes e ajudamos a encaminhar o diagnóstico.
+</p>
 
-        <div class="section-head">
+</div>
 
-          <div class="eyebrow">
-            Serviços
-          </div>
 
-          <h2>
-            Assistência técnica para equipamentos
-            e avarias do dia a dia.
-          </h2>
+<div class="symptoms">
 
-          <p>
-            Escolha o serviço para consultar informação
-            específica e pedir assistência.
-          </p>
+<a class="symptom reveal" href="#contacto">
+<i>⚡</i>
+<b>Não liga</b>
+<small>Sem resposta ou sem alimentação.</small>
+</a>
 
-        </div>
+<a class="symptom reveal" href="#contacto">
+<i>❄️</i>
+<b>Não arrefece</b>
+<small>Frigorífico ou AC sem frio.</small>
+</a>
 
+<a class="symptom reveal" href="#contacto">
+<i>🔥</i>
+<b>Não aquece</b>
+<small>AC não produz calor.</small>
+</a>
 
-        <div class="services-grid">
+<a class="symptom reveal" href="#contacto">
+<i>💧</i>
+<b>Deita água</b>
+<small>Fugas ou problemas de drenagem.</small>
+</a>
 
-          <a
-            class="service-card"
-            href="/servicos/eletrodomesticos.html"
-          >
+<a class="symptom reveal" href="#contacto">
+<i>🔊</i>
+<b>Faz barulho</b>
+<small>Ruído, vibração ou funcionamento anormal.</small>
+</a>
 
-            <div class="service-icon">
-              ⚙
-            </div>
+<a class="symptom reveal" href="#contacto">
+<i>⚠️</i>
+<b>Dá erro</b>
+<small>Código ou luzes de avaria.</small>
+</a>
 
-            <h3>
-              Eletrodomésticos
-            </h3>
+<a class="symptom reveal" href="#contacto">
+<i>🧊</i>
+<b>Cria gelo</b>
+<small>Gelo excessivo ou temperatura irregular.</small>
+</a>
 
-            <p>
-              Reparação e diagnóstico de máquinas de lavar,
-              secar, loiça, fornos, placas e outros equipamentos.
-            </p>
+<a class="symptom reveal" href="#contacto">
+<i>🌡️</i>
+<b>Temperatura errada</b>
+<small>Trabalha mas não chega ao esperado.</small>
+</a>
 
-          </a>
+</div>
 
+</div>
 
-          <a
-            class="service-card"
-            href="/servicos/frigorificos.html"
-          >
+</section>
 
-            <div class="service-icon">
-              ❄
-            </div>
 
-            <h3>
-              Frigoríficos e congeladores
-            </h3>
+<!-- ESPECIALIDADES -->
 
-            <p>
-              Diagnóstico de problemas de temperatura,
-              gelo, funcionamento e refrigeração.
-            </p>
+<section id="especialidades">
 
-          </a>
+<div class="wrap">
 
+<div class="head reveal">
 
-          <a
-            class="service-card"
-            href="/servicos/ar-condicionado.html"
-          >
+<div class="eyebrow">
+As nossas duas áreas principais
+</div>
 
-            <div class="service-icon">
-              ☀
-            </div>
+<h2>
+Especialistas em resolver problemas de equipamentos.
+</h2>
 
-            <h3>
-              Ar condicionado
-            </h3>
+<p>
+Menos conversa, mais diagnóstico: diga-nos o que o aparelho está a fazer.
+</p>
 
-            <p>
-              Assistência, diagnóstico, manutenção e reparação
-              de equipamentos de ar condicionado.
-            </p>
+</div>
 
-          </a>
 
+<div class="pillars">
 
-          <a
-            class="service-card"
-            href="/servicos/refrigeracao.html"
-          >
+<article class="pillar reveal">
 
-            <div class="service-icon">
-              🧊
-            </div>
+<img
+src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1300&q=90"
+alt="Cozinha com eletrodomésticos"
+width="1300"
+height="975"
+loading="lazy">
 
-            <h3>
-              Refrigeração
-            </h3>
+<div class="pillar-content">
 
-            <p>
-              Diagnóstico e assistência técnica a equipamentos
-              e sistemas de refrigeração.
-            </p>
+<div class="eyebrow">
+01 · Eletrodomésticos
+</div>
 
-          </a>
+<h3>
+Reparação de eletrodomésticos
+</h3>
 
+<p>
+Máquinas de lavar, secar, loiça, fornos, placas, frigoríficos, congeladores e outros equipamentos.
+</p>
 
-          <a
-            class="service-card"
-            href="/servicos/eletricidade.html"
-          >
+<div class="checks">
+<span>Máquina não liga ou não termina o programa</span>
+<span>Frigorífico não arrefece ou cria gelo</span>
+<span>Forno ou placa apresenta falha</span>
+</div>
 
-            <div class="service-icon">
-              ⚡
-            </div>
+<a class="btn orange" href="/servicos/eletrodomesticos.html">
+Ver reparação →
+</a>
 
-            <h3>
-              Eletricidade
-            </h3>
+</div>
 
-            <p>
-              Diagnóstico de avarias elétricas,
-              alimentação de equipamentos e pequenas intervenções.
-            </p>
+</article>
 
-          </a>
 
+<article class="pillar reveal">
 
-          <a
-            class="service-card"
-            href="/servicos/canalizacao.html"
-          >
+<img
+src="https://images.unsplash.com/photo-1631545806609-0c4a4b7c8c2d?auto=format&fit=crop&w=1300&q=90"
+alt="Sistema de ar condicionado numa habitação"
+width="1300"
+height="975"
+loading="lazy">
 
-            <div class="service-icon">
-              💧
-            </div>
+<div class="pillar-content">
 
-            <h3>
-              Canalização
-            </h3>
+<div class="eyebrow">
+02 · Climatização
+</div>
 
-            <p>
-              Fugas, escoamentos, sifões, obstruções
-              e pequenas reparações de canalização.
-            </p>
+<h3>
+Ar condicionado
+</h3>
 
-          </a>
+<p>
+Diagnóstico, manutenção e reparação de sistemas de ar condicionado conforme o equipamento e a avaria.
+</p>
 
-        </div>
+<div class="checks">
+<span>Não arrefece ou não aquece</span>
+<span>Deita água ou apresenta gelo</span>
+<span>Ruído, erro ou comportamento anormal</span>
+</div>
 
-      </div>
+<a class="btn orange" href="/servicos/ar-condicionado.html">
+Ver serviços de AC →
+</a>
 
-    </section>
+</div>
 
+</article>
 
-    <!-- =========================
-         ZONAS
-    ========================= -->
+</div>
 
-    <section
-      id="zonas"
-      class="local-section"
-    >
+</div>
 
-      <div class="container">
+</section>
 
-        <div class="section-head">
 
-          <div class="eyebrow">
-            Área de atendimento
-          </div>
+<!-- GALERIA -->
 
-          <h2>
-            Assistência técnica em Lisboa
-            e Margem Sul.
-          </h2>
+<section>
 
-          <p>
-            Atendimento em várias localidades da Área Metropolitana
-            de Lisboa, sujeito à disponibilidade de agenda e ao tipo
-            de intervenção.
-          </p>
+<div class="wrap">
 
-        </div>
+<div class="head reveal">
 
+<div class="eyebrow">
+Equipamentos
+</div>
 
-        <div class="area-grid">
+<h2>
+Alguns dos equipamentos que podem precisar de assistência.
+</h2>
 
-          <a class="area" href="/zonas/lisboa.html">
-            Lisboa
-          </a>
+<p>
+Imagens ilustrativas. A possibilidade de reparação depende da marca, modelo, avaria e disponibilidade de peças.
+</p>
 
-          <a class="area" href="/zonas/seixal.html">
-            Seixal
-          </a>
+</div>
 
-          <a class="area" href="/zonas/amora.html">
-            Amora
-          </a>
 
-          <a class="area" href="/zonas/corroios.html">
-            Corroios
-          </a>
+<div class="gallery">
 
-          <a class="area" href="/zonas/arrentela.html">
-            Arrentela
-          </a>
+<figure class="reveal">
 
-          <a class="area" href="/zonas/paio-pires.html">
-            Paio Pires
-          </a>
+<img
+src="https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?auto=format&fit=crop&w=1400&q=90"
+alt="Máquina de lavar roupa"
+width="1400"
+height="1050"
+loading="lazy">
 
-          <a class="area" href="/zonas/fernao-ferro.html">
-            Fernão Ferro
-          </a>
+<figcaption>
+Máquinas de lavar
+</figcaption>
 
-          <a class="area" href="/zonas/almada.html">
-            Almada
-          </a>
+</figure>
 
-          <a class="area" href="/zonas/barreiro.html">
-            Barreiro
-          </a>
 
-          <a class="area" href="/zonas/moita.html">
-            Moita
-          </a>
+<figure class="reveal">
 
-          <a class="area" href="/zonas/montijo.html">
-            Montijo
-          </a>
+<img
+src="https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?auto=format&fit=crop&w=900&q=90"
+alt="Frigorífico moderno"
+width="900"
+height="675"
+loading="lazy">
 
-          <a class="area" href="/zonas/setubal.html">
-            Setúbal
-          </a>
+<figcaption>
+Frigoríficos
+</figcaption>
 
-          <a class="area" href="/zonas/loures.html">
-            Loures
-          </a>
+</figure>
 
-          <a class="area" href="/zonas/odivelas.html">
-            Odivelas
-          </a>
 
-          <a class="area" href="/zonas/amadora.html">
-            Amadora
-          </a>
+<figure class="reveal">
 
-          <a class="area" href="/zonas/sintra.html">
-            Sintra
-          </a>
+<img
+src="https://images.unsplash.com/photo-1631545806609-0c4a4b7c8c2d?auto=format&fit=crop&w=900&q=90"
+alt="Ar condicionado"
+width="900"
+height="675"
+loading="lazy">
 
-          <a class="area" href="/zonas/cascais.html">
-            Cascais
-          </a>
+<figcaption>
+Ar condicionado
+</figcaption>
 
-          <a class="area" href="/zonas/oeiras.html">
-            Oeiras
-          </a>
+</figure>
 
-          <a class="area" href="/zonas/mafra.html">
-            Mafra
-          </a>
 
-          <a class="area" href="/zonas/vila-franca-de-xira.html">
-            Vila Franca de Xira
-          </a>
+<figure class="reveal">
 
-        </div>
+<img
+src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=900&q=90"
+alt="Eletrodomésticos de cozinha"
+width="900"
+height="675"
+loading="lazy">
 
-      </div>
+<figcaption>
+Cozinha
+</figcaption>
 
-    </section>
+</figure>
 
 
-    <!-- =========================
-         PROCESSO
-    ========================= -->
+<figure class="reveal">
 
-    <section id="processo">
+<img
+src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=900&q=90"
+alt="Técnico em assistência técnica"
+width="900"
+height="675"
+loading="lazy">
 
-      <div class="container">
+<figcaption>
+Assistência técnica
+</figcaption>
 
-        <div class="section-head">
+</figure>
 
-          <div class="eyebrow">
-            Como funciona
-          </div>
+</div>
 
-          <h2>
-            Menos complicações.
-            Mais diagnóstico.
-          </h2>
+</div>
 
-        </div>
+</section>
 
 
-        <div class="process-grid">
+<!-- MARGEM SUL -->
 
-          <div class="process-card">
+<div class="wrap">
 
-            <div class="process-number">
-              01 · Contacto
-            </div>
+<div class="callout reveal">
 
-            <h3>
-              Explique a avaria
-            </h3>
+<div>
 
-            <p>
-              Envie pelo WhatsApp a localidade,
-              equipamento, marca, modelo e sintomas.
-            </p>
+<div class="eyebrow">
+Margem Sul · Atendimento prioritário
+</div>
 
-          </div>
+<h2>
+Está em Seixal ou arredores?
+</h2>
 
+<p>
+Seixal, Amora, Corroios, Arrentela, Paio Pires, Fernão Ferro e outras zonas da Margem Sul.
+</p>
 
-          <div class="process-card">
+</div>
 
-            <div class="process-number">
-              02 · Diagnóstico
-            </div>
+<a
+class="btn orange"
+href="https://wa.me/351912410782?text=Olá.%20Preciso%20de%20assistência%20na%20Margem%20Sul."
+target="_blank"
+rel="noopener">
 
-            <h3>
-              Percebemos o problema
-            </h3>
+📲 Contactar Margem Sul
 
-            <p>
-              A informação recebida permite preparar
-              o diagnóstico e perceber a intervenção necessária.
-            </p>
+</a>
 
-          </div>
+</div>
 
+</div>
 
-          <div class="process-card">
 
-            <div class="process-number">
-              03 · Reparação
-            </div>
+<!-- SERVIÇOS -->
 
-            <h3>
-              Avançamos consigo
-            </h3>
+<section id="servicos">
 
-            <p>
-              Depois de avaliar o problema, é definida
-              a solução adequada ao equipamento.
-            </p>
+<div class="wrap">
 
-          </div>
+<div class="head reveal">
 
-        </div>
+<div class="eyebrow">
+Serviços
+</div>
 
-      </div>
+<h2>
+Assistência técnica sem complicações.
+</h2>
 
-    </section>
+<p>
+As duas especialidades principais estão no centro do serviço. As restantes áreas continuam disponíveis conforme o tipo de intervenção.
+</p>
 
+</div>
 
-    <!-- =========================
-         CONTACTO
-    ========================= -->
 
-    <section id="contacto">
+<div class="service-grid">
 
-      <div class="container">
+<a class="service reveal" href="/servicos/eletrodomesticos.html">
 
-        <div class="contact-box">
+<div class="icon">⚙️</div>
 
-          <div>
+<h3>
+Reparação de eletrodomésticos
+</h3>
 
-            <div class="eyebrow">
-              Pedido de assistência
-            </div>
+<p>
+Máquinas de lavar, secar, loiça, fornos, placas e outros equipamentos.
+</p>
 
-            <h2>
-              Diga-nos o que aconteceu.
-            </h2>
+<span>
+Ver serviço →
+</span>
 
-            <p>
-              Quanto mais informação enviar,
-              mais fácil será preparar o diagnóstico inicial.
-            </p>
+</a>
 
-            <p>
-              Pode indicar marca, modelo, código de erro,
-              sintomas e localidade.
-            </p>
 
-            <p style="font-size:.82rem">
-              O formulário abre diretamente uma conversa
-              no WhatsApp.
-            </p>
+<a class="service reveal" href="/servicos/frigorificos.html">
 
-          </div>
+<div class="icon">❄️</div>
 
+<h3>
+Frigoríficos e congeladores
+</h3>
 
-          <form id="assistenciaForm">
+<p>
+Temperatura, gelo, água, ruídos, arranque e problemas de refrigeração.
+</p>
 
-            <input
-              type="text"
-              name="nome"
-              placeholder="Nome"
-              autocomplete="name"
-              required
-            >
+<span>
+Ver serviço →
+</span>
 
-            <input
-              type="text"
-              name="localidade"
-              placeholder="Localidade"
-              autocomplete="address-level2"
-              required
-            >
+</a>
 
-            <input
-              type="text"
-              name="equipamento"
-              placeholder="Equipamento / marca / modelo"
-            >
 
-            <textarea
-              name="avaria"
-              placeholder="Descreva a avaria"
-              required
-            ></textarea>
+<a class="service reveal" href="/servicos/ar-condicionado.html">
 
-            <button
-              class="btn btn-orange"
-              type="submit"
-            >
-              Enviar pedido pelo WhatsApp
-            </button>
+<div class="icon">🌡️</div>
 
-          </form>
+<h3>
+Ar condicionado
+</h3>
 
-        </div>
+<p>
+Diagnóstico, manutenção e reparação de equipamentos de climatização.
+</p>
 
-      </div>
+<span>
+Ver serviço →
+</span>
 
-    </section>
+</a>
 
 
-    <!-- =========================
-         FAQ
-    ========================= -->
+<a class="service reveal" href="/servicos/refrigeracao.html">
 
-    <section>
+<div class="icon">🧊</div>
 
-      <div class="container">
+<h3>
+Refrigeração
+</h3>
 
-        <div class="section-head">
+<p>
+Assistência técnica e diagnóstico de equipamentos de refrigeração.
+</p>
 
-          <div class="eyebrow">
-            Perguntas frequentes
-          </div>
+<span>
+Ver serviço →
+</span>
 
-          <h2>
-            Antes de chamar o técnico.
-          </h2>
+</a>
 
-        </div>
 
+<a class="service reveal" href="/servicos/eletricidade.html">
 
-        <div class="faq">
+<div class="icon">⚡</div>
 
-          <details>
+<h3>
+Eletricidade
+</h3>
 
-            <summary>
-              Fazem assistência técnica ao domicílio?
-            </summary>
+<p>
+Diagnóstico de falhas elétricas relacionadas com equipamentos e instalações.
+</p>
 
-            <p>
-              Sim. A M. Cavaleiro Reparações realiza
-              assistência ao domicílio nas zonas abrangidas
-              pela área de atendimento, dependendo da
-              disponibilidade e do tipo de intervenção.
-            </p>
+<span>
+Ver serviço →
+</span>
 
-          </details>
+</a>
 
 
-          <details>
+<a class="service reveal" href="/servicos/canalizacao.html">
 
-            <summary>
-              Que equipamentos reparam?
-            </summary>
+<div class="icon">💧</div>
 
-            <p>
-              A assistência inclui eletrodomésticos,
-              frigoríficos, congeladores, ar condicionado,
-              refrigeração e outras intervenções técnicas.
-            </p>
+<h3>
+Canalização
+</h3>
 
-          </details>
+<p>
+Fugas, escoamentos, sifões, obstruções e pequenas intervenções.
+</p>
 
+<span>
+Ver serviço →
+</span>
 
-          <details>
+</a>
 
-            <summary>
-              Posso enviar fotografias ou vídeos da avaria?
-            </summary>
+</div>
 
-            <p>
-              Sim. Pode enviar fotografias, vídeos,
-              etiqueta do equipamento e códigos de erro
-              através do WhatsApp.
-            </p>
+</div>
 
-          </details>
+</section>
 
 
-          <details>
+<!-- PORQUE -->
 
-            <summary>
-              Trabalham em Lisboa e na Margem Sul?
-            </summary>
+<section class="why-section">
 
-            <p>
-              Sim. A área de atendimento inclui Lisboa
-              e várias localidades da Área Metropolitana,
-              incluindo diversas zonas da Margem Sul.
-            </p>
+<div class="wrap why">
 
-          </details>
+<div class="why-photo reveal">
 
+<img
+src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1300&q=90"
+alt="Técnico a trabalhar com equipamento profissional"
+width="1300"
+height="975"
+loading="lazy">
 
-          <details>
+<span>
+M. CAVALEIRO · ASSISTÊNCIA TÉCNICA
+</span>
 
-            <summary>
-              Reparam todas as marcas?
-            </summary>
+</div>
 
-            <p>
-              A possibilidade de reparação depende da
-              marca, modelo, tipo de avaria e disponibilidade
-              de peças. Envie os dados do equipamento para avaliação.
-            </p>
 
-          </details>
+<div class="reveal">
 
+<div class="eyebrow">
+Porque escolher a M. Cavaleiro?
+</div>
 
-        </div>
+<h2>
+Uma boa reparação começa antes de trocar uma peça.
+</h2>
 
-      </div>
+<p class="why-copy">
+O objetivo é perceber o comportamento do equipamento, procurar a origem provável da avaria e definir a intervenção adequada.
+</p>
 
-    </section>
 
+<div class="why-list">
 
-    <!-- =========================
-         FINAL CTA
-    ========================= -->
+<div class="why-item">
+<b>01</b>
+<span>
+<strong>Diagnóstico orientado</strong>
+Partimos dos sintomas e da informação disponível do equipamento.
+</span>
+</div>
 
-    <section class="final-cta">
+<div class="why-item">
+<b>02</b>
+<span>
+<strong>Comunicação clara</strong>
+Explicamos o problema e a solução possível.
+</span>
+</div>
 
-      <div class="container">
+<div class="why-item">
+<b>03</b>
+<span>
+<strong>Experiência técnica</strong>
+Mais de 10 anos ligados à área técnica.
+</span>
+</div>
 
-        <div class="final-box">
+<div class="why-item">
+<b>04</b>
+<span>
+<strong>Atendimento ao domicílio</strong>
+Lisboa e várias localidades da Área Metropolitana.
+</span>
+</div>
 
-          <div>
+</div>
 
-            <h2>
-              Tem uma avaria?
-            </h2>
+</div>
 
-            <p>
-              Envie-nos o equipamento, a localidade
-              e os sintomas.
-            </p>
+</div>
 
-          </div>
+</section>
 
-          <a
-            class="btn btn-orange"
-            href="https://wa.me/351931369411?text=Olá%20M.%20Cavaleiro.%20Preciso%20de%20assistência%20técnica."
-            target="_blank"
-            rel="noopener"
-          >
-            Falar no WhatsApp
-          </a>
 
-        </div>
+<!-- ZONAS -->
 
-      </div>
+<section class="local" id="zonas">
 
-    </section>
+<div class="wrap">
 
-  </main>
+<div class="head reveal">
 
+<div class="eyebrow">
+Onde atendemos
+</div>
 
-  <!-- =========================
-       FOOTER
-  ========================= -->
+<h2>
+Lisboa e Margem Sul.
+</h2>
 
-  <footer>
+<p>
+Área de atendimento ampla, sempre sujeita à disponibilidade e ao tipo de intervenção.
+</p>
 
-    <div class="container footer-grid">
+</div>
 
-      <div>
 
-        <strong>
-          M. Cavaleiro Reparações
-        </strong>
+<div class="areas">
 
-        <br>
+<a href="/zonas/lisboa.html">Lisboa</a>
+<a href="/zonas/seixal.html">Seixal</a>
+<a href="/zonas/amora.html">Amora</a>
+<a href="/zonas/corroios.html">Corroios</a>
+<a href="/zonas/arrentela.html">Arrentela</a>
+<a href="/zonas/paio-pires.html">Paio Pires</a>
+<a href="/zonas/fernao-ferro.html">Fernão Ferro</a>
+<a href="/zonas/almada.html">Almada</a>
+<a href="/zonas/barreiro.html">Barreiro</a>
+<a href="/zonas/moita.html">Moita</a>
+<a href="/zonas/montijo.html">Montijo</a>
+<a href="/zonas/setubal.html">Setúbal</a>
+<a href="/zonas/loures.html">Loures</a>
+<a href="/zonas/odivelas.html">Odivelas</a>
+<a href="/zonas/amadora.html">Amadora</a>
+<a href="/zonas/sintra.html">Sintra</a>
+<a href="/zonas/cascais.html">Cascais</a>
+<a href="/zonas/oeiras.html">Oeiras</a>
+<a href="/zonas/mafra.html">Mafra</a>
+<a href="/zonas/vila-franca-de-xira.html">Vila Franca de Xira</a>
 
-        Assistência técnica em Lisboa
-        e Área Metropolitana.
+</div>
 
-      </div>
+</div>
 
+</section>
 
-      <div>
 
-        <a href="tel:+351931369411">
-          +351 931 369 411
-        </a>
+<!-- PROCESSO -->
 
-        <br>
+<section>
 
-        <a href="mailto:geral@mcavaleiro.pt">
-          geral@mcavaleiro.pt
-        </a>
+<div class="wrap">
 
-      </div>
+<div class="head reveal">
 
+<div class="eyebrow">
+Processo
+</div>
 
-      <div>
+<h2>
+Simples para o cliente. Técnico onde interessa.
+</h2>
 
-        ©
-        <span id="year"></span>
-        M. Cavaleiro Reparações
+</div>
 
-      </div>
 
-    </div>
+<div class="process">
 
-  </footer>
+<div class="step reveal">
 
+<div class="num">01</div>
 
-  <!-- =========================
-       FLOATING WHATSAPP
-  ========================= -->
+<h3>
+Fale connosco
+</h3>
 
-  <a
-    class="floating-whatsapp"
-    href="https://wa.me/351931369411"
-    target="_blank"
-    rel="noopener"
-    aria-label="Contactar M. Cavaleiro Reparações pelo WhatsApp"
-  >
-    WhatsApp
-  </a>
+<p>
+Indique localidade, equipamento, marca/modelo e sintomas.
+</p>
 
+</div>
 
-  <!-- =========================
-       MOBILE CTA
-  ========================= -->
 
-  <div class="mobile-bar">
+<div class="step reveal">
 
-    <a href="tel:+351931369411">
-      Ligar
-    </a>
+<div class="num">02</div>
 
-    <a
-      href="https://wa.me/351931369411"
-      target="_blank"
-      rel="noopener"
-    >
-      WhatsApp
-    </a>
+<h3>
+Diagnóstico
+</h3>
 
-  </div>
+<p>
+A informação inicial ajuda a preparar a avaliação do equipamento.
+</p>
 
+</div>
 
-  <!-- =========================
-       JAVASCRIPT
-  ========================= -->
 
-  <script>
+<div class="step reveal">
 
-    /* =========================
-       MENU MOBILE
-    ========================= */
+<div class="num">03</div>
 
-    const menuBtn =
-      document.getElementById("menuBtn");
+<h3>
+Intervenção
+</h3>
 
-    const navLinks =
-      document.getElementById("navLinks");
+<p>
+Após avaliação, é definida a solução adequada à avaria.
+</p>
 
-    if (menuBtn && navLinks) {
+</div>
 
-      menuBtn.addEventListener(
-        "click",
-        function () {
+</div>
 
-          const active =
-            navLinks.classList.toggle("active");
+</div>
 
-          menuBtn.setAttribute(
-            "aria-expanded",
-            active ? "true" : "false"
-          );
+</section>
 
-        }
-      );
 
+<!-- CONTACTO -->
 
-      navLinks
-        .querySelectorAll("a")
-        .forEach(link => {
+<section id="contacto">
 
-          link.addEventListener(
-            "click",
-            () => {
+<div class="wrap">
 
-              navLinks.classList.remove("active");
+<div class="contact reveal">
 
-              menuBtn.setAttribute(
-                "aria-expanded",
-                "false"
-              );
+<div>
 
-            }
-          );
+<div class="eyebrow">
+Pedido de assistência
+</div>
 
-        });
+<h2>
+Explique a avaria em 30 segundos.
+</h2>
 
-    }
+<p>
+Não precisa de saber o nome da peça. Diga-nos o que acontece.
+</p>
 
+<p>
+<strong>Dica:</strong>
+se tiver fotografia da etiqueta, marca/modelo ou código de erro, envie pelo WhatsApp.
+</p>
 
-    /* =========================
-       WHATSAPP FORM
-    ========================= */
+</div>
 
-    const form =
-      document.getElementById(
-        "assistenciaForm"
-      );
 
-    if (form) {
+<form id="form">
 
-      form.addEventListener(
-        "submit",
-        function (event) {
+<input
+name="nome"
+placeholder="Nome"
+autocomplete="name"
+required
+>
 
-          event.preventDefault();
+<input
+name="localidade"
+placeholder="Localidade"
+required
+>
 
-          const nome =
-            form.nome.value.trim();
+<select name="tipo" required>
 
-          const localidade =
-            form.localidade.value.trim();
+<option value="">
+Escolha o equipamento
+</option>
 
-          const equipamento =
-            form.equipamento.value.trim();
+<option>
+Eletrodoméstico
+</option>
 
-          const avaria =
-            form.avaria.value.trim();
+<option>
+Frigorífico / congelador
+</option>
 
+<option>
+Ar condicionado
+</option>
 
-          const message =
+<option>
+Refrigeração
+</option>
+
+<option>
+Outro
+</option>
+
+</select>
+
+<input
+name="modelo"
+placeholder="Marca / modelo (se souber)"
+>
+
+<textarea
+name="avaria"
+placeholder="O que aconteceu? Descreva os sintomas..."
+required
+></textarea>
+
+<button class="btn orange" type="submit">
+📲 Enviar pedido pelo WhatsApp
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FAQ -->
+
+<section>
+
+<div class="wrap">
+
+<div class="head reveal">
+
+<div class="eyebrow">
+Perguntas frequentes
+</div>
+
+<h2>
+Antes de pedir assistência.
+</h2>
+
+</div>
+
+
+<div class="faq">
+
+<details>
+<summary>
+Fazem reparação de eletrodomésticos ao domicílio?
+</summary>
+<p>
+Sim. A assistência é prestada ao domicílio nas zonas abrangidas, dependendo da disponibilidade e do tipo de intervenção.
+</p>
+</details>
+
+
+<details>
+<summary>
+Que eletrodomésticos reparam?
+</summary>
+<p>
+A assistência pode abranger máquinas de lavar roupa, loiça, secar, fornos, placas, frigoríficos, congeladores e outros equipamentos, dependendo da marca, modelo e avaria.
+</p>
+</details>
+
+
+<details>
+<summary>
+O meu ar condicionado não arrefece. Fazem diagnóstico?
+</summary>
+<p>
+Sim. O equipamento pode ser avaliado para perceber a natureza provável da avaria antes de definir a intervenção.
+</p>
+</details>
+
+
+<details>
+<summary>
+Posso enviar fotografias e código de erro?
+</summary>
+<p>
+Sim. Fotografias, vídeos, etiqueta do equipamento e códigos de erro podem ajudar no diagnóstico inicial.
+</p>
+</details>
+
+
+<details>
+<summary>
+Trabalham na Margem Sul?
+</summary>
+<p>
+Sim. A área inclui Seixal, Amora, Corroios, Arrentela, Paio Pires, Fernão Ferro, Almada, Barreiro e outras localidades, sujeito à disponibilidade.
+</p>
+</details>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CTA FINAL -->
+
+<section>
+
+<div class="wrap">
+
+<div class="final reveal">
+
+<div>
+
+<h2>
+Tem uma avaria neste momento?
+</h2>
+
+<p>
+Envie o equipamento + localidade + sintoma. O resto tratamos de encaminhar.
+</p>
+
+</div>
+
+<a
+class="btn orange"
+href="https://wa.me/351931369411?text=Olá.%20Preciso%20de%20assistência%20técnica."
+target="_blank"
+rel="noopener">
+
+Falar com a M. Cavaleiro →
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="wrap foot">
+
+<div>
+<strong>
+M. Cavaleiro Reparações
+</strong>
+<br>
+Reparação de eletrodomésticos · Ar condicionado · Refrigeração
+</div>
+
+<div>
+<a href="tel:+351931369411">
++351 931 369 411
+</a>
+<br>
+<a href="mailto:geral@mcavaleiro.pt">
+geral@mcavaleiro.pt
+</a>
+</div>
+
+<div>
+© <span id="year"></span> M. Cavaleiro Reparações
+</div>
+
+</div>
+
+</footer>
+
+
+<!-- WHATSAPP -->
+
+<a
+class="float"
+href="https://wa.me/351931369411?text=Olá.%20Preciso%20de%20assistência%20técnica."
+target="_blank"
+rel="noopener">
+
+💬 WhatsApp
+
+</a>
+
+
+<!-- MOBILE CTA -->
+
+<div class="mobile">
+
+<a href="tel:+351931369411">
+☎ Ligar agora
+</a>
+
+<a
+href="https://wa.me/351931369411?text=Olá.%20Preciso%20de%20assistência%20técnica."
+target="_blank"
+rel="noopener">
+
+💬 WhatsApp
+
+</a>
+
+</div>
+
+
+<script>
+
+/* MENU MOBILE */
+
+const menu=document.getElementById("menu");
+const nav=document.querySelector("nav");
+
+menu?.addEventListener("click",()=>{
+
+if(nav.style.display==="flex"){
+
+nav.style.display="none";
+
+}else{
+
+nav.style.display="flex";
+nav.style.position="absolute";
+nav.style.top="76px";
+nav.style.left="11px";
+nav.style.right="11px";
+nav.style.padding="12px";
+nav.style.flexDirection="column";
+nav.style.alignItems="stretch";
+nav.style.background="#0b1724";
+nav.style.border="1px solid #22364a";
+nav.style.borderRadius="15px";
+
+}
+
+});
+
+
+document.querySelectorAll("nav a").forEach(a=>{
+
+a.addEventListener("click",()=>{
+
+if(innerWidth<951){
+nav.style.display="none";
+}
+
+});
+
+});
+
+
+/* ANO */
+
+document.getElementById("year").textContent=
+new Date().getFullYear();
+
+
+/* FORMULÁRIO WHATSAPP */
+
+document.getElementById("form").addEventListener("submit",e=>{
+
+e.preventDefault();
+
+const f=e.target;
+
+const msg=
 `Olá M. Cavaleiro Reparações.
 
-Gostaria de pedir assistência técnica.
+Pedido de assistência técnica:
 
-Nome: ${nome}
-
-Localidade: ${localidade}
-
-Equipamento:
-${equipamento || "Não indicado"}
+Nome: ${f.nome.value}
+Localidade: ${f.localidade.value}
+Equipamento: ${f.tipo.value}
+Marca/modelo: ${f.modelo.value||"Não indicado"}
 
 Avaria:
-${avaria}`;
+${f.avaria.value}`;
+
+window.open(
+"https://wa.me/351931369411?text="+encodeURIComponent(msg),
+"_blank",
+"noopener"
+);
+
+});
 
 
-          const url =
-            "https://wa.me/351931369411?text=" +
-            encodeURIComponent(message);
+/* ANIMAÇÕES */
+
+const observer=
+new IntersectionObserver(
+entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("on");
+
+}
+
+});
+
+},
+{threshold:.08}
+);
 
 
-          window.open(
-            url,
-            "_blank",
-            "noopener"
-          );
+document
+.querySelectorAll(".reveal")
+.forEach(el=>observer.observe(el));
 
-        }
-      );
-
-    }
-
-
-    /* =========================
-       ANO AUTOMÁTICO
-    ========================= */
-
-    const year =
-      document.getElementById("year");
-
-    if (year) {
-
-      year.textContent =
-        new Date().getFullYear();
-
-    }
-
-  </script>
+</script>
 
 </body>
 </html>
