@@ -4,24 +4,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
-  <title>M. Cavaleiro® | Assistência Técnica Especializada Multimarcas - Frigoríficos, Máquinas & Ar Condicionado</title>
+  <title>M. Cavaleiro® | Assistência Técnica Especializada por Equipamento e Marca</title>
   <meta name="description"
-    content="Centro Técnico Multimarcas de Alta Performance. Assistência e manutenção ao domicílio de Frigoríficos, Máquinas de Lavar e Ar Condicionado (Daikin, Bosch, LG, Whirlpool, Haier, Candy, AEG, Siemens, Balay, Electrolux). Atendimento no próprio dia.">
+    content="Assistência Técnica e Reparação ao Domicílio em Lisboa e Margem Sul: Máquinas de Lavar, Frigoríficos, Fornos, Placas, Fogões, Esquentadores, Termoacumuladores e Ar Condicionado.">
   <meta name="keywords"
-    content="reparacao frigorificos bosch lisboa, assistencia ar condicionado daikin, reparacao maquinas lavar lg, assistencia whirlpool, reparacao electrolux aeg balay">
+    content="reparacao maquinas lavar bosch, reparacao fogoes meireles, assistencia esquentadores vulcano, reparacao ar condicionado daikin, assistencia placas indução teka">
   <link rel="canonical" href="https://mcavaleiro.pt/">
 
-  <!-- Mobile & PWA Optimizations -->
   <meta name="theme-color" content="#000000">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
-  <!-- Open Graph Meta Tags -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://mcavaleiro.pt/">
-  <meta property="og:title" content="M. Cavaleiro® | Assistência & Manutenção Lisboa & Margem Sul">
-  <meta property="og:description"
-    content="Manutenção e Diagnóstico Multimarcas em 24h ao Domicílio. Peças de origem e garantia escrita.">
 
   <style>
     :root {
@@ -30,7 +22,6 @@
       --surface-hover: rgba(255, 255, 255, 0.08);
       --border: rgba(255, 255, 255, 0.12);
       --accent: #2997ff;
-      --accent-glow: rgba(41, 151, 255, 0.3);
       --green: #30d158;
       --green-glow: rgba(48, 209, 88, 0.3);
       --text: #f5f5f7;
@@ -48,7 +39,7 @@
     body {
       background-color: var(--bg);
       color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", sans-serif;
       line-height: 1.45;
       padding: clamp(12px, 3vw, 24px);
       -webkit-font-smoothing: antialiased;
@@ -104,11 +95,6 @@
       padding: 6px 14px;
       border-radius: 20px;
       border: 1px solid var(--border);
-      transition: background 0.2s;
-    }
-
-    .nav-phone:hover {
-      background: rgba(255, 255, 255, 0.15);
     }
 
     .status-badge {
@@ -160,7 +146,7 @@
     }
 
     h1 {
-      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      font-size: clamp(2rem, 5vw, 3.5rem);
       font-weight: 800;
       letter-spacing: -1.5px;
       line-height: 1.08;
@@ -172,8 +158,8 @@
 
     .hero-sub {
       color: var(--text-sub);
-      font-size: clamp(1rem, 2vw, 1.25rem);
-      max-width: 700px;
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      max-width: 750px;
       margin: 0 auto 30px;
     }
 
@@ -192,18 +178,11 @@
       background: var(--green);
       color: #000;
       font-weight: 800;
-      font-size: 1.15rem;
-      padding: 18px 36px;
+      font-size: 1.1rem;
+      padding: 16px 32px;
       border-radius: 40px;
       text-decoration: none;
       box-shadow: 0 8px 30px var(--green-glow);
-      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .btn-whatsapp:active,
-    .btn-whatsapp:hover {
-      transform: scale(1.02);
-      box-shadow: 0 12px 40px rgba(48, 209, 88, 0.5);
     }
 
     .btn-phone {
@@ -215,17 +194,10 @@
       color: #fff;
       font-weight: 700;
       font-size: 1.1rem;
-      padding: 18px 32px;
+      padding: 16px 30px;
       border-radius: 40px;
       text-decoration: none;
       border: 1px solid var(--border);
-      backdrop-filter: blur(10px);
-      transition: all 0.25s ease;
-    }
-
-    .btn-phone:hover {
-      background: rgba(255, 255, 255, 0.18);
-      border-color: #fff;
     }
 
     /* Bento Grid Structure */
@@ -240,17 +212,8 @@
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 28px;
+      padding: 24px;
       backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      transition: border-color 0.3s, background 0.3s;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .card:hover {
-      border-color: rgba(255, 255, 255, 0.25);
-      background: var(--surface-hover);
     }
 
     .col-12 {
@@ -258,15 +221,53 @@
     }
 
     .card-title {
-      font-size: 1.25rem;
+      font-size: 1.2rem;
       font-weight: 700;
       display: flex;
       align-items: center;
       gap: 10px;
       color: #fff;
+      margin-bottom: 12px;
     }
 
-    /* Brands Badges */
+    /* Equipment Navigation Matrix */
+    .eq-tabs {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+
+    .eq-tab {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--border);
+      color: var(--text-sub);
+      padding: 10px 16px;
+      border-radius: 14px;
+      font-weight: 600;
+      font-size: 0.88rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .eq-tab.active {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+
+    .eq-panel {
+      display: none;
+      background: rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 18px;
+      padding: 20px;
+    }
+
+    .eq-panel.active {
+      display: block;
+    }
+
     .brand-grid {
       display: flex;
       flex-wrap: wrap;
@@ -274,104 +275,53 @@
       margin-top: 12px;
     }
 
-    .brand-item {
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+    .brand-badge {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
       color: #fff;
-      padding: 8px 16px;
-      border-radius: 12px;
-      font-size: 0.88rem;
+      padding: 6px 14px;
+      border-radius: 10px;
+      font-size: 0.85rem;
       font-weight: 600;
-      transition: all 0.2s;
     }
 
-    .brand-item:hover {
-      background: var(--accent);
-      border-color: var(--accent);
-      transform: translateY(-2px);
-    }
-
-    /* Matrix Tabs */
-    .matrix-tabs {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      margin-top: 15px;
-      margin-bottom: 15px;
-    }
-
-    .matrix-tab {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid var(--border);
-      color: var(--text-sub);
-      padding: 10px 18px;
-      border-radius: 16px;
-      font-weight: 600;
-      font-size: 0.9rem;
-      cursor: pointer;
-      transition: all 0.2s;
-    }
-
-    .matrix-tab.active {
-      background: var(--accent);
-      color: #fff;
-      border-color: var(--accent);
-    }
-
-    .matrix-content {
-      background: rgba(0, 0, 0, 0.3);
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      border-radius: 18px;
-      padding: 20px;
-    }
-
-    .matrix-panel {
-      display: none;
-    }
-
-    .matrix-panel.active {
-      display: block;
-    }
-
-    /* Local Proximity Section Styling */
-    .proximity-section-box {
+    /* Proximity Section */
+    .proximity-box {
       background: rgba(0, 0, 0, 0.25);
       border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: 20px;
-      padding: 24px;
-      margin-top: 15px;
+      padding: 20px;
     }
 
-    .proximity-intro {
+    .selector-label {
+      font-size: 0.88rem;
       color: var(--text-sub);
-      font-size: 0.95rem;
-      margin-bottom: 16px;
-      line-height: 1.5;
+      margin-bottom: 8px;
+      display: block;
     }
 
-    .filter-brand-selector {
+    .filter-selector {
       display: flex;
       gap: 8px;
       margin-bottom: 16px;
       flex-wrap: wrap;
-      max-height: 180px;
+      max-height: 200px;
       overflow-y: auto;
-      padding-bottom: 6px;
     }
 
-    .btn-filter-brand {
+    .btn-filter-eq {
       background: rgba(255, 255, 255, 0.08);
       border: 1px solid var(--border);
       color: #fff;
-      padding: 6px 14px;
-      border-radius: 20px;
-      font-size: 0.85rem;
+      padding: 8px 14px;
+      border-radius: 16px;
+      font-size: 0.83rem;
       font-weight: 600;
       cursor: pointer;
       transition: all 0.2s;
     }
 
-    .btn-filter-brand.active {
+    .btn-filter-eq.active {
       background: var(--green);
       color: #000;
       border-color: var(--green);
@@ -385,10 +335,9 @@
       padding: 12px 18px;
       border-radius: 14px;
       color: #fff;
-      font-size: 0.95rem;
+      font-size: 0.92rem;
       margin-bottom: 16px;
       outline: none;
-      transition: border-color 0.2s;
     }
 
     .search-input:focus {
@@ -397,21 +346,21 @@
 
     .locations-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
       gap: 8px;
-      max-height: 360px;
+      max-height: 380px;
       overflow-y: auto;
-      padding-right: 6px;
+      padding-right: 4px;
     }
 
     .locations-grid::-webkit-scrollbar,
-    .filter-brand-selector::-webkit-scrollbar {
+    .filter-selector::-webkit-scrollbar {
       width: 6px;
       height: 6px;
     }
 
     .locations-grid::-webkit-scrollbar-thumb,
-    .filter-brand-selector::-webkit-scrollbar-thumb {
+    .filter-selector::-webkit-scrollbar-thumb {
       background: rgba(255, 255, 255, 0.2);
       border-radius: 4px;
     }
@@ -426,25 +375,23 @@
       display: flex;
       align-items: center;
       gap: 8px;
-      transition: all 0.2s ease;
       text-decoration: none;
+      transition: all 0.2s;
     }
 
     .location-pill:hover {
       background: rgba(41, 151, 255, 0.15);
       border-color: var(--accent);
       color: #fff;
-      transform: translateY(-1px);
     }
 
-    /* Footer */
     footer {
       text-align: center;
-      padding: 50px 15px 30px;
+      padding: 40px 15px;
       color: var(--text-sub);
       font-size: 0.85rem;
       border-top: 1px solid var(--border);
-      margin-top: 50px;
+      margin-top: 40px;
     }
 
     @media (max-width: 900px) {
@@ -494,10 +441,6 @@
       "areaServed": [
         {"@type": "AdministrativeArea", "name": "Lisboa e Grande Lisboa"},
         {"@type": "AdministrativeArea", "name": "Margem Sul e Setúbal"}
-      ],
-      "knowsAbout": [
-        "Assistência técnica Daikin, Bosch, LG, Whirlpool, Haier, Candy, Hoover, Ariston, Indesit, Electrolux, AEG, Zanussi, Becken, Kunft, Siemens, Gaggenau, Balay",
-        "Reparação de frigoríficos, máquinas de lavar roupa, loiça e ar condicionado"
       ]
     }
   </script>
@@ -518,146 +461,127 @@
 
     <!-- HERO SECTION -->
     <section class="hero">
-      <span class="pill-hero">Assistência Técnica Multimarcas · Especialistas Domicílio</span>
-      <h1>Assistência Técnica Direta no Próprio Dia.</h1>
-      <p class="hero-sub">A alternativa mais rápida para frigoríficos, máquinas de lavar e ar condicionado de todas as marcas principais. Peças originais e garantia escrita.</p>
+      <span class="pill-hero">Assistência Técnica Especializada · Ao Domicílio</span>
+      <h1>Assistência Técnica por Equipamento & Marca Real.</h1>
+      <p class="hero-sub">Reparação e diagnóstico direto no próprio dia. Selecione o seu equipamento e marca para suporte técnico rápido com garantia escrita.</p>
       <div class="hero-ctas">
         <a href="https://wa.me/351931369411?text=Ol%C3%A1!%20Preciso%20de%20assist%C3%AAncia%20t%C3%A9cnica%20urgente%20para%20o%20meu%20equipamento."
-          class="btn-whatsapp" target="_blank" rel="noopener">💬 Pedir Diagnóstico no WhatsApp (931 369 411)</a>
+          class="btn-whatsapp" target="_blank" rel="noopener">💬 Contactar no WhatsApp (931 369 411)</a>
         <a href="tel:931369411" class="btn-phone">📞 Ligar 931 369 411</a>
       </div>
     </section>
 
     <div class="bento">
-      <!-- CARD 1: MULTI-BRAND & EQUIPMENT MATRIX -->
+      <!-- CARD 1: CATALOGO REAL POR EQUIPAMENTO E MARCAS -->
       <div class="card col-12">
-        <div class="card-title"><span class="icon">⚙️</span> Matriz de Equipamentos & Marcas Suportadas</div>
-        <p style="color: var(--text-sub); font-size: 0.95rem; margin-top: 6px;">
-          Selecione a categoria para verificar o suporte especializado das marcas líderes em Portugal:
-        </p>
-
-        <div class="matrix-tabs">
-          <button class="matrix-tab active" onclick="switchMatrix(event, 'frigorificos')">🧊 Frigoríficos e Combinados</button>
-          <button class="matrix-tab" onclick="switchMatrix(event, 'maquinas')">🧺 Máquinas de Lavar Roupa e Loiça</button>
-          <button class="matrix-tab" onclick="switchMatrix(event, 'ac')">❄ Ar Condicionado e Climatização</button>
+        <div class="card-title">🛠️ Marcas Reais Suportadas por Categoria de Equipamento</div>
+        
+        <div class="eq-tabs">
+          <button class="eq-tab active" onclick="switchEq(event, 'eq-lavar')">🧺 Máquinas de Lavar / Secar / Loiça</button>
+          <button class="eq-tab" onclick="switchEq(event, 'eq-frio')">🧊 Frigoríficos e Combinados</button>
+          <button class="eq-tab" onclick="switchEq(event, 'eq-cozinha')">🍳 Placas, Fogões e Fornos</button>
+          <button class="eq-tab" onclick="switchEq(event, 'eq-agua')">🔥 Esquentadores & Termoacumuladores</button>
+          <button class="eq-tab" onclick="switchEq(event, 'eq-ac')">❄️ Ar Condicionado</button>
         </div>
 
-        <div class="matrix-content">
-          <!-- Frigorificos Panel -->
-          <div id="frigorificos" class="matrix-panel active">
-            <strong style="color: #fff; font-size: 1.05rem;">Reparação e Manutenção de Frigoríficos, Combinados e Arcas No-Frost</strong>
-            <p style="color: var(--text-sub); font-size: 0.9rem; margin-top: 4px; margin-bottom: 12px;">
-              Reparação de fugas de gás, troca de compressores, termostatos e substituição de placas eletrónicas nas marcas:
-            </p>
-            <div class="brand-grid">
-              <div class="brand-item">Bosch</div>
-              <div class="brand-item">Samsung</div>
-              <div class="brand-item">LG</div>
-              <div class="brand-item">Whirlpool</div>
-              <div class="brand-item">Haier</div>
-              <div class="brand-item">Candy</div>
-              <div class="brand-item">Hoover</div>
-              <div class="brand-item">Ariston</div>
-              <div class="brand-item">Indesit</div>
-              <div class="brand-item">Electrolux</div>
-              <div class="brand-item">AEG</div>
-              <div class="brand-item">Zanussi</div>
-              <div class="brand-item">Becken</div>
-              <div class="brand-item">Kunft</div>
-              <div class="brand-item">Siemens</div>
-              <div class="brand-item">Gaggenau</div>
-              <div class="brand-item">Balay</div>
-              <div class="brand-item">Beko</div>
-              <div class="brand-item">Miele</div>
-            </div>
+        <!-- Panels -->
+        <div id="eq-lavar" class="eq-panel active">
+          <strong style="color:#fff;">Máquinas de Lavar Roupa, Secar e Lavar Loiça</strong>
+          <p style="color:var(--text-sub); font-size:0.88rem; margin: 4px 0 10px;">Avarias de centrifugação, escoamento, rolamentos e bloqueio de porta:</p>
+          <div class="brand-grid">
+            <span class="brand-badge">Bosch</span><span class="brand-badge">Samsung</span><span class="brand-badge">LG</span>
+            <span class="brand-badge">Whirlpool</span><span class="brand-badge">Candy</span><span class="brand-badge">Hoover</span>
+            <span class="brand-badge">Indesit</span><span class="brand-badge">Electrolux</span><span class="brand-badge">AEG</span>
+            <span class="brand-badge">Zanussi</span><span class="brand-badge">Siemens</span><span class="brand-badge">Balay</span>
+            <span class="brand-badge">Miele</span><span class="brand-badge">Beko</span><span class="brand-badge">Ariston</span>
+            <span class="brand-badge">Becken</span><span class="brand-badge">Kunft</span>
           </div>
+        </div>
 
-          <!-- Maquinas Panel -->
-          <div id="maquinas" class="matrix-panel">
-            <strong style="color: #fff; font-size: 1.05rem;">Assistência Técnica a Máquinas de Lavar Roupa, Secar e Lavar Loiça</strong>
-            <p style="color: var(--text-sub); font-size: 0.9rem; margin-top: 4px; margin-bottom: 12px;">
-              Solução de avarias de centrifugação, escoamento, rolamentos e bloqueios de porta:
-            </p>
-            <div class="brand-grid">
-              <div class="brand-item">Bosch</div>
-              <div class="brand-item">Samsung</div>
-              <div class="brand-item">LG</div>
-              <div class="brand-item">Whirlpool</div>
-              <div class="brand-item">Haier</div>
-              <div class="brand-item">Candy</div>
-              <div class="brand-item">Hoover</div>
-              <div class="brand-item">Ariston</div>
-              <div class="brand-item">Indesit</div>
-              <div class="brand-item">Electrolux</div>
-              <div class="brand-item">AEG</div>
-              <div class="brand-item">Zanussi</div>
-              <div class="brand-item">Becken</div>
-              <div class="brand-item">Kunft</div>
-              <div class="brand-item">Siemens</div>
-              <div class="brand-item">Gaggenau</div>
-              <div class="brand-item">Balay</div>
-            </div>
+        <div id="eq-frio" class="eq-panel">
+          <strong style="color:#fff;">Frigoríficos, Combinados e Arcas De Congelação</strong>
+          <p style="color:var(--text-sub); font-size:0.88rem; margin: 4px 0 10px;">Fugas de gás, compressores, no-frost e módulos de controlo:</p>
+          <div class="brand-grid">
+            <span class="brand-badge">Bosch</span><span class="brand-badge">Samsung</span><span class="brand-badge">LG</span>
+            <span class="brand-badge">Whirlpool</span><span class="brand-badge">Haier</span><span class="brand-badge">Liebherr</span>
+            <span class="brand-badge">Candy</span><span class="brand-badge">Indesit</span><span class="brand-badge">Electrolux</span>
+            <span class="brand-badge">AEG</span><span class="brand-badge">Siemens</span><span class="brand-badge">Balay</span>
+            <span class="brand-badge">Beko</span><span class="brand-badge">Gaggenau</span><span class="brand-badge">Becken</span>
+            <span class="brand-badge">Kunft</span>
           </div>
+        </div>
 
-          <!-- AC Panel -->
-          <div id="ac" class="matrix-panel">
-            <strong style="color: #fff; font-size: 1.05rem;">Serviço Técnico Especializado em Ar Condicionado & Climatização</strong>
-            <p style="color: var(--text-sub); font-size: 0.9rem; margin-top: 4px; margin-bottom: 12px;">
-              Cargas de gás (R32 / R410A), higienização antibacteriana profunda e reparação de placas Inverter:
-            </p>
-            <div class="brand-grid">
-              <div class="brand-item">Daikin</div>
-              <div class="brand-item">Mitsubishi Electric</div>
-              <div class="brand-item">LG</div>
-              <div class="brand-item">Bosch</div>
-              <div class="brand-item">Haier</div>
-              <div class="brand-item">Fujitsu</div>
-              <div class="brand-item">Samsung</div>
-              <div class="brand-item">Gree</div>
-              <div class="brand-item">Panasonic</div>
-              <div class="brand-item">Toshiba</div>
-              <div class="brand-item">Electrolux</div>
-              <div class="brand-item">Carrier</div>
-            </div>
+        <div id="eq-cozinha" class="eq-panel">
+          <strong style="color:#fff;">Placas de Indução / Vitrocerâmicas, Fornos e Fogões</strong>
+          <p style="color:var(--text-sub); font-size:0.88rem; margin: 4px 0 10px;">Reparação de reóstato, resistências, placas de controlo e injetores de gás:</p>
+          <div class="brand-grid">
+            <span class="brand-badge">Meireles</span><span class="brand-badge">Teka</span><span class="brand-badge">Smeg</span>
+            <span class="brand-badge">Bosch</span><span class="brand-badge">Siemens</span><span class="brand-badge">Balay</span>
+            <span class="brand-badge">AEG</span><span class="brand-badge">Electrolux</span><span class="brand-badge">Zanussi</span>
+            <span class="brand-badge">Whirlpool</span><span class="brand-badge">Candy</span><span class="brand-badge">Indesit</span>
+            <span class="brand-badge">Gaggenau</span><span class="brand-badge">Becken</span><span class="brand-badge">Kunft</span>
+          </div>
+        </div>
+
+        <div id="eq-agua" class="eq-panel">
+          <strong style="color:#fff;">Esquentadores a Gás e Termoacumuladores Elétricos</strong>
+          <p style="color:var(--text-sub); font-size:0.88rem; margin: 4px 0 10px;">Substituição de membranas, resistências, ânodos e eletrovalvulas:</p>
+          <div class="brand-grid">
+            <span class="brand-badge">Vulcano</span><span class="brand-badge">Junkers</span><span class="brand-badge">Bosch</span>
+            <span class="brand-badge">Vaillant</span><span class="brand-badge">Ariston</span><span class="brand-badge">Fleck</span>
+            <span class="brand-badge">Teka</span><span class="brand-badge">Thermor</span><span class="brand-badge">Videira</span>
+            <span class="brand-badge">Intelligent</span><span class="brand-badge">Becken</span>
+          </div>
+        </div>
+
+        <div id="eq-ac" class="eq-panel">
+          <strong style="color:#fff;">Sistemas de Ar Condicionado e Climatização Inverter</strong>
+          <p style="color:var(--text-sub); font-size:0.88rem; margin: 4px 0 10px;">Cargas de gás (R32 / R410A), higienização e reparação de compressores:</p>
+          <div class="brand-grid">
+            <span class="brand-badge">Daikin</span><span class="brand-badge">Mitsubishi Electric</span><span class="brand-badge">LG</span>
+            <span class="brand-badge">Bosch</span><span class="brand-badge">Haier</span><span class="brand-badge">Fujitsu</span>
+            <span class="brand-badge">Samsung</span><span class="brand-badge">Gree</span><span class="brand-badge">Panasonic</span>
+            <span class="brand-badge">Toshiba</span><span class="brand-badge">Carrier</span>
           </div>
         </div>
       </div>
 
-      <!-- CARD 2: DYNAMIC LOCAL PROXIMITY SECTION -->
+      <!-- CARD 2: PROXIMIDADE COERENTE POR LOCALIDADE -->
       <div class="card col-12">
-        <div class="card-title">🌍 Cobertura de Proximidade · Selecione a Marca por Localidade</div>
-        <div class="proximity-section-box">
-          <p class="proximity-intro">
-            Clique na marca pretendida para gerar os links de assistência direta para a sua localidade:
-          </p>
-
-          <!-- Filter Brand Switcher -->
-          <div class="filter-brand-selector">
-            <button class="btn-filter-brand active" onclick="setBrandFilter('daikin', 'Ar Condicionado Daikin')">❄️ Daikin</button>
-            <button class="btn-filter-brand" onclick="setBrandFilter('bosch', 'Equipamentos Bosch')">🧊 Bosch</button>
-            <button class="btn-filter-brand" onclick="setBrandFilter('lg', 'Equipamentos LG')">📱 LG</button>
-            <button class="btn-filter-brand" onclick="setBrandFilter('whirlpool', 'Equipamentos Whirlpool')">🔄 Whirlpool</button>
-            <button class="btn-filter-brand" onclick="setBrandFilter('haier', 'Equipamentos Haier')">🏠 Haier</button>
-            <button class="btn-filter-brand" onclick="setBrandFilter('candy', 'Equipamentos Candy')">🧺 Candy</button>
-            <button class="btn-filter-brand" onclick="setBrandFilter('hoover', 'Equipamentos Hoover')">🌀 Hoover</button>
-            <button class="btn-filter-brand" onclick="setBrandFilter('ariston', 'Equipamentos Ariston')">🔥 Ariston</button>
-            <button class="btn-filter-brand" onclick="setBrandFilter('indesit', 'Equipamentos Indesit')">⚡ Indesit</button>
-            <button class="btn-filter-brand" onclick="setBrandFilter('electrolux', 'Equipamentos Electrolux')">✨ Electrolux</button>
-            <button class="btn-filter-brand" onclick="setBrandFilter('aeg', 'Equipamentos AEG')">🛠️ AEG</button>
-            <button class="btn-filter-brand" onclick="setBrandFilter('zanussi', 'Equipamentos Zanussi')">🔧 Zanussi</button>
-            <button class="btn-filter-brand" onclick="setBrandFilter('becken', 'Equipamentos Becken')">⚙️ Becken</button>
-            <button class="btn-filter-brand" onclick="setBrandFilter('kunft', 'Equipamentos Kunft')">💡 Kunft</button>
-            <button class="btn-filter-brand" onclick="setBrandFilter('siemens', 'Equipamentos Siemens')">💎 Siemens</button>
-            <button class="btn-filter-brand" onclick="setBrandFilter('gaggenau', 'Equipamentos Gaggenau')">👑 Gaggenau</button>
-            <button class="btn-filter-brand" onclick="setBrandFilter('balay', 'Equipamentos Balay')">🌟 Balay</button>
-            <button class="btn-filter-brand" onclick="setBrandFilter('samsung', 'Equipamentos Samsung')">📲 Samsung</button>
+        <div class="card-title">📍 Serviço de Proximidade · Selecione o Equipamento & Marca Pretendida</div>
+        <div class="proximity-box">
+          <span class="selector-label">Escolha a combinação real pretendida:</span>
+          
+          <div class="filter-selector">
+            <!-- AC -->
+            <button class="btn-filter-eq active" onclick="setServiceFilter('Ar Condicionado Daikin')">❄️ AC Daikin</button>
+            <button class="btn-filter-eq" onclick="setServiceFilter('Ar Condicionado Mitsubishi')">❄️ AC Mitsubishi</button>
+            <!-- Lavar -->
+            <button class="btn-filter-eq" onclick="setServiceFilter('Máquina de Lavar Bosch')">🧺 M. Lavar Bosch</button>
+            <button class="btn-filter-eq" onclick="setServiceFilter('Máquina de Lavar LG')">🧺 M. Lavar LG</button>
+            <button class="btn-filter-eq" onclick="setServiceFilter('Máquina de Lavar Whirlpool')">🧺 M. Lavar Whirlpool</button>
+            <button class="btn-filter-eq" onclick="setServiceFilter('Máquina de Lavar Candy')">🧺 M. Lavar Candy</button>
+            <button class="btn-filter-eq" onclick="setServiceFilter('Máquina de Lavar AEG')">🧺 M. Lavar AEG</button>
+            <button class="btn-filter-eq" onclick="setServiceFilter('Máquina de Lavar Indesit')">🧺 M. Lavar Indesit</button>
+            <!-- Fogao / Forno / Placa -->
+            <button class="btn-filter-eq" onclick="setServiceFilter('Fogão / Forno Meireles')">🍳 Fogão Meireles</button>
+            <button class="btn-filter-eq" onclick="setServiceFilter('Placa / Forno Teka')">🍳 Placa/Forno Teka</button>
+            <button class="btn-filter-eq" onclick="setServiceFilter('Placa de Indução Smeg')">🍳 Placa Smeg</button>
+            <!-- Esquentador / Termoacumulador -->
+            <button class="btn-filter-eq" onclick="setServiceFilter('Esquentador Vulcano')">🔥 Esquentador Vulcano</button>
+            <button class="btn-filter-eq" onclick="setServiceFilter('Esquentador Junkers')">🔥 Esquentador Junkers</button>
+            <button class="btn-filter-eq" onclick="setServiceFilter('Termoacumulador Ariston')">⚡ Termoacumulador Ariston</button>
+            <!-- Frio -->
+            <button class="btn-filter-eq" onclick="setServiceFilter('Frigorífico Samsung')">🧊 Frigorífico Samsung</button>
+            <button class="btn-filter-eq" onclick="setServiceFilter('Frigorífico Liebherr')">🧊 Frigorífico Liebherr</button>
+            <button class="btn-filter-eq" onclick="setServiceFilter('Frigorífico Siemens')">🧊 Frigorífico Siemens</button>
           </div>
 
           <input type="text" id="locationSearch" class="search-input"
-            placeholder="🔍 Filtrar por localidade (ex: Lisboa, Sintra, Cascais, Almada, Seixal...)" onkeyup="filterLocations()">
+            placeholder="🔍 Filtrar localidade (ex: Lisboa, Sintra, Cascais, Almada, Seixal, Odivelas...)" onkeyup="filterLocations()">
 
           <div class="locations-grid" id="locationsGrid">
-            <!-- Gerado dinamicamente pelo JS -->
+            <!-- Gerado dinamicamente via JS -->
           </div>
         </div>
       </div>
@@ -665,7 +589,7 @@
 
     <!-- FOOTER -->
     <footer>
-      <p>&copy; M. Cavaleiro® - Assistência Técnica Especializada Multimarcas em Lisboa e Margem Sul.</p>
+      <p>&copy; M. Cavaleiro® - Assistência Técnica Coerente e Especializada Multimarcas em Lisboa e Margem Sul.</p>
     </footer>
   </div>
 
@@ -684,8 +608,7 @@
       "Moscavide", "Sacavém", "Póvoa de Santa Iria", "Alverca", "Margem Sul", "Parque das Nações"
     ];
 
-    let currentBrandKey = 'daikin';
-    let currentBrandLabel = 'Ar Condicionado Daikin';
+    let currentServiceLabel = 'Ar Condicionado Daikin';
 
     function renderLocations() {
       const grid = document.getElementById('locationsGrid');
@@ -695,18 +618,17 @@
         const a = document.createElement('a');
         a.className = 'location-pill';
         a.target = '_blank';
-        const msg = encodeURIComponent(`Olá! Preciso de assistência técnica para ${currentBrandLabel} em ${loc}`);
+        const msg = encodeURIComponent(`Olá! Preciso de assistência técnica para ${currentServiceLabel} em ${loc}`);
         a.href = `https://wa.me/351931369411?text=${msg}`;
-        a.innerHTML = `📍 Assistência ${currentBrandLabel} em ${loc}`;
+        a.innerHTML = `📍 Assistência ${currentServiceLabel} em ${loc}`;
         grid.appendChild(a);
       });
     }
 
-    function setBrandFilter(brandKey, brandLabel) {
-      currentBrandKey = brandKey;
-      currentBrandLabel = brandLabel;
+    function setServiceFilter(label) {
+      currentServiceLabel = label;
 
-      document.querySelectorAll('.btn-filter-brand').forEach(btn => {
+      document.querySelectorAll('.btn-filter-eq').forEach(btn => {
         btn.classList.remove('active');
       });
       if (event && event.currentTarget) {
@@ -717,12 +639,9 @@
       filterLocations();
     }
 
-    function switchMatrix(event, tabId) {
-      const tabs = document.querySelectorAll('.matrix-tab');
-      const panels = document.querySelectorAll('.matrix-panel');
-
-      tabs.forEach(tab => tab.classList.remove('active'));
-      panels.forEach(panel => panel.classList.remove('active'));
+    function switchEq(event, tabId) {
+      document.querySelectorAll('.eq-tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.eq-panel').forEach(p => p.classList.remove('active'));
 
       event.currentTarget.classList.add('active');
       document.getElementById(tabId).classList.add('active');
@@ -738,7 +657,6 @@
       });
     }
 
-    // Inicializar na carga da página
     document.addEventListener('DOMContentLoaded', () => {
       renderLocations();
     });
