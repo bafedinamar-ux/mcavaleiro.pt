@@ -257,10 +257,18 @@
     .col-6 { grid-column: span 6; }
     .col-4 { grid-column: span 4; }
 
+    .card-header-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
     .card-title {
       font-size: 1.25rem;
       font-weight: 700;
-      margin-bottom: 12px;
       display: flex;
       align-items: center;
       gap: 10px;
@@ -269,6 +277,31 @@
 
     .card-title span.icon {
       font-size: 1.4rem;
+    }
+
+    .btn-refresh {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid var(--border);
+      color: var(--accent);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .btn-refresh:hover {
+      background: rgba(41, 151, 255, 0.15);
+      border-color: var(--accent);
+      transform: scale(1.03);
+    }
+
+    .btn-refresh:active {
+      transform: scale(0.97);
     }
 
     /* Comparativo Serviços Tradicionais vs M. Cavaleiro */
@@ -342,12 +375,17 @@
       margin-bottom: 6px;
     }
 
-    /* Galeria Interativa / Geotagged */
+    /* Galeria Interativa com Transição Suave */
     .gallery-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 12px;
       margin-top: 15px;
+      transition: opacity 0.3s ease;
+    }
+
+    .gallery-grid.fade-out {
+      opacity: 0;
     }
 
     .gallery-card {
@@ -622,31 +660,22 @@
         </div>
       </div>
 
-      <!-- CARD 5: GALERIA DE INTERVENÇÕES RECENTES -->
+      <!-- CARD 5: GALERIA DINÂMICA DE INTERVENÇÕES (COM CLICK E REFRESH ALEATÓRIO) -->
       <div class="card col-12">
-        <div class="card-title">
-          <span class="icon">🛠️</span> Intervenções Recentes em Campo
+        <div class="card-header-flex">
+          <div class="card-title">
+            <span class="icon">🛠️</span> Intervenções Recentes em Campo
+          </div>
+          <button class="btn-refresh" onclick="gerarIntervencoesAleatorias()">
+            🔄 Ver Outras Intervenções
+          </button>
         </div>
         <p style="color: var(--text-sub); font-size: 0.9rem;">
           Exemplos reais de serviços executados pelas nossas equipas técnicas na Grande Lisboa e Margem Sul:
         </p>
-        <div class="gallery-grid">
-          <div class="gallery-card">
-            <div class="gallery-tag">Ar Condicionado</div>
-            <div class="gallery-desc">Carga de Gás R32 e Selagem de Fuga Micro em Multi-Split Daikin</div>
-            <div class="gallery-location">📍 Parque das Nações, Lisboa</div>
-          </div>
-          <div class="gallery-card">
-            <div class="gallery-tag">Máquina de Lavar</div>
-            <div class="gallery-desc">Substituição de Rolamentos e Bomba de Escoamento Bosch Serie 6</div>
-            <div class="gallery-location">📍 Almada, Margem Sul</div>
-          </div>
-          <div class="gallery-card">
-            <div class="gallery-tag">Frigorífico</div>
-            <div class="gallery-desc">Substituição de Termostato e Sensor No-Frost Siemens iQ500</div>
-            <div class="gallery-location">📍 Oeiras, Lisboa</div>
-          </div>
-        </div>
+        
+        <!-- Contentor dinâmico de intervenções -->
+        <div class="gallery-grid" id="galleryContainer"></div>
       </div>
 
       <!-- CARD 6: COMO FUNCIONA (SISTEMA EM 3 PASSOS SIMPLES) -->
@@ -730,6 +759,59 @@
     </footer>
 
   </div>
+
+  <!-- JAVASCRIPT: GERADOR DINÂMICO E ALEATÓRIO DE INTERVENÇÕES -->
+  <script>
+    // Base de dados alargada de intervenções
+    const baseIntervencoes = [
+      { tag: "Ar Condicionado", desc: "Carga de Gás R32 e Selagem de Fuga Micro em Multi-Split Daikin", loc: "📍 Parque das Nações, Lisboa" },
+      { tag: "Máquina de Lavar", desc: "Substituição de Rolamentos e Bomba de Escoamento Bosch Serie 6", loc: "📍 Almada, Margem Sul" },
+      { tag: "Frigorífico", desc: "Substituição de Termostato e Sensor No-Frost Siemens iQ500", loc: "📍 Oeiras, Lisboa" },
+      { tag: "Ar Condicionado", desc: "Substituição de Placa Inverter e Higienização Química Mitsubishi", loc: "📍 Cascais, Linha" },
+      { tag: "Máquina de Secar", desc: "Limpeza de Condensador e Troca de Correia de Aço AEG Protech", loc: "📍 Sintra, Lisboa" },
+      { tag: "Máquina Loiça", desc: "Substituição de Válvula Aquastop e Bomba Principal Whirlpool", loc: "📍 Seixal, Margem Sul" },
+      { tag: "Ar Condicionado", desc: "Manutenção Preventiva Antibacteriana e Carga R410A LG Artcool", loc: "📍 Odivelas, Lisboa" },
+      { tag: "Frigorífico Side-by-Side", desc: "Reparação de Ventoinha e Deteção de Fuga de Gás R600a Samsung", loc: "📍 Telheiras, Lisboa" },
+      { tag: "Máquina de Lavar", desc: "Troca de Amortecedores e Borracha de Escotilha Balay 8kg", loc: "📍 Corroios, Margem Sul" },
+      { tag: "Ar Condicionado", desc: "Substituição de Compressor e Condensador Gree Lomo Norte", loc: "📍 Amadora, Lisboa" },
+      { tag: "Máquina Loiça", desc: "Substituição de Sensor de Turbidez e Desobstrução Miele G5000", loc: "📍 Estoril, Cascais" },
+      { tag: "Frigorífico", desc: "Substituição de Módulo Eletrónico de Potência e Sonda Indesit", loc: "📍 Barreiro, Margem Sul" },
+      { tag: "Ar Condicionado", desc: "Higienização Industrial de Condutas e Filtros Fujitsu Inverter", loc: "📍 Alfragide, Amadora" },
+      { tag: "Máquina de Lavar", desc: "Troca de Escovas do Motor e Módulo de Controlo Electrolux", loc: "📍 Montijo, Margem Sul" },
+      { tag: "Ar Condicionado", desc: "Carga de Gás e Verificação de Manómetros em Sistema Panasonic", loc: "📍 Loures, Lisboa" }
+    ];
+
+    function gerarIntervencoesAleatorias() {
+      const container = document.getElementById('galleryContainer');
+      
+      // Efeito de transição fade
+      container.classList.add('fade-out');
+      
+      setTimeout(() => {
+        // Baralhar a lista de forma aleatória (Algoritmo Fisher-Yates)
+        const embaralhado = [...baseIntervencoes].sort(() => 0.5 - Math.random());
+        // Selecionar 3 intervenções
+        const selecionados = embaralhado.slice(0, 3);
+        
+        container.innerHTML = '';
+        selecionados.forEach(item => {
+          const cardHtml = `
+            <div class="gallery-card">
+              <div class="gallery-tag">${item.tag}</div>
+              <div class="gallery-desc">${item.desc}</div>
+              <div class="gallery-location">${item.loc}</div>
+            </div>
+          `;
+          container.innerHTML += cardHtml;
+        });
+        
+        container.classList.remove('fade-out');
+      }, 200);
+    }
+
+    // Carregar intervenções aleatórias automaticamente assim que a página abre
+    window.addEventListener('DOMContentLoaded', gerarIntervencoesAleatorias);
+  </script>
 
 </body>
 </html>
