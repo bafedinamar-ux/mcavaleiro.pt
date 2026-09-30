@@ -4,21 +4,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
-  <title>M. Cavaleiro® | Serviço de Proximidade & Assistência Técnica</title>
-  <meta name="description" content="Serviço de Proximidade M. Cavaleiro: Selecione o Equipamento e Marca Pretendida para agendamento rápido de assistência técnica na Grande Lisboa e Margem Sul.">
+  <title>M. Cavaleiro® | Assistência Técnica Especializada</title>
+  <meta name="description" content="Assistência Técnica e Reparação ao Domicílio: Selecione o seu equipamento e marca.">
   <style>
     :root {
-      --bg: #090a0f;
-      --surface: rgba(255, 255, 255, 0.04);
-      --surface-hover: rgba(255, 255, 255, 0.08);
+      --bg: #000000;
+      --surface: rgba(255, 255, 255, 0.05);
       --border: rgba(255, 255, 255, 0.12);
       --accent: #2997ff;
-      --accent-glow: rgba(41, 151, 255, 0.25);
       --green: #30d158;
-      --green-glow: rgba(48, 209, 88, 0.2);
       --text: #f5f5f7;
       --text-sub: #86868b;
-      --radius: 18px;
+      --radius: 20px;
     }
 
     * {
@@ -31,156 +28,132 @@
     body {
       background-color: var(--bg);
       color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
       line-height: 1.5;
-      padding: clamp(16px, 4vw, 32px) 12px;
-      min-height: 100vh;
+      padding: clamp(12px, 3vw, 24px);
     }
 
     .container {
-      max-width: 1080px;
+      max-width: 1000px;
       margin: 0 auto;
     }
 
     /* Header */
     header {
       text-align: center;
-      margin-bottom: 36px;
-    }
-
-    .badge-top {
-      display: inline-block;
-      background: rgba(41, 151, 255, 0.12);
-      border: 1px solid rgba(41, 151, 255, 0.3);
-      color: var(--accent);
-      padding: 6px 16px;
-      border-radius: 30px;
-      font-size: 0.85rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      margin-bottom: 12px;
+      margin-bottom: 40px;
+      padding-top: 20px;
     }
 
     h1 {
-      font-size: clamp(1.8rem, 4.5vw, 2.6rem);
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
       font-weight: 800;
-      letter-spacing: -0.5px;
+      letter-spacing: -1px;
       background: linear-gradient(180deg, #ffffff 0%, #a1a1a6 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
 
     .subtitle {
       color: var(--text-sub);
-      font-size: 1.05rem;
+      font-size: 1.1rem;
     }
 
-    /* Passos do Funil */
+    /* Selection Steps */
     .step-box {
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: clamp(18px, 3vw, 28px);
-      margin-bottom: 20px;
-      backdrop-filter: blur(16px);
-      transition: all 0.3s ease;
+      padding: 24px;
+      margin-bottom: 24px;
+      backdrop-filter: blur(10px);
     }
 
     .step-title {
-      font-size: 1.15rem;
+      font-size: 1.2rem;
       font-weight: 700;
-      margin-bottom: 18px;
+      margin-bottom: 16px;
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
       color: #fff;
     }
 
     .step-number {
       background: var(--accent);
       color: #fff;
-      width: 30px;
-      height: 30px;
+      width: 28px;
+      height: 28px;
       display: flex;
       align-items: center;
       justify-content: center;
       border-radius: 50%;
       font-size: 0.9rem;
       font-weight: 800;
-      box-shadow: 0 0 12px var(--accent-glow);
     }
 
-    /* Grelha de Seleção */
+    /* Grid Buttons */
     .btn-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+      display: flex;
+      flex-wrap: wrap;
       gap: 10px;
     }
 
     .btn-select {
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.15);
       color: var(--text);
-      padding: 14px 16px;
-      border-radius: 14px;
-      font-size: 0.92rem;
+      padding: 12px 20px;
+      border-radius: 12px;
+      font-size: 0.95rem;
       font-weight: 600;
       cursor: pointer;
-      text-align: left;
-      display: flex;
-      align-items: center;
-      gap: 10px;
       transition: all 0.2s ease;
     }
 
     .btn-select:hover {
-      background: var(--surface-hover);
-      border-color: rgba(255, 255, 255, 0.25);
-      transform: translateY(-1px);
+      background: rgba(255, 255, 255, 0.1);
     }
 
     .btn-select.active {
       background: var(--accent);
       border-color: var(--accent);
-      color: #ffffff;
-      box-shadow: 0 4px 20px var(--accent-glow);
+      color: #fff;
+      box-shadow: 0 4px 15px rgba(41, 151, 255, 0.3);
     }
 
-    /* Barra de Pesquisa e Grelha de Localidades */
+    /* Locations Grid */
     .search-bar {
       width: 100%;
-      background: rgba(0, 0, 0, 0.4);
+      background: rgba(0, 0, 0, 0.3);
       border: 1px solid var(--border);
-      padding: 14px 18px;
+      padding: 14px 20px;
       border-radius: 12px;
       color: #fff;
-      font-size: 0.95rem;
-      margin-bottom: 16px;
+      font-size: 1rem;
+      margin-bottom: 20px;
       outline: none;
-      transition: border-color 0.2s;
     }
 
     .search-bar:focus {
       border-color: var(--accent);
-      box-shadow: 0 0 10px var(--accent-glow);
     }
 
     .locations-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
       gap: 10px;
-      max-height: 420px;
+      max-height: 400px;
       overflow-y: auto;
-      padding-right: 6px;
+      padding-right: 5px;
     }
 
     .locations-grid::-webkit-scrollbar { width: 6px; }
     .locations-grid::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.2); border-radius: 4px; }
 
     .location-card {
-      background: rgba(0, 0, 0, 0.35);
+      background: rgba(0, 0, 0, 0.4);
       border: 1px solid rgba(255, 255, 255, 0.08);
       padding: 14px 16px;
       border-radius: 12px;
@@ -189,137 +162,95 @@
       display: flex;
       align-items: center;
       gap: 10px;
-      font-size: 0.88rem;
-      transition: all 0.2s ease;
+      font-size: 0.9rem;
+      transition: all 0.2s;
     }
 
     .location-card:hover {
-      background: var(--green-glow);
+      background: rgba(48, 209, 88, 0.15);
       border-color: var(--green);
       color: #fff;
-      transform: translateY(-1px);
     }
 
-    .location-card strong { color: var(--green); font-weight: 700; }
+    .location-card span { font-weight: 700; color: var(--green); }
 
-    .summary-badge {
-      background: rgba(48, 209, 88, 0.12);
-      border: 1px solid rgba(48, 209, 88, 0.3);
-      color: var(--green);
-      padding: 10px 16px;
-      border-radius: 12px;
-      font-weight: 600;
-      margin-bottom: 16px;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 0.98rem;
+    .hidden {
+      display: none !important;
     }
-
-    .hidden { display: none !important; }
   </style>
 </head>
 
 <body>
   <div class="container">
     <header>
-      <span class="badge-top">Serviço de Proximidade</span>
       <h1>M. CAVALEIRO®</h1>
-      <p class="subtitle">Selecione o Equipamento & Marca Pretendida para Assistência Imediata</p>
+      <p class="subtitle">Agendamento Inteligente de Assistência Técnica</p>
     </header>
 
     <!-- PASSO 1: EQUIPAMENTO -->
     <div class="step-box" id="step1">
       <div class="step-title"><span class="step-number">1</span> Selecione o Equipamento</div>
       <div class="btn-grid" id="equipmentGrid">
-        <!-- Injetado via JS -->
+        <!-- Preenchido via JS -->
       </div>
     </div>
 
-    <!-- PASSO 2: MARCA (Filtrada estritamente por equipamento) -->
+    <!-- PASSO 2: MARCA (Só mostra as marcas correspondentes) -->
     <div class="step-box hidden" id="step2">
-      <div class="step-title"><span class="step-number">2</span> Selecione a Marca Pretendida</div>
+      <div class="step-title"><span class="step-number">2</span> Qual é a Marca?</div>
       <div class="btn-grid" id="brandsGrid">
-        <!-- Injetado via JS dinamicamente -->
+        <!-- Preenchido via JS dinamicamente -->
       </div>
     </div>
 
-    <!-- PASSO 3: LOCALIDADE & CONTACTO DIRETO -->
+    <!-- PASSO 3: LOCALIDADE (Gera o link final) -->
     <div class="step-box hidden" id="step3">
-      <div class="step-title"><span class="step-number">3</span> Selecione a sua Localidade</div>
+      <div class="step-title"><span class="step-number">3</span> Onde precisa de assistência?</div>
       
-      <div class="summary-badge" id="summaryText"></div>
+      <p id="summaryText" style="color:var(--accent); font-weight:600; margin-bottom:15px; font-size: 1.1rem;"></p>
       
-      <input type="text" id="locSearch" class="search-bar" placeholder="🔍 Pesquisar localidade (ex: Almada, Sintra, Cascais, Odivelas...)" onkeyup="filterLocations()">
+      <input type="text" id="locSearch" class="search-bar" placeholder="🔍 Escreva a sua localidade (ex: Almada, Sintra...)" onkeyup="filterLocations()">
       <div class="locations-grid" id="locationsGrid">
-        <!-- Injetado via JS dinamicamente -->
+        <!-- Preenchido via JS dinamicamente -->
       </div>
     </div>
 
   </div>
 
   <script>
-    // MATRIZ COMPLETA E RIGOROSA DE EQUIPAMENTOS E MARCAS REAIS
+    // BASE DE DADOS ESTRITA: Equipamentos e as suas Marcas reais
     const dataMatrix = {
-      "Máquina de Lavar Roupa": {
+      "Máquina de Lavar": {
         icon: "🧺",
-        brands: ["Bosch", "Siemens", "Balay", "LG", "Samsung", "Whirlpool", "AEG", "Electrolux", "Zanussi", "Indesit", "Candy", "Hoover", "Miele", "Beko", "Hotpoint-Ariston", "Haier", "Becken", "Kunft", "Fagor", "Brandt"]
+        brands: ["Bosch", "Siemens", "Balay", "LG", "Samsung", "Whirlpool", "AEG", "Electrolux", "Zanussi", "Indesit", "Candy", "Hoover", "Miele", "Beko", "Ariston", "Becken", "Kunft"]
       },
-      "Máquina de Secar Roupa": {
-        icon: "👕",
-        brands: ["Bosch", "Siemens", "Balay", "LG", "Samsung", "Whirlpool", "AEG", "Electrolux", "Zanussi", "Indesit", "Candy", "Hoover", "Miele", "Beko", "Hotpoint-Ariston", "Haier", "Becken", "Kunft"]
-      },
-      "Máquina de Lavar Louça": {
-        icon: "🍽️",
-        brands: ["Bosch", "Siemens", "Balay", "Whirlpool", "AEG", "Electrolux", "Zanussi", "Indesit", "Candy", "Miele", "Beko", "Hotpoint-Ariston", "Teka", "Smeg", "Haier", "Becken", "Kunft"]
-      },
-      "Frigorífico / Combinado": {
+      "Frigorífico / Arca": {
         icon: "🧊",
-        brands: ["Bosch", "Siemens", "Balay", "LG", "Samsung", "Whirlpool", "AEG", "Electrolux", "Zanussi", "Indesit", "Candy", "Liebherr", "Haier", "Beko", "Hotpoint-Ariston", "Hisense", "Smeg", "Becken", "Kunft"]
+        brands: ["Bosch", "Siemens", "Balay", "LG", "Samsung", "Whirlpool", "AEG", "Electrolux", "Zanussi", "Indesit", "Candy", "Liebherr", "Haier", "Beko", "Becken", "Kunft"]
       },
-      "Arca Congeladora": {
+      "Ar Condicionado": {
         icon: "❄️",
-        brands: ["Bosch", "Siemens", "Balay", "Whirlpool", "Liebherr", "Beko", "Haier", "Zanussi", "Indesit", "Electrolux", "Candy", "Hisense", "Becken", "Kunft"]
+        brands: ["Daikin", "Mitsubishi Electric", "LG", "Samsung", "Bosch", "Haier", "Fujitsu", "Panasonic", "Gree", "Toshiba", "Carrier"]
       },
-      "Garrafeira Climatizada": {
-        icon: "🍷",
-        brands: ["Liebherr", "Avintage", "La Sommelière", "Caso", "Teka", "Smeg", "Candy", "Haier", "Bosch"]
-      },
-      "Ar Condicionado / Higa": {
-        icon: "🌡️",
-        brands: ["Daikin", "Mitsubishi Electric", "LG", "Samsung", "Bosch", "Haier", "Fujitsu", "Panasonic", "Gree", "Toshiba", "Carrier", "Midea", "Hisense", "Daitsu"]
-      },
-      "Forno Elétrico / Encastre": {
+      "Forno": {
         icon: "♨️",
-        brands: ["Bosch", "Siemens", "Balay", "Teka", "Meireles", "Smeg", "AEG", "Electrolux", "Zanussi", "Whirlpool", "Indesit", "Candy", "Beko", "Gaggenau", "Franke", "Hotpoint-Ariston", "Becken", "Kunft"]
+        brands: ["Bosch", "Siemens", "Balay", "Teka", "Meireles", "Smeg", "AEG", "Electrolux", "Zanussi", "Whirlpool", "Indesit", "Candy", "Beko", "Gaggenau", "Becken", "Kunft"]
       },
-      "Placa Indução / Vitro / Gás": {
+      "Placa de Indução / Vitro": {
         icon: "🍳",
-        brands: ["Bosch", "Siemens", "Balay", "Teka", "Smeg", "Meireles", "AEG", "Electrolux", "Zanussi", "Whirlpool", "Indesit", "Candy", "Beko", "Franke", "Becken", "Kunft"]
+        brands: ["Bosch", "Siemens", "Balay", "Teka", "Smeg", "AEG", "Electrolux", "Zanussi", "Whirlpool", "Indesit", "Candy", "Beko", "Becken", "Kunft"]
       },
       "Fogão": {
         icon: "🔥",
-        brands: ["Meireles", "Smeg", "Teka", "Beko", "Zanussi", "Indesit", "Candy", "Hotpoint-Ariston", "Becken", "Kunft"]
-      },
-      "Exaustor / Hotte": {
-        icon: "💨",
-        brands: ["Teka", "Bosch", "Siemens", "Balay", "Faber", "Cata", "Meireles", "Smeg", "AEG", "Electrolux", "Zanussi", "Candy", "Beko", "Franke"]
+        brands: ["Meireles", "Smeg", "Beko", "Zanussi", "Indesit", "Candy", "Teka", "Becken", "Kunft"]
       },
       "Esquentador": {
         icon: "🚿",
-        brands: ["Vulcano", "Junkers", "Bosch", "Vaillant", "Ariston", "Cointra", "Fagor", "Becken", "Intelligent"]
+        brands: ["Vulcano", "Junkers", "Bosch", "Vaillant", "Becken", "Intelligent"]
       },
-      "Caldeira a Gás / Mural": {
-        icon: "🔥",
-        brands: ["Vulcano", "Junkers", "Bosch", "Vaillant", "Baxi", "Ferroli", "Ariston", "Saunier Duval", "Chaffoteaux", "Beretta"]
-      },
-      "Termoacumulador / Cilindro": {
+      "Termoacumulador": {
         icon: "⚡",
-        brands: ["Ariston", "Fleck", "Vulcano", "Junkers", "Videira", "Thermor", "Teka", "Bosch", "Atlantic", "Becken"]
-      },
-      "Micro-ondas Encastre": {
-        icon: "📻",
-        brands: ["Bosch", "Siemens", "Balay", "Teka", "Whirlpool", "Samsung", "LG", "Panasonic", "Candy", "Smeg", "AEG", "Electrolux", "Becken", "Kunft"]
+        brands: ["Ariston", "Fleck", "Vulcano", "Junkers", "Videira", "Thermor", "Teka", "Becken"]
       }
     };
 
@@ -329,46 +260,47 @@
       "Oeiras", "Vila Franca de Xira", "Corroios", "Costa da Caparica", "Agualva-Cacém", 
       "Ericeira", "Pontinha", "Carcavelos", "Pinhal Novo", "Algés", "Rio de Mouro", 
       "Carnaxide", "Quinta do Conde", "Benfica", "Estoril", "São Domingos de Rana", 
-      "Queluz", "Massamá", "Cacilhas", "Azeitão", "Moscavide", "Sacavém", "Póvoa de Santa Iria",
-      "Alverca", "Belas", "Paço de Arcos", "Parede", "Alcabideche", "Ramada", "Prior Velho"
+      "Queluz", "Massamá", "Cacilhas", "Azeitão", "Moscavide", "Sacavém", "Póvoa de Santa Iria"
     ];
 
     let selectedEquip = "";
     let selectedBrand = "";
 
-    // 1. Renderizar lista inicial de equipamentos
+    // 1. Iniciar os botões de equipamentos
     function initEquipments() {
       const grid = document.getElementById("equipmentGrid");
-      grid.innerHTML = "";
-      
       for (const [eq, info] of Object.entries(dataMatrix)) {
         const btn = document.createElement("button");
         btn.className = "btn-select";
-        btn.innerHTML = `<span>${info.icon}</span> <span>${eq}</span>`;
+        btn.innerHTML = `${info.icon} ${eq}`;
         btn.onclick = () => selectEquipment(eq, btn);
         grid.appendChild(btn);
       }
     }
 
-    // 2. Seleção do Equipamento
+    // 2. Ação ao selecionar Equipamento
     function selectEquipment(eq, btnElement) {
       selectedEquip = eq;
-      selectedBrand = "";
+      selectedBrand = ""; // Reseta a marca
 
+      // Atualizar botões visuais
       document.querySelectorAll("#equipmentGrid .btn-select").forEach(b => b.classList.remove("active"));
       btnElement.classList.add("active");
 
+      // Esconder passo 3 se estivesse aberto
       document.getElementById("step3").classList.add("hidden");
 
+      // Mostrar e preencher Passo 2 (Marcas)
       const step2 = document.getElementById("step2");
       step2.classList.remove("hidden");
       
       const brandsGrid = document.getElementById("brandsGrid");
-      brandsGrid.innerHTML = "";
+      brandsGrid.innerHTML = ""; // Limpa marcas anteriores
 
-      // Filtra APENAS as marcas correspondentes a este equipamento
-      const marcas = dataMatrix[eq].brands.sort();
-      marcas.forEach(marca => {
+      // Carrega SÓ as marcas relativas a este equipamento
+      const marcasPermitidas = dataMatrix[eq].brands;
+      
+      marcasPermitidas.forEach(marca => {
         const btn = document.createElement("button");
         btn.className = "btn-select";
         btn.innerText = marca;
@@ -376,30 +308,38 @@
         brandsGrid.appendChild(btn);
       });
 
+      // Fazer scroll suave para o passo 2
       step2.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }
 
-    // 3. Seleção da Marca
+    // 3. Ação ao selecionar Marca
     function selectBrand(marca, btnElement) {
       selectedBrand = marca;
 
+      // Atualizar botões visuais
       document.querySelectorAll("#brandsGrid .btn-select").forEach(b => b.classList.remove("active"));
       btnElement.classList.add("active");
 
+      // Mostrar Passo 3 (Localidades)
       const step3 = document.getElementById("step3");
       step3.classList.remove("hidden");
 
-      document.getElementById("summaryText").innerHTML = `✓ Pedido: <strong>${selectedEquip} ${selectedBrand}</strong>`;
+      // Atualiza o texto de resumo
+      document.getElementById("summaryText").innerText = `✓ Assistência a ${selectedEquip} ${selectedBrand}`;
 
+      // Renderiza os links finais
       renderLocations();
+
+      // Fazer scroll suave para o passo 3
       step3.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }
 
-    // 4. Renderizar a grelha de localidades com o link do WhatsApp
+    // 4. Renderizar a lista de localidades com o Link de WhatsApp gerado
     function renderLocations() {
       const grid = document.getElementById("locationsGrid");
       grid.innerHTML = "";
 
+      // Ordenar alfabeticamente para facilitar a procura
       const locsOrdenadas = [...locations].sort();
 
       locsOrdenadas.forEach(loc => {
@@ -407,15 +347,16 @@
         a.className = "location-card";
         a.target = "_blank";
         
+        // Mensagem perfeita enviada para o WhatsApp
         const msg = encodeURIComponent(`Olá! Preciso de assistência técnica para ${selectedEquip} da marca ${selectedBrand} em ${loc}.`);
         a.href = `https://wa.me/351931369411?text=${msg}`;
         
-        a.innerHTML = `📍 <strong>${loc}</strong> — Assistência ${selectedEquip} ${selectedBrand}`;
+        a.innerHTML = `📍 <span>${loc}</span> — Reparar ${selectedEquip} ${selectedBrand}`;
         grid.appendChild(a);
       });
     }
 
-    // 5. Filtro de pesquisa rápida de localidades
+    // 5. Filtro de pesquisa de localidades
     function filterLocations() {
       const input = document.getElementById("locSearch").value.toLowerCase();
       const cards = document.querySelectorAll(".location-card");
@@ -426,6 +367,7 @@
       });
     }
 
+    // Iniciar a página
     document.addEventListener("DOMContentLoaded", initEquipments);
   </script>
 </body>
