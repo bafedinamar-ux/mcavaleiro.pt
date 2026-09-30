@@ -4,11 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
-  <title>M. Cavaleiro® | Assistência Técnica Especializada Frigoríficos, Máquinas & Ar Condicionado Daikin</title>
+  <title>M. Cavaleiro® | Assistência Técnica Especializada Multimarcas - Frigoríficos, Máquinas & Ar Condicionado</title>
   <meta name="description"
-    content="Centro Técnico Multimarcas de Alta Performance. Assistência e manutenção ao domicílio de Frigoríficos (Bosch, Samsung, LG), Máquinas de Lavar e Ar Condicionado Daikin & Mitsubishi. Atendimento no próprio dia.">
+    content="Centro Técnico Multimarcas de Alta Performance. Assistência e manutenção ao domicílio de Frigoríficos, Máquinas de Lavar e Ar Condicionado (Daikin, Bosch, LG, Whirlpool, Haier, Candy, AEG, Siemens, Balay, Electrolux). Atendimento no próprio dia.">
   <meta name="keywords"
-    content="reparacao frigorificos bosch lisboa, assistencia ar condicionado daikin lisboa, reparacao maquinas lavar louca seixal, assistencia daikin almada">
+    content="reparacao frigorificos bosch lisboa, assistencia ar condicionado daikin, reparacao maquinas lavar lg, assistencia whirlpool, reparacao electrolux aeg balay">
   <link rel="canonical" href="https://mcavaleiro.pt/">
 
   <!-- Mobile & PWA Optimizations -->
@@ -134,17 +134,9 @@
     }
 
     @keyframes pulse {
-      0% {
-        opacity: 1;
-      }
-
-      50% {
-        opacity: 0.4;
-      }
-
-      100% {
-        opacity: 1;
-      }
+      0% { opacity: 1; }
+      50% { opacity: 0.4; }
+      100% { opacity: 1; }
     }
 
     /* Hero Section */
@@ -293,12 +285,6 @@
       transition: all 0.2s;
     }
 
-    .brand-item.highlight {
-      background: rgba(41, 151, 255, 0.2);
-      border-color: var(--accent);
-      color: #fff;
-    }
-
     .brand-item:hover {
       background: var(--accent);
       border-color: var(--accent);
@@ -365,16 +351,19 @@
 
     .filter-brand-selector {
       display: flex;
-      gap: 10px;
+      gap: 8px;
       margin-bottom: 16px;
       flex-wrap: wrap;
+      max-height: 180px;
+      overflow-y: auto;
+      padding-bottom: 6px;
     }
 
     .btn-filter-brand {
       background: rgba(255, 255, 255, 0.08);
       border: 1px solid var(--border);
       color: #fff;
-      padding: 8px 16px;
+      padding: 6px 14px;
       border-radius: 20px;
       font-size: 0.85rem;
       font-weight: 600;
@@ -415,11 +404,14 @@
       padding-right: 6px;
     }
 
-    .locations-grid::-webkit-scrollbar {
+    .locations-grid::-webkit-scrollbar,
+    .filter-brand-selector::-webkit-scrollbar {
       width: 6px;
+      height: 6px;
     }
 
-    .locations-grid::-webkit-scrollbar-thumb {
+    .locations-grid::-webkit-scrollbar-thumb,
+    .filter-brand-selector::-webkit-scrollbar-thumb {
       background: rgba(255, 255, 255, 0.2);
       border-radius: 4px;
     }
@@ -504,10 +496,8 @@
         {"@type": "AdministrativeArea", "name": "Margem Sul e Setúbal"}
       ],
       "knowsAbout": [
-        "Assistência técnica Ar Condicionado Daikin Lisboa",
-        "Reparação de frigoríficos Bosch, Samsung, LG, Whirlpool",
-        "Assistência máquinas de lavar roupa e loiça Candy, Hoover, Haier",
-        "Manutenção e carga de gás R32 / R410A Daikin"
+        "Assistência técnica Daikin, Bosch, LG, Whirlpool, Haier, Candy, Hoover, Ariston, Indesit, Electrolux, AEG, Zanussi, Becken, Kunft, Siemens, Gaggenau, Balay",
+        "Reparação de frigoríficos, máquinas de lavar roupa, loiça e ar condicionado"
       ]
     }
   </script>
@@ -530,8 +520,7 @@
     <section class="hero">
       <span class="pill-hero">Assistência Técnica Multimarcas · Especialistas Domicílio</span>
       <h1>Assistência Técnica Direta no Próprio Dia.</h1>
-      <p class="hero-sub">A alternativa mais rápida para ar condicionado Daikin, frigoríficos e máquinas de lavar. Peças
-        originais e garantia escrita.</p>
+      <p class="hero-sub">A alternativa mais rápida para frigoríficos, máquinas de lavar e ar condicionado de todas as marcas principais. Peças originais e garantia escrita.</p>
       <div class="hero-ctas">
         <a href="https://wa.me/351931369411?text=Ol%C3%A1!%20Preciso%20de%20assist%C3%AAncia%20t%C3%A9cnica%20urgente%20para%20o%20meu%20equipamento."
           class="btn-whatsapp" target="_blank" rel="noopener">💬 Pedir Diagnóstico no WhatsApp (931 369 411)</a>
@@ -548,48 +537,38 @@
         </p>
 
         <div class="matrix-tabs">
-          <button class="matrix-tab" onclick="switchMatrix(event, 'frigorificos')">🧊 Frigoríficos e Combinados</button>
+          <button class="matrix-tab active" onclick="switchMatrix(event, 'frigorificos')">🧊 Frigoríficos e Combinados</button>
           <button class="matrix-tab" onclick="switchMatrix(event, 'maquinas')">🧺 Máquinas de Lavar Roupa e Loiça</button>
-          <button class="matrix-tab active" onclick="switchMatrix(event, 'ac')">❄ Ar Condicionado Daikin & Climatização</button>
+          <button class="matrix-tab" onclick="switchMatrix(event, 'ac')">❄ Ar Condicionado e Climatização</button>
         </div>
 
         <div class="matrix-content">
-          <!-- AC Panel -->
-          <div id="ac" class="matrix-panel active">
-            <strong style="color: #fff; font-size: 1.05rem;">Serviço Técnico Especializado em Ar Condicionado Daikin & Climatização</strong>
-            <p style="color: var(--text-sub); font-size: 0.9rem; margin-top: 4px; margin-bottom: 12px;">
-              Cargas de gás (R32 / R410A), higienização antibacteriana profunda, diagnóstico de códigos de erro e reparação de placas Inverter:
-            </p>
-            <div class="brand-grid">
-              <div class="brand-item highlight">Daikin</div>
-              <div class="brand-item">Mitsubishi Electric</div>
-              <div class="brand-item">LG</div>
-              <div class="brand-item">Bosch</div>
-              <div class="brand-item">Haier</div>
-              <div class="brand-item">Fujitsu</div>
-              <div class="brand-item">Samsung</div>
-              <div class="brand-item">Gree</div>
-              <div class="brand-item">Panasonic</div>
-              <div class="brand-item">Toshiba</div>
-            </div>
-          </div>
-
           <!-- Frigorificos Panel -->
-          <div id="frigorificos" class="matrix-panel">
+          <div id="frigorificos" class="matrix-panel active">
             <strong style="color: #fff; font-size: 1.05rem;">Reparação e Manutenção de Frigoríficos, Combinados e Arcas No-Frost</strong>
             <p style="color: var(--text-sub); font-size: 0.9rem; margin-top: 4px; margin-bottom: 12px;">
-              Reparação de fugas de gás, troca de compressores, termostatos e substituição de placas eletrónicas:
+              Reparação de fugas de gás, troca de compressores, termostatos e substituição de placas eletrónicas nas marcas:
             </p>
             <div class="brand-grid">
-              <div class="brand-item highlight">Bosch</div>
+              <div class="brand-item">Bosch</div>
               <div class="brand-item">Samsung</div>
               <div class="brand-item">LG</div>
+              <div class="brand-item">Whirlpool</div>
+              <div class="brand-item">Haier</div>
               <div class="brand-item">Candy</div>
               <div class="brand-item">Hoover</div>
-              <div class="brand-item">Whirlpool</div>
+              <div class="brand-item">Ariston</div>
               <div class="brand-item">Indesit</div>
+              <div class="brand-item">Electrolux</div>
+              <div class="brand-item">AEG</div>
+              <div class="brand-item">Zanussi</div>
+              <div class="brand-item">Becken</div>
+              <div class="brand-item">Kunft</div>
               <div class="brand-item">Siemens</div>
+              <div class="brand-item">Gaggenau</div>
+              <div class="brand-item">Balay</div>
               <div class="brand-item">Beko</div>
+              <div class="brand-item">Miele</div>
             </div>
           </div>
 
@@ -603,36 +582,82 @@
               <div class="brand-item">Bosch</div>
               <div class="brand-item">Samsung</div>
               <div class="brand-item">LG</div>
+              <div class="brand-item">Whirlpool</div>
+              <div class="brand-item">Haier</div>
               <div class="brand-item">Candy</div>
               <div class="brand-item">Hoover</div>
-              <div class="brand-item">AEG</div>
+              <div class="brand-item">Ariston</div>
+              <div class="brand-item">Indesit</div>
               <div class="brand-item">Electrolux</div>
+              <div class="brand-item">AEG</div>
+              <div class="brand-item">Zanussi</div>
+              <div class="brand-item">Becken</div>
+              <div class="brand-item">Kunft</div>
+              <div class="brand-item">Siemens</div>
+              <div class="brand-item">Gaggenau</div>
               <div class="brand-item">Balay</div>
+            </div>
+          </div>
+
+          <!-- AC Panel -->
+          <div id="ac" class="matrix-panel">
+            <strong style="color: #fff; font-size: 1.05rem;">Serviço Técnico Especializado em Ar Condicionado & Climatização</strong>
+            <p style="color: var(--text-sub); font-size: 0.9rem; margin-top: 4px; margin-bottom: 12px;">
+              Cargas de gás (R32 / R410A), higienização antibacteriana profunda e reparação de placas Inverter:
+            </p>
+            <div class="brand-grid">
+              <div class="brand-item">Daikin</div>
+              <div class="brand-item">Mitsubishi Electric</div>
+              <div class="brand-item">LG</div>
+              <div class="brand-item">Bosch</div>
+              <div class="brand-item">Haier</div>
+              <div class="brand-item">Fujitsu</div>
+              <div class="brand-item">Samsung</div>
+              <div class="brand-item">Gree</div>
+              <div class="brand-item">Panasonic</div>
+              <div class="brand-item">Toshiba</div>
+              <div class="brand-item">Electrolux</div>
+              <div class="brand-item">Carrier</div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- CARD 2: DYNAMIC LOCAL PROXIMITY SECTION (WITH DAIKIN SUPPORT) -->
+      <!-- CARD 2: DYNAMIC LOCAL PROXIMITY SECTION -->
       <div class="card col-12">
-        <div class="card-title">🌍 Cobertura de Proximidade · Selecione o Serviço/Marca por Localidade</div>
+        <div class="card-title">🌍 Cobertura de Proximidade · Selecione a Marca por Localidade</div>
         <div class="proximity-section-box">
           <p class="proximity-intro">
-            Escolha a marca do seu equipamento para ver o serviço técnico especializado disponível na sua área:
+            Clique na marca pretendida para gerar os links de assistência direta para a sua localidade:
           </p>
 
           <!-- Filter Brand Switcher -->
           <div class="filter-brand-selector">
-            <button class="btn-filter-brand active" onclick="setBrandFilter('daikin', 'Ar Condicionado Daikin')">❄️ Daikin (Ar Condicionado)</button>
-            <button class="btn-filter-brand" onclick="setBrandFilter('bosch', 'Frigoríficos Bosch')">🧊 Bosch (Frigoríficos)</button>
-            <button class="btn-filter-brand" onclick="setBrandFilter('samsung', 'Equipamentos Samsung')">📱 Samsung (Frigoríficos/Lavar)</button>
+            <button class="btn-filter-brand active" onclick="setBrandFilter('daikin', 'Ar Condicionado Daikin')">❄️ Daikin</button>
+            <button class="btn-filter-brand" onclick="setBrandFilter('bosch', 'Equipamentos Bosch')">🧊 Bosch</button>
+            <button class="btn-filter-brand" onclick="setBrandFilter('lg', 'Equipamentos LG')">📱 LG</button>
+            <button class="btn-filter-brand" onclick="setBrandFilter('whirlpool', 'Equipamentos Whirlpool')">🔄 Whirlpool</button>
+            <button class="btn-filter-brand" onclick="setBrandFilter('haier', 'Equipamentos Haier')">🏠 Haier</button>
+            <button class="btn-filter-brand" onclick="setBrandFilter('candy', 'Equipamentos Candy')">🧺 Candy</button>
+            <button class="btn-filter-brand" onclick="setBrandFilter('hoover', 'Equipamentos Hoover')">🌀 Hoover</button>
+            <button class="btn-filter-brand" onclick="setBrandFilter('ariston', 'Equipamentos Ariston')">🔥 Ariston</button>
+            <button class="btn-filter-brand" onclick="setBrandFilter('indesit', 'Equipamentos Indesit')">⚡ Indesit</button>
+            <button class="btn-filter-brand" onclick="setBrandFilter('electrolux', 'Equipamentos Electrolux')">✨ Electrolux</button>
+            <button class="btn-filter-brand" onclick="setBrandFilter('aeg', 'Equipamentos AEG')">🛠️ AEG</button>
+            <button class="btn-filter-brand" onclick="setBrandFilter('zanussi', 'Equipamentos Zanussi')">🔧 Zanussi</button>
+            <button class="btn-filter-brand" onclick="setBrandFilter('becken', 'Equipamentos Becken')">⚙️ Becken</button>
+            <button class="btn-filter-brand" onclick="setBrandFilter('kunft', 'Equipamentos Kunft')">💡 Kunft</button>
+            <button class="btn-filter-brand" onclick="setBrandFilter('siemens', 'Equipamentos Siemens')">💎 Siemens</button>
+            <button class="btn-filter-brand" onclick="setBrandFilter('gaggenau', 'Equipamentos Gaggenau')">👑 Gaggenau</button>
+            <button class="btn-filter-brand" onclick="setBrandFilter('balay', 'Equipamentos Balay')">🌟 Balay</button>
+            <button class="btn-filter-brand" onclick="setBrandFilter('samsung', 'Equipamentos Samsung')">📲 Samsung</button>
           </div>
 
           <input type="text" id="locationSearch" class="search-input"
             placeholder="🔍 Filtrar por localidade (ex: Lisboa, Sintra, Cascais, Almada, Seixal...)" onkeyup="filterLocations()">
 
           <div class="locations-grid" id="locationsGrid">
-            <!-- Locations will be auto-generated dynamically via JavaScript -->
+            <!-- Gerado dinamicamente pelo JS -->
           </div>
         </div>
       </div>
@@ -640,7 +665,7 @@
 
     <!-- FOOTER -->
     <footer>
-      <p>&copy; M. Cavaleiro® - Assistência Técnica Especializada Daikin, Bosch e Multimarcas em Lisboa e Margem Sul.</p>
+      <p>&copy; M. Cavaleiro® - Assistência Técnica Especializada Multimarcas em Lisboa e Margem Sul.</p>
     </footer>
   </div>
 
@@ -684,7 +709,9 @@
       document.querySelectorAll('.btn-filter-brand').forEach(btn => {
         btn.classList.remove('active');
       });
-      event.currentTarget.classList.add('active');
+      if (event && event.currentTarget) {
+        event.currentTarget.classList.add('active');
+      }
 
       renderLocations();
       filterLocations();
@@ -711,7 +738,7 @@
       });
     }
 
-    // Inicializar na carga
+    // Inicializar na carga da página
     document.addEventListener('DOMContentLoaded', () => {
       renderLocations();
     });
