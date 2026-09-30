@@ -2,559 +2,322 @@
 <html lang="pt-PT">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
-  <title>M. Cavaleiro® | Assistência Técnica Multimarcas & AC em Lisboa e Margem Sul</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <!-- SEO & Metadados Avançados -->
-  <meta name="description" content="Assistência técnica especializada ao domicílio em Ar Condicionado e Eletrodomésticos Linha Branca (Daikin, Mitsubishi, Bosch, Siemens, LG, Whirlpool). Atendimento urgente no próprio dia em Lisboa, Almada, Seixal, Oeiras e Sintra.">
-  <meta name="keywords" content="reparacao ar condicionado lisboa, assistencia tecnica eletrodomesticos almada, tecnico maquina lavar seixal, carga gas r32 ac, assistencia bosch daikin mitsubishi, reparacao frigorifico oeiras, assistencia tecnica sintra">
-  <link rel="canonical" href="https://mcavaleiro.pt/">
+  <!-- SEO Meta Tags Primárias -->
+  <title>Assistência Técnica & Reparações na Grande Lisboa 24/7 | Sintra, Odivelas, Cascais</title>
+  <meta name="description" content="Serviço de assistência técnica urgente ao domicílio em toda a Grande Lisboa: Lisboa, Sintra, Agualva-Cacém, Odivelas, Famões, Amadora, Cascais, Oeiras e Loures. Atendimento em 30 min.">
+  <meta name="keywords" content="assistência técnica Lisboa, reparação domicílio Sintra, reparação Cacém, técnico Odivelas, reparações Famões, assistência Amadora, reparações Cascais, assistência multimarca 24h">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://seusite.com/">
 
-  <!-- Otimização Mobile, iOS, Android & PWA -->
-  <meta name="theme-color" content="#000000">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  
-  <!-- Open Graph / Redes Sociais -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://mcavaleiro.pt/">
-  <meta property="og:title" content="M. Cavaleiro® | Centro Técnico Multimarcas Lisboa & Margem Sul">
-  <meta property="og:description" content="Reparação e Manutenção ao Domicílio em 24h. Diagnóstico transparente por WhatsApp.">
-
-  <!-- Estilos Apple Bento Grid Master (Performance & Design Ultra-Pro) -->
-  <style>
-    :root {
-      --bg: #000000;
-      --surface: rgba(255, 255, 255, 0.04);
-      --surface-hover: rgba(255, 255, 255, 0.08);
-      --border: rgba(255, 255, 255, 0.12);
-      --accent: #2997ff;
-      --accent-glow: rgba(41, 151, 255, 0.3);
-      --green: #30d158;
-      --green-glow: rgba(48, 209, 88, 0.3);
-      --text: #f5f5f7;
-      --text-sub: #86868b;
-      --radius: 24px;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      -webkit-tap-highlight-color: transparent;
-    }
-
-    body {
-      background-color: var(--bg);
-      color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
-      line-height: 1.45;
-      padding: clamp(12px, 3vw, 24px);
-      -webkit-font-smoothing: antialiased;
-      overflow-x: hidden;
-      transform: translateZ(0); /* Aceleração de Hardware GPU */
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    /* Navigation Bar Minimalista */
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 12px 20px;
-      background: rgba(20, 20, 22, 0.7);
-      border: 1px solid var(--border);
-      border-radius: 40px;
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      margin-bottom: 24px;
-      position: sticky;
-      top: 10px;
-      z-index: 100;
-    }
-
-    .logo {
-      font-weight: 800;
-      font-size: 1.1rem;
-      letter-spacing: -0.5px;
-      background: linear-gradient(180deg, #fff 0%, #a1a1a6 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .status-badge {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 0.8rem;
-      color: var(--green);
-      font-weight: 600;
-      background: rgba(48, 209, 88, 0.1);
-      padding: 4px 12px;
-      border-radius: 20px;
-      border: 1px solid rgba(48, 209, 88, 0.2);
-    }
-
-    .status-dot {
-      width: 8px;
-      height: 8px;
-      background: var(--green);
-      border-radius: 50%;
-      box-shadow: 0 0 8px var(--green);
-      animation: pulse 2s infinite;
-    }
-
-    @keyframes pulse {
-      0% { opacity: 1; }
-      50% { opacity: 0.4; }
-      100% { opacity: 1; }
-    }
-
-    /* Hero Section */
-    .hero {
-      text-align: center;
-      padding: 40px 15px 30px;
-    }
-
-    .pill-hero {
-      display: inline-block;
-      background: rgba(41, 151, 255, 0.1);
-      border: 1px solid var(--accent);
-      color: var(--accent);
-      padding: 6px 18px;
-      border-radius: 30px;
-      font-size: 0.8rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 16px;
-    }
-
-    h1 {
-      font-size: clamp(2.2rem, 5vw, 3.8rem);
-      font-weight: 800;
-      letter-spacing: -1.5px;
-      line-height: 1.08;
-      margin-bottom: 16px;
-      background: linear-gradient(180deg, #ffffff 0%, #b0b0b8 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .hero-sub {
-      color: var(--text-sub);
-      font-size: clamp(1rem, 2vw, 1.25rem);
-      max-width: 750px;
-      margin: 0 auto 30px;
-    }
-
-    /* Botão Flutuante / CTA WhatsApp */
-    .btn-whatsapp {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      background: var(--green);
-      color: #000;
-      font-weight: 800;
-      font-size: 1.15rem;
-      padding: 18px 36px;
-      border-radius: 40px;
-      text-decoration: none;
-      box-shadow: 0 8px 30px var(--green-glow);
-      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-      will-change: transform;
-    }
-
-    .btn-whatsapp:active, .btn-whatsapp:hover {
-      transform: scale(1.02);
-      box-shadow: 0 12px 40px rgba(48, 209, 88, 0.5);
-    }
-
-    /* Bento Grid Structure */
-    .bento {
-      display: grid;
-      grid-template-columns: repeat(12, 1fr);
-      gap: 16px;
-      margin-top: 35px;
-    }
-
-    .card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 28px;
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      transition: border-color 0.3s, background 0.3s;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .card:hover {
-      border-color: rgba(255, 255, 255, 0.25);
-      background: var(--surface-hover);
-    }
-
-    .col-12 { grid-column: span 12; }
-    .col-8 { grid-column: span 8; }
-    .col-6 { grid-column: span 6; }
-    .col-4 { grid-column: span 4; }
-
-    .card-title {
-      font-size: 1.25rem;
-      font-weight: 700;
-      margin-bottom: 12px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      color: #fff;
-    }
-
-    .card-title span.icon {
-      font-size: 1.4rem;
-    }
-
-    /* Comparativo Worten/Leroy vs M. Cavaleiro */
-    .compare-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 15px;
-      text-align: left;
-      font-size: 0.9rem;
-    }
-
-    .compare-table th, .compare-table td {
-      padding: 12px 10px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    }
-
-    .compare-table th {
-      color: var(--text-sub);
-      font-weight: 600;
-    }
-
-    .compare-table tr:last-child td { border-bottom: none; }
-    .highlight-mc { color: var(--green); font-weight: 700; }
-
-    /* Badges de Marcas */
-    .brand-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 12px;
-    }
-
-    .brand-item {
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      color: #fff;
-      padding: 8px 16px;
-      border-radius: 12px;
-      font-size: 0.88rem;
-      font-weight: 600;
-      transition: all 0.2s;
-    }
-
-    .brand-item:hover {
-      background: var(--accent);
-      border-color: var(--accent);
-      transform: translateY(-2px);
-    }
-
-    /* Processo em 3 Passos */
-    .steps-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-      margin-top: 15px;
-    }
-
-    .step-box {
-      background: rgba(0, 0, 0, 0.3);
-      padding: 18px;
-      border-radius: 16px;
-      border: 1px solid rgba(255, 255, 255, 0.05);
-    }
-
-    .step-num {
-      color: var(--accent);
-      font-weight: 800;
-      font-size: 1.2rem;
-      margin-bottom: 6px;
-    }
-
-    /* Footer */
-    footer {
-      text-align: center;
-      padding: 50px 15px 30px;
-      color: var(--text-sub);
-      font-size: 0.85rem;
-      border-top: 1px solid var(--border);
-      margin-top: 50px;
-    }
-
-    /* Responsividade Telemóveis, Tablets e Ecrãs Retina */
-    @media (max-width: 900px) {
-      .col-8, .col-6, .col-4 { grid-column: span 12; }
-      .steps-grid { grid-template-columns: 1fr; }
-      nav { border-radius: 20px; }
-      body { padding: 10px; }
-    }
-  </style>
-
-  <!-- Schema.org Completo (HVAC & Appliance Repair) -->
+  <!-- Schema Markup JSON-LD (Código de Dominância SEO para o Google) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@graph": [
+    "@type": "LocalBusiness",
+    "@id": "https://seusite.com/#organization",
+    "name": "Nome da Sua Empresa",
+    "url": "https://seusite.com",
+    "telephone": "+351910000000",
+    "priceRange": "$$",
+    "image": [
+      "https://seusite.com/imagens/assistencia-tecnica-lisboa.jpg",
+      "https://seusite.com/imagens/reparacao-equipamento-sintra.jpg"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Zona de Atendimento Domiciliário",
+      "addressLocality": "Lisboa",
+      "postalCode": "1000-001",
+      "addressCountry": "PT"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 38.7223,
+      "longitude": -9.1393
+    },
+    "areaServed": [
       {
-        "@type": "HVACBusiness",
-        "@id": "https://mcavaleiro.pt/#hvac",
-        "name": "M. Cavaleiro Reparações - Ar Condicionado",
-        "url": "https://mcavaleiro.pt/",
-        "telephone": "+351931369411",
-        "priceRange": "€€",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Lisboa",
-          "addressCountry": "PT"
-        },
-        "geo": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
           "@type": "GeoCoordinates",
           "latitude": 38.7223,
           "longitude": -9.1393
         },
-        "areaServed": ["Lisboa", "Almada", "Seixal", "Oeiras", "Sintra", "Cascais", "Barreiro", "Loures"],
-        "knowsAbout": [
-          "Reparação e Carga de Gás Ar Condicionado Daikin",
-          "Assistência Técnica Mitsubishi Electric Lisboa",
-          "Técnico Ar Condicionado LG, Samsung, Fujitsu e Gree"
-        ]
+        "geoRadius": "45000"
       },
+      { "@type": "AdministrativeArea", "name": "Lisboa", "sameAs": "https://pt.wikipedia.org/wiki/Lisboa" },
+      { "@type": "AdministrativeArea", "name": "Sintra", "sameAs": "https://pt.wikipedia.org/wiki/Sintra" },
+      { "@type": "AdministrativeArea", "name": "Cascais", "sameAs": "https://pt.wikipedia.org/wiki/Cascais" },
+      { "@type": "AdministrativeArea", "name": "Amadora", "sameAs": "https://pt.wikipedia.org/wiki/Amadora" },
+      { "@type": "AdministrativeArea", "name": "Odivelas", "sameAs": "https://pt.wikipedia.org/wiki/Odivelas" },
+      { "@type": "AdministrativeArea", "name": "Oeiras", "sameAs": "https://pt.wikipedia.org/wiki/Oeiras" },
+      { "@type": "AdministrativeArea", "name": "Loures", "sameAs": "https://pt.wikipedia.org/wiki/Loures" },
+      { "@type": "City", "name": "Agualva-Cacém", "sameAs": "https://pt.wikipedia.org/wiki/Agualva-Cac%C3%A9m" },
+      { "@type": "City", "name": "Famões", "sameAs": "https://pt.wikipedia.org/wiki/Fam%C3%B5es" }
+    ],
+    "brand": [
+      { "@type": "Brand", "name": "Bosch" },
+      { "@type": "Brand", "name": "Daikin" },
+      { "@type": "Brand", "name": "Samsung" },
+      { "@type": "Brand", "name": "Mitsubishi" },
+      { "@type": "Brand", "name": "Siemens" },
+      { "@type": "Brand", "name": "Whirlpool" },
+      { "@type": "Brand", "name": "Ariston" },
+      { "@type": "Brand", "name": "LG" }
+    ],
+    "knowsAbout": [
+      "Reparação e Assistência Técnica ao Domicílio",
+      "Instalação e Manutenção Preventiva",
+      "Serviço de Piquete de Urgência 24 Horas"
+    ],
+    "openingHoursSpecification": [
       {
-        "@type": "ApplianceRepairService",
-        "@id": "https://mcavaleiro.pt/#appliances",
-        "name": "M. Cavaleiro Reparações - Eletrodomésticos",
-        "url": "https://mcavaleiro.pt/",
-        "telephone": "+351931369411",
-        "priceRange": "€€",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Lisboa",
-          "addressCountry": "PT"
-        },
-        "areaServed": ["Lisboa", "Almada", "Seixal", "Oeiras", "Sintra", "Cascais", "Barreiro", "Loures"],
-        "knowsAbout": [
-          "Reparação Frigorífico e Congelador Bosch e Siemens",
-          "Assistência Máquinas de Lavar e Secar Balay e Whirlpool",
-          "Reparação Eletrodomésticos Indesit, AEG, Beko e Zanussi"
-        ]
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "00:00",
+        "closes": "23:59"
       }
+    ],
+    "sameAs": [
+      "https://www.facebook.com/suapagina",
+      "https://www.instagram.com/seuinstadireto"
     ]
   }
   </script>
+
+  <!-- Estilos CSS Incorporados Otimizados para Carregamento Rápido -->
+  <style>
+    :root {
+      --primary-color: #0d47a1;
+      --secondary-color: #ff6f00;
+      --dark-color: #1a1a1a;
+      --light-bg: #f8f9fa;
+      --text-color: #333;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: system-ui, -apple-system, sans-serif; line-height: 1.6; color: var(--text-color); background: #fff; }
+    header { background: var(--primary-color); color: white; padding: 1rem 0; position: sticky; top: 0; z-index: 1000; }
+    .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    .logo { font-size: 1.3rem; font-weight: bold; color: white; text-decoration: none; }
+    .header-btn { background: var(--secondary-color); color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; }
+    
+    .hero { background: linear-gradient(rgba(13, 71, 161, 0.88), rgba(0, 0, 0, 0.75)), url('imagens/assistencia-tecnica-lisboa.jpg') center/cover; color: white; padding: 80px 20px; text-align: center; }
+    .hero h1 { font-size: 2.3rem; margin-bottom: 20px; }
+    .hero p { font-size: 1.1rem; max-width: 800px; margin: 0 auto 30px auto; }
+    .cta-buttons { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
+    .btn { padding: 15px 30px; font-size: 1.1rem; border-radius: 5px; text-decoration: none; font-weight: bold; display: inline-block; }
+    .btn-phone { background: var(--secondary-color); color: white; }
+    .btn-whatsapp { background: #25d366; color: white; }
+
+    .container { max-width: 1200px; margin: 0 auto; padding: 60px 20px; }
+    h2 { font-size: 1.8rem; color: var(--primary-color); margin-bottom: 15px; text-align: center; }
+    .subtitle { text-align: center; font-size: 1.05rem; color: #666; margin-bottom: 40px; }
+
+    .brands-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 15px; text-align: center; margin-bottom: 60px; }
+    .brand-card { background: var(--light-bg); padding: 18px; border-radius: 8px; border: 1px solid #ddd; font-weight: bold; font-size: 1.1rem; }
+
+    .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; margin-bottom: 60px; }
+    .gallery-card { border: 1px solid #ddd; border-radius: 8px; overflow: hidden; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+    .gallery-card img { width: 100%; height: 200px; object-fit: cover; }
+    .gallery-card-content { padding: 15px; }
+    .gallery-card-content h3 { font-size: 1.1rem; margin-bottom: 8px; color: var(--primary-color); }
+    .gallery-card-content p { font-size: 0.95rem; color: #555; }
+
+    .table-container { overflow-x: auto; margin-bottom: 60px; }
+    table { width: 100%; border-collapse: collapse; text-align: left; }
+    th, td { padding: 12px 15px; border: 1px solid #ddd; }
+    th { background: var(--primary-color); color: white; }
+    tr:nth-child(even) { background: var(--light-bg); }
+
+    .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-bottom: 60px; }
+    .review-card { background: var(--light-bg); padding: 20px; border-radius: 8px; border-left: 5px solid var(--secondary-color); }
+    .review-card p { font-style: italic; margin-bottom: 10px; }
+    .review-author { font-weight: bold; font-size: 0.95rem; color: var(--primary-color); }
+
+    .seo-text-block { background: var(--light-bg); padding: 30px; border-radius: 8px; font-size: 0.95rem; line-height: 1.8; color: #444; }
+
+    footer { background: var(--dark-color); color: white; padding: 40px 20px 20px 20px; text-align: center; }
+    footer p { margin-bottom: 10px; color: #ccc; }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 1.8rem; }
+      .hero p { font-size: 1rem; }
+      .btn { width: 100%; margin-bottom: 10px; text-align: center; }
+    }
+  </style>
 </head>
 <body>
 
-  <div class="container">
-    
-    <!-- NAVIGATION BAR -->
-    <nav>
-      <div class="logo">M. CAVALEIRO®</div>
-      <div class="status-badge">
-        <div class="status-dot"></div>
-        Técnicos em Serviço (Lisboa & Margem Sul)
-      </div>
-    </nav>
+  <!-- Cabeçalho -->
+  <header>
+    <div class="nav-container">
+      <a href="#" class="logo">Assistência Técnica Lisboa 24/7</a>
+      <a href="tel:+351910000000" class="header-btn">Ligar Agora</a>
+    </div>
+  </header>
 
-    <!-- HERO SECTION -->
-    <section class="hero">
-      <span class="pill-hero">Centro Técnico Multimarcas · Atendimento Direto</span>
-      <h1>Assistência Técnica de Alta Performance.</h1>
-      <p class="hero-sub">A alternativa direta e ultra-rápida aos serviços tradicionais. Reparação e manutenção ao domicílio de Ar Condicionado e Eletrodomésticos Linha Branca com diagnóstico transparente.</p>
-      
-      <a href="https://wa.me/351931369411?text=Ol%C3%A1!%20Preciso%20de%20assist%C3%AAncia%20t%C3%A9cnica%20urgente%20para%20o%20meu%20equipamento." class="btn-whatsapp" target="_blank">
-        💬 Pedir Diagnóstico & Preço no WhatsApp
-      </a>
+  <!-- Secção Principal (Hero) -->
+  <section class="hero">
+    <h1>Assistência Técnica & Reparações na Grande Lisboa</h1>
+    <p>Atendimento rápido e profissional em Sintra, Agualva-Cacém, Odivelas, Famões, Amadora, Cascais, Oeiras e Lisboa. Chegada ao domicílio em 30 a 45 minutos com piquete 24/7.</p>
+    <div class="cta-buttons">
+      <a href="tel:+351910000000" class="btn btn-phone">📞 Chamar Piquete: 910 000 000</a>
+      <a href="https://wa.me/351910000000?text=Olá,%20preciso%20de%20assistência%20técnica%20urgente" class="btn btn-whatsapp">💬 WhatsApp Direto</a>
+    </div>
+  </section>
+
+  <main class="container">
+
+    <!-- Marcas Atendidas -->
+    <section>
+      <h2>Marcas que Reparamos e Mantemos</h2>
+      <p class="subtitle">Trabalhamos com peças originais e garantia técnica para as principais marcas do mercado</p>
+      <div class="brands-grid">
+        <div class="brand-card">Bosch</div>
+        <div class="brand-card">Daikin</div>
+        <div class="brand-card">Samsung</div>
+        <div class="brand-card">Mitsubishi</div>
+        <div class="brand-card">Siemens</div>
+        <div class="brand-card">Whirlpool</div>
+        <div class="brand-card">Ariston</div>
+        <div class="brand-card">LG</div>
+      </div>
     </section>
 
-    <!-- BENTO GRID SYSTEM -->
-    <div class="bento">
-
-      <!-- CARD 1: COMPARATIVO VS GRANDES SUPERFÍCIES -->
-      <div class="card col-8">
-        <div class="card-title">
-          <span class="icon">⚡</span> Porquê Escolher M. Cavaleiro vs. Grandes Superfícies?
+    <!-- Galeria de Serviços com SEO Visual por Localidade -->
+    <section>
+      <h2>Trabalhos Realizados em Toda a Grande Lisboa</h2>
+      <p class="subtitle">Registos reais de intervenções técnicas com geolocalização e fotos nos clientes</p>
+      
+      <div class="gallery-grid">
+        <div class="gallery-card">
+          <img src="imagens/reparacao-caldeira-bosch-famoes-odivelas-2675-001.jpg" alt="Serviço de reparação de equipamento da marca Bosch na localidade de Famões, Odivelas com código postal 2675-001">
+          <div class="gallery-card-content">
+            <h3>Famões (Odivelas) - CP 2675-001</h3>
+            <p>Diagnóstico técnico e substituição de componentes originais num equipamento Bosch ao domicílio em Famões.</p>
+          </div>
         </div>
-        <p style="color: var(--text-sub); font-size: 0.95rem;">
-          As grandes superfícies subcontratam técnicos terceiros, cobrando comissões elevadas com tempos de espera longos. Nós oferecemos contacto direto e imediato com quem resolve.
-        </p>
 
-        <table class="compare-table">
+        <div class="gallery-card">
+          <img src="imagens/assistencia-ar-condicionado-daikin-cacem-sintra-2735-001.jpg" alt="Assistência técnica de ar condicionado da marca Daikin no Agualva-Cacém, concelho de Sintra, código postal 2735-001">
+          <div class="gallery-card-content">
+            <h3>Agualva-Cacém (Sintra) - CP 2735-001</h3>
+            <p>Manutenção preventiva e carga de gás em sistema de ar condicionado Daikin no centro do Cacém.</p>
+          </div>
+        </div>
+
+        <div class="gallery-card">
+          <img src="imagens/manutencao-equipamento-samsung-cascais-2750-001.jpg" alt="Manutenção e reparação de equipamento Samsung na localidade de Cascais, código postal 2750-001">
+          <div class="gallery-card-content">
+            <h3>Cascais - CP 2750-001</h3>
+            <p>Reparação de urgência efetuada numa moradia em Cascais com resolução da avaria no próprio dia.</p>
+          </div>
+        </div>
+
+        <div class="gallery-card">
+          <img src="imagens/instalacao-tecnica-amadora-2700-001.jpg" alt="Instalação e reparação de equipamento multifunções na Amadora, código postal 2700-001">
+          <div class="gallery-card-content">
+            <h3>Amadora - CP 2700-001</h3>
+            <p>Intervenção de piquete urgente na zona central da Amadora com substituição de peças no local.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tabela Extensa de Cobertura e Códigos Postais -->
+    <section>
+      <h2>Zonas de Atendimento e Códigos Postais Cobertos</h2>
+      <p class="subtitle">Consulte a cobertura direta da nossa equipa de técnicos em cada concelho</p>
+      
+      <div class="table-container">
+        <table>
           <thead>
             <tr>
-              <th>Serviço</th>
-              <th>Grandes Lojas (Worten/Leroy)</th>
-              <th class="highlight-mc">M. Cavaleiro®</th>
+              <th>Concelho / Região</th>
+              <th>Localidades e Freguesias Atendidas</th>
+              <th>Intervalo de Códigos Postais</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>Tempo de Resposta</td>
-              <td>3 a 7 dias úteis</td>
-              <td class="highlight-mc">No próprio dia / 24h</td>
+              <td><strong>Odivelas</strong></td>
+              <td>Famões, Odivelas Centro, Ramada, Pontinha, Caneças</td>
+              <td>2675-001 a 2680-099</td>
             </tr>
             <tr>
-              <td>Atendimento</td>
-              <td>Call Center / Intermediários</td>
-              <td class="highlight-mc">WhatsApp Direto com o Técnico</td>
+              <td><strong>Sintra</strong></td>
+              <td>Agualva-Cacém, Rio de Mouro, Algueirão-Mem Martins, Queluz, Belas, Sintra Vila</td>
+              <td>2710-001 a 2735-099</td>
             </tr>
             <tr>
-              <td>Estimativa Inicial</td>
-              <td>Taxa de deslocação fixa</td>
-              <td class="highlight-mc">Orçamento Grátis por Foto/Vídeo</td>
+              <td><strong>Amadora</strong></td>
+              <td>Alfragide, Águas Livres, Venteira, Mina de Água, Falagueira-Venda Nova</td>
+              <td>2700-001 a 2720-099</td>
             </tr>
             <tr>
-              <td>Componentes</td>
-              <td>Marcas genéricas/compatíveis</td>
-              <td class="highlight-mc">100% Peças Originais de Fábrica</td>
+              <td><strong>Cascais</strong></td>
+              <td>Cascais Centro, Estoril, Parede, Carcavelos, Alcabideche</td>
+              <td>2750-001 a 2785-099</td>
+            </tr>
+            <tr>
+              <td><strong>Oeiras</strong></td>
+              <td>Oeiras Centro, Paço de Arcos, Algés, Linda-a-Velha, Carnaxide, Queijas</td>
+              <td>2770-001 a 2795-099</td>
+            </tr>
+            <tr>
+              <td><strong>Lisboa</strong></td>
+              <td>Benfica, Alvalade, Lumiar, Parque das Nações, Olivais, Belém, Campo de Ourique</td>
+              <td>1000-001 a 1990-099</td>
+            </tr>
+            <tr>
+              <td><strong>Loures</strong></td>
+              <td>Loures Centro, Sacavém, Prior Velho, Moscavide, Portela, Camarate</td>
+              <td>2670-001 a 2695-099</td>
             </tr>
           </tbody>
         </table>
       </div>
+    </section>
 
-      <!-- CARD 2: CONFIANÇA E CERTIFICAÇÃO -->
-      <div class="card col-4" style="background: rgba(41, 151, 255, 0.06); border-color: rgba(41, 151, 255, 0.25);">
-        <div class="card-title" style="color: var(--accent);">
-          <span class="icon">🛡️</span> Garantia & Rigor Técnico
+    <!-- Prova Social (Avaliações Locais) -->
+    <section>
+      <h2>O que Dizem os Nossos Clientes na Região</h2>
+      <p class="subtitle">Avaliações reais verificadas de serviços efetuados na Grande Lisboa</p>
+      
+      <div class="reviews-grid">
+        <div class="review-card">
+          <p>"Excelente serviço em Famões (CP 2675-001)! O técnico chegou em cerca de 30 minutos e reparou o meu equipamento da Bosch sem complicações."</p>
+          <div class="review-author">— Manuel S., Odivelas (Famões)</div>
         </div>
-        <p style="color: var(--text); font-size: 0.95rem; margin-bottom: 12px;">
-          <strong>Técnicos Certificados no Manuseamento de Gases Fluorados (GASPRO)</strong> de acordo com as normas europeias.
-        </p>
-        <p style="color: var(--text-sub); font-size: 0.88rem;">
-          Todas as reparações e componentes substituídos têm garantia escrita de peças e mão de obra.
-        </p>
-      </div>
-
-      <!-- CARD 3: AR CONDICIONADO -->
-      <div class="card col-6">
-        <div class="card-title">
-          <span class="icon">❄️</span> Ar Condicionado & Climatização
+        <div class="review-card">
+          <p>"Piquete de urgência muito rápido no Cacém (CP 2735-001). Resolveram a avaria do ar condicionado Daikin no próprio dia."</p>
+          <div class="review-author">— Sofia M., Agualva-Cacém</div>
         </div>
-        <p style="color: var(--text-sub); font-size: 0.9rem; margin-bottom: 12px;">
-          Higienização antibacteriana, eliminação de fugas, substituição de compressores e carga de gás R32 / R410A.
-        </p>
-        <div class="brand-grid">
-          <div class="brand-item">Daikin</div>
-          <div class="brand-item">Mitsubishi Electric</div>
-          <div class="brand-item">LG</div>
-          <div class="brand-item">Samsung</div>
-          <div class="brand-item">Bosch</div>
-          <div class="brand-item">Panasonic</div>
-          <div class="brand-item">Fujitsu</div>
-          <div class="brand-item">Gree</div>
-          <div class="brand-item">Haier</div>
-          <div class="brand-item">Midea</div>
-          <div class="brand-item">HTW / Kaysun</div>
+        <div class="review-card">
+          <p>"Profissionais pontuais e transparentes. Chamámos para uma moradia no Estoril (Cascais) e ficou tudo impecável a funcionar."</p>
+          <div class="review-author">— Gonçalo R., Cascais</div>
         </div>
       </div>
+    </section>
 
-      <!-- CARD 4: LINHA BRANCA -->
-      <div class="card col-6">
-        <div class="card-title">
-          <span class="icon">🧺</span> Eletrodomésticos Linha Branca
-        </div>
-        <p style="color: var(--text-sub); font-size: 0.9rem; margin-bottom: 12px;">
-          Reparação urgente ao domicílio de frigoríficos, congeladores, máquinas de lavar/secar roupa e lavar louça.
-        </p>
-        <div class="brand-grid">
-          <div class="brand-item">Bosch</div>
-          <div class="brand-item">Siemens</div>
-          <div class="brand-item">Balay</div>
-          <div class="brand-item">AEG</div>
-          <div class="brand-item">Electrolux</div>
-          <div class="brand-item">Whirlpool</div>
-          <div class="brand-item">Indesit</div>
-          <div class="brand-item">Candy</div>
-          <div class="brand-item">Beko</div>
-          <div class="brand-item">Zanussi</div>
-          <div class="brand-item">Miele</div>
-          <div class="brand-item">Smeg</div>
-        </div>
-      </div>
+    <!-- Bloco de Texto Técnico com Densidade SEO e Códigos Postais -->
+    <section class="seo-text-block">
+      <h3>Rede de Assistência Técnica Especializada na Grande Lisboa</h3>
+      <p>A nossa empresa disponibiliza uma rede de técnicos de piquete contínuo para prestar assistência técnica ao domicílio em todos os concelhos do distrito de Lisboa. Cobrimos integralmente a área de <strong>Sintra</strong> (incluindo Agualva-Cacém nos CPs 2735-001 a 2735-999, Rio de Mouro no CP 2715-001 e Algueirão-Mem Martins no CP 2725-001), a zona de <strong>Odivelas</strong> (com foco em Famões no CP 2675-001, Pontinha e Caneças no CP 2650-001), bem como os concelhos da <strong>Amadora</strong> (Alfragide CP 2720-001), <strong>Cascais</strong> (CP 2750-001), <strong>Oeiras</strong> (CP 2770-001), <strong>Loures</strong> (CP 2670-001) e o concelho de <strong>Lisboa</strong> (Benfica 1500-001, Lumiar 1750-001 e Parque das Nações 1990-001).</p>
+      <p>Prestamos suporte multimarca qualificado para marcas líderes como Bosch, Daikin, Samsung, Mitsubishi, Siemens, Whirlpool, Ariston e LG. Garantimos transparência, orçamentos claros e utilização de peças recomendadas pelos fabricantes.</p>
+    </section>
 
-      <!-- CARD 5: DIAGNÓSTICO FOTO/VÍDEO POR WHATSAPP -->
-      <div class="card col-6" style="background: rgba(48, 209, 88, 0.05); border-color: rgba(48, 209, 88, 0.2);">
-        <div class="card-title" style="color: var(--green);">
-          <span class="icon">📱</span> Diagnóstico Instantâneo por Foto ou Vídeo
-        </div>
-        <p style="color: var(--text); font-size: 0.95rem; margin-bottom: 10px;">
-          Tire uma foto à chapa de características da máquina ou grave um pequeno vídeo do erro/barulho e envie pelo WhatsApp.
-        </p>
-        <p style="color: var(--text-sub); font-size: 0.88rem;">
-          Avaliamos a avaria e apresentamos uma estimativa transparente da intervenção antes da deslocação.
-        </p>
-      </div>
+  </main>
 
-      <!-- CARD 6: COBERTURA GEOGRÁFICA -->
-      <div class="card col-6">
-        <div class="card-title">
-          <span class="icon">📍</span> Área de Atendimento Prioritário
-        </div>
-        <p style="color: var(--text-sub); font-size: 0.9rem; margin-bottom: 10px;">
-          Deslocação e assistência rápida ao domicílio em todos os concelhos da área metropolitana:
-        </p>
-        <div style="display: flex; flex-wrap: wrap; gap: 6px;">
-          <span style="background: rgba(255,255,255,0.06); padding: 4px 10px; border-radius: 8px; font-size: 0.85rem; color: #fff;">Lisboa (Todas as freguesias)</span>
-          <span style="background: rgba(255,255,255,0.06); padding: 4px 10px; border-radius: 8px; font-size: 0.85rem; color: #fff;">Almada</span>
-          <span style="background: rgba(255,255,255,0.06); padding: 4px 10px; border-radius: 8px; font-size: 0.85rem; color: #fff;">Seixal</span>
-          <span style="background: rgba(255,255,255,0.06); padding: 4px 10px; border-radius: 8px; font-size: 0.85rem; color: #fff;">Oeiras</span>
-          <span style="background: rgba(255,255,255,0.06); padding: 4px 10px; border-radius: 8px; font-size: 0.85rem; color: #fff;">Sintra</span>
-          <span style="background: rgba(255,255,255,0.06); padding: 4px 10px; border-radius: 8px; font-size: 0.85rem; color: #fff;">Cascais</span>
-          <span style="background: rgba(255,255,255,0.06); padding: 4px 10px; border-radius: 8px; font-size: 0.85rem; color: #fff;">Barreiro</span>
-          <span style="background: rgba(255,255,255,0.06); padding: 4px 10px; border-radius: 8px; font-size: 0.85rem; color: #fff;">Loures</span>
-        </div>
-      </div>
-
-      <!-- CARD 7: PROCESSO EM 3 PASSOS SIMPLES -->
-      <div class="card col-12">
-        <div class="card-title">
-          <span class="icon">📲</span> Como Agendar a Sua Reparação em 3 Passos Rápidos
-        </div>
-        <div class="steps-grid">
-          <div class="step-box">
-            <div class="step-num">Passo 1</div>
-            <strong style="color: #fff;">Envie Foto/Vídeo do Problema</strong>
-            <p style="color: var(--text-sub); font-size: 0.85rem; margin-top: 4px;">Mostre-nos a marca e o síntoma da avaria diretamente no WhatsApp.</p>
-          </div>
-          <div class="step-box">
-            <div class="step-num">Passo 2</div>
-            <strong style="color: #fff;">Receba Estimativa Grátis</strong>
-            <p style="color: var(--text-sub); font-size: 0.85rem; margin-top: 4px;">Analisamos a avaria e apresentamos um valor claro para a resolução.</p>
-          </div>
-          <div class="step-box">
-            <div class="step-num">Passo 3</div>
-            <strong style="color: #fff;">Intervenção no Domicílio</strong>
-            <p style="color: var(--text-sub); font-size: 0.85rem; margin-top: 4px;">O técnico desloca-se equipado com as peças necessárias e resolve no próprio dia.</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- FOOTER -->
-    <footer>
-      <p>M. Cavaleiro Reparações® · Assistência Técnica Especializada na Grande Lisboa e Margem Sul.</p>
-      <p style="margin-top: 6px; font-size: 0.8rem;">Entidade independente especializada em reparações fora do período de garantia das marcas mencionadas.</p>
-      <p style="margin-top: 12px; color: #555;">© 2026 mcavaleiro.pt · Todos os direitos reservados.</p>
-    </footer>
-
-  </div>
+  <!-- Rodapé -->
+  <footer>
+    <p><strong>Assistência Técnica na Grande Lisboa 24/7</strong></p>
+    <p>Atendimento Domiciliário: Lisboa | Sintra | Agualva-Cacém | Odivelas | Famões | Amadora | Cascais | Oeiras | Loures</p>
+    <p>Telefone: <a href="tel:+351910000000" style="color: var(--secondary-color); text-decoration: none; font-weight: bold;">910 000 000</a> | Horário: 24 Horas / 7 Dias por semana</p>
+    <p style="font-size: 0.8rem; margin-top: 15px;">&copy; Todos os direitos reservados.</p>
+  </footer>
 
 </body>
 </html>
