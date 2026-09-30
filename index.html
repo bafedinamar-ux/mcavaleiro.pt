@@ -8,18 +8,17 @@
   <meta name="keywords" content="assistencia ar condicionado lisboa, assistencia tecnica eletrodomesticos almada, tecnico maquina lavar seixal, carga gas ac, assistencia bosch daikin">
   <link rel="canonical" href="https://mcavaleiro.pt/">
 
-  <!-- Otimização iOS / Android / Mobile / PWA -->
+  <!-- Mobile & PWA Optimizations -->
   <meta name="theme-color" content="#000000">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   
-  <!-- Open Graph Meta -->
+  <!-- Open Graph Meta Tags -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mcavaleiro.pt/">
   <meta property="og:title" content="M. Cavaleiro® | Assistência & Manutenção Lisboa & Margem Sul">
   <meta property="og:description" content="Manutenção e Diagnóstico Multimarcas em 24h ao Domicílio. Diagnóstico transparente por WhatsApp.">
 
-  <!-- Estilos Ultra-Pro Apple Bento Grid (Performance Max) -->
   <style>
     :root {
       --bg: #000000;
@@ -50,7 +49,6 @@
       padding: clamp(12px, 3vw, 24px);
       -webkit-font-smoothing: antialiased;
       overflow-x: hidden;
-      transform: translateZ(0); /* Aceleração de Hardware GPU */
     }
 
     .container {
@@ -58,7 +56,7 @@
       margin: 0 auto;
     }
 
-    /* Navigation Bar Minimalista */
+    /* Navigation Bar */
     nav {
       display: flex;
       justify-content: space-between;
@@ -182,7 +180,6 @@
       flex-wrap: wrap;
     }
 
-    /* Botão Flutuante / CTA WhatsApp e Chamada */
     .btn-whatsapp {
       display: inline-flex;
       align-items: center;
@@ -197,7 +194,6 @@
       text-decoration: none;
       box-shadow: 0 8px 30px var(--green-glow);
       transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-      will-change: transform;
     }
 
     .btn-whatsapp:active, .btn-whatsapp:hover {
@@ -280,31 +276,31 @@
     }
 
     .btn-refresh {
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid var(--border);
-      color: var(--accent);
-      padding: 6px 14px;
+      background: var(--accent);
+      color: #ffffff;
+      border: none;
+      padding: 8px 18px;
       border-radius: 20px;
-      font-size: 0.8rem;
+      font-size: 0.85rem;
       font-weight: 700;
       cursor: pointer;
-      transition: all 0.2s ease;
+      transition: transform 0.15s ease, background-color 0.2s, box-shadow 0.2s;
       display: inline-flex;
       align-items: center;
       gap: 6px;
+      box-shadow: 0 4px 15px var(--accent-glow);
     }
 
     .btn-refresh:hover {
-      background: rgba(41, 151, 255, 0.15);
-      border-color: var(--accent);
+      background: #0071e3;
       transform: scale(1.03);
     }
 
     .btn-refresh:active {
-      transform: scale(0.97);
+      transform: scale(0.96);
     }
 
-    /* Comparativo Serviços Tradicionais vs M. Cavaleiro */
+    /* Comparison Table */
     .compare-table {
       width: 100%;
       border-collapse: collapse;
@@ -326,7 +322,7 @@
     .compare-table tr:last-child td { border-bottom: none; }
     .highlight-mc { color: var(--green); font-weight: 700; }
 
-    /* Badges de Marcas com Filtro/Foco */
+    /* Brands Badges */
     .brand-grid {
       display: flex;
       flex-wrap: wrap;
@@ -343,7 +339,6 @@
       font-size: 0.88rem;
       font-weight: 600;
       transition: all 0.2s;
-      cursor: pointer;
     }
 
     .brand-item:hover {
@@ -352,7 +347,7 @@
       transform: translateY(-2px);
     }
 
-    /* Processo em 3 Passos */
+    /* Steps Grid */
     .steps-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -375,17 +370,13 @@
       margin-bottom: 6px;
     }
 
-    /* Galeria Interativa com Transição Suave */
+    /* Dynamic Gallery Grid */
     .gallery-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 12px;
       margin-top: 15px;
-      transition: opacity 0.3s ease;
-    }
-
-    .gallery-grid.fade-out {
-      opacity: 0;
+      transition: opacity 0.15s ease-in-out;
     }
 
     .gallery-card {
@@ -425,7 +416,7 @@
       gap: 4px;
     }
 
-    /* Matriz de Zonas & Códigos Postais */
+    /* Postcodes Matrix */
     .postcodes-container {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -481,7 +472,6 @@
       margin-top: 50px;
     }
 
-    /* Responsividade Telemóveis, Tablets e Ecrãs Retina */
     @media (max-width: 900px) {
       .col-8, .col-6, .col-4 { grid-column: span 12; }
       .steps-grid, .gallery-grid, .postcodes-container { grid-template-columns: 1fr; }
@@ -493,7 +483,6 @@
     }
   </style>
 
-  <!-- Schema.org Avançado para Pesquisa do Google -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -554,10 +543,9 @@
       </div>
     </section>
 
-    <!-- BENTO GRID -->
     <div class="bento">
 
-      <!-- CARD 1: O PORQUÊ DE SERMOS MAIS RÁPIDOS -->
+      <!-- CARD 1: COMPARISON -->
       <div class="card col-8">
         <div class="card-title">
           <span class="icon">⚡</span> Porquê Escolher M. Cavaleiro vs. Serviços Tradicionais?
@@ -599,7 +587,7 @@
         </table>
       </div>
 
-      <!-- CARD 2: GARANTIA DE SERVIÇO -->
+      <!-- CARD 2: GUARANTEE -->
       <div class="card col-4" style="background: rgba(41, 151, 255, 0.06); border-color: rgba(41, 151, 255, 0.25);">
         <div class="card-title" style="color: var(--accent);">
           <span class="icon">🛡️</span> Garantia Total M. Cavaleiro
@@ -612,10 +600,10 @@
         </p>
       </div>
 
-      <!-- CARD 3: AR CONDICIONADO -->
+      <!-- CARD 3: AIR CONDITIONING BRANDS -->
       <div class="card col-6">
         <div class="card-title">
-          <span class="icon">❄️</span> Ar Condicionado & Climatização
+          <span class="icon">❄️️</span> Ar Condicionado & Climatização
         </div>
         <p style="color: var(--text-sub); font-size: 0.9rem; margin-bottom: 12px;">
           Higienização antibacteriana, resolução de fugas, substituição de placas e carga de gás R32 / R410A.
@@ -636,7 +624,7 @@
         </div>
       </div>
 
-      <!-- CARD 4: LINHA BRANCA -->
+      <!-- CARD 4: HOME APPLIANCES BRANDS -->
       <div class="card col-6">
         <div class="card-title">
           <span class="icon">🧺</span> Eletrodomésticos Linha Branca
@@ -660,13 +648,13 @@
         </div>
       </div>
 
-      <!-- CARD 5: GALERIA DINÂMICA DE INTERVENÇÕES (COM CLICK E REFRESH ALEATÓRIO) -->
+      <!-- CARD 5: DYNAMIC RECENT INTERVENTIONS -->
       <div class="card col-12">
         <div class="card-header-flex">
           <div class="card-title">
             <span class="icon">🛠️</span> Intervenções Recentes em Campo
           </div>
-          <button class="btn-refresh" onclick="gerarIntervencoesAleatorias()">
+          <button type="button" class="btn-refresh" id="btnRefreshInterventions">
             🔄 Ver Outras Intervenções
           </button>
         </div>
@@ -674,11 +662,11 @@
           Exemplos reais de serviços executados pelas nossas equipas técnicas na Grande Lisboa e Margem Sul:
         </p>
         
-        <!-- Contentor dinâmico de intervenções -->
-        <div class="gallery-grid" id="galleryContainer"></div>
+        <!-- Dynamic Target Grid Container -->
+        <div class="gallery-grid" id="interventionsContainer"></div>
       </div>
 
-      <!-- CARD 6: COMO FUNCIONA (SISTEMA EM 3 PASSOS SIMPLES) -->
+      <!-- CARD 6: 3-STEP PROCESS -->
       <div class="card col-12">
         <div class="card-title">
           <span class="icon">📲</span> Como Agendar a Sua Assistência em 3 Passos Rápidos
@@ -702,7 +690,7 @@
         </div>
       </div>
 
-      <!-- CARD 7: ZONAS ATENDIDAS E CÓDIGOS POSTAIS -->
+      <!-- CARD 7: COVERAGE & POSTCODES MATRIX -->
       <div class="card col-12">
         <div class="card-title">
           <span class="icon">📍</span> Zonas de Cobertura e Matriz de Códigos Postais
@@ -760,58 +748,78 @@
 
   </div>
 
-  <!-- JAVASCRIPT: GERADOR DINÂMICO E ALEATÓRIO DE INTERVENÇÕES -->
   <script>
-    // Base de dados alargada de intervenções
-    const baseIntervencoes = [
-      { tag: "Ar Condicionado", desc: "Carga de Gás R32 e Selagem de Fuga Micro em Multi-Split Daikin", loc: "📍 Parque das Nações, Lisboa" },
-      { tag: "Máquina de Lavar", desc: "Substituição de Rolamentos e Bomba de Escoamento Bosch Serie 6", loc: "📍 Almada, Margem Sul" },
-      { tag: "Frigorífico", desc: "Substituição de Termostato e Sensor No-Frost Siemens iQ500", loc: "📍 Oeiras, Lisboa" },
-      { tag: "Ar Condicionado", desc: "Substituição de Placa Inverter e Higienização Química Mitsubishi", loc: "📍 Cascais, Linha" },
-      { tag: "Máquina de Secar", desc: "Limpeza de Condensador e Troca de Correia de Aço AEG Protech", loc: "📍 Sintra, Lisboa" },
-      { tag: "Máquina Loiça", desc: "Substituição de Válvula Aquastop e Bomba Principal Whirlpool", loc: "📍 Seixal, Margem Sul" },
-      { tag: "Ar Condicionado", desc: "Manutenção Preventiva Antibacteriana e Carga R410A LG Artcool", loc: "📍 Odivelas, Lisboa" },
-      { tag: "Frigorífico Side-by-Side", desc: "Reparação de Ventoinha e Deteção de Fuga de Gás R600a Samsung", loc: "📍 Telheiras, Lisboa" },
-      { tag: "Máquina de Lavar", desc: "Troca de Amortecedores e Borracha de Escotilha Balay 8kg", loc: "📍 Corroios, Margem Sul" },
-      { tag: "Ar Condicionado", desc: "Substituição de Compressor e Condensador Gree Lomo Norte", loc: "📍 Amadora, Lisboa" },
-      { tag: "Máquina Loiça", desc: "Substituição de Sensor de Turbidez e Desobstrução Miele G5000", loc: "📍 Estoril, Cascais" },
-      { tag: "Frigorífico", desc: "Substituição de Módulo Eletrónico de Potência e Sonda Indesit", loc: "📍 Barreiro, Margem Sul" },
-      { tag: "Ar Condicionado", desc: "Higienização Industrial de Condutas e Filtros Fujitsu Inverter", loc: "📍 Alfragide, Amadora" },
-      { tag: "Máquina de Lavar", desc: "Troca de Escovas do Motor e Módulo de Controlo Electrolux", loc: "📍 Montijo, Margem Sul" },
-      { tag: "Ar Condicionado", desc: "Carga de Gás e Verificação de Manómetros em Sistema Panasonic", loc: "📍 Loures, Lisboa" }
-    ];
+    (function () {
+      // Extensive dataset of field interventions
+      const dataset = [
+        { tag: "Ar Condicionado", desc: "Carga de Gás R32 e Deteção de Micro-fuga em Multi-Split Daikin", loc: "📍 Parque das Nações, Lisboa" },
+        { tag: "Máquina de Lavar", desc: "Substituição de Rolamentos e Bomba de Escoamento Bosch Serie 6", loc: "📍 Almada, Margem Sul" },
+        { tag: "Frigorífico", desc: "Substituição de Termostato e Sensor No-Frost Siemens iQ500", loc: "📍 Oeiras, Lisboa" },
+        { tag: "Ar Condicionado", desc: "Substituição de Placa Inverter e Higienização Química Mitsubishi", loc: "📍 Cascais, Linha" },
+        { tag: "Máquina de Secar", desc: "Limpeza de Condensador e Troca de Correia de Aço AEG Protech", loc: "📍 Sintra, Lisboa" },
+        { tag: "Máquina Loiça", desc: "Substituição de Válvula Aquastop e Bomba Principal Whirlpool", loc: "📍 Seixal, Margem Sul" },
+        { tag: "Ar Condicionado", desc: "Manutenção Preventiva Antibacteriana e Carga R410A LG Artcool", loc: "📍 Odivelas, Lisboa" },
+        { tag: "Frigorífico Side-by-Side", desc: "Reparação de Ventoinha e Fuga de Gás R600a Samsung", loc: "📍 Telheiras, Lisboa" },
+        { tag: "Máquina de Lavar", desc: "Troca de Amortecedores e Borracha de Escotilha Balay 8kg", loc: "📍 Corroios, Margem Sul" },
+        { tag: "Ar Condicionado", desc: "Substituição de Compressor e Condensador Gree Lomo Norte", loc: "📍 Amadora, Lisboa" },
+        { tag: "Máquina Loiça", desc: "Substituição de Sensor de Turbidez e Desobstrução Miele G5000", loc: "📍 Estoril, Cascais" },
+        { tag: "Frigorífico", desc: "Substituição de Módulo Eletrónico de Potência e Sonda Indesit", loc: "📍 Barreiro, Margem Sul" },
+        { tag: "Ar Condicionado", desc: "Higienização Industrial de Condutas e Filtros Fujitsu Inverter", loc: "📍 Alfragide, Amadora" },
+        { tag: "Máquina de Lavar", desc: "Troca de Escovas do Motor e Módulo de Controlo Electrolux", loc: "📍 Montijo, Margem Sul" },
+        { tag: "Ar Condicionado", desc: "Carga de Gás e Verificação de Pressões em Sistema Panasonic", loc: "📍 Loures, Lisboa" }
+      ];
 
-    function gerarIntervencoesAleatorias() {
-      const container = document.getElementById('galleryContainer');
-      
-      // Efeito de transição fade
-      container.classList.add('fade-out');
-      
-      setTimeout(() => {
-        // Baralhar a lista de forma aleatória (Algoritmo Fisher-Yates)
-        const embaralhado = [...baseIntervencoes].sort(() => 0.5 - Math.random());
-        // Selecionar 3 intervenções
-        const selecionados = embaralhado.slice(0, 3);
-        
-        container.innerHTML = '';
-        selecionados.forEach(item => {
-          const cardHtml = `
+      let lastUsedIndexes = [];
+
+      function renderNewInterventions() {
+        const container = document.getElementById('interventionsContainer');
+        if (!container) return;
+
+        // Filter out previously displayed interventions to guarantee 3 new ones
+        let availablePool = dataset.filter((_, idx) => !lastUsedIndexes.includes(idx));
+
+        // Shuffle available pool
+        availablePool.sort(() => Math.random() - 0.5);
+
+        // Pick 3 items
+        const selectedItems = availablePool.slice(0, 3);
+
+        // Track new indexes
+        lastUsedIndexes = selectedItems.map(item => dataset.indexOf(item));
+
+        // Smooth transition effect
+        container.style.opacity = '0.15';
+
+        setTimeout(() => {
+          container.innerHTML = selectedItems.map(item => `
             <div class="gallery-card">
               <div class="gallery-tag">${item.tag}</div>
               <div class="gallery-desc">${item.desc}</div>
               <div class="gallery-location">${item.loc}</div>
             </div>
-          `;
-          container.innerHTML += cardHtml;
-        });
-        
-        container.classList.remove('fade-out');
-      }, 200);
-    }
+          `).join('');
+          container.style.opacity = '1';
+        }, 120);
+      }
 
-    // Carregar intervenções aleatórias automaticamente assim que a página abre
-    window.addEventListener('DOMContentLoaded', gerarIntervencoesAleatorias);
+      function init() {
+        const btn = document.getElementById('btnRefreshInterventions');
+        if (btn) {
+          btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            renderNewInterventions();
+          });
+        }
+        renderNewInterventions();
+      }
+
+      // Execute on DOM load or immediately if already loaded
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+      } else {
+        init();
+      }
+    })();
   </script>
-
 </body>
 </html>
