@@ -4,11 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
-  <title>M. Cavaleiro® | Assistência Técnica Especializada Multimarcas - Frigoríficos, Máquinas & Ar Condicionado</title>
+  <title>M. Cavaleiro® | Assistência Técnica Especializada Frigoríficos, Máquinas & Ar Condicionado</title>
   <meta name="description"
-    content="Centro Técnico Multimarcas de Alta Performance. Assistência e manutenção ao domicílio de Frigoríficos, Máquinas de Lavar e Ar Condicionado (Daikin, Bosch, LG, Whirlpool, Haier, Candy, AEG, Siemens, Balay, Electrolux). Atendimento no próprio dia.">
+    content="Centro Técnico Multimarcas de Alta Performance. Assistência e manutenção ao domicílio de Frigoríficos (Bosch, Samsung, LG, Whirlpool), Máquinas de Lavar e Ar Condicionado (Daikin, Mitsubishi). Atendimento no próprio dia.">
   <meta name="keywords"
-    content="reparacao frigorificos bosch lisboa, assistencia ar condicionado daikin, reparacao maquinas lavar lg, assistencia whirlpool, reparacao electrolux aeg balay">
+    content="reparacao frigorificos bosch lisboa, assistencia frigorifico samsung almada, reparacao maquinas lavar louca seixal, assistencia ar condicionado daikin">
   <link rel="canonical" href="https://mcavaleiro.pt/">
 
   <!-- Mobile & PWA Optimizations -->
@@ -134,9 +134,17 @@
     }
 
     @keyframes pulse {
-      0% { opacity: 1; }
-      50% { opacity: 0.4; }
-      100% { opacity: 1; }
+      0% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0.4;
+      }
+
+      100% {
+        opacity: 1;
+      }
     }
 
     /* Hero Section */
@@ -257,6 +265,27 @@
       grid-column: span 12;
     }
 
+    .col-8 {
+      grid-column: span 8;
+    }
+
+    .col-6 {
+      grid-column: span 6;
+    }
+
+    .col-4 {
+      grid-column: span 4;
+    }
+
+    .card-header-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
     .card-title {
       font-size: 1.25rem;
       font-weight: 700;
@@ -264,6 +293,31 @@
       align-items: center;
       gap: 10px;
       color: #fff;
+    }
+
+    .card-title span.icon {
+      font-size: 1.4rem;
+    }
+
+    .btn-refresh {
+      background: var(--accent);
+      color: #ffffff;
+      border: none;
+      padding: 8px 18px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 0.15s ease, background-color 0.2s, box-shadow 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 4px 15px var(--accent-glow);
+    }
+
+    .btn-refresh:hover {
+      background: #0071e3;
+      transform: scale(1.03);
     }
 
     /* Brands Badges */
@@ -291,7 +345,7 @@
       transform: translateY(-2px);
     }
 
-    /* Matrix Tabs */
+    /* Multi-Brand Matrix Selector */
     .matrix-tabs {
       display: flex;
       gap: 8px;
@@ -333,7 +387,7 @@
       display: block;
     }
 
-    /* Local Proximity Section Styling */
+    /* Local Proximity Section Styling (Strict adherence) */
     .proximity-section-box {
       background: rgba(0, 0, 0, 0.25);
       border: 1px solid rgba(255, 255, 255, 0.08);
@@ -347,35 +401,6 @@
       font-size: 0.95rem;
       margin-bottom: 16px;
       line-height: 1.5;
-    }
-
-    .filter-brand-selector {
-      display: flex;
-      gap: 8px;
-      margin-bottom: 16px;
-      flex-wrap: wrap;
-      max-height: 180px;
-      overflow-y: auto;
-      padding-bottom: 6px;
-    }
-
-    .btn-filter-brand {
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid var(--border);
-      color: #fff;
-      padding: 6px 14px;
-      border-radius: 20px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.2s;
-    }
-
-    .btn-filter-brand.active {
-      background: var(--green);
-      color: #000;
-      border-color: var(--green);
-      font-weight: 800;
     }
 
     .search-input {
@@ -397,21 +422,18 @@
 
     .locations-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
       gap: 8px;
-      max-height: 360px;
+      max-height: 320px;
       overflow-y: auto;
       padding-right: 6px;
     }
 
-    .locations-grid::-webkit-scrollbar,
-    .filter-brand-selector::-webkit-scrollbar {
+    .locations-grid::-webkit-scrollbar {
       width: 6px;
-      height: 6px;
     }
 
-    .locations-grid::-webkit-scrollbar-thumb,
-    .filter-brand-selector::-webkit-scrollbar-thumb {
+    .locations-grid::-webkit-scrollbar-thumb {
       background: rgba(255, 255, 255, 0.2);
       border-radius: 4px;
     }
@@ -437,6 +459,28 @@
       transform: translateY(-1px);
     }
 
+    /* Steps Grid */
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 15px;
+    }
+
+    .step-box {
+      background: rgba(0, 0, 0, 0.3);
+      padding: 18px;
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .step-num {
+      color: var(--accent);
+      font-weight: 800;
+      font-size: 1.2rem;
+      margin-bottom: 6px;
+    }
+
     /* Footer */
     footer {
       text-align: center;
@@ -448,6 +492,14 @@
     }
 
     @media (max-width: 900px) {
+
+      .col-8,
+      .col-6,
+      .col-4 {
+        grid-column: span 12;
+      }
+
+      .steps-grid,
       .locations-grid {
         grid-template-columns: 1fr;
       }
@@ -496,8 +548,9 @@
         {"@type": "AdministrativeArea", "name": "Margem Sul e Setúbal"}
       ],
       "knowsAbout": [
-        "Assistência técnica Daikin, Bosch, LG, Whirlpool, Haier, Candy, Hoover, Ariston, Indesit, Electrolux, AEG, Zanussi, Becken, Kunft, Siemens, Gaggenau, Balay",
-        "Reparação de frigoríficos, máquinas de lavar roupa, loiça e ar condicionado"
+        "Reparação de frigoríficos Bosch, Samsung, LG, Whirlpool",
+        "Assistência máquinas de lavar roupa e loiça Candy, Hoover, Haier",
+        "Ar Condicionado Daikin, Mitsubishi, LG, Bosch"
       ]
     }
   </script>
@@ -520,7 +573,8 @@
     <section class="hero">
       <span class="pill-hero">Assistência Técnica Multimarcas · Especialistas Domicílio</span>
       <h1>Assistência Técnica Direta no Próprio Dia.</h1>
-      <p class="hero-sub">A alternativa mais rápida para frigoríficos, máquinas de lavar e ar condicionado de todas as marcas principais. Peças originais e garantia escrita.</p>
+      <p class="hero-sub">A alternativa mais rápida para frigoríficos, máquinas de lavar e ar condicionado. Peças
+        originais e garantia escrita.</p>
       <div class="hero-ctas">
         <a href="https://wa.me/351931369411?text=Ol%C3%A1!%20Preciso%20de%20assist%C3%AAncia%20t%C3%A9cnica%20urgente%20para%20o%20meu%20equipamento."
           class="btn-whatsapp" target="_blank" rel="noopener">💬 Pedir Diagnóstico no WhatsApp (931 369 411)</a>
@@ -547,26 +601,19 @@
           <div id="frigorificos" class="matrix-panel active">
             <strong style="color: #fff; font-size: 1.05rem;">Reparação e Manutenção de Frigoríficos, Combinados e Arcas No-Frost</strong>
             <p style="color: var(--text-sub); font-size: 0.9rem; margin-top: 4px; margin-bottom: 12px;">
-              Reparação de fugas de gás, troca de compressores, termostatos e substituição de placas eletrónicas nas marcas:
+              Reparação de fugas de gás, troca de compressores, termostatos e substituição de placas eletrónicas de potência nas principais marcas:
             </p>
             <div class="brand-grid">
               <div class="brand-item">Bosch</div>
               <div class="brand-item">Samsung</div>
               <div class="brand-item">LG</div>
-              <div class="brand-item">Whirlpool</div>
-              <div class="brand-item">Haier</div>
               <div class="brand-item">Candy</div>
               <div class="brand-item">Hoover</div>
-              <div class="brand-item">Ariston</div>
+              <div class="brand-item">Haier</div>
+              <div class="brand-item">Whirlpool</div>
               <div class="brand-item">Indesit</div>
-              <div class="brand-item">Electrolux</div>
-              <div class="brand-item">AEG</div>
-              <div class="brand-item">Zanussi</div>
-              <div class="brand-item">Becken</div>
-              <div class="brand-item">Kunft</div>
+              <div class="brand-item">Ariston</div>
               <div class="brand-item">Siemens</div>
-              <div class="brand-item">Gaggenau</div>
-              <div class="brand-item">Balay</div>
               <div class="brand-item">Beko</div>
               <div class="brand-item">Miele</div>
             </div>
@@ -582,82 +629,131 @@
               <div class="brand-item">Bosch</div>
               <div class="brand-item">Samsung</div>
               <div class="brand-item">LG</div>
-              <div class="brand-item">Whirlpool</div>
-              <div class="brand-item">Haier</div>
               <div class="brand-item">Candy</div>
               <div class="brand-item">Hoover</div>
-              <div class="brand-item">Ariston</div>
+              <div class="brand-item">Haier</div>
+              <div class="brand-item">Whirlpool</div>
               <div class="brand-item">Indesit</div>
-              <div class="brand-item">Electrolux</div>
+              <div class="brand-item">Ariston</div>
               <div class="brand-item">AEG</div>
-              <div class="brand-item">Zanussi</div>
-              <div class="brand-item">Becken</div>
-              <div class="brand-item">Kunft</div>
-              <div class="brand-item">Siemens</div>
-              <div class="brand-item">Gaggenau</div>
+              <div class="brand-item">Electrolux</div>
               <div class="brand-item">Balay</div>
             </div>
           </div>
 
           <!-- AC Panel -->
           <div id="ac" class="matrix-panel">
-            <strong style="color: #fff; font-size: 1.05rem;">Serviço Técnico Especializado em Ar Condicionado & Climatização</strong>
+            <strong style="color: #fff; font-size: 1.05rem;">Serviço Técnico Especializado em Ar Condicionado & Bombas de Calor</strong>
             <p style="color: var(--text-sub); font-size: 0.9rem; margin-top: 4px; margin-bottom: 12px;">
               Cargas de gás (R32 / R410A), higienização antibacteriana profunda e reparação de placas Inverter:
             </p>
             <div class="brand-grid">
               <div class="brand-item">Daikin</div>
-              <div class="brand-item">Mitsubishi Electric</div>
               <div class="brand-item">LG</div>
               <div class="brand-item">Bosch</div>
               <div class="brand-item">Haier</div>
+              <div class="brand-item">Mitsubishi Electric</div>
               <div class="brand-item">Fujitsu</div>
               <div class="brand-item">Samsung</div>
               <div class="brand-item">Gree</div>
               <div class="brand-item">Panasonic</div>
               <div class="brand-item">Toshiba</div>
-              <div class="brand-item">Electrolux</div>
               <div class="brand-item">Carrier</div>
+              <div class="brand-item">Midea</div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- CARD 2: DYNAMIC LOCAL PROXIMITY SECTION -->
+      <!-- CARD 2: STRICT LOCAL PROXIMITY SECTION -->
       <div class="card col-12">
-        <div class="card-title">🌍 Cobertura de Proximidade · Selecione a Marca por Localidade</div>
+        <div class="card-title">🌍 Cobertura de Proximidade · Reparação de Frigoríficos Bosch por Localidade</div>
         <div class="proximity-section-box">
           <p class="proximity-intro">
-            Clique na marca pretendida para gerar os links de assistência direta para a sua localidade:
+            Encontre rapidamente o técnico especializado mais próximo de si para intervenção em frigoríficos e combinados Bosch:
           </p>
-
-          <!-- Filter Brand Switcher -->
-          <div class="filter-brand-selector">
-            <button class="btn-filter-brand active" onclick="setBrandFilter('daikin', 'Ar Condicionado Daikin')">❄️ Daikin</button>
-            <button class="btn-filter-brand" onclick="setBrandFilter('bosch', 'Equipamentos Bosch')">🧊 Bosch</button>
-            <button class="btn-filter-brand" onclick="setBrandFilter('lg', 'Equipamentos LG')">📱 LG</button>
-            <button class="btn-filter-brand" onclick="setBrandFilter('whirlpool', 'Equipamentos Whirlpool')">🔄 Whirlpool</button>
-            <button class="btn-filter-brand" onclick="setBrandFilter('haier', 'Equipamentos Haier')">🏠 Haier</button>
-            <button class="btn-filter-brand" onclick="setBrandFilter('candy', 'Equipamentos Candy')">🧺 Candy</button>
-            <button class="btn-filter-brand" onclick="setBrandFilter('hoover', 'Equipamentos Hoover')">🌀 Hoover</button>
-            <button class="btn-filter-brand" onclick="setBrandFilter('ariston', 'Equipamentos Ariston')">🔥 Ariston</button>
-            <button class="btn-filter-brand" onclick="setBrandFilter('indesit', 'Equipamentos Indesit')">⚡ Indesit</button>
-            <button class="btn-filter-brand" onclick="setBrandFilter('electrolux', 'Equipamentos Electrolux')">✨ Electrolux</button>
-            <button class="btn-filter-brand" onclick="setBrandFilter('aeg', 'Equipamentos AEG')">🛠️ AEG</button>
-            <button class="btn-filter-brand" onclick="setBrandFilter('zanussi', 'Equipamentos Zanussi')">🔧 Zanussi</button>
-            <button class="btn-filter-brand" onclick="setBrandFilter('becken', 'Equipamentos Becken')">⚙️ Becken</button>
-            <button class="btn-filter-brand" onclick="setBrandFilter('kunft', 'Equipamentos Kunft')">💡 Kunft</button>
-            <button class="btn-filter-brand" onclick="setBrandFilter('siemens', 'Equipamentos Siemens')">💎 Siemens</button>
-            <button class="btn-filter-brand" onclick="setBrandFilter('gaggenau', 'Equipamentos Gaggenau')">👑 Gaggenau</button>
-            <button class="btn-filter-brand" onclick="setBrandFilter('balay', 'Equipamentos Balay')">🌟 Balay</button>
-            <button class="btn-filter-brand" onclick="setBrandFilter('samsung', 'Equipamentos Samsung')">📲 Samsung</button>
-          </div>
-
           <input type="text" id="locationSearch" class="search-input"
-            placeholder="🔍 Filtrar por localidade (ex: Lisboa, Sintra, Cascais, Almada, Seixal...)" onkeyup="filterLocations()">
+            placeholder="🔍 Filtrar por localidade (ex: Lisboa, Sintra, Cascais, Almada...)" onkeyup="filterLocations()">
 
           <div class="locations-grid" id="locationsGrid">
-            <!-- Gerado dinamicamente pelo JS -->
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Lisboa" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Lisboa</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Odivelas" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Odivelas</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Almada" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Almada</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Amadora" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Amadora</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Sintra" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Sintra</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Mafra" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Mafra</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Cascais" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Cascais</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Loures" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Loures</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Alcochete" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Alcochete</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Palmela" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Palmela</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Barreiro" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Barreiro</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Setúbal" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Setúbal</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Montijo" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Montijo</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Sesimbra" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Sesimbra</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Seixal" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Seixal</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Oeiras" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Oeiras</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Vila Franca de Xira" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Vila Franca de Xira</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Colares" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Colares</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Moita" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Moita</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Corroios" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Corroios</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Costa da Caparica" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Costa da Caparica</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Agualva-Cacém" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Agualva-Cacém</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Trafaria" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Trafaria</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Belas" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Belas</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Ericeira" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Ericeira</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Pontinha" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Pontinha</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Vialonga" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Vialonga</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Alhos Vedros" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Alhos Vedros</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Carcavelos" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Carcavelos</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Pinhal Novo" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Pinhal Novo</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Póvoa de Santo Adrião" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Póvoa de Santo Adrião</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Algés" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Algés</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Rio de Mouro" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Rio de Mouro</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Paço de Arcos" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Paço de Arcos</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Algueirão-Mem Martins" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Algueirão-Mem Martins</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Carnaxide" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Carnaxide</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Quinta do Conde" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Quinta do Conde</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Forte da Casa" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Forte da Casa</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Pêro Pinheiro" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Pêro Pinheiro</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Queijas" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Queijas</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Belém" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Belém</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Benfica" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Benfica</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em União das freguesias de Agualva" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em União das freguesias de Agualva</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Mira-Sintra" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Mira-Sintra</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Estoril" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Estoril</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em São Domingos de Rana" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em São Domingos de Rana</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Olival Basto" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Olival Basto</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Alfragide" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Alfragide</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Queluz" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Queluz</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Massamá" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Massamá</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Tercena" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Tercena</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Cacém" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Cacém</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Algueirão" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Algueirão</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Mem Martins" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Mem Martins</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em São Marcos" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em São Marcos</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Linda-a-Velha" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Linda-a-Velha</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Quejas" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Quejas</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Caxias" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Caxias</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Parede" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Parede</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Monte do Estoril" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Monte do Estoril</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Cacilhas" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Cacilhas</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Feijó" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Feijó</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Laranjeiro" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Laranjeiro</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Cruz de Pau" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Cruz de Pau</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Azeitão" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Azeitão</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Moscavide" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Moscavide</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Sacavém" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Sacavém</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Póvoa de Santa Iria" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Póvoa de Santa Iria</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Alverca" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Alverca</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Flamenga" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Flamenga</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Infantado" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Infantado</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch na Margem Sul" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch na Margem Sul</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Baixa Lisboa" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Baixa Lisboa</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Chiado" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Chiado</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Bairro Alto" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Bairro Alto</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Alfama" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Alfama</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Belém de Lisboa" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Belém de Lisboa</a>
+            <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch no Parque das Nações de Lisboa" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch no Parque das Nações de Lisboa</a>
           </div>
         </div>
       </div>
@@ -670,53 +766,6 @@
   </div>
 
   <script>
-    const locationsList = [
-      "Lisboa", "Odivelas", "Almada", "Amadora", "Sintra", "Mafra", "Cascais", "Loures", 
-      "Alcochete", "Palmela", "Barreiro", "Setúbal", "Montijo", "Sesimbra", "Seixal", 
-      "Oeiras", "Vila Franca de Xira", "Colares", "Moita", "Corroios", "Costa da Caparica", 
-      "Agualva-Cacém", "Trafaria", "Belas", "Ericeira", "Pontinha", "Vialonga", "Alhos Vedros", 
-      "Carcavelos", "Pinhal Novo", "Póvoa de Santo Adrião", "Algés", "Rio de Mouro", 
-      "Paço de Arcos", "Algueirão-Mem Martins", "Carnaxide", "Quinta do Conde", "Forte da Casa", 
-      "Pêro Pinheiro", "Queijas", "Belém", "Benfica", "Agualva", "Mira-Sintra", "Estoril", 
-      "São Domingos de Rana", "Olival Basto", "Alfragide", "Queluz", "Massamá", "Tercena", 
-      "Cacém", "Algueirão", "Mem Martins", "São Marcos", "Linda-a-Velha", "Caxias", "Parede", 
-      "Monte do Estoril", "Cacilhas", "Feijó", "Laranjeiro", "Cruz de Pau", "Azeitão", 
-      "Moscavide", "Sacavém", "Póvoa de Santa Iria", "Alverca", "Margem Sul", "Parque das Nações"
-    ];
-
-    let currentBrandKey = 'daikin';
-    let currentBrandLabel = 'Ar Condicionado Daikin';
-
-    function renderLocations() {
-      const grid = document.getElementById('locationsGrid');
-      grid.innerHTML = '';
-
-      locationsList.forEach(loc => {
-        const a = document.createElement('a');
-        a.className = 'location-pill';
-        a.target = '_blank';
-        const msg = encodeURIComponent(`Olá! Preciso de assistência técnica para ${currentBrandLabel} em ${loc}`);
-        a.href = `https://wa.me/351931369411?text=${msg}`;
-        a.innerHTML = `📍 Assistência ${currentBrandLabel} em ${loc}`;
-        grid.appendChild(a);
-      });
-    }
-
-    function setBrandFilter(brandKey, brandLabel) {
-      currentBrandKey = brandKey;
-      currentBrandLabel = brandLabel;
-
-      document.querySelectorAll('.btn-filter-brand').forEach(btn => {
-        btn.classList.remove('active');
-      });
-      if (event && event.currentTarget) {
-        event.currentTarget.classList.add('active');
-      }
-
-      renderLocations();
-      filterLocations();
-    }
-
     function switchMatrix(event, tabId) {
       const tabs = document.querySelectorAll('.matrix-tab');
       const panels = document.querySelectorAll('.matrix-panel');
@@ -737,11 +786,6 @@
         pill.style.display = text.includes(input) ? 'flex' : 'none';
       });
     }
-
-    // Inicializar na carga da página
-    document.addEventListener('DOMContentLoaded', () => {
-      renderLocations();
-    });
   </script>
 </body>
 
