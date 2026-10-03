@@ -1,25 +1,53 @@
-
-
 <!DOCTYPE html>
 <html lang="pt-PT">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
   <title>M. Cavaleiro® | Assistência Técnica Especializada Frigoríficos, Máquinas & Ar Condicionado</title>
-  <meta name="description" content="Centro Técnico Multimarcas de Alta Performance. Assistência e manutenção ao domicílio de Frigoríficos (Bosch, Samsung, LG, Whirlpool), Máquinas de Lavar e Ar Condicionado (Daikin, Mitsubishi). Atendimento no próprio dia.">
-  <meta name="keywords" content="reparacao frigorificos bosch lisboa, assistencia frigorifico samsung almada, reparacao maquinas lavar louca seixal, assistencia ar condicionado daikin">
+  <meta name="description"
+    content="Centro Técnico Multimarcas de Alta Performance. Assistência e manutenção ao domicílio de Frigoríficos (Bosch, Samsung, LG, Whirlpool), Máquinas de Lavar e Ar Condicionado (Daikin, Mitsubishi). Atendimento no próprio dia.">
+  <meta name="keywords"
+    content="reparacao frigorificos bosch lisboa, assistencia frigorifico samsung almada, reparacao maquinas lavar louca seixal, assistencia ar condicionado daikin">
   <link rel="canonical" href="https://mcavaleiro.pt/">
 
   <!-- Mobile & PWA Optimizations -->
   <meta name="theme-color" content="#000000">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  
+
   <!-- Open Graph Meta Tags -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mcavaleiro.pt/">
   <meta property="og:title" content="M. Cavaleiro® | Assistência & Manutenção Lisboa & Margem Sul">
-  <meta property="og:description" content="Manutenção e Diagnóstico Multimarcas em 24h ao Domicílio. Peças de origem e garantia escrita.">
+  <meta property="og:description"
+    content="Manutenção e Diagnóstico Multimarcas em 24h ao Domicílio. Peças de origem e garantia escrita.">
+
+  <!-- Schema.org LocalBusiness para o Google -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HVACBusiness",
+      "name": "M. Cavaleiro Assistência Técnica",
+      "url": "https://mcavaleiro.pt/",
+      "telephone": "+351931369411",
+      "priceRange": "€€",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Lisboa",
+        "addressCountry": "PT"
+      },
+      "areaServed": [
+        {"@type": "AdministrativeArea", "name": "Lisboa e Grande Lisboa"},
+        {"@type": "AdministrativeArea", "name": "Margem Sul e Setúbal"}
+      ],
+      "knowsAbout": [
+        "Reparação de frigoríficos Bosch, Samsung, LG, Whirlpool",
+        "Assistência máquinas de lavar roupa e loiça Candy, Hoover, Haier",
+        "Ar Condicionado Daikin, Mitsubishi, LG, Bosch"
+      ]
+    }
+  </script>
 
   <style>
     :root {
@@ -49,6 +77,7 @@
       font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
       line-height: 1.45;
       padding: clamp(12px, 3vw, 24px);
+      padding-bottom: 90px; /* Espaço para a barra flutuante em mobile */
       -webkit-font-smoothing: antialiased;
       overflow-x: hidden;
     }
@@ -198,7 +227,8 @@
       transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    .btn-whatsapp:active, .btn-whatsapp:hover {
+    .btn-whatsapp:active,
+    .btn-whatsapp:hover {
       transform: scale(1.02);
       box-shadow: 0 12px 40px rgba(48, 209, 88, 0.5);
     }
@@ -255,15 +285,6 @@
     .col-6 { grid-column: span 6; }
     .col-4 { grid-column: span 4; }
 
-    .card-header-flex {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 12px;
-    }
-
     .card-title {
       font-size: 1.25rem;
       font-weight: 700;
@@ -275,27 +296,6 @@
 
     .card-title span.icon {
       font-size: 1.4rem;
-    }
-
-    .btn-refresh {
-      background: var(--accent);
-      color: #ffffff;
-      border: none;
-      padding: 8px 18px;
-      border-radius: 20px;
-      font-size: 0.85rem;
-      font-weight: 700;
-      cursor: pointer;
-      transition: transform 0.15s ease, background-color 0.2s, box-shadow 0.2s;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      box-shadow: 0 4px 15px var(--accent-glow);
-    }
-
-    .btn-refresh:hover {
-      background: #0071e3;
-      transform: scale(1.03);
     }
 
     /* Brands Badges */
@@ -365,7 +365,7 @@
       display: block;
     }
 
-    /* Local Proximity Section Styling (Strict adherence) */
+    /* Local Proximity Section Styling */
     .proximity-section-box {
       background: rgba(0, 0, 0, 0.25);
       border: 1px solid rgba(255, 255, 255, 0.08);
@@ -405,6 +405,7 @@
       max-height: 320px;
       overflow-y: auto;
       padding-right: 6px;
+      -webkit-overflow-scrolling: touch;
     }
 
     .locations-grid::-webkit-scrollbar {
@@ -437,27 +438,38 @@
       transform: translateY(-1px);
     }
 
-    /* Steps Grid */
-    .steps-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-      margin-top: 15px;
+    /* Barra Flutuante Fixa para Telemóveis (Sticky Bottom Bar) */
+    .mobile-sticky-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(15, 15, 18, 0.92);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-top: 1px solid var(--border);
+      padding: 10px 16px;
+      display: flex;
+      gap: 10px;
+      z-index: 2000;
     }
 
-    .step-box {
-      background: rgba(0, 0, 0, 0.3);
-      padding: 18px;
-      border-radius: 16px;
-      border: 1px solid rgba(255, 255, 255, 0.05);
-    }
-
-    .step-num {
-      color: var(--accent);
+    .mobile-sticky-bar a {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 12px;
+      border-radius: 24px;
       font-weight: 800;
-      font-size: 1.2rem;
-      margin-bottom: 6px;
+      font-size: 0.9rem;
+      text-decoration: none;
+      min-height: 48px;
     }
+
+    .bar-whatsapp { background: var(--green); color: #000; box-shadow: 0 4px 15px var(--green-glow); }
+    .bar-phone { background: rgba(255, 255, 255, 0.12); color: #fff; border: 1px solid var(--border); }
 
     /* Footer */
     footer {
@@ -471,7 +483,7 @@
 
     @media (max-width: 900px) {
       .col-8, .col-6, .col-4 { grid-column: span 12; }
-      .steps-grid, .locations-grid { grid-template-columns: 1fr; }
+      .locations-grid { grid-template-columns: 1fr; }
       nav { border-radius: 20px; flex-wrap: wrap; gap: 10px; }
       .nav-actions { width: 100%; justify-content: space-between; }
       body { padding: 10px; }
@@ -479,44 +491,17 @@
       .btn-whatsapp, .btn-phone { width: 100%; }
     }
   </style>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "HVACBusiness",
-    "name": "M. Cavaleiro Assistência Técnica",
-    "url": "https://mcavaleiro.pt/",
-    "telephone": "+351931369411",
-    "priceRange": "€€",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Lisboa",
-      "addressCountry": "PT"
-    },
-    "areaServed": [
-      {"@type": "AdministrativeArea", "name": "Lisboa e Grande Lisboa"},
-      {"@type": "AdministrativeArea", "name": "Margem Sul e Setúbal"}
-    ],
-    "knowsAbout": [
-      "Reparação de frigoríficos Bosch, Samsung, LG, Whirlpool",
-      "Assistência máquinas de lavar roupa e loiça Candy, Hoover, Haier",
-      "Ar Condicionado Daikin, Mitsubishi, LG, Bosch"
-    ]
-  }
-  </script>
 </head>
-<body>
 
+<body>
   <div class="container">
-    
     <!-- NAVIGATION BAR -->
     <nav>
       <div class="logo">M. CAVALEIRO®</div>
       <div class="nav-actions">
         <a href="tel:931369411" class="nav-phone">📞 931 369 411</a>
         <div class="status-badge">
-          <div class="status-dot"></div>
-          Técnicos em Serviço
+          <div class="status-dot"></div>Técnicos em Serviço
         </div>
       </div>
     </nav>
@@ -525,25 +510,18 @@
     <section class="hero">
       <span class="pill-hero">Assistência Técnica Multimarcas · Especialistas Domicílio</span>
       <h1>Assistência Técnica Direta no Próprio Dia.</h1>
-      <p class="hero-sub">A alternativa mais rápida para frigoríficos, máquinas de lavar e ar condicionado. Peças originais e garantia escrita.</p>
-      
+      <p class="hero-sub">A alternativa mais rápida para frigoríficos, máquinas de lavar e ar condicionado. Peças de origem e garantia escrita.</p>
       <div class="hero-ctas">
-        <a href="https://wa.me/351931369411?text=Ol%C3%A1!%20Preciso%20de%20assist%C3%AAncia%20t%C3%A9cnica%20urgente%20para%20o%20meu%20equipamento." class="btn-whatsapp" target="_blank" rel="noopener">
-          💬 Pedir Diagnóstico no WhatsApp (931 369 411)
-        </a>
-        <a href="tel:931369411" class="btn-phone">
-          📞 Ligar 931 369 411
-        </a>
+        <a href="https://wa.me/351931369411?text=Ol%C3%A1!%20Preciso%20de%20assist%C3%AAncia%20t%C3%A9cnica%20urgente%20para%20o%20meu%20equipamento."
+          class="btn-whatsapp" target="_blank" rel="noopener">💬 Pedir Diagnóstico no WhatsApp (931 369 411)</a>
+        <a href="tel:931369411" class="btn-phone">📞 Ligar 931 369 411</a>
       </div>
     </section>
 
     <div class="bento">
-
       <!-- CARD 1: MULTI-BRAND & EQUIPMENT MATRIX -->
       <div class="card col-12">
-        <div class="card-title">
-          <span class="icon">⚙️</span> Matriz de Equipamentos & Marcas Suportadas
-        </div>
+        <div class="card-title"><span class="icon">⚙️️</span> Matriz de Equipamentos & Marcas Suportadas</div>
         <p style="color: var(--text-sub); font-size: 0.95rem; margin-top: 6px;">
           Selecione a categoria para verificar o suporte especializado das marcas líderes em Portugal:
         </p>
@@ -558,7 +536,9 @@
           <!-- Frigorificos Panel -->
           <div id="frigorificos" class="matrix-panel active">
             <strong style="color: #fff; font-size: 1.05rem;">Reparação e Manutenção de Frigoríficos, Combinados e Arcas No-Frost</strong>
-            <p style="color: var(--text-sub); font-size: 0.9rem; margin-top: 4px; margin-bottom: 12px;">Reparação de fugas de gás, troca de compressores, termostatos e substituição de placas eletrónicas de potência nas principais marcas:</p>
+            <p style="color: var(--text-sub); font-size: 0.9rem; margin-top: 4px; margin-bottom: 12px;">
+              Reparação de fugas de gás, troca de compressores, termostatos e substituição de placas eletrónicas de potência nas principais marcas:
+            </p>
             <div class="brand-grid">
               <div class="brand-item">Bosch</div>
               <div class="brand-item">Samsung</div>
@@ -578,7 +558,9 @@
           <!-- Maquinas Panel -->
           <div id="maquinas" class="matrix-panel">
             <strong style="color: #fff; font-size: 1.05rem;">Assistência Técnica a Máquinas de Lavar Roupa, Secar e Lavar Loiça</strong>
-            <p style="color: var(--text-sub); font-size: 0.9rem; margin-top: 4px; margin-bottom: 12px;">Solução de avarias de centrifugação, escoamento, rolamentos e bloqueios de porta:</p>
+            <p style="color: var(--text-sub); font-size: 0.9rem; margin-top: 4px; margin-bottom: 12px;">
+              Solução de avarias de centrifugação, escoamento, rolamentos e bloqueios de porta:
+            </p>
             <div class="brand-grid">
               <div class="brand-item">Bosch</div>
               <div class="brand-item">Samsung</div>
@@ -598,7 +580,9 @@
           <!-- AC Panel -->
           <div id="ac" class="matrix-panel">
             <strong style="color: #fff; font-size: 1.05rem;">Serviço Técnico Especializado em Ar Condicionado & Bombas de Calor</strong>
-            <p style="color: var(--text-sub); font-size: 0.9rem; margin-top: 4px; margin-bottom: 12px;">Cargas de gás (R32 / R410A), higienização antibacteriana profunda e reparação de placas Inverter:</p>
+            <p style="color: var(--text-sub); font-size: 0.9rem; margin-top: 4px; margin-bottom: 12px;">
+              Cargas de gás (R32 / R410A), higienização antibacteriana profunda e reparação de placas Inverter:
+            </p>
             <div class="brand-grid">
               <div class="brand-item">Daikin</div>
               <div class="brand-item">LG</div>
@@ -617,18 +601,15 @@
         </div>
       </div>
 
-      <!-- CARD 2: STRICT LOCAL PROXIMITY SECTION REQUESTED -->
+      <!-- CARD 2: LOCAL PROXIMITY SECTION -->
       <div class="card col-12">
-        <div class="card-title">
-          🌍 Cobertura de Proximidade · Reparação de Frigoríficos Bosch por Localidade
-        </div>
-        
+        <div class="card-title">🌍 Cobertura de Proximidade · Reparação de Frigoríficos Bosch por Localidade</div>
         <div class="proximity-section-box">
           <p class="proximity-intro">
             Encontre rapidamente o técnico especializado mais próximo de si para intervenção em frigoríficos e combinados Bosch:
           </p>
-
-          <input type="text" id="locationSearch" class="search-input" placeholder="🔍 Filtrar por localidade (ex: Lisboa, Sintra, Cascais, Almada...)" onkeyup="filterLocations()">
+          <input type="text" id="locationSearch" class="search-input"
+            placeholder="🔍 Filtrar por localidade (ex: Lisboa, Sintra, Cascais, Almada...)" onkeyup="filterLocations()">
 
           <div class="locations-grid" id="locationsGrid">
             <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Lisboa" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Lisboa</a>
@@ -709,78 +690,45 @@
             <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Alfama" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Alfama</a>
             <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch em Belém de Lisboa" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch em Belém de Lisboa</a>
             <a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de frigorífico Bosch no Parque das Nações de Lisboa" class="location-pill" target="_blank">📍 Reparação de frigoríficos Bosch no Parque das Nações de Lisboa</a>
-            <div class="locations-grid" id="locationsGrid"><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em Lisboa" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em Lisboa</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em Odivelas" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em Odivelas</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em Almada" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em Almada</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em Amadora" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em Amadora</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em Sintra" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em Sintra</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em Mafra" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em Mafra</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em Cascais" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em Cascais</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em Loures" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em Loures</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em Alcochete" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em Alcochete</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em Palmela" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em Palmela</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em Barreiro" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em Barreiro</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em Setúbal" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em Setúbal</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em Montijo" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em Montijo</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em Sesimbra" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em Sesimbra</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em Seixal" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em Seixal</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em Oeiras" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em Oeiras</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em Vila Franca de Xira" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em Vila Franca de Xira</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em Colares" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em Colares</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em Moita" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em Moita</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em Corroios" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em Corroios</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em Costa da Caparica" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em Costa da Caparica</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em Agualva-Cacém" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em Agualva-Cacém</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em Trafaria" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em Trafaria</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em Belas" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em Belas</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em Ericeira" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em Ericeira</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em Pontinha" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em Pontinha</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em Vialonga" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em Vialonga</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em Alhos Vedros" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em Alhos Vedros</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em Carcavelos" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em Carcavelos</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em Pinhal Novo" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em Pinhal Novo</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em Póvoa de Santo Adrião" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em Póvoa de Santo Adrião</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em Algés" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em Algés</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em Rio de Mouro" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em Rio de Mouro</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em Paço de Arcos" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em Paço de Arcos</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em Algueirão-Mem Martins" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em Algueirão-Mem Martins</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em Carnaxide" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em Carnaxide</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em Quinta do Conde" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em Quinta do Conde</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em Forte da Casa" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em Forte da Casa</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em Pêro Pinheiro" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em Pêro Pinheiro</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em Queijas" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em Queijas</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em Belém" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em Belém</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em Benfica" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em Benfica</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em União das freguesias de Agualva" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em União das freguesias de Agualva</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em Mira-Sintra" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em Mira-Sintra</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em Estoril" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em Estoril</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em São Domingos de Rana" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em São Domingos de Rana</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em Olival Basto" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em Olival Basto</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em Alfragide" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em Alfragide</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em Queluz" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em Queluz</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em Massamá" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em Massamá</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em Tercena" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em Tercena</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em Cacém" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em Cacém</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em Algueirão" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em Algueirão</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em Mem Martins" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em Mem Martins</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em São Marcos" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em São Marcos</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em Linda-a-Velha" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em Linda-a-Velha</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em Quejas" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em Quejas</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em Caxias" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em Caxias</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em Parede" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em Parede</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em Monte do Estoril" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em Monte do Estoril</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em Cacilhas" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em Cacilhas</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em Feijó" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em Feijó</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em Laranjeiro" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em Laranjeiro</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em Cruz de Pau" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em Cruz de Pau</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em Azeitão" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em Azeitão</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em Moscavide" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em Moscavide</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em Sacavém" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em Sacavém</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em Póvoa de Santa Iria" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em Póvoa de Santa Iria</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em Alverca" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em Alverca</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em Flamenga" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em Flamenga</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em Infantado" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em Infantado</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin na Margem Sul" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin na Margem Sul</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em Baixa Lisboa" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em Baixa Lisboa</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em Chiado" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em Chiado</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em Bairro Alto" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em Bairro Alto</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em Alfama" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em Alfama</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin em Belém de Lisboa" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin em Belém de Lisboa</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Daikin no Parque das Nações de Lisboa" class="location-pill" target="_blank">📍 Reparação de ar condicionado Daikin no Parque das Nações de Lisboa</a></div>
-            <div class="locations-grid" id="locationsGrid"><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em Lisboa" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em Lisboa</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em Odivelas" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em Odivelas</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em Almada" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em Almada</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em Amadora" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em Amadora</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em Sintra" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em Sintra</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em Mafra" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em Mafra</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em Cascais" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em Cascais</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em Loures" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em Loures</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em Alcochete" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em Alcochete</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em Palmela" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em Palmela</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em Barreiro" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em Barreiro</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em Setúbal" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em Setúbal</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em Montijo" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em Montijo</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em Sesimbra" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em Sesimbra</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em Seixal" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em Seixal</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em Oeiras" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em Oeiras</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em Vila Franca de Xira" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em Vila Franca de Xira</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em Colares" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em Colares</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em Moita" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em Moita</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em Corroios" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em Corroios</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em Costa da Caparica" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em Costa da Caparica</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em Agualva-Cacém" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em Agualva-Cacém</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em Trafaria" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em Trafaria</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em Belas" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em Belas</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em Ericeira" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em Ericeira</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em Pontinha" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em Pontinha</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em Vialonga" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em Vialonga</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em Alhos Vedros" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em Alhos Vedros</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em Carcavelos" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em Carcavelos</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em Pinhal Novo" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em Pinhal Novo</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em Póvoa de Santo Adrião" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em Póvoa de Santo Adrião</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em Algés" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em Algés</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em Rio de Mouro" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em Rio de Mouro</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em Paço de Arcos" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em Paço de Arcos</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em Algueirão-Mem Martins" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em Algueirão-Mem Martins</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em Carnaxide" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em Carnaxide</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em Quinta do Conde" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em Quinta do Conde</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em Forte da Casa" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em Forte da Casa</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em Pêro Pinheiro" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em Pêro Pinheiro</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em Queijas" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em Queijas</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em Belém" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em Belém</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em Benfica" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em Benfica</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em União das freguesias de Agualva" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em União das freguesias de Agualva</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em Mira-Sintra" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em Mira-Sintra</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em Estoril" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em Estoril</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em São Domingos de Rana" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em São Domingos de Rana</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em Olival Basto" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em Olival Basto</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em Alfragide" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em Alfragide</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em Queluz" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em Queluz</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em Massamá" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em Massamá</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em Tercena" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em Tercena</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em Cacém" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em Cacém</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em Algueirão" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em Algueirão</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em Mem Martins" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em Mem Martins</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em São Marcos" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em São Marcos</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em Linda-a-Velha" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em Linda-a-Velha</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em Quejas" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em Quejas</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em Caxias" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em Caxias</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em Parede" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em Parede</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em Monte do Estoril" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em Monte do Estoril</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em Cacilhas" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em Cacilhas</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em Feijó" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em Feijó</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em Laranjeiro" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em Laranjeiro</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em Cruz de Pau" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em Cruz de Pau</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em Azeitão" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em Azeitão</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em Moscavide" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em Moscavide</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em Sacavém" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em Sacavém</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em Póvoa de Santa Iria" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em Póvoa de Santa Iria</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em Alverca" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em Alverca</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em Flamenga" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em Flamenga</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em Infantado" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em Infantado</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi na Margem Sul" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi na Margem Sul</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em Baixa Lisboa" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em Baixa Lisboa</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em Chiado" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em Chiado</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em Bairro Alto" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em Bairro Alto</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em Alfama" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em Alfama</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi em Belém de Lisboa" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi em Belém de Lisboa</a><a href="https://wa.me/351931369411?text=Olá! Preciso de reparação de ar condicionado Mitsubishi no Parque das Nações de Lisboa" class="location-pill" target="_blank">📍 Reparação de ar condicionado Mitsubishi no Parque das Nações de Lisboa</a></div>
-            
           </div>
         </div>
       </div>
-
-      <!-- CARD 3: 3-STEP PROCESS -->
-      <div class="card col-12">
-        <div class="card-title">
-          <span class="icon">📲</span> Como Agendar a Sua Assistência em 3 Passos
-        </div>
-        <div class="steps-grid">
-          <div class="step-box">
-            <div class="step-num">Passo 1</div>
-            <strong style="color: #fff;">Envie Foto do Equipamento</strong>
-            <p style="color: var(--text-sub); font-size: 0.85rem; margin-top: 4px;">Tire foto à etiqueta de características ou envie vídeo do sintoma no WhatsApp <strong>931 369 411</strong>.</p>
-          </div>
-          <div class="step-box">
-            <div class="step-num">Passo 2</div>
-            <strong style="color: #fff;">Estimativa Transparente</strong>
-            <p style="color: var(--text-sub); font-size: 0.85rem; margin-top: 4px;">Receba a indicação de custos e o agendamento prioritário para o próprio dia.</p>
-          </div>
-          <div class="step-box">
-            <div class="step-num">Passo 3</div>
-            <strong style="color: #fff;">Intervenção no Domicílio</strong>
-            <p style="color: var(--text-sub); font-size: 0.85rem; margin-top: 4px;">O técnico desloca-se munido com peças e ferramentas para reparação na hora.</p>
-          </div>
-        </div>
-      </div>
-
     </div>
 
     <!-- FOOTER -->
     <footer>
-      <p>M. Cavaleiro® · Assistência Técnica Especializada em Frigoríficos, Máquinas e Ar Condicionado.</p>
-      <p style="margin-top: 6px; font-size: 0.85rem; color: var(--accent);">Contacto Direto: <strong>931 369 411</strong> | Resposta em menos de 15 minutos</p>
-      <p style="margin-top: 6px; font-size: 0.8rem;">Entidade independente especializada em intervenções fora do período de garantia das marcas mencionadas.</p>
-      <p style="margin-top: 12px; color: #555;">© 2026 mcavaleiro.pt · Todos os direitos reservados.</p>
+      <p>&copy; M. Cavaleiro® - Assistência Técnica Especializada Multimarcas em Lisboa e Margem Sul.</p>
     </footer>
+  </div>
 
+  <!-- BARRA FLUTUANTE FIXA EM DISPOSITIVOS MÓVEIS -->
+  <div class="mobile-sticky-bar">
+    <a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica urgente." class="bar-whatsapp" target="_blank">💬 WhatsApp</a>
+    <a href="tel:931369411" class="bar-phone">📞 931 369 411</a>
   </div>
 
   <script>
-    // Tab Switching Logic for Equipment & Brands Matrix
-    function switchMatrix(evt, categoryId) {
+    function switchMatrix(event, tabId) {
+      const tabs = document.querySelectorAll('.matrix-tab');
       const panels = document.querySelectorAll('.matrix-panel');
+
+      tabs.forEach(tab => tab.classList.remove('active'));
       panels.forEach(panel => panel.classList.remove('active'));
 
-      const tabs = document.querySelectorAll('.matrix-tab');
-      tabs.forEach(tab => tab.classList.remove('active'));
-
-      document.getElementById(categoryId).classList.add('active');
-      evt.currentTarget.classList.add('active');
+      event.currentTarget.classList.add('active');
+      document.getElementById(tabId).classList.add('active');
     }
 
-    // Location Filter Logic for Proximity Section
     function filterLocations() {
-      const input = document.getElementById('locationSearch');
-      const filter = input.value.toLowerCase();
-      const grid = document.getElementById('locationsGrid');
-      const pills = grid.getElementsByClassName('location-pill');
+      const input = document.getElementById('locationSearch').value.toLowerCase();
+      const pills = document.querySelectorAll('.location-pill');
 
-      for (let i = 0; i < pills.length; i++) {
-        const text = pills[i].textContent || pills[i].innerText;
-        if (text.toLowerCase().indexOf(filter) > -1) {
-          pills[i].style.display = "";
-        } else {
-          pills[i].style.display = "none";
-        }
-      }
+      pills.forEach(pill => {
+        const text = pill.textContent.toLowerCase();
+        pill.style.display = text.includes(input) ? 'flex' : 'none';
+      });
     }
   </script>
 </body>
+
 </html>
