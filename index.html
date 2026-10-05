@@ -712,22 +712,20 @@ erros ortograficos comuns: reparacao de frigorificos, reparacao frigorificos lis
 </head>
 
 <body>
-  <!-- O SEU CONTEÚDO ATUAL PERMANECE AQUI -->
+ <!-- POP-UP DINÂMICO DE URGÊNCIA (CANTO SUPERIOR DIREITO - SEM TAPAR CONTACTOS) -->
+<div id="service-popup" style="position: fixed; top: 80px; right: 20px; background: rgba(20, 20, 22, 0.92); border: 1px solid rgba(255, 255, 255, 0.12); color: #f5f5f7; padding: 12px 18px; border-radius: 16px; font-family: -apple-system, BlinkMacSystemFont, sans-serif; font-size: 0.85rem; z-index: 9999; backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); box-shadow: 0 10px 30px rgba(0,0,0,0.6); display: flex; align-items: center; gap: 10px; max-width: 320px;">
+  <span style="width: 8px; height: 8px; background: #30d158; border-radius: 50%; box-shadow: 0 0 8px #30d158; flex-shrink: 0;"></span>
+  <span><strong id="popup-count">17</strong> pessoas pediram serviços na sua zona nas últimas 24h.</span>
+</div>
 
-  <!-- POP-UP ADICIONADO -->
-  <div id="service-popup" style="position: fixed; bottom: 20px; left: 20px; background: rgba(20, 20, 22, 0.92); border: 1px solid rgba(255, 255, 255, 0.12); color: #f5f5f7; padding: 12px 18px; border-radius: 16px; font-family: -apple-system, BlinkMacSystemFont, sans-serif; font-size: 0.85rem; z-index: 9999; backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); box-shadow: 0 10px 30px rgba(0,0,0,0.6); display: flex; align-items: center; gap: 10px;">
-    <span style="width: 8px; height: 8px; background: #30d158; border-radius: 50%; box-shadow: 0 0 8px #30d158; flex-shrink: 0;"></span>
-    <span><strong id="popup-count">30</strong> pessoas pediram serviços na sua zona nas últimas 24h.</span>
-  </div>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      const randomCount = Math.floor(Math.random() * (45 - 24)) + 24;
-      const countElement = document.getElementById("popup-count");
-      if (countElement) {
-        countElement.textContent = randomCount;
-      }
-    });
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const randomCount = Math.floor(Math.random() * (35 - 17)) + 17;
+    const countElement = document.getElementById("popup-count");
+    if (countElement) {
+      countElement.textContent = randomCount;
+    }
+  });
   </script>
 </body>
     <div class="bento">
