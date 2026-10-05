@@ -99,33 +99,88 @@ erros ortograficos comuns: reparacao de frigorificos, reparacao frigorificos lis
     content="Manutenção e Diagnóstico Multimarcas em 24h ao Domicílio. Peças de origem e garantia escrita.">
 
   <!-- Schema.org LocalBusiness para o Google -->
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "HVACBusiness",
-      "name": "M. Cavaleiro Assistência Técnica",
-      "url": "https://mcavaleiro.pt/",
-      "telephone": "+351931369411",
-      "priceRange": "€€",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Lisboa",
-        "addressCountry": "PT"
+ <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["HVACBusiness", "HomeAndConstructionBusiness"],
+  "name": "M. Cavaleiro Assistência Técnica 24H",
+  "image": "https://mcavaleiro.pt/logo.png",
+  "description": "Serviço de piquete 24H e reparação urgente de eletrodomésticos, frigoríficos, máquinas de lavar, ar condicionado e termoacumuladores ao domicílio em Lisboa e Margem Sul. Orçamentos rápidos.",
+  "url": "https://mcavaleiro.pt/",
+  "telephone": "+351931369411",
+  "priceRange": "€",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Lisboa",
+    "addressRegion": "Lisboa",
+    "addressCountry": "PT"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "38.7223",
+    "longitude": "-9.1393"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
+    ],
+    "opens": "00:00",
+    "closes": "23:59"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "184"
+  },
+  "areaServed": [
+    {"@type": "City", "name": "Lisboa"},
+    {"@type": "City", "name": "Amadora"},
+    {"@type": "City", "name": "Sintra"},
+    {"@type": "City", "name": "Loures"},
+    {"@type": "City", "name": "Cascais"},
+    {"@type": "City", "name": "Almada"},
+    {"@type": "City", "name": "Setúbal"}
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Serviços de Reparação e Assistência",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Substituição de Compressores e Cargas de Gás (R600a)"
+        }
       },
-      "areaServed": [
-        {"@type": "AdministrativeArea", "name": "Lisboa e Grande Lisboa"},
-        {"@type": "AdministrativeArea", "name": "Margem Sul e Setúbal"}
-      ],
-      "knowsAbout": [
-        "Reparação de frigoríficos Bosch, Samsung, LG, Whirlpool",
-        "Assistência máquinas de lavar roupa e loiça",
-        "Reparação de fornos, placas e micro-ondas",
-        "Assistência a esquentadores e termoacumuladores",
-        "Ar Condicionado Daikin, Mitsubishi, LG, Bosch"
-      ]
-    }
-  </script>
-
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Diagnóstico de Erros Máquinas de Loiça Bosch e Teka"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Assistência a Termoacumuladores e Esquentadores"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Instalação e Reparação de Ar Condicionado (Multisplit e Daitsu)"
+        }
+      }
+    ]
+  },
+  "knowsAbout": [
+    "Reparação de Urgência", "Piquete 24H", "Vulcano", "Junkers", "Bosch", "Teka", "Samsung", "LG", "Whirlpool", "Daikin", "Daitsu"
+  ]
+}
+</script>
   <style>
     :root {
       --bg: #000000;
@@ -570,7 +625,7 @@ erros ortograficos comuns: reparacao de frigorificos, reparacao frigorificos lis
   <div class="container">
     <!-- NAVIGATION BAR -->
     <nav>
-      <div class="logo">M.CAVALEIRO®</div>
+      <div class="logo">M.CAVALEIRO Reparações ®</div>
       <div class="nav-actions">
         <a href="tel:931369411" class="nav-phone">📞 931 369 411</a>
         <div class="status-badge">
@@ -581,9 +636,9 @@ erros ortograficos comuns: reparacao de frigorificos, reparacao frigorificos lis
 
     <!-- HERO SECTION -->
     <section class="hero">
-      <span class="pill-hero">Assistência Técnica Multimarcas · Especialistas Domicílio</span>
+      <span class="pill-hero">Assistência Técnica Multimarcas Domésticas · Especialistas ao Domicílio</span>
       <h1>Assistência Técnica Direta no Próprio Dia.</h1>
-      <p class="hero-sub">A alternativa mais rápida para eletrodomésticos, frigoríficos, máquinas, fornos, placas, esquentadores e ar condicionado. Peças de origem e garantia escrita.</p>
+      <p class="hero-sub">A alternativa mais rápida do mercado para eletrodomésticos, frigoríficos, máquinas, fornos, placas, esquentadores e ar condicionado. Peças de origem e garantia escrita.</p>
       <div class="hero-ctas">
         <a href="https://wa.me/351931369411?text=Ol%C3%A1!%20Preciso%20de%20assist%C3%AAncia%20t%C3%A9cnica%20urgente%20para%20o%20meu%20equipamento."
           class="btn-whatsapp" target="_blank" rel="noopener">💬 Pedir Diagnóstico no WhatsApp (931 369 411)</a>
@@ -596,7 +651,7 @@ erros ortograficos comuns: reparacao de frigorificos, reparacao frigorificos lis
       <div class="card col-12">
         <div class="card-title"><span class="icon">⚙️</span> Matriz de Equipamentos & Marcas Suportadas</div>
         <p style="color: var(--text-sub); font-size: 0.95rem; margin-top: 6px;">
-          Selecione a categoria para verificar o suporte especializado das marcas líderes em Portugal:
+          Selecione a categoria para verificar o suporte especializado das marcas suportadas em Portugal:
         </p>
 
         <div class="matrix-tabs">
@@ -634,7 +689,7 @@ erros ortograficos comuns: reparacao de frigorificos, reparacao frigorificos lis
           <div id="maquinas" class="matrix-panel">
             <strong style="color: #fff; font-size: 1.05rem;">Assistência a Máquinas de Lavar Roupa, Secar e Loiça</strong>
             <p style="color: var(--text-sub); font-size: 0.9rem; margin-top: 4px; margin-bottom: 12px;">
-              Resolução de avarias de centrifugação, escoamento, rolamentos e bloqueios de porta:
+              Resolução de avarias de centrifugação,bloqueios, drenagem, rolamentos e bloqueios de porta e erros eletrónicos:
             </p>
             <div class="brand-grid">
               <div class="brand-item">Bosch</div>
@@ -726,9 +781,9 @@ erros ortograficos comuns: reparacao de frigorificos, reparacao frigorificos lis
 
           <!-- AC Panel -->
           <div id="ac" class="matrix-panel">
-            <strong style="color: #fff; font-size: 1.05rem;">Serviço Técnico Especializado em Ar Condicionado & Bombas de Calor</strong>
+            <strong style="color: #fff; font-size: 1.05rem;">Serviço Técnico Especializado em Ar Condicionado </strong>
             <p style="color: var(--text-sub); font-size: 0.9rem; margin-top: 4px; margin-bottom: 12px;">
-              Cargas de gás (R32 / R410A), higienização antibacteriana profunda e reparação de placas Inverter:
+              Cargas de gás (R32 / R410A), Verificação de fugas, higienização antibacteriana profunda e reparação de placas Inverter:
             </p>
             <div class="brand-grid">
               <div class="brand-item">Daikin</div>
@@ -753,7 +808,7 @@ erros ortograficos comuns: reparacao de frigorificos, reparacao frigorificos lis
             Encontre rapidamente o técnico especializado mais próximo de si para intervenção urgente ao domicílio:
           </p>
           <input type="text" id="locationSearch" class="search-input"
-            placeholder="🔍 Filtrar por localidade (ex: Lisboa, Sintra, Cascais, Almada...)" onkeyup="filterLocations()">
+            placeholder="🔍 Filtrar por localidade (ex: Lisboa,Loures, Sintra, Cascais, Almada, Oeiras, Odivelas ...)" onkeyup="filterLocations()">
 
           <div class="locations-grid" id="locationsGrid">
             <a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica em Lisboa" class="location-pill" target="_blank">📍 Reparação de frigoríficos Sharp em Lisboa</a>
@@ -2351,14 +2406,291 @@ erros ortograficos comuns: reparacao de frigorificos, reparacao frigorificos lis
 <a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas vitrocerâmicas em Cascais" class="location-pill" target="_blank">📍 Reparação de placas vitrocerâmicas Samsung em Cascais</a>
 <a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas vitrocerâmicas em Cascais" class="location-pill" target="_blank">📍 Reparação de placas vitrocerâmicas LG em Cascais</a>
 <a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas vitrocerâmicas em Cascais" class="location-pill" target="_blank">📍 Reparação de placas vitrocerâmicas Fagor em Cascais</a>
-<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas vitrocerâmicas em Cascais" class="location-pill" target="_blank">📍 Reparação de placas vitrocerâmicas Zanussi em Cascais</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas vitrocerâmicas em Cascais" class="location-pill" target="_blank">📍 Reparação de placas vitrocerâmicas Zanussi em Cascais</a> <!-- ZONA 1: LISBOA -->
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução em Lisboa" class="location-pill" target="_blank">📍 Reparação de placas de indução Teka em Lisboa</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução em Lisboa" class="location-pill" target="_blank">📍 Reparação de placas de indução Bosch em Lisboa</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução em Lisboa" class="location-pill" target="_blank">📍 Reparação de placas de indução Siemens em Lisboa</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução em Lisboa" class="location-pill" target="_blank">📍 Reparação de placas de indução Balay em Lisboa</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução em Lisboa" class="location-pill" target="_blank">📍 Reparação de placas de indução Whirlpool em Lisboa</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução em Lisboa" class="location-pill" target="_blank">📍 Reparação de placas de indução Beko em Lisboa</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução em Lisboa" class="location-pill" target="_blank">📍 Reparação de placas de indução AEG em Lisboa</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução em Lisboa" class="location-pill" target="_blank">📍 Reparação de placas de indução Electrolux em Lisboa</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução em Lisboa" class="location-pill" target="_blank">📍 Reparação de placas de indução Candy em Lisboa</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução em Lisboa" class="location-pill" target="_blank">📍 Reparação de placas de indução Hoover em Lisboa</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução em Lisboa" class="location-pill" target="_blank">📍 Reparação de placas de indução Indesit em Lisboa</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução em Lisboa" class="location-pill" target="_blank">📍 Reparação de placas de indução Ariston em Lisboa</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução em Lisboa" class="location-pill" target="_blank">📍 Reparação de placas de indução Samsung em Lisboa</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução em Lisboa" class="location-pill" target="_blank">📍 Reparação de placas de indução LG em Lisboa</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução em Lisboa" class="location-pill" target="_blank">📍 Reparação de placas de indução Fagor em Lisboa</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução em Lisboa" class="location-pill" target="_blank">📍 Reparação de placas de indução Zanussi em Lisboa</a>
+
+<!-- ZONA 2: AMADORA -->
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução na Amadora" class="location-pill" target="_blank">📍 Reparação de placas de indução Teka na Amadora</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução na Amadora" class="location-pill" target="_blank">📍 Reparação de placas de indução Bosch na Amadora</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução na Amadora" class="location-pill" target="_blank">📍 Reparação de placas de indução Siemens na Amadora</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução na Amadora" class="location-pill" target="_blank">📍 Reparação de placas de indução Balay na Amadora</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução na Amadora" class="location-pill" target="_blank">📍 Reparação de placas de indução Whirlpool na Amadora</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução na Amadora" class="location-pill" target="_blank">📍 Reparação de placas de indução Beko na Amadora</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução na Amadora" class="location-pill" target="_blank">📍 Reparação de placas de indução AEG na Amadora</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução na Amadora" class="location-pill" target="_blank">📍 Reparação de placas de indução Electrolux na Amadora</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução na Amadora" class="location-pill" target="_blank">📍 Reparação de placas de indução Candy na Amadora</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução na Amadora" class="location-pill" target="_blank">📍 Reparação de placas de indução Hoover na Amadora</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução na Amadora" class="location-pill" target="_blank">📍 Reparação de placas de indução Indesit na Amadora</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução na Amadora" class="location-pill" target="_blank">📍 Reparação de placas de indução Ariston na Amadora</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução na Amadora" class="location-pill" target="_blank">📍 Reparação de placas de indução Samsung na Amadora</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução na Amadora" class="location-pill" target="_blank">📍 Reparação de placas de indução LG na Amadora</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução na Amadora" class="location-pill" target="_blank">📍 Reparação de placas de indução Fagor na Amadora</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução na Amadora" class="location-pill" target="_blank">📍 Reparação de placas de indução Zanussi na Amadora</a>
+
+<!-- ZONA 3: SINTRA -->
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução em Sintra" class="location-pill" target="_blank">📍 Reparação de placas de indução Teka em Sintra</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução em Sintra" class="location-pill" target="_blank">📍 Reparação de placas de indução Bosch em Sintra</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução em Sintra" class="location-pill" target="_blank">📍 Reparação de placas de indução Siemens em Sintra</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução em Sintra" class="location-pill" target="_blank">📍 Reparação de placas de indução Balay em Sintra</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução em Sintra" class="location-pill" target="_blank">📍 Reparação de placas de indução Whirlpool em Sintra</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução em Sintra" class="location-pill" target="_blank">📍 Reparação de placas de indução Beko em Sintra</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução em Sintra" class="location-pill" target="_blank">📍 Reparação de placas de indução AEG em Sintra</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução em Sintra" class="location-pill" target="_blank">📍 Reparação de placas de indução Electrolux em Sintra</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução em Sintra" class="location-pill" target="_blank">📍 Reparação de placas de indução Candy em Sintra</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução em Sintra" class="location-pill" target="_blank">📍 Reparação de placas de indução Hoover em Sintra</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução em Sintra" class="location-pill" target="_blank">📍 Reparação de placas de indução Indesit em Sintra</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução em Sintra" class="location-pill" target="_blank">📍 Reparação de placas de indução Ariston em Sintra</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução em Sintra" class="location-pill" target="_blank">📍 Reparação de placas de indução Samsung em Sintra</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução em Sintra" class="location-pill" target="_blank">📍 Reparação de placas de indução LG em Sintra</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução em Sintra" class="location-pill" target="_blank">📍 Reparação de placas de indução Fagor em Sintra</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução em Sintra" class="location-pill" target="_blank">📍 Reparação de placas de indução Zanussi em Sintra</a>
+
+<!-- ZONA 4: LOURES -->
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução em Loures" class="location-pill" target="_blank">📍 Reparação de placas de indução Teka em Loures</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução em Loures" class="location-pill" target="_blank">📍 Reparação de placas de indução Bosch em Loures</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução em Loures" class="location-pill" target="_blank">📍 Reparação de placas de indução Siemens em Loures</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução em Loures" class="location-pill" target="_blank">📍 Reparação de placas de indução Balay em Loures</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução em Loures" class="location-pill" target="_blank">📍 Reparação de placas de indução Whirlpool em Loures</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução em Loures" class="location-pill" target="_blank">📍 Reparação de placas de indução Beko em Loures</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução em Loures" class="location-pill" target="_blank">📍 Reparação de placas de indução AEG em Loures</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução em Loures" class="location-pill" target="_blank">📍 Reparação de placas de indução Electrolux em Loures</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução em Loures" class="location-pill" target="_blank">📍 Reparação de placas de indução Candy em Loures</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução em Loures" class="location-pill" target="_blank">📍 Reparação de placas de indução Hoover em Loures</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução em Loures" class="location-pill" target="_blank">📍 Reparação de placas de indução Indesit em Loures</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução em Loures" class="location-pill" target="_blank">📍 Reparação de placas de indução Ariston em Loures</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução em Loures" class="location-pill" target="_blank">📍 Reparação de placas de indução Samsung em Loures</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução em Loures" class="location-pill" target="_blank">📍 Reparação de placas de indução LG em Loures</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução em Loures" class="location-pill" target="_blank">📍 Reparação de placas de indução Fagor em Loures</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução em Loures" class="location-pill" target="_blank">📍 Reparação de placas de indução Zanussi em Loures</a>
+
+<!-- ZONA 5: CASCAIS -->
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução em Cascais" class="location-pill" target="_blank">📍 Reparação de placas de indução Teka em Cascais</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução em Cascais" class="location-pill" target="_blank">📍 Reparação de placas de indução Bosch em Cascais</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução em Cascais" class="location-pill" target="_blank">📍 Reparação de placas de indução Siemens em Cascais</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução em Cascais" class="location-pill" target="_blank">📍 Reparação de placas de indução Balay em Cascais</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução em Cascais" class="location-pill" target="_blank">📍 Reparação de placas de indução Whirlpool em Cascais</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução em Cascais" class="location-pill" target="_blank">📍 Reparação de placas de indução Beko em Cascais</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução em Cascais" class="location-pill" target="_blank">📍 Reparação de placas de indução AEG em Cascais</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução em Cascais" class="location-pill" target="_blank">📍 Reparação de placas de indução Electrolux em Cascais</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução em Cascais" class="location-pill" target="_blank">📍 Reparação de placas de indução Candy em Cascais</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução em Cascais" class="location-pill" target="_blank">📍 Reparação de placas de indução Hoover em Cascais</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução em Cascais" class="location-pill" target="_blank">📍 Reparação de placas de indução Indesit em Cascais</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução em Cascais" class="location-pill" target="_blank">📍 Reparação de placas de indução Ariston em Cascais</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução em Cascais" class="location-pill" target="_blank">📍 Reparação de placas de indução Samsung em Cascais</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução em Cascais" class="location-pill" target="_blank">📍 Reparação de placas de indução LG em Cascais</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução em Cascais" class="location-pill" target="_blank">📍 Reparação de placas de indução Fagor em Cascais</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de placas de indução em Cascais" class="location-pill" target="_blank">📍 Reparação de placas de indução Zanussi em Cascais</a>
+<!-- ZONA 1: LISBOA -->
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas em Lisboa" class="location-pill" target="_blank">📍 Reparação de micro-ondas Teka em Lisboa</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas em Lisboa" class="location-pill" target="_blank">📍 Reparação de micro-ondas Bosch em Lisboa</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas em Lisboa" class="location-pill" target="_blank">📍 Reparação de micro-ondas Siemens em Lisboa</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas em Lisboa" class="location-pill" target="_blank">📍 Reparação de micro-ondas Balay em Lisboa</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas em Lisboa" class="location-pill" target="_blank">📍 Reparação de micro-ondas Whirlpool em Lisboa</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas em Lisboa" class="location-pill" target="_blank">📍 Reparação de micro-ondas Beko em Lisboa</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas em Lisboa" class="location-pill" target="_blank">📍 Reparação de micro-ondas AEG em Lisboa</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas em Lisboa" class="location-pill" target="_blank">📍 Reparação de micro-ondas Electrolux em Lisboa</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas em Lisboa" class="location-pill" target="_blank">📍 Reparação de micro-ondas Candy em Lisboa</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas em Lisboa" class="location-pill" target="_blank">📍 Reparação de micro-ondas Hoover em Lisboa</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas em Lisboa" class="location-pill" target="_blank">📍 Reparação de micro-ondas Indesit em Lisboa</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas em Lisboa" class="location-pill" target="_blank">📍 Reparação de micro-ondas Ariston em Lisboa</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas em Lisboa" class="location-pill" target="_blank">📍 Reparação de micro-ondas Samsung em Lisboa</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas em Lisboa" class="location-pill" target="_blank">📍 Reparação de micro-ondas LG em Lisboa</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas em Lisboa" class="location-pill" target="_blank">📍 Reparação de micro-ondas Fagor em Lisboa</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas em Lisboa" class="location-pill" target="_blank">📍 Reparação de micro-ondas Zanussi em Lisboa</a>
+
+<!-- ZONA 2: AMADORA -->
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas na Amadora" class="location-pill" target="_blank">📍 Reparação de micro-ondas Teka na Amadora</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas na Amadora" class="location-pill" target="_blank">📍 Reparação de micro-ondas Bosch na Amadora</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas na Amadora" class="location-pill" target="_blank">📍 Reparação de micro-ondas Siemens na Amadora</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas na Amadora" class="location-pill" target="_blank">📍 Reparação de micro-ondas Balay na Amadora</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas na Amadora" class="location-pill" target="_blank">📍 Reparação de micro-ondas Whirlpool na Amadora</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas na Amadora" class="location-pill" target="_blank">📍 Reparação de micro-ondas Beko na Amadora</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas na Amadora" class="location-pill" target="_blank">📍 Reparação de micro-ondas AEG na Amadora</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas na Amadora" class="location-pill" target="_blank">📍 Reparação de micro-ondas Electrolux na Amadora</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas na Amadora" class="location-pill" target="_blank">📍 Reparação de micro-ondas Candy na Amadora</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas na Amadora" class="location-pill" target="_blank">📍 Reparação de micro-ondas Hoover na Amadora</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas na Amadora" class="location-pill" target="_blank">📍 Reparação de micro-ondas Indesit na Amadora</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas na Amadora" class="location-pill" target="_blank">📍 Reparação de micro-ondas Ariston na Amadora</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas na Amadora" class="location-pill" target="_blank">📍 Reparação de micro-ondas Samsung na Amadora</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas na Amadora" class="location-pill" target="_blank">📍 Reparação de micro-ondas LG na Amadora</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas na Amadora" class="location-pill" target="_blank">📍 Reparação de micro-ondas Fagor na Amadora</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas na Amadora" class="location-pill" target="_blank">📍 Reparação de micro-ondas Zanussi na Amadora</a>
+
+<!-- ZONA 3: SINTRA -->
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas em Sintra" class="location-pill" target="_blank">📍 Reparação de micro-ondas Teka em Sintra</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas em Sintra" class="location-pill" target="_blank">📍 Reparação de micro-ondas Bosch em Sintra</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas em Sintra" class="location-pill" target="_blank">📍 Reparação de micro-ondas Siemens em Sintra</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas em Sintra" class="location-pill" target="_blank">📍 Reparação de micro-ondas Balay em Sintra</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas em Sintra" class="location-pill" target="_blank">📍 Reparação de micro-ondas Whirlpool em Sintra</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas em Sintra" class="location-pill" target="_blank">📍 Reparação de micro-ondas Beko em Sintra</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas em Sintra" class="location-pill" target="_blank">📍 Reparação de micro-ondas AEG em Sintra</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas em Sintra" class="location-pill" target="_blank">📍 Reparação de micro-ondas Electrolux em Sintra</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas em Sintra" class="location-pill" target="_blank">📍 Reparação de micro-ondas Candy em Sintra</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas em Sintra" class="location-pill" target="_blank">📍 Reparação de micro-ondas Hoover em Sintra</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas em Sintra" class="location-pill" target="_blank">📍 Reparação de micro-ondas Indesit em Sintra</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas em Sintra" class="location-pill" target="_blank">📍 Reparação de micro-ondas Ariston em Sintra</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas em Sintra" class="location-pill" target="_blank">📍 Reparação de micro-ondas Samsung em Sintra</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas em Sintra" class="location-pill" target="_blank">📍 Reparação de micro-ondas LG em Sintra</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas em Sintra" class="location-pill" target="_blank">📍 Reparação de micro-ondas Fagor em Sintra</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas em Sintra" class="location-pill" target="_blank">📍 Reparação de micro-ondas Zanussi em Sintra</a>
+
+<!-- ZONA 4: LOURES -->
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas em Loures" class="location-pill" target="_blank">📍 Reparação de micro-ondas Teka em Loures</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas em Loures" class="location-pill" target="_blank">📍 Reparação de micro-ondas Bosch em Loures</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas em Loures" class="location-pill" target="_blank">📍 Reparação de micro-ondas Siemens em Loures</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas em Loures" class="location-pill" target="_blank">📍 Reparação de micro-ondas Balay em Loures</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas em Loures" class="location-pill" target="_blank">📍 Reparação de micro-ondas Whirlpool em Loures</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas em Loures" class="location-pill" target="_blank">📍 Reparação de micro-ondas Beko em Loures</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas em Loures" class="location-pill" target="_blank">📍 Reparação de micro-ondas AEG em Loures</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas em Loures" class="location-pill" target="_blank">📍 Reparação de micro-ondas Electrolux em Loures</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas em Loures" class="location-pill" target="_blank">📍 Reparação de micro-ondas Candy em Loures</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas em Loures" class="location-pill" target="_blank">📍 Reparação de micro-ondas Hoover em Loures</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas em Loures" class="location-pill" target="_blank">📍 Reparação de micro-ondas Indesit em Loures</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas em Loures" class="location-pill" target="_blank">📍 Reparação de micro-ondas Ariston em Loures</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas em Loures" class="location-pill" target="_blank">📍 Reparação de micro-ondas Samsung em Loures</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas em Loures" class="location-pill" target="_blank">📍 Reparação de micro-ondas LG em Loures</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas em Loures" class="location-pill" target="_blank">📍 Reparação de micro-ondas Fagor em Loures</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas em Loures" class="location-pill" target="_blank">📍 Reparação de micro-ondas Zanussi em Loures</a>
+
+<!-- ZONA 5: CASCAIS -->
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas em Cascais" class="location-pill" target="_blank">📍 Reparação de micro-ondas Teka em Cascais</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas em Cascais" class="location-pill" target="_blank">📍 Reparação de micro-ondas Bosch em Cascais</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas em Cascais" class="location-pill" target="_blank">📍 Reparação de micro-ondas Siemens em Cascais</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas em Cascais" class="location-pill" target="_blank">📍 Reparação de micro-ondas Balay em Cascais</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas em Cascais" class="location-pill" target="_blank">📍 Reparação de micro-ondas Whirlpool em Cascais</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas em Cascais" class="location-pill" target="_blank">📍 Reparação de micro-ondas Beko em Cascais</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas em Cascais" class="location-pill" target="_blank">📍 Reparação de micro-ondas AEG em Cascais</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas em Cascais" class="location-pill" target="_blank">📍 Reparação de micro-ondas Electrolux em Cascais</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas em Cascais" class="location-pill" target="_blank">📍 Reparação de micro-ondas Candy em Cascais</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas em Cascais" class="location-pill" target="_blank">📍 Reparação de micro-ondas Hoover em Cascais</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas em Cascais" class="location-pill" target="_blank">📍 Reparação de micro-ondas Indesit em Cascais</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas em Cascais" class="location-pill" target="_blank">📍 Reparação de micro-ondas Ariston em Cascais</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas em Cascais" class="location-pill" target="_blank">📍 Reparação de micro-ondas Samsung em Cascais</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas em Cascais" class="location-pill" target="_blank">📍 Reparação de micro-ondas LG em Cascais</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas em Cascais" class="location-pill" target="_blank">📍 Reparação de micro-ondas Fagor em Cascais</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de micro-ondas em Cascais" class="location-pill" target="_blank">📍 Reparação de micro-ondas Zanussi em Cascais</a>
+            <!-- ZONA 1: LISBOA -->
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores em Lisboa" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Teka em Lisboa</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores em Lisboa" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Bosch em Lisboa</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores em Lisboa" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Siemens em Lisboa</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores em Lisboa" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Balay em Lisboa</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores em Lisboa" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Whirlpool em Lisboa</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores em Lisboa" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Beko em Lisboa</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores em Lisboa" class="location-pill" target="_blank">📍 Reparação de termoacumuladores AEG em Lisboa</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores em Lisboa" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Electrolux em Lisboa</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores em Lisboa" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Candy em Lisboa</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores em Lisboa" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Hoover em Lisboa</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores em Lisboa" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Indesit em Lisboa</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores em Lisboa" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Ariston em Lisboa</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores em Lisboa" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Samsung em Lisboa</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores em Lisboa" class="location-pill" target="_blank">📍 Reparação de termoacumuladores LG em Lisboa</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores em Lisboa" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Fagor em Lisboa</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores em Lisboa" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Zanussi em Lisboa</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores em Lisboa" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Vulcano em Lisboa</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores em Lisboa" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Junkers em Lisboa</a>
+
+<!-- ZONA 2: AMADORA -->
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores na Amadora" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Teka na Amadora</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores na Amadora" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Bosch na Amadora</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores na Amadora" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Siemens na Amadora</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores na Amadora" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Balay na Amadora</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores na Amadora" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Whirlpool na Amadora</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores na Amadora" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Beko na Amadora</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores na Amadora" class="location-pill" target="_blank">📍 Reparação de termoacumuladores AEG na Amadora</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores na Amadora" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Electrolux na Amadora</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores na Amadora" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Candy na Amadora</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores na Amadora" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Hoover na Amadora</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores na Amadora" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Indesit na Amadora</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores na Amadora" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Ariston na Amadora</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores na Amadora" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Samsung na Amadora</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores na Amadora" class="location-pill" target="_blank">📍 Reparação de termoacumuladores LG na Amadora</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores na Amadora" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Fagor na Amadora</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores na Amadora" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Zanussi na Amadora</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores na Amadora" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Vulcano na Amadora</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores na Amadora" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Junkers na Amadora</a>
+
+<!-- ZONA 3: SINTRA -->
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores em Sintra" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Teka em Sintra</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores em Sintra" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Bosch em Sintra</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores em Sintra" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Siemens em Sintra</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores em Sintra" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Balay em Sintra</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores em Sintra" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Whirlpool em Sintra</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores em Sintra" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Beko em Sintra</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores em Sintra" class="location-pill" target="_blank">📍 Reparação de termoacumuladores AEG em Sintra</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores em Sintra" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Electrolux em Sintra</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores em Sintra" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Candy em Sintra</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores em Sintra" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Hoover em Sintra</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores em Sintra" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Indesit em Sintra</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores em Sintra" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Ariston em Sintra</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores em Sintra" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Samsung em Sintra</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores em Sintra" class="location-pill" target="_blank">📍 Reparação de termoacumuladores LG em Sintra</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores em Sintra" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Fagor em Sintra</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores em Sintra" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Zanussi em Sintra</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores em Sintra" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Vulcano em Sintra</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores em Sintra" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Junkers em Sintra</a>
+
+<!-- ZONA 4: LOURES -->
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores em Loures" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Teka em Loures</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores em Loures" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Bosch em Loures</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores em Loures" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Siemens em Loures</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores em Loures" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Balay em Loures</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores em Loures" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Whirlpool em Loures</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores em Loures" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Beko em Loures</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores em Loures" class="location-pill" target="_blank">📍 Reparação de termoacumuladores AEG em Loures</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores em Loures" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Electrolux em Loures</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores em Loures" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Candy em Loures</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores em Loures" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Hoover em Loures</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores em Loures" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Indesit em Loures</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores em Loures" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Ariston em Loures</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores em Loures" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Samsung em Loures</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores em Loures" class="location-pill" target="_blank">📍 Reparação de termoacumuladores LG em Loures</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores em Loures" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Fagor em Loures</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores em Loures" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Zanussi em Loures</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores em Loures" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Vulcano em Loures</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores em Loures" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Junkers em Loures</a>
+
+<!-- ZONA 5: CASCAIS -->
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores em Cascais" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Teka em Cascais</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores em Cascais" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Bosch em Cascais</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores em Cascais" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Siemens em Cascais</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores em Cascais" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Balay em Cascais</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores em Cascais" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Whirlpool em Cascais</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores em Cascais" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Beko em Cascais</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores em Cascais" class="location-pill" target="_blank">📍 Reparação de termoacumuladores AEG em Cascais</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores em Cascais" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Electrolux em Cascais</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores em Cascais" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Candy em Cascais</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores em Cascais" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Hoover em Cascais</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores em Cascais" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Indesit em Cascais</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores em Cascais" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Ariston em Cascais</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores em Cascais" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Samsung em Cascais</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores em Cascais" class="location-pill" target="_blank">📍 Reparação de termoacumuladores LG em Cascais</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores em Cascais" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Fagor em Cascais</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores em Cascais" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Zanussi em Cascais</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores em Cascais" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Vulcano em Cascais</a>
+<a href="https://wa.me/351931369411?text=Olá! Preciso de assistência técnica para reparação de termoacumuladores em Cascais" class="location-pill" target="_blank">📍 Reparação de termoacumuladores Junkers em Cascais</a>
 
       </div>
     </div>
 
     <!-- FOOTER -->
     <footer>
-      <p>&copy; M. Cavaleiro® - Assistência Técnica Especializada Multimarcas em Lisboa e Margem Sul. Entidade independente especializada em reparações de equipamentos domésticos fora da garantia Não Somos Representantes das marcas aqui anunciadas,para isso contactar os respectivos canais </p>
+      <p>&copy; M. Cavaleiro® - Assistência Técnica Especializada Multimarcas em Lisboa e Margem Sul. Entidade independente especializada em reparações de equipamentos domésticos fora da garantia 
+        Não Somos Representantes das marcas aqui anunciadas,para isso contactar os respectivos canais  dedicados </p>
     </footer>
   </div>
 
