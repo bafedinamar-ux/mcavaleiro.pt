@@ -727,6 +727,127 @@ erros ortograficos comuns: reparacao de frigorificos, reparacao frigorificos lis
     }
   });
   </script>
+  <!-- ========================================== -->
+<!-- M. CAVALEIRO® | MÓDULOS DE CONVERSÃO SUPREMA -->
+<!-- ========================================== -->
+
+<!-- 1. BARRA SUPERIOR DE URGÊNCIA 24H -->
+<div style="background: linear-gradient(90deg, #1c1c1e, #2c2c2e); border-bottom: 1px solid rgba(255,255,255,0.1); color: #f5f5f7; padding: 10px 16px; font-family: -apple-system, BlinkMacSystemFont, sans-serif; font-size: 0.8rem; text-align: center; position: sticky; top: 0; z-index: 1001; display: flex; justify-content: center; align-items: center; gap: 8px; flex-wrap: wrap;">
+  <span style="width: 8px; height: 8px; background: #30d158; border-radius: 50%; box-shadow: 0 0 8px #30d158; display: inline-block;"></span>
+  <span><strong>Piquete de Urgência 24H Ativo na Grande Lisboa & Margem Sul.</strong> Não atende o principal? Ligue alternativamente:</span>
+  <a href="tel:351931369490" style="color: #30d158; text-decoration: none; font-weight: 700;">931 369 490</a>
+</div>
+
+<!-- 2. SELOS DE GARANTIA E CONFIANÇA -->
+<div style="max-width: 1200px; margin: 24px auto; padding: 0 16px; font-family: -apple-system, BlinkMacSystemFont, sans-serif;">
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px;">
+    
+    <div style="background: rgba(25, 25, 28, 0.8); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 16px; display: flex; align-items: center; gap: 12px; backdrop-filter: blur(10px);">
+      <span style="font-size: 1.5rem;">🛡️</span>
+      <div>
+        <div style="color: #fff; font-weight: 600; font-size: 0.85rem;">Garantia Escrita</div>
+        <div style="color: #86868b; font-size: 0.75rem;">Em todas as peças e reparações efetuadas.</div>
+      </div>
+    </div>
+
+    <div style="background: rgba(25, 25, 28, 0.8); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 16px; display: flex; align-items: center; gap: 12px; backdrop-filter: blur(10px);">
+      <span style="font-size: 1.5rem;">⏱️</span>
+      <div>
+        <div style="color: #fff; font-weight: 600; font-size: 0.85rem;">Intervenção no Próprio Dia</div>
+        <div style="color: #86868b; font-size: 0.75rem;">Deslocação rápida ao domicílio sem demora.</div>
+      </div>
+    </div>
+
+    <div style="background: rgba(25, 25, 28, 0.8); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 16px; display: flex; align-items: center; gap: 12px; backdrop-filter: blur(10px);">
+      <span style="font-size: 1.5rem;">💶</span>
+      <div>
+        <div style="color: #fff; font-weight: 600; font-size: 0.85rem;">Orçamento Prévio</div>
+        <div style="color: #86868b; font-size: 0.75rem;">Total transparência antes de avançar.</div>
+      </div>
+    </div>
+
+    <div style="background: rgba(25, 25, 28, 0.8); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 16px; display: flex; align-items: center; gap: 12px; backdrop-filter: blur(10px);">
+      <span style="font-size: 1.5rem;">⭐</span>
+      <div>
+        <div style="color: #fff; font-weight: 600; font-size: 0.85rem;">Avaliação 4.9 / 5.0</div>
+        <div style="color: #86868b; font-size: 0.75rem;">Centenas de clientes satisfeitos na região.</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- 3. CALCULADORA / DIAGNÓSTICO EXPRESSO DE SINTOMAS -->
+<div style="max-width: 1200px; margin: 30px auto; padding: 24px; background: rgba(20, 20, 22, 0.9); border: 1px solid rgba(255,255,255,0.12); border-radius: 24px; font-family: -apple-system, BlinkMacSystemFont, sans-serif; backdrop-filter: blur(20px);">
+  <div style="text-align: center; margin-bottom: 16px;">
+    <h3 style="color: #fff; font-size: 1.1rem; font-weight: 700; margin-bottom: 4px;">🔍 Diagnóstico Expresso de Avarias</h3>
+    <p style="color: #86868b; font-size: 0.82rem;">Selecione o sintoma do seu equipamento para enviar os dados diretamente para o técnico:</p>
+  </div>
+  
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px;">
+    <button onclick="sendDiagnostic('Frigorífico: Não gela ou deita água')" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #fff; padding: 12px; border-radius: 12px; font-size: 0.8rem; cursor: pointer; text-align: left; transition: 0.2s;">
+      ❄️ Frigorífico: Não gela / Água no chão
+    </button>
+    <button onclick="sendDiagnostic('Máquina Lavar: Não puxa água ou não escoa')" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #fff; padding: 12px; border-radius: 12px; font-size: 0.8rem; cursor: pointer; text-align: left; transition: 0.2s;">
+      🌊 Máq. Lavar: Não puxa água / Não escoa
+    </button>
+    <button onclick="sendDiagnostic('Esquentador / Termoacumulador: Não acende ou não aquece')" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #fff; padding: 12px; border-radius: 12px; font-size: 0.8rem; cursor: pointer; text-align: left; transition: 0.2s;">
+      🔥 Esquentador / Termo: Sem água quente
+    </button>
+    <button onclick="sendDiagnostic('Ar Condicionado: Não deita ar frio / Barulho')" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #fff; padding: 12px; border-radius: 12px; font-size: 0.8rem; cursor: pointer; text-align: left; transition: 0.2s;">
+      💨 Ar Condicionado: Sem frio / Barulho
+    </button>
+  </div>
+</div>
+
+<!-- 4. WIDGET DE ASSISTENTE VIRTUAL INTELIGENTE (CANTO INFERIOR DIREITO) -->
+<div id="ai-assistant-widget" style="position: fixed; bottom: 20px; right: 20px; z-index: 9998; font-family: -apple-system, BlinkMacSystemFont, sans-serif;">
+  <button onclick="toggleAiChat()" style="background: #1c1c1e; border: 1px solid rgba(255,255,255,0.2); color: #f5f5f7; padding: 12px 18px; border-radius: 30px; cursor: pointer; display: flex; align-items: center; gap: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); backdrop-filter: blur(20px);">
+    <span style="width: 10px; height: 10px; background: #30d158; border-radius: 50%; box-shadow: 0 0 10px #30d158;"></span>
+    <span style="font-size: 0.85rem; font-weight: 600;">Assistente Virtual M. Cavaleiro</span>
+  </button>
+
+  <div id="ai-chat-box" style="display: none; position: absolute; bottom: 65px; right: 0; width: 320px; background: rgba(20, 20, 22, 0.96); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 20px; padding: 16px; box-shadow: 0 15px 35px rgba(0,0,0,0.7); backdrop-filter: blur(25px); color: #f5f5f7;">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 8px;">
+      <span style="font-size: 0.8rem; font-weight: 700; color: #30d158;">⚡ ATENDIMENTO RÁPIDO 24H</span>
+      <button onclick="toggleAiChat()" style="background: none; border: none; color: #86868b; cursor: pointer; font-size: 1rem;">✕</button>
+    </div>
+    
+    <div style="font-size: 0.82rem; color: #d1d1d6; margin-bottom: 12px; line-height: 1.4;">
+      Olá! Precisa de assistência técnica urgente para eletrodomésticos, frio ou climatização? Selecione o serviço para enviar direto para o nosso WhatsApp:
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 6px;">
+      <button onclick="sendWhatsApp('Frigorífico / Arcas')" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); color: #fff; padding: 8px 12px; border-radius: 10px; font-size: 0.8rem; text-align: left; cursor: pointer;">❄️ Avaria em Frigorífico / Arca</button>
+      <button onclick="sendWhatsApp('Máquina de Lavar Roupa ou Loiça')" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); color: #fff; padding: 8px 12px; border-radius: 10px; font-size: 0.8rem; text-align: left; cursor: pointer;">🌊 Máquina de Lavar (Roupa/Loiça)</button>
+      <button onclick="sendWhatsApp('Termoacumulador / Esquentador')" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); color: #fff; padding: 8px 12px; border-radius: 10px; font-size: 0.8rem; text-align: left; cursor: pointer;">🔥 Termoacumulador / Esquentador</button>
+      <button onclick="sendWhatsApp('Ar Condicionado / Outros')" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); color: #fff; padding: 8px 12px; border-radius: 10px; font-size: 0.8rem; text-align: left; cursor: pointer;">🛠️ Outro Equipamento / Avaria</button>
+    </div>
+
+    <div style="margin-top: 12px; padding-top: 8px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.72rem; color: #86868b; text-align: center;">
+      Não consegue contacto no número principal? Ligue alternativamente para: <a href="tel:351931369490" style="color: #30d158; text-decoration: none; font-weight: 700;">931 369 490</a>
+    </div>
+  </div>
+</div>
+
+<!-- SCRIPTS DE CONTROLO DO WHATSAPP E INTERAÇÃO -->
+<script>
+  function toggleAiChat() {
+    const box = document.getElementById('ai-chat-box');
+    box.style.display = box.style.display === 'block' ? 'none' : 'block';
+  }
+
+  function sendWhatsApp(serviceType) {
+    const text = encodeURIComponent("Olá! Vim através do assistente virtual do site. Preciso de assistência técnica urgente para: " + serviceType);
+    window.open("https://wa.me/351931369411?text=" + text, "_blank");
+    toggleAiChat();
+  }
+
+  function sendDiagnostic(diagnosticType) {
+    const text = encodeURIComponent("Olá! Fiz um diagnóstico expresso no site e preciso de assistência urgente. Sintoma/Avaria: " + diagnosticType);
+    window.open("https://wa.me/351931369411?text=" + text, "_blank");
+  }
+</script>
 </body>
     <div class="bento">
       <!-- CARD 1: MULTI-BRAND & EQUIPMENT MATRIX -->
@@ -2835,6 +2956,7 @@ erros ortograficos comuns: reparacao de frigorificos, reparacao frigorificos lis
   function sendWhatsApp(serviceType) {
     const text = encodeURIComponent("Olá! Vim através do assistente virtual do site. Preciso de assistência técnica urgente para: " + serviceType);
     window.open("https://wa.me/351931369411?text=" + text, "_blank");
+    toggleAiChat();
   }
 </script>
     <!-- FOOTER -->
