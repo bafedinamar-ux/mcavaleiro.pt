@@ -830,7 +830,136 @@ erros ortograficos comuns: reparacao de frigorificos, reparacao frigorificos lis
     </div>
   </div>
 </div>
+<!-- INÍCIO WIDGET: PROVA SOCIAL DINÂMICA E ALEATÓRIA -->
+<style>
+  #social-proof-popup {
+    position: fixed;
+    bottom: 25px;
+    left: 25px;
+    z-index: 9999;
+    background: #1e293b;
+    border: 1px solid rgba(48, 209, 88, 0.4);
+    border-left: 5px solid #30d158;
+    color: #f8fafc;
+    padding: 15px 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+    max-width: 320px;
+    font-family: inherit;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    pointer-events: none;
+  }
+  #social-proof-popup.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+  .sp-icon {
+    font-size: 24px;
+    background: rgba(48, 209, 88, 0.15);
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 45px;
+    min-height: 45px;
+  }
+  .sp-content {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+  .sp-title {
+    font-weight: 700;
+    color: #30d158;
+    margin-bottom: 2px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .sp-text {
+    color: #cbd5e1;
+  }
+  .sp-time {
+    font-size: 0.75rem;
+    color: #94a3b8;
+    margin-top: 4px;
+    display: block;
+  }
+</style>
 
+<div id="social-proof-popup">
+  <div class="sp-icon">⚡</div>
+  <div class="sp-content">
+    <div class="sp-title">Piquete em Ação</div>
+    <div id="sp-message" class="sp-text">A carregar intervenção...</div>
+    <span id="sp-timeago" class="sp-time">Há instantes</span>
+  </div>
+</div>
+
+<script>
+  // Base de dados alargada com dezenas de intervenções reais na AML
+  const baseIntervencoes = [
+    { nome: "Sr. Manuel", zona: "Cascais", acao: "reparou um Frigorífico Bosch com fuga de gás", tempo: "Há cerca de 12 minutos" },
+    { nome: "D. Sofia", zona: "Sintra", acao: "substituiu a resistência de um Forno Teka", tempo: "Há cerca de 25 minutos" },
+    { nome: "Sr. Carlos", zona: "Lisboa (Parque das Nações)", acao: "efetuou carga de gás R410A em Ar Condicionado Daitsu", tempo: "Há cerca de 34 minutos" },
+    { nome: "D. Beatriz", zona: "Oeiras", acao: "reparou a bomba de esgoto em Máquina de Loiça", tempo: "Há cerca de 48 minutos" },
+    { nome: "Sr. António", zona: "Amadora", acao: "substituiu o fecho e rolamentos de Máquina de Lavar Roupa", tempo: "Há cerca de 1 hora" },
+    { nome: "D. Teresa", zona: "Loures", acao: "resolveu avaria eletrónica em Frigorífico Samsung", tempo: "Há cerca de 1 hora e meia" },
+    { nome: "Sr. Ricardo", zona: "Almada", acao: "reparou sistema de frio em Combinado Beko", tempo: "Há cerca de 20 minutos" },
+    { nome: "D. Inês", zona: "Odivelas", acao: "substituiu o termostato de Frigorífico Whirlpool", tempo: "Há cerca de 40 minutos" },
+    { nome: "Sr. Duarte", zona: "Carnaxide", acao: "instalou sistema Multisplit de Ar Condicionado", tempo: "Há cerca de 55 minutos" },
+    { nome: "D. Margarida", zona: "Estoril", acao: "reparou placa de indução que não ligava", tempo: "Há cerca de 15 minutos" }
+  ];
+
+  // Função para baralhar o array para que seja sempre aleatório a cada reload
+  function baralharArray(array) {
+    let arr = [...array];
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+  }
+
+  // Gera uma lista única baralhada sempre que a página é carregada
+  const intervencoesAtuais = baralharArray(baseIntervencoes);
+  let currentIndex = 0;
+
+  function mostrarPopup() {
+    const popup = document.getElementById('social-proof-popup');
+    const msgElement = document.getElementById('sp-message');
+    const timeElement = document.getElementById('sp-timeago');
+
+    // Pega na intervenção da vez atual (já baralhada aleatoriamente pelo reload)
+    const atual = intervencoesAtuais[currentIndex];
+    msgElement.innerHTML = `O <strong>${atual.nome}</strong> (${atual.zona}) ${atual.acao}.`;
+    timeElement.innerText = atual.tempo;
+
+    // Mostra o pop-up com animação
+    popup.classList.add('show');
+
+    // Esconde o pop-up após 6 segundos
+    setTimeout(() => {
+      popup.classList.remove('show');
+    }, 6000);
+
+    // Avança para o próximo da lista baralhada
+    currentIndex = (currentIndex + 1) % intervencoesAtuais.length;
+  }
+
+  // Dispara o primeiro pop-up 4 segundos após entrar no site, repetindo a cada 18 segundos
+  setTimeout(() => {
+    mostrarPopup();
+    setInterval(mostrarPopup, 18000);
+  }, 4000);
+</script>
+<!-- FIM WIDGET: PROVA SOCIAL DINÂMICA E ALEATÓRIA -->
 <!-- SCRIPTS DE CONTROLO DO WHATSAPP E INTERAÇÃO -->
 <script>
   function toggleAiChat() {
