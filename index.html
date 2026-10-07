@@ -728,6 +728,56 @@ erros ortograficos comuns: reparacao de frigorificos, reparacao frigorificos lis
     </section>
 </script>
 </head>
+    <!-- ====================================================== -->
+<!-- M. CAVALEIRO® | MÓDULOS EXTRAS: SIMULADOR & VAGAS 24H -->
+<!-- ====================================================== -->
+
+<!-- 1. ALERTA DE VAGAS DE PIQUETE EM TEMPO REAL -->
+<div style="max-width: 1200px; margin: 0 auto 20px auto; padding: 0 16px; font-family: -apple-system, BlinkMacSystemFont, sans-serif;">
+  <div style="background: linear-gradient(135deg, rgba(48, 209, 88, 0.1), rgba(20, 20, 22, 0.9)); border: 1px solid rgba(48, 209, 88, 0.3); border-radius: 16px; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; backdrop-filter: blur(10px);">
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <span style="font-size: 1.2rem;">🚨</span>
+      <span style="color: #f5f5f7; font-size: 0.85rem;"><strong>Piquete Móvel Ativo:</strong> Restam apenas <span id="vagas-count" style="color: #30d158; font-weight: 700;">2</span> vagas de assistência domiciliária com prioridade para hoje na Grande Lisboa.</span>
+    </div>
+    <a href="tel:351931369490" style="background: #30d158; color: #000; padding: 6px 14px; border-radius: 8px; font-size: 0.8rem; font-weight: 700; text-decoration: none; box-shadow: 0 4px 12px rgba(48,209,88,0.3);">Ligar 931 369 490</a>
+  </div>
+</div>
+
+<!-- 2. SIMULADOR DE COBERTURA E DESLOCAÇÃO RÁPIDA -->
+<div style="max-width: 1200px; margin: 20px auto; padding: 24px; background: rgba(20, 20, 22, 0.9); border: 1px solid rgba(255,255,255,0.12); border-radius: 24px; font-family: -apple-system, BlinkMacSystemFont, sans-serif; backdrop-filter: blur(20px);">
+  <div style="text-align: center; margin-bottom: 16px;">
+    <h3 style="color: #fff; font-size: 1.1rem; font-weight: 700; margin-bottom: 4px;">📍 Verificação de Cobertura e Deslocação</h3>
+    <p style="color: #86868b; font-size: 0.82rem;">Selecione o seu concelho para validar a disponibilidade imediata do técnico na sua rua:</p>
+  </div>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; margin-bottom: 16px;">
+    <button onclick="checkZone('Lisboa / Centro')" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #fff; padding: 10px; border-radius: 10px; font-size: 0.8rem; cursor: pointer;">📍 Lisboa</button>
+    <button onclick="checkZone('Loures / Odivelas')" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #fff; padding: 10px; border-radius: 10px; font-size: 0.8rem; cursor: pointer;">📍 Loures / Odivelas</button>
+    <button onclick="checkZone('Sintra / Amadora')" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #fff; padding: 10px; border-radius: 10px; font-size: 0.8rem; cursor: pointer;">📍 Sintra / Amadora</button>
+    <button onclick="checkZone('Cascais / Oeiras')" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #fff; padding: 10px; border-radius: 10px; font-size: 0.8rem; cursor: pointer;">📍 Cascais / Oeiras</button>
+    <button onclick="checkZone('Margem Sul')" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #fff; padding: 10px; border-radius: 10px; font-size: 0.8rem; cursor: pointer;">📍 Margem Sul</button>
+  </div>
+
+  <div id="zone-result" style="display: none; background: rgba(48, 209, 88, 0.1); border: 1px solid rgba(48, 209, 88, 0.2); padding: 12px; border-radius: 12px; text-align: center; color: #30d158; font-size: 0.85rem; font-weight: 600;">
+    ✅ Técnico disponível nesta zona com chegada estimada em menos de 60 minutos!
+  </div>
+</div>
+
+<script>
+  // Rotação dinâmica simples para simular escassez real
+  document.addEventListener("DOMContentLoaded", function() {
+    const vagas = [1, 2, 3];
+    const randomVaga = vagas[Math.floor(Math.random() * vagas.length)];
+    const vagaEl = document.getElementById("vagas-count");
+    if(vagaEl) vagaEl.textContent = randomVaga;
+  });
+
+  function checkZone(zoneName) {
+    const resultBox = document.getElementById("zone-result");
+    resultBox.style.display = "block";
+    resultBox.innerHTML = "✅ Unidade móvel próxima de <strong>" + zoneName + "</strong> com disponibilidade imediata. <br><a href='https://wa.me/351931369411?text=" + encodeURIComponent("Olá! Confirmei no site a disponibilidade para " + zoneName + " e preciso de assistência urgente.") + "' target='_blank' style='color: #fff; text-decoration: underline;'>Clique aqui para agendar no WhatsApp</a> ou ligue <strong>931 369 490</strong>.";
+  }
+</script>
 <body>
 <!-- WIDGETS DE CONVERSÃO PSICOLÓGICA E GATILHOS DE PÂNICO ADICIONADOS -->
 <style>
