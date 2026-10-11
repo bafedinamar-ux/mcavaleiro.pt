@@ -101,3 +101,25 @@ if (fs.existsSync('index.html')) {
     console.log('Aviso: Marcadores <!-- SEO_MATRIX_START --> e <!-- SEO_MATRIX_END --> não encontrados no index.html.');
   }
 }
+// --- GERAR SITEMAP.XML AUTOMÁTICO ---
+let urlsSitemap = [
+  '  <url><loc>https://mcavaleiro.pt/</loc><priority>1.0</priority></url>'
+];
+
+// Se tiveres as tuas variáveis marcas e zonas definidas no script:
+if (typeof marcas !== 'undefined' && typeof zonas !== 'undefined') {
+  marcas.forEach(marca => {
+    zonas.forEach(zona => {
+      const pageUrl = `https://mcavaleiro.pt/reparacao-frigorificos-${marca.slug}-${zona.slug}.html`;
+      urlsSitemap.push(`  <url><loc>${pageUrl}</loc><priority>0.8</priority></url>`);
+    });
+  });
+}
+
+const sitemapContent = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${urlsSitemap.join('\n')}
+</urlset>`;
+
+fs.writeFileSync('sitemap.xml', sitemapContent);
+console.log("Sitemap.xml gerado e gravado com sucesso!");
