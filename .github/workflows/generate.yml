@@ -1,4 +1,4 @@
-name: Programmatic SEO Generator
+name: Deploy Programmatic SEO Pages
 
 on:
   push:
@@ -6,12 +6,20 @@ on:
       - main
   workflow_dispatch:
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout Repository
+      - name: Checkout
         uses: actions/checkout@v3
 
       - name: Setup Node.js
@@ -19,13 +27,16 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Generate HTML Pages
+      - name: Run SEO Generator Script
         run: node generate.js
 
-      - name: Commit and Push Generated Pages
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add *.html
-          git commit -m "chore: auto-generate programmatic SEO landing pages" || echo "Sem novas alterações para guardar"
-          git push
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+
+      - name: Upload Artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: '.'
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v2
