@@ -65,3 +65,39 @@ ${urlsSitemap.join('\n')}
 
 fs.writeFileSync('sitemap.xml', sitemapContent);
 console.log("Sitemap.xml gerado com sucesso!");
+
+const fs = require('fs');
+
+// ... (definição das tuas marcas e zonas) ...
+
+// 1. Gerar o bloco de Links Internos (Footer Links)
+let footerLinksHtml = '<div class="seo-matrix-grid">\n';
+
+marcas.forEach(marca => {
+  footerLinksHtml += `  <div class="seo-matrix-col">\n    <h4>${marca.nome}</h4>\n    <ul>\n`;
+  zonas.forEach(zona => {
+    const pageUrl = `/reparacao-frigorificos-${marca.slug}-${zona.slug}.html`;
+    footerLinksHtml += `      <li><a href="${pageUrl}">Frigoríficos ${marca.nome} em ${zona.nome}</a></li>\n`;
+  });
+  footerLinksHtml += `    </ul>\n  </div>\n`;
+});
+
+footerLinksHtml += '</div>';
+
+// 2. Atualizar ou injetar o HTML na página principal (index.html)
+if (fs.existsSync('index.html')) {
+  let indexContent = fs.readFileSync('index.html', 'utf8');
+
+  // Marcadores no index.html para substituição dinâmica
+  const startTag = '<!-- SEO_MATRIX_START -->';
+  const endTag = '<!-- SEO_MATRIX_END -->';
+
+  if (indexContent.includes(startTag) && indexContent.includes(endTag)) {
+    const regex = new RegExp(`${startTag}[\\s\\S]*?${endTag}`, 'm');
+    indexContent = indexContent.replace(regex, `${startTag}\n${footerLinksHtml}\n${endTag}`);
+    fs.writeFileSync('index.html', indexContent, 'utf8');
+    console.log('index.html atualizado com a matriz de links dinâmicos!');
+  } else {
+    console.log('Aviso: Marcadores <!-- SEO_MATRIX_START --> e <!-- SEO_MATRIX_END --> não encontrados no index.html.');
+  }
+}
